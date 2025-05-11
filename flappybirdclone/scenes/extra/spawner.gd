@@ -2,7 +2,7 @@ extends Node
 
 class_name Spawner
 
-#llamado
+#escucha si un osbtaculo colisiono
 signal on_obstacle_crash
 
 
@@ -12,6 +12,7 @@ const OBSTACLE_SCENE = preload("res://scenes/Obstacle/obstacle.tscn")
 
 #referencia al nodo timer 
 @onready var timer: Timer = $Timer
+
 
 func spawn_obstacle():
 	#crea una estancia del obstaculo
@@ -36,6 +37,7 @@ func spawn_obstacle():
 
 func stop_obstacles():
 	#detengo el timer
+	#para no spawnear más obtaculos
 	timer.stop()
 	#recorre los hijos de spawner que se instancian y se filtran los que son
 	#obstacle y se nombrara como x

@@ -15,6 +15,7 @@ func _process(delta) :
 	position.x -= move_speed * delta
 
 
+#funcion que actualiza la velocidad
 func set_speed(value: float):
 	move_speed = value
 

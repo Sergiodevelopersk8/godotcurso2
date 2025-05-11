@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://ddvkraubywcq3"]
+
+[ext_resource type="Texture2D" uid="uid://cvjp578yskg1i" path="res://Assets/Sprites/groundSnow.png" id="1_au3k8"]
+[ext_resource type="Script" uid="uid://d24sfnhvblftk" path="res://scenes/ground/ground.gd" id="1_rrkwn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_au3k8"]
+size = Vector2(807, 70)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xmv3o"]
+size = Vector2(807, 70)
+
+[node name="Ground" type="Node2D"]
+script = ExtResource("1_rrkwn")
+
+[node name="Ground_1" type="Area2D" parent="."]
+position = Vector2(404, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Ground_1"]
+unique_name_in_owner = true
+position = Vector2(0, -1)
+texture = ExtResource("1_au3k8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground_1"]
+position = Vector2(-0.5, -1)
+shape = SubResource("RectangleShape2D_au3k8")
+
+[node name="Ground_2" type="Area2D" parent="."]
+position = Vector2(1212, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Ground_2"]
+position = Vector2(0, -1)
+texture = ExtResource("1_au3k8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground_2"]
+position = Vector2(-0.5, -1)
+shape = SubResource("RectangleShape2D_xmv3o")
+debug_color = Color(0.965892, 0.165891, 0.215202, 0.42)
+
+[connection signal="body_entered" from="Ground_1" to="." method="_on_ground_body_entered"]
+[connection signal="body_entered" from="Ground_2" to="." method="_on_ground_body_entered"]
