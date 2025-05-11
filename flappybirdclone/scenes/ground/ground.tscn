@@ -10,6 +10,7 @@ size = Vector2(807, 70)
 size = Vector2(807, 70)
 
 [node name="Ground" type="Node2D"]
+z_index = 1
 script = ExtResource("1_rrkwn")
 
 [node name="Ground_1" type="Area2D" parent="."]

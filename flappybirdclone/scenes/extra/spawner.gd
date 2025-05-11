@@ -5,7 +5,8 @@ class_name Spawner
 #escucha si un osbtaculo colisiono
 signal on_obstacle_crash
 
-
+#señal para el score
+signal on_player_score
 
 #guardamos la referencia de obstacle
 const OBSTACLE_SCENE = preload("res://scenes/Obstacle/obstacle.tscn")
@@ -20,6 +21,9 @@ func spawn_obstacle():
 	#accedemos al signal  de choque
 	obs_instance.on_player_crashed.connect(_on_player_crashed)
 	
+	#conectamos con el score 
+	obs_instance.on_player_score.connect(_on_player_score)
+	
 	
 	# referencia de la ventana de main
 	var viewport: Viewport = get_viewport()
@@ -30,7 +34,7 @@ func spawn_obstacle():
 	#obtener posicion central en y
 	var half_height = viewport.size.y / 2
 	#regresar un valor random en la posicion
-	obs_instance.position.y = randf_range(half_height + 240, half_height - 50)
+	obs_instance.position.y = randf_range(half_height + 280, half_height - 50)
 	#se agrega como hijo
 	add_child(obs_instance)
 
@@ -53,6 +57,9 @@ func _on_player_crashed():
 	on_obstacle_crash.emit()
 	stop_obstacles()
 
+
+func _on_player_score():
+	on_player_score.emit()
 
 
 

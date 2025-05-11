@@ -1,0 +1,106 @@
+[gd_scene load_steps=8 format=3 uid="uid://dln7xo63ikh3k"]
+
+[ext_resource type="Script" uid="uid://d0bqb1c1h35wp" path="res://scenes/game_ui/game_ui.gd" id="1_1i64n"]
+[ext_resource type="LabelSettings" uid="uid://qdykiiylaggv" path="res://scenes/label_75.tres" id="2_najyh"]
+[ext_resource type="Texture2D" uid="uid://dhcfq1juug1ru" path="res://Assets/Sprites/UI/textGetReady.png" id="3_2cwxn"]
+[ext_resource type="Texture2D" uid="uid://c42nhwabeqalv" path="res://Assets/Sprites/UI/tapTick.png" id="4_hk0ve"]
+
+[sub_resource type="Animation" id="Animation_8qcbp"]
+resource_name = "play"
+length = 0.8
+loop_mode = 1
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/StartMenu/TextureRect2:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1), Vector2(2, 2), Vector2(2, 2)]
+}
+
+[sub_resource type="Animation" id="Animation_t24f4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/StartMenu/TextureRect2:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e13be"]
+_data = {
+&"RESET": SubResource("Animation_t24f4"),
+&"play": SubResource("Animation_8qcbp")
+}
+
+[node name="GameUI" type="CanvasLayer"]
+script = ExtResource("1_1i64n")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="ScoreLabel" type="Label" parent="MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "0"
+label_settings = ExtResource("2_najyh")
+
+[node name="StartMenu" type="Control" parent="MarginContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(450, 180)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/StartMenu"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_right = 200.0
+offset_bottom = 73.0
+grow_horizontal = 2
+texture = ExtResource("3_2cwxn")
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/StartMenu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -29.5
+offset_top = 4.0
+offset_right = 29.5
+offset_bottom = 63.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_hk0ve")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_e13be")
+}
+autoplay = "play"

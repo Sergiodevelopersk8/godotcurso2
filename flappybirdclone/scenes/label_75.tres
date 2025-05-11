@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://qdykiiylaggv"]
+
+[ext_resource type="FontFile" uid="uid://due6jbyye53ld" path="res://Assets/Fonts/font_score.ttf" id="1_hoim3"]
+
+[resource]
+font = ExtResource("1_hoim3")
+font_size = 75
+outline_size = 16
+outline_color = Color(0.0475577, 0.0475576, 0.0475576, 1)
