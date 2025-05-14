@@ -169,7 +169,8 @@ text = "medal"
 label_settings = ExtResource("7_pxslt")
 horizontal_alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="GameOverMenu/panel/MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="MedalImg" type="TextureRect" parent="GameOverMenu/panel/MarginContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 texture = ExtResource("8_d1cf8")
 

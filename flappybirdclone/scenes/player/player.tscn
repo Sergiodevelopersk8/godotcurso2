@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://d0byfbgfvrwxr"]
+[gd_scene load_steps=8 format=3 uid="uid://d0byfbgfvrwxr"]
 
 [ext_resource type="Texture2D" uid="uid://bvntpsok5a8x5" path="res://Assets/Sprites/Planes/planeBlue1.png" id="1_gmlin"]
 [ext_resource type="Script" uid="uid://ded8q8lvo0nfk" path="res://scenes/player/player.gd" id="1_lvxji"]
 [ext_resource type="Texture2D" uid="uid://bokghwlyvels1" path="res://Assets/Sprites/Planes/planeBlue2.png" id="2_lvxji"]
 [ext_resource type="Texture2D" uid="uid://087voyngu1by" path="res://Assets/Sprites/Planes/planeBlue3.png" id="3_p47bc"]
+[ext_resource type="AudioStream" uid="uid://dwmtu5w1krorr" path="res://Assets/Audio/sfx_wing.wav" id="5_p47bc"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_75vfm"]
 animations = [{
@@ -44,3 +45,7 @@ frame_progress = 0.462984
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_0owmy")
+
+[node name="jumpAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_p47bc")
+bus = &"SFX"

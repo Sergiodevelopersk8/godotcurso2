@@ -10,6 +10,10 @@ signal on_game_started
 @export var jump_force := 400.0
 @export var max_speed := 400.0
 @export var rotation_speed := 2.0
+@onready var jump_audio: AudioStreamPlayer2D = $jumpAudio
+
+
+
 
 var is_started := false
 var should_process_input := true
@@ -48,6 +52,8 @@ func jump():
 	velocity.y = -jump_force
 	#gira el player hacia arriba
 	rotation = deg_to_rad(-30)
+	jump_audio.play()
+	
 
 
 func rotate_player():

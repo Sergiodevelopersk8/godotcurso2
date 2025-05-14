@@ -7,3 +7,7 @@ res://scenes/player/player.tscn
 res://scenes/Obstacle/obstacle.tscn
 res://scenes/extra/spawner.tscn
 res://scenes/ground/ground.tscn
+res://default_bus_layout.tres
+res://scenes/player/player.gd
+res://scenes/Obstacle/obstacle.gd
+res://scenes/ground/ground.gd
