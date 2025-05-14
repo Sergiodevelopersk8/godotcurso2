@@ -26,6 +26,7 @@ func _on_spawner_on_obstacle_crash() -> void:
 
 func _on_ground_on_player_crash() -> void:
 	spawner.stop_obstacles()
+	game_ui.game_over()
 
 
 func _on_spawner_on_player_score() -> void:

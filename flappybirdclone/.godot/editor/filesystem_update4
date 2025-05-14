@@ -1,10 +1,9 @@
-res://scenes/Obstacle/obstacle.tscn
-res://scenes/Obstacle/obstacle.gd
-res://scenes/extra/spawner.tscn
-res://scenes/extra/spawner.gd
+res://scenes/game_ui/game_ui.tscn
+res://scenes/label_75.tres
+res://scenes/game_ui/game_ui.gd
 res://scenes/main/main.gd
 res://scenes/main/main.tscn
 res://scenes/player/player.tscn
+res://scenes/Obstacle/obstacle.tscn
+res://scenes/extra/spawner.tscn
 res://scenes/ground/ground.tscn
-res://scenes/game_ui/game_ui.tscn
-res://scenes/game_ui/game_ui.gd
