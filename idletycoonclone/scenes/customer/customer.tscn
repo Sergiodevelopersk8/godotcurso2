@@ -1,0 +1,68 @@
+[gd_scene load_steps=7 format=3 uid="uid://wc0q8r5de70"]
+
+[ext_resource type="PackedScene" uid="uid://wtwkuvkvgd8h" path="res://scenes/cashier/cashier.tscn" id="1_8noaa"]
+[ext_resource type="Script" uid="uid://vmb4rmf7kykq" path="res://scenes/customer/customer.gd" id="2_duem0"]
+[ext_resource type="Texture2D" uid="uid://fthsmh5qo4rj" path="res://Idle Tycoon Assets/Sprites/UI/circle.png" id="3_k1bqq"]
+[ext_resource type="Texture2D" uid="uid://dlxagrf2rxh05" path="res://Idle Tycoon Assets/Sprites/UI/Coffee.png" id="4_6bdyt"]
+[ext_resource type="FontFile" uid="uid://due6jbyye53ld" path="res://Idle Tycoon Assets/Fonts/font_score.ttf" id="5_jy5aj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lu5oa"]
+font = ExtResource("5_jy5aj")
+font_size = 40
+font_color = Color(0, 0, 0, 1)
+
+[node name="Customer" instance=ExtResource("1_8noaa")]
+script = ExtResource("2_duem0")
+
+[node name="Body" parent="Visuals" index="1"]
+unique_name_in_owner = true
+
+[node name="Face" parent="Visuals" index="2"]
+unique_name_in_owner = true
+
+[node name="HandLeft" parent="Visuals" index="3"]
+unique_name_in_owner = true
+
+[node name="HandRight" parent="Visuals" index="4"]
+unique_name_in_owner = true
+
+[node name="ItemBox" type="Control" parent="." index="2"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 3
+anchors_preset = 0
+offset_left = -141.0
+offset_top = -139.0
+offset_right = -41.0
+offset_bottom = -39.0
+
+[node name="BG" type="TextureRect" parent="ItemBox" index="0"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_k1bqq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ItemImg" type="TextureRect" parent="ItemBox/BG" index="0"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 0
+offset_left = 7.0
+offset_top = 19.0
+offset_right = 67.0
+offset_bottom = 79.0
+texture = ExtResource("4_6bdyt")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ItemLabel" type="Label" parent="ItemBox/BG" index="1"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 59.0
+offset_top = 46.0
+offset_right = 99.0
+offset_bottom = 131.0
+text = "3
+"
+label_settings = SubResource("LabelSettings_lu5oa")

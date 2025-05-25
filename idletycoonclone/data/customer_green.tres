@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CustomerData" load_steps=5 format=3 uid="uid://bc772q7slvey"]
+
+[ext_resource type="Texture2D" uid="uid://ct1mj5q86efd1" path="res://Idle Tycoon Assets/Sprites/Characters/green_body_square.png" id="1_8ujel"]
+[ext_resource type="Script" uid="uid://n8t7oeuf1cdn" path="res://data/customer_data.gd" id="1_kasvp"]
+[ext_resource type="Texture2D" uid="uid://powy61lxqjfh" path="res://Idle Tycoon Assets/Sprites/Characters/face_b.png" id="2_mvywr"]
+[ext_resource type="Texture2D" uid="uid://d4eb24stjui2f" path="res://Idle Tycoon Assets/Sprites/Characters/green_hand_open.png" id="3_yjqdl"]
+
+[resource]
+script = ExtResource("1_kasvp")
+body = ExtResource("1_8ujel")
+face = ExtResource("2_mvywr")
+hand = ExtResource("3_yjqdl")
+metadata/_custom_type_script = "uid://n8t7oeuf1cdn"

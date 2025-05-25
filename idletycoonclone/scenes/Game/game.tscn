@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://cpbrfn3i5jvui"]
+
+[ext_resource type="Texture2D" uid="uid://i1v6d8iq58ox" path="res://Idle Tycoon Assets/Sprites/Fondo.png" id="1_jm17p"]
+[ext_resource type="Texture2D" uid="uid://dv0tmb053vwcd" path="res://Idle Tycoon Assets/Sprites/Counter.png" id="2_fc1p2"]
+[ext_resource type="Texture2D" uid="uid://drjydg6is1r5f" path="res://Idle Tycoon Assets/Sprites/Counter_half.png" id="3_fc1p2"]
+[ext_resource type="PackedScene" uid="uid://wtwkuvkvgd8h" path="res://scenes/cashier/cashier.tscn" id="4_bfxw3"]
+
+[node name="Game" type="Node2D"]
+
+[node name="BG" type="Sprite2D" parent="."]
+texture = ExtResource("1_jm17p")
+centered = false
+
+[node name="MainCounter" type="Sprite2D" parent="."]
+position = Vector2(531, 855)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_fc1p2")
+
+[node name="CoffeeCounter" type="Sprite2D" parent="."]
+position = Vector2(417, 1382)
+scale = Vector2(0.8, 0.9)
+texture = ExtResource("3_fc1p2")
+
+[node name="BurgerCounter" type="Sprite2D" parent="."]
+position = Vector2(657, 1382)
+scale = Vector2(0.8, 0.9)
+texture = ExtResource("3_fc1p2")
+
+[node name="Cashier" parent="." instance=ExtResource("4_bfxw3")]
+position = Vector2(536, 1076)
