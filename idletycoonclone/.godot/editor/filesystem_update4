@@ -1,11 +1,2 @@
 res://scenes/Game/game.tscn
-res://scenes/cashier/cashier.tscn
-res://scenes/cashier/cashier.gd
-res://scenes/customer/customer.tscn
-res://scenes/customer/customer.gd
-res://data/customer_data.gd
-res://data/Customer_red.tres
-res://data/Customer_yellow.tres
-res://data/Customer_green.tres
-res://data/Customer_purple.tres
-res://data/Customer_pink.tres
+res://scenes/manager/customer_manager.gd
