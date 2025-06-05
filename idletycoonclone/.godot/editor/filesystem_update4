@@ -1,2 +1,5 @@
 res://scenes/Game/game.tscn
 res://scenes/manager/customer_manager.gd
+res://scenes/cashier/cashier.tscn
+res://scenes/customer/customer.tscn
+res://scenes/customer/customer.gd
