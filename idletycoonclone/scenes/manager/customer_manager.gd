@@ -13,6 +13,7 @@ class_name CustomerManager
 
 func _ready() -> void:
 	spawn_customer()
+	
 
 #funcion para instanciar customer
 func spawn_customer():
@@ -24,6 +25,10 @@ func spawn_customer():
 	var sprite_data : CustomerData = customer_sprites.pick_random() 
 	#accedemos al nuevo cliente que creamos
 	customer.set_sprites(sprite_data)
+	
+	var random_item: Item = GameManager.get_random_item()
+	var quantity : int = randi_range(1,3)
+	customer.init_customer(random_item,quantity)
 	
 	#variable que almacena los customer randoms
 	var random_start_position : Marker2D = spawn_positions.pick_random()

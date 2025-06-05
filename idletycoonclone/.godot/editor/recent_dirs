@@ -1,5 +1,6 @@
-res://scenes/manager
+res://autoloads
 res://data
+res://scenes/manager
 res://scenes/customer
 res://scenes/cashier
 res://scenes/Game

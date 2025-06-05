@@ -3,3 +3,8 @@ res://scenes/manager/customer_manager.gd
 res://scenes/cashier/cashier.tscn
 res://scenes/customer/customer.tscn
 res://scenes/customer/customer.gd
+res://data/item.gd
+res://data/item_burger.tres
+res://data/item_coffe.tres
+res://autoloads/game_manager.tscn
+res://autoloads/game_manager.gd

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://b1tljdkd1311f"]
+
+[ext_resource type="Script" uid="uid://de131ngb2cwnm" path="res://data/item.gd" id="1_vjyhh"]
+[ext_resource type="Texture2D" uid="uid://no28cjn2vsln" path="res://Idle Tycoon Assets/Sprites/UI/Burger.png" id="2_72abt"]
+
+[resource]
+script = ExtResource("1_vjyhh")
+id = "Burger"
+type = 1
+sprite = ExtResource("2_72abt")
+cook_time = 10.0
+cook_time_reduce_perc = 0.5
+upgrade_cost = 4.0
+upgrade_multi = 1.3
+profit = 5.0
+profit_multi = 1.2
+metadata/_custom_type_script = "uid://de131ngb2cwnm"
