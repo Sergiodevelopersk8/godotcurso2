@@ -7,6 +7,13 @@ class_name Cashier
 #animacion
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
+#cliente actual
+var current_customer :Customer
+
+func set_customer(customer):
+	#cliente que se atiende actualmente
+	current_customer = customer
+
 func move_to_customer():
 	#crea un  tween
 	#moverlo

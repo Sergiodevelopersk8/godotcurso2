@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cpbrfn3i5jvui"]
+[gd_scene load_steps=15 format=3 uid="uid://cpbrfn3i5jvui"]
 
 [ext_resource type="Texture2D" uid="uid://i1v6d8iq58ox" path="res://Idle Tycoon Assets/Sprites/Fondo.png" id="1_jm17p"]
 [ext_resource type="Texture2D" uid="uid://dv0tmb053vwcd" path="res://Idle Tycoon Assets/Sprites/Counter.png" id="2_fc1p2"]
@@ -12,6 +12,8 @@
 [ext_resource type="Resource" uid="uid://c3i83okngynmy" path="res://data/customer_red.tres" id="10_u6w8h"]
 [ext_resource type="Resource" uid="uid://b48ikqreww55s" path="res://data/customer_yellow.tres" id="11_ssgoc"]
 [ext_resource type="PackedScene" uid="uid://wc0q8r5de70" path="res://scenes/customer/customer.tscn" id="12_yvoo5"]
+[ext_resource type="Script" uid="uid://df2np1jm3ynbb" path="res://scenes/manager/cashier_manager.gd" id="13_wg16f"]
+[ext_resource type="Script" uid="uid://045a07cxs2xs" path="res://scenes/manager/counter_manager.gd" id="13_y7cus"]
 
 [node name="Game" type="Node2D"]
 
@@ -34,9 +36,6 @@ position = Vector2(657, 1382)
 scale = Vector2(0.8, 0.9)
 texture = ExtResource("3_fc1p2")
 
-[node name="Cashier" parent="." instance=ExtResource("4_bfxw3")]
-position = Vector2(536, 1076)
-
 [node name="CustomerManager" type="Node" parent="." node_paths=PackedStringArray("spawn_positions")]
 script = ExtResource("5_7dfdq")
 spawn_positions = [NodePath("TopSpawnerPos"), NodePath("BottomSpawnPos")]
@@ -52,5 +51,30 @@ position = Vector2(-77, 640)
 [node name="SpawnTimer" type="Timer" parent="CustomerManager"]
 wait_time = 3.5
 autostart = true
+
+[node name="CounterManager" type="Node" parent="." node_paths=PackedStringArray("counter_positions")]
+unique_name_in_owner = true
+script = ExtResource("13_y7cus")
+counter_positions = [NodePath("Pos_0"), NodePath("Pos_1"), NodePath("Pos_2"), NodePath("Pos_3")]
+
+[node name="Pos_0" type="Marker2D" parent="CounterManager"]
+position = Vector2(370, 740)
+
+[node name="Pos_1" type="Marker2D" parent="CounterManager"]
+position = Vector2(480, 740)
+
+[node name="Pos_2" type="Marker2D" parent="CounterManager"]
+position = Vector2(590, 740)
+
+[node name="Pos_3" type="Marker2D" parent="CounterManager"]
+position = Vector2(700, 740)
+
+[node name="CashierManager" type="Node" parent="." node_paths=PackedStringArray("spawn_pos")]
+script = ExtResource("13_wg16f")
+cashier_scene = ExtResource("4_bfxw3")
+spawn_pos = NodePath("SpawnPos")
+
+[node name="SpawnPos" type="Marker2D" parent="CashierManager"]
+position = Vector2(521, 1081)
 
 [connection signal="timeout" from="CustomerManager/SpawnTimer" to="CustomerManager" method="_on_spawn_timer_timeout"]

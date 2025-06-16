@@ -1,5 +1,9 @@
 extends Node
 
+#señal que notifica que un cliente quiere ser atendido
+signal on_customer_request(customer: Customer)
+
+#variable que almacena un item que es hamburguesa y cafe
 @export var coffe : Item 
 @export var burger : Item
 
