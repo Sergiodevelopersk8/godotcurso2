@@ -1,10 +1,12 @@
-[gd_scene load_steps=15 format=3 uid="uid://cpbrfn3i5jvui"]
+[gd_scene load_steps=17 format=3 uid="uid://cpbrfn3i5jvui"]
 
 [ext_resource type="Texture2D" uid="uid://i1v6d8iq58ox" path="res://Idle Tycoon Assets/Sprites/Fondo.png" id="1_jm17p"]
 [ext_resource type="Texture2D" uid="uid://dv0tmb053vwcd" path="res://Idle Tycoon Assets/Sprites/Counter.png" id="2_fc1p2"]
 [ext_resource type="Texture2D" uid="uid://drjydg6is1r5f" path="res://Idle Tycoon Assets/Sprites/Counter_half.png" id="3_fc1p2"]
 [ext_resource type="PackedScene" uid="uid://wtwkuvkvgd8h" path="res://scenes/cashier/cashier.tscn" id="4_bfxw3"]
+[ext_resource type="Texture2D" uid="uid://dlxagrf2rxh05" path="res://Idle Tycoon Assets/Sprites/UI/Coffee.png" id="4_ssgoc"]
 [ext_resource type="Script" uid="uid://cylrotp8b38t6" path="res://scenes/manager/customer_manager.gd" id="5_7dfdq"]
+[ext_resource type="Texture2D" uid="uid://no28cjn2vsln" path="res://Idle Tycoon Assets/Sprites/UI/Burger.png" id="5_cueac"]
 [ext_resource type="Script" uid="uid://n8t7oeuf1cdn" path="res://data/customer_data.gd" id="6_5rpqn"]
 [ext_resource type="Resource" uid="uid://bc772q7slvey" path="res://data/customer_green.tres" id="7_yvoo5"]
 [ext_resource type="Resource" uid="uid://dmly0xejtwbcn" path="res://data/customer_pink.tres" id="8_y7cus"]
@@ -31,10 +33,20 @@ position = Vector2(417, 1382)
 scale = Vector2(0.8, 0.9)
 texture = ExtResource("3_fc1p2")
 
+[node name="Sprite2D" type="Sprite2D" parent="CoffeeCounter"]
+position = Vector2(-78.75, -52.2222)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("4_ssgoc")
+
 [node name="BurgerCounter" type="Sprite2D" parent="."]
 position = Vector2(657, 1382)
 scale = Vector2(0.8, 0.9)
 texture = ExtResource("3_fc1p2")
+
+[node name="Sprite2D" type="Sprite2D" parent="BurgerCounter"]
+position = Vector2(-73.75, -74.4445)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("5_cueac")
 
 [node name="CustomerManager" type="Node" parent="." node_paths=PackedStringArray("spawn_positions")]
 script = ExtResource("5_7dfdq")

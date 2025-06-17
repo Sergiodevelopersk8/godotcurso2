@@ -1,3 +1,4 @@
+Sprite2D
 Marker2D
 Node
 Timer
@@ -6,4 +7,3 @@ TextureRect
 Control
 Node2D
 AnimationPlayer
-Sprite2D

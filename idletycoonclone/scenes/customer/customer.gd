@@ -25,7 +25,7 @@ func init_customer(item : Item, quantity : int):
 	request_item = item
 	request_quantity = quantity
 	current_order_status= quantity
-	show_request()
+
 
 
 #funcion que permite actualizar texturas de customer

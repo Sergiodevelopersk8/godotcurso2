@@ -10,12 +10,31 @@ class_name Cashier
 #cliente actual
 var current_customer :Customer
 
-func set_customer(customer):
+var counter_pos : Vector2
+
+func set_customer(customer : Customer):
 	#cliente que se atiende actualmente
 	current_customer = customer
+	#este cliente ya esta siendo atendido
+	customer.being_served = true
+	#mueve al cashier cerca de la posición del customer
+	counter_pos = Vector2(customer.position.x, customer.position.y + 160)
+
+func take_order():
+	move_to_customer()
+	#hacemos un intervalo para que acabe la animación de move
+	await get_tree().create_timer(1.1).timeout
+	#mustra el pedido del cliente (borra el show request del script de customer 
+	#de la funncion de init_customer
+	current_customer.show_request()
+	#muve al cashier a la otra mesa para preparar el pedido
+	move_to_item_position()
+
 
 func move_to_customer():
 	#crea un  tween
+	var tween := create_tween()
+	tween.tween_property(self, "position", counter_pos, 1.0) 
 	#moverlo
 	animation_player.play("move")
 
