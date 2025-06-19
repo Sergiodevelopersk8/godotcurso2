@@ -13,7 +13,9 @@ class_name Customer
 
 #guardamos la referencia al item
 var request_item : Item
+#variable que muestar la cantidad
 var request_quantity : int
+#variable de cuanto ordena 
 var current_order_status : int
 
 #posicion por vector2

@@ -3,7 +3,7 @@ class_name Item
 
 #tipos de item
 enum ItemType{
-	coffe,
+	Coffe,
 	Burger
 }
 
