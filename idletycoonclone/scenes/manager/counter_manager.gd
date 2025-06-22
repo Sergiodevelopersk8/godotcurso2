@@ -12,6 +12,10 @@ var counter : Dictionary[int, Customer] ={
 	3:null,
 }
 
+func _ready() -> void:
+	GameManager.on_customer_order_completed.connect(_on_customer_order_completed)
+
+
 #funcion que ve si hay una posición libre en el diccionario
 func get_free_index()-> int:
 	#recorremos los elementos del diccionario
@@ -35,3 +39,25 @@ func assign_customer(customer : Customer):
 	#accedemos al customer a la variable customer_pos
 	#y damos la referencia de la posición
 	customer.counter_position = free_counter_pos 
+
+#regresa el primer cliente disponible
+func get_first_avilabe_customer()-> Customer:
+	#recorremos para ver si son nulo
+	for customer : Customer in counter.values():
+		#si no es nulo
+		if customer != null:
+			#si el cliente esta en espera y no a sido atendido
+			if customer.waiting_order and not customer.being_served:
+				return customer
+	
+	return null
+
+func _on_customer_order_completed(customer : Customer):
+	#liberamos la referencia
+	#lo llamamos x para counter
+	for x : int in counter:
+		# si counter en la posicion x es igual a customer
+		if counter[x] == customer:
+			#su nuevo valor sera nulo
+			counter[x] = null
+	

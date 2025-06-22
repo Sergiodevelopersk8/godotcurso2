@@ -2,6 +2,8 @@ extends Node
 
 #señal que notifica que un cliente quiere ser atendido
 signal on_customer_request(customer: Customer)
+#señal de orden completada
+signal on_customer_order_completed(customer : Customer)
 
 #variable que almacena un item que es hamburguesa y cafe
 @export var coffe : Item 
@@ -10,7 +12,8 @@ signal on_customer_request(customer: Customer)
 #variables de la posicion del item cafe hamburguesa
 var coffe_counter_pos := Vector2(425, 1250)  
 var burguer_counter_pos := Vector2(680,1250)  
-
+#mondeas actuales 
+var current_coins : int
 #funcion que regresa un item de manera random
 func get_random_item() -> Item:
 	# creamos un array 

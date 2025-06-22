@@ -7,6 +7,10 @@ class_name CashierManager
 #referencia donde instanciar el cashier
 @export var spawn_pos: Marker2D 
 
+@onready var counter_manager: CounterManager = %CounterManager
+
+
+
 #arreglo que guardamos la referencia del cashier
 var cashier_list : Array[Cashier] = []
 
@@ -20,6 +24,8 @@ func _ready():
 func add_cashier():
 	#variable que instancia la escena cashier
 	var new_cashier: Cashier = cashier_scene.instantiate()
+	#señal de cashier
+	new_cashier.on_order_clompleted.connect(_on_order_clompleted)
 	#agrega el nuevo cashier
 	add_child(new_cashier)
 	#modificamos su posicon para que sea igual a spawn_pos 
@@ -42,3 +48,13 @@ func _on_customer_request(customer : Customer):
 		random_cashier.set_customer(customer)
 		#toma la orden
 		random_cashier.take_order()
+
+func _on_order_clompleted(cashier : Cashier):
+	#obtener un cliente disponible en el counter que no a sido entendido
+	var free_customer : Customer = counter_manager.get_first_avilabe_customer()
+	#verificamos que no sea nulo
+	if free_customer:
+		#referencia al nuevo cliente
+		cashier.set_customer(free_customer)
+		#toma la orden
+		cashier.take_order()

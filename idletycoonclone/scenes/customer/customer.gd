@@ -20,12 +20,23 @@ var current_order_status : int
 
 #posicion por vector2
 var counter_position : Vector2
-
+#variable de que el cliente ya esta siendo atendido
 var being_served : bool 
+#decir que el cliente llega a la posicion del counter y en espera de 
+#que lo atiendan
+var waiting_order: bool
+
+
+func _process(delta: float) -> void:
+	item_label.text = str(current_order_status)
+
 
 func init_customer(item : Item, quantity : int):
+	#inicializamos la referencia
 	request_item = item
+	#cantidad del pedido
 	request_quantity = quantity
+	#estado actual de la cantidad
 	current_order_status= quantity
 
 
@@ -54,6 +65,7 @@ func move_to_counter():
 	#finalizamos el tween y usamos la animación de idle
 	tween.finished.connect(func():
 		anim_player.play("idle")
+		waiting_order = true
 		#funcion del game manager y su referencia a si mismo
 		GameManager.on_customer_request.emit(self)
 		)
@@ -66,6 +78,30 @@ func show_request():
 	item_img.texture = request_item.sprite
 	item_label.text = str(request_quantity)
 	
+	
+
+#funcion de recibir orden
+func receive_order():
+	#reduce la cantidad de orden
+	current_order_status -= 1
+	#valida la orden actual ya se completo 
+	if current_order_status <= 0 :
+		#llamamos ala funcion de oreden completada
+		oreder_completed()
+
+func oreder_completed():
+	item_box.hide()
+	waiting_order = false
+	#variable para mover customer cuando fue atendido
+	var counter_top_position = counter_position.y - 180
+	var tween = create_tween()
+	#mueve al customer 
+	tween.tween_property(self, "position",Vector2(counter_position.x, counter_top_position), 1.0)
+	tween.tween_interval(0.2)
+	tween.tween_property(self, "position",Vector2(counter_position.x + 800, counter_top_position), 3.0)
+	tween.tween_interval(0.2)
+	#nos conectamos y finalizamos
+	tween.finished.connect(func(): GameManager.on_customer_order_completed.emit(self))
 
 
 func play_move_anim():

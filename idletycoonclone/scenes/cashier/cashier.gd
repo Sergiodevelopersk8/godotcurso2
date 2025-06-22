@@ -1,6 +1,9 @@
 extends Node2D
 class_name Cashier
 
+#señal de que se completo la orden con referencia a cashier
+signal on_order_clompleted(cashier : Cashier)
+
 #variable de movimiento
 @export var move_speed := 50.0
 
@@ -71,7 +74,22 @@ func start_cook_time():
 	cook_bar.cook_item(item_request.cook_time)
 
 func deliver_oreder():
-	print("cook completed")
+	#nos movemos a la posicion del cliente
+	move_to_customer()
+	#esperamos y emitimos un time out
+	await get_tree().create_timer(1.1).timeout
+	current_customer.receive_order()
+	#obtenemos las monedas 
+	GameManager.current_coins += item_request.profit
+	# si faltan unidades por entregar
+	if not current_customer.current_order_status <= 0:
+		move_to_item_position()
+	else:
+		animation_player.play("idle")
+		current_customer = null
+		#emitimos la señal de que se completo
+		on_order_clompleted.emit(self)
+
 
 
 func _on_cook_bar_on_cook_completed() -> void:
