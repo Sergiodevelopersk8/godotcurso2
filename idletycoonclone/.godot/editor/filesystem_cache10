@@ -1,19 +1,19 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1750367428
+::res://::1750575002
 icon.svg::CompressedTexture2D/CompressedTexture2D::4901191189968074723::1748152010::1748152021::1::::<><><>0<>0<>123dade2503c83c9cca2c40489c91a20<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-::res://autoloads/::1750203688
-game_manager.gd::GDScript/GDScript::8368991914909156611::1750065160::0::1::::<>Node<><>0<>0<><>::
-game_manager.tscn::PackedScene::2068685407726428069::1750203688::0::1::::<><><>0<>0<><>::uid://driacrw7t1q3l::::res://autoloads/game_manager.gd<>uid://btbf44ab8rqrf::::res://data/item_coffe.tres<>uid://b1tljdkd1311f::::res://data/item_burger.tres
-::res://data/::1750202950
+::res://autoloads/::1750370986
+game_manager.gd::GDScript::8368991914909156611::1750370346::0::1::::<>Node<><>0<>0<><>::
+game_manager.tscn::PackedScene::2068685407726428069::1750370986::0::1::::<><><>0<>0<><>::uid://driacrw7t1q3l::::res://autoloads/game_manager.gd<>uid://btbf44ab8rqrf::::res://data/item_coffe.tres<>uid://b1tljdkd1311f::::res://data/item_burger.tres
+::res://data/::1750368850
 customer_data.gd::GDScript/GDScript::981790943868447259::1748162313::0::1::::CustomerData<>Resource<><>0<>0<><>::
 customer_green.tres::Resource/CustomerData::76319132645404396::1748163089::0::1::::<><><>0<>0<><>::uid://ct1mj5q86efd1::::res://Idle Tycoon Assets/Sprites/Characters/green_body_square.png<>uid://n8t7oeuf1cdn::::res://data/customer_data.gd<>uid://powy61lxqjfh::::res://Idle Tycoon Assets/Sprites/Characters/face_b.png<>uid://d4eb24stjui2f::::res://Idle Tycoon Assets/Sprites/Characters/green_hand_open.png
 customer_pink.tres::Resource/CustomerData::8025739397355812949::1748163199::0::1::::<><><>0<>0<><>::uid://n8t7oeuf1cdn::::res://data/customer_data.gd<>uid://dy0hd1o3sv3qk::::res://Idle Tycoon Assets/Sprites/Characters/pink_body_rhombus.png<>uid://by2kbrr7sgmsj::::res://Idle Tycoon Assets/Sprites/Characters/face_f.png<>uid://bvqjlqu1tu17y::::res://Idle Tycoon Assets/Sprites/Characters/pink_hand_peace.png
 customer_purple.tres::Resource/CustomerData::3817601511906754518::1748163133::0::1::::<><><>0<>0<><>::uid://cxafqqbiq1vl1::::res://Idle Tycoon Assets/Sprites/Characters/purple_body_circle.png<>uid://n8t7oeuf1cdn::::res://data/customer_data.gd<>uid://nsm7t7sy7swd::::res://Idle Tycoon Assets/Sprites/Characters/face_i.png<>uid://dmqxv7wburby7::::res://Idle Tycoon Assets/Sprites/Characters/purple_hand_thumb.png
 customer_red.tres::Resource/CustomerData::6756698425648800932::1748162985::0::1::::<><><>0<>0<><>::uid://n8t7oeuf1cdn::::res://data/customer_data.gd<>uid://dau1d0enqnj5v::::res://Idle Tycoon Assets/Sprites/Characters/red_body_circle.png<>uid://b5jk47et10yef::::res://Idle Tycoon Assets/Sprites/Characters/face_g.png<>uid://bt2exgwat511a::::res://Idle Tycoon Assets/Sprites/Characters/red_hand_point.png
 customer_yellow.tres::Resource/CustomerData::4490526075808512342::1748162985::0::1::::<><><>0<>0<><>::uid://dsqeq8b1p56jw::::res://Idle Tycoon Assets/Sprites/Characters/yellow_body_rhombus.png<>uid://n8t7oeuf1cdn::::res://data/customer_data.gd<>uid://q7v2yald6wch::::res://Idle Tycoon Assets/Sprites/Characters/face_d.png<>uid://pxunpwv4c43q::::res://Idle Tycoon Assets/Sprites/Characters/hand_yellow_rock.png
-item.gd::GDScript/GDScript::7495438445829974526::1749095976::0::1::::Item<>Resource<><>0<>0<><>::
-item_burger.tres::Resource/Item::4251237927864931009::1750202950::0::1::::<><><>0<>0<><>::uid://de131ngb2cwnm::::res://data/item.gd<>uid://no28cjn2vsln::::res://Idle Tycoon Assets/Sprites/UI/Burger.png
-item_coffe.tres::Resource/Item::3722429986824226367::1750202950::0::1::::<><><>0<>0<><>::uid://de131ngb2cwnm::::res://data/item.gd<>uid://dlxagrf2rxh05::::res://Idle Tycoon Assets/Sprites/UI/Coffee.png
+item.gd::GDScript::7495438445829974526::1750368850::0::1::::Item<>Resource<><>0<>0<><>::
+item_burger.tres::Resource/Item::4251237927864931009::1750367927::0::1::::<><><>0<>0<><>::uid://de131ngb2cwnm::::res://data/item.gd<>uid://no28cjn2vsln::::res://Idle Tycoon Assets/Sprites/UI/Burger.png
+item_coffe.tres::Resource/Item::3722429986824226367::1750367927::0::1::::<><><>0<>0<><>::uid://de131ngb2cwnm::::res://data/item.gd<>uid://dlxagrf2rxh05::::res://Idle Tycoon Assets/Sprites/UI/Coffee.png
 ::res://Idle Tycoon Assets/::1734394646
 ::res://Idle Tycoon Assets/Fonts/::1748152081
 font_score.ttf::FontFile/FontFile::8573194824472757913::1719813931::1748152081::1::::<><><>0<>0<>8613eb2cfd66e46bb21185e4f5452c37<>res://.godot/imported/font_score.ttf-14c370565ed4e13299a4d90fbb1e95f3.fontdata::
@@ -131,14 +131,14 @@ pb_circle.png::CompressedTexture2D/CompressedTexture2D::33116565047266821::17289
 pg_outline.png::CompressedTexture2D/CompressedTexture2D::2994147023214097670::1728971768::1748152082::1::::<><><>0<>0<>8f537135cf0160979e6ff605560b3c45<>res://.godot/imported/pg_outline.png-83be32e08a5408c99cd4dd9d0366f4bc.ctex::
 star.png::CompressedTexture2D/CompressedTexture2D::3708885874068366007::1729634224::1748152082::1::::<><><>0<>0<>c56506c28d9505ba33af2f56c6e1836e<>res://.godot/imported/star.png-2fb777f155045d127923a013c56efed4.ctex::
 ::res://scenes/::1749083257
-::res://scenes/cashier/::1750203688
-cashier.gd::GDScript::3776844439181293558::1750203686::0::1::::Cashier<>Node2D<><>0<>0<><>::
-cashier.tscn::PackedScene::1584732452534312693::1750203688::0::1::::<><><>0<>0<><>::uid://bt2sct8n1tfy1::::res://scenes/cashier/cashier.gd<>uid://vukrm1i8u07n::::res://Idle Tycoon Assets/Sprites/Characters/blue_body_square.png<>uid://dqbfes1vkfshe::::res://Idle Tycoon Assets/Sprites/shadow.png<>uid://jf60677t635w::::res://Idle Tycoon Assets/Sprites/Characters/face_a.png<>uid://ctjsioplj2qsa::::res://Idle Tycoon Assets/Sprites/Characters/blue_hand_closed.png
-::res://scenes/customer/::1750203688
-customer.gd::GDScript::1498851666168372276::1750203514::0::1::::Customer<>Node2D<><>0<>0<><>::
-customer.tscn::PackedScene::45583281587234369::1750203688::0::1::::<><><>0<>0<><>::uid://wtwkuvkvgd8h::::res://scenes/cashier/cashier.tscn<>uid://vmb4rmf7kykq::::res://scenes/customer/customer.gd<>uid://fthsmh5qo4rj::::res://Idle Tycoon Assets/Sprites/UI/circle.png<>uid://dlxagrf2rxh05::::res://Idle Tycoon Assets/Sprites/UI/Coffee.png<>uid://due6jbyye53ld::::res://Idle Tycoon Assets/Fonts/font_score.ttf
-::res://scenes/Game/::1750204189
-game.tscn::PackedScene::5828780244019329708::1750204189::0::1::::<><><>0<>0<><>::uid://i1v6d8iq58ox::::res://Idle Tycoon Assets/Sprites/Fondo.png<>uid://dv0tmb053vwcd::::res://Idle Tycoon Assets/Sprites/Counter.png<>uid://drjydg6is1r5f::::res://Idle Tycoon Assets/Sprites/Counter_half.png<>uid://wtwkuvkvgd8h::::res://scenes/cashier/cashier.tscn<>uid://dlxagrf2rxh05::::res://Idle Tycoon Assets/Sprites/UI/Coffee.png<>uid://cylrotp8b38t6::::res://scenes/manager/customer_manager.gd<>uid://no28cjn2vsln::::res://Idle Tycoon Assets/Sprites/UI/Burger.png<>uid://n8t7oeuf1cdn::::res://data/customer_data.gd<>uid://bc772q7slvey::::res://data/customer_green.tres<>uid://dmly0xejtwbcn::::res://data/customer_pink.tres<>uid://bunjlsbwnidby::::res://data/customer_purple.tres<>uid://c3i83okngynmy::::res://data/customer_red.tres<>uid://b48ikqreww55s::::res://data/customer_yellow.tres<>uid://wc0q8r5de70::::res://scenes/customer/customer.tscn<>uid://df2np1jm3ynbb::::res://scenes/manager/cashier_manager.gd<>uid://045a07cxs2xs::::res://scenes/manager/counter_manager.gd
+::res://scenes/cashier/::1750370986
+cashier.gd::GDScript::3776844439181293558::1750370976::0::1::::Cashier<>Node2D<><>0<>0<><>::
+cashier.tscn::PackedScene::1584732452534312693::1750370986::0::1::::<><><>0<>0<><>::uid://bt2sct8n1tfy1::::res://scenes/cashier/cashier.gd<>uid://vukrm1i8u07n::::res://Idle Tycoon Assets/Sprites/Characters/blue_body_square.png<>uid://dqbfes1vkfshe::::res://Idle Tycoon Assets/Sprites/shadow.png<>uid://jf60677t635w::::res://Idle Tycoon Assets/Sprites/Characters/face_a.png<>uid://ctjsioplj2qsa::::res://Idle Tycoon Assets/Sprites/Characters/blue_hand_closed.png
+::res://scenes/customer/::1750370986
+customer.gd::GDScript::1498851666168372276::1750367927::0::1::::Customer<>Node2D<><>0<>0<><>::
+customer.tscn::PackedScene::45583281587234369::1750370986::0::1::::<><><>0<>0<><>::uid://wtwkuvkvgd8h::::res://scenes/cashier/cashier.tscn<>uid://vmb4rmf7kykq::::res://scenes/customer/customer.gd<>uid://fthsmh5qo4rj::::res://Idle Tycoon Assets/Sprites/UI/circle.png<>uid://dlxagrf2rxh05::::res://Idle Tycoon Assets/Sprites/UI/Coffee.png<>uid://due6jbyye53ld::::res://Idle Tycoon Assets/Fonts/font_score.ttf
+::res://scenes/Game/::1750370986
+game.tscn::PackedScene::5828780244019329708::1750370986::0::1::::<><><>0<>0<><>::uid://i1v6d8iq58ox::::res://Idle Tycoon Assets/Sprites/Fondo.png<>uid://dv0tmb053vwcd::::res://Idle Tycoon Assets/Sprites/Counter.png<>uid://drjydg6is1r5f::::res://Idle Tycoon Assets/Sprites/Counter_half.png<>uid://wtwkuvkvgd8h::::res://scenes/cashier/cashier.tscn<>uid://dlxagrf2rxh05::::res://Idle Tycoon Assets/Sprites/UI/Coffee.png<>uid://cylrotp8b38t6::::res://scenes/manager/customer_manager.gd<>uid://no28cjn2vsln::::res://Idle Tycoon Assets/Sprites/UI/Burger.png<>uid://n8t7oeuf1cdn::::res://data/customer_data.gd<>uid://bc772q7slvey::::res://data/customer_green.tres<>uid://dmly0xejtwbcn::::res://data/customer_pink.tres<>uid://bunjlsbwnidby::::res://data/customer_purple.tres<>uid://c3i83okngynmy::::res://data/customer_red.tres<>uid://b48ikqreww55s::::res://data/customer_yellow.tres<>uid://wc0q8r5de70::::res://scenes/customer/customer.tscn<>uid://df2np1jm3ynbb::::res://scenes/manager/cashier_manager.gd<>uid://045a07cxs2xs::::res://scenes/manager/counter_manager.gd
 ::res://scenes/manager/::1750066496
 cashier_manager.gd::GDScript/GDScript::7566761956537560855::1750066496::0::1::::CashierManager<>Node<><>0<>0<><>::
 counter_manager.gd::GDScript/GDScript::1816410918241377996::1750058399::0::1::::CounterManager<>Node<><>0<>0<><>::

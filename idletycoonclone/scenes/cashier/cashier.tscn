@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://wtwkuvkvgd8h"]
+[gd_scene load_steps=11 format=3 uid="uid://wtwkuvkvgd8h"]
 
 [ext_resource type="Script" uid="uid://bt2sct8n1tfy1" path="res://scenes/cashier/cashier.gd" id="1_erpnb"]
 [ext_resource type="Texture2D" uid="uid://vukrm1i8u07n" path="res://Idle Tycoon Assets/Sprites/Characters/blue_body_square.png" id="1_hdeuw"]
 [ext_resource type="Texture2D" uid="uid://dqbfes1vkfshe" path="res://Idle Tycoon Assets/Sprites/shadow.png" id="1_ks7a0"]
 [ext_resource type="Texture2D" uid="uid://jf60677t635w" path="res://Idle Tycoon Assets/Sprites/Characters/face_a.png" id="2_ks7a0"]
 [ext_resource type="Texture2D" uid="uid://ctjsioplj2qsa" path="res://Idle Tycoon Assets/Sprites/Characters/blue_hand_closed.png" id="3_erpnb"]
+[ext_resource type="PackedScene" uid="uid://blqrojrop5l45" path="res://scenes/ui/cook_bar.tscn" id="6_2t7dy"]
 
 [sub_resource type="Animation" id="Animation_erpnb"]
 length = 0.001
@@ -166,3 +167,13 @@ libraries = {
 &"": SubResource("AnimationLibrary_2t7dy")
 }
 autoplay = "idle"
+
+[node name="CookBar" parent="." instance=ExtResource("6_2t7dy")]
+visible = false
+offset_left = -45.0
+offset_top = -146.0
+offset_right = -45.0
+offset_bottom = -146.0
+scale = Vector2(0.7, 0.7)
+
+[connection signal="on_cook_completed" from="CookBar" to="." method="_on_cook_bar_on_cook_completed"]

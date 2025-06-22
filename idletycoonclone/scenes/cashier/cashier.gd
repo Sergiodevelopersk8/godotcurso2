@@ -4,6 +4,10 @@ class_name Cashier
 #variable de movimiento
 @export var move_speed := 50.0
 
+#referencia a la barra de cocinando
+@onready var cook_bar: CookBar = $CookBar
+
+
 #animacion
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
@@ -63,3 +67,14 @@ func move_to_item_position():
 
 func start_cook_time():
 	animation_player.play("idle")
+	cook_bar.show()
+	cook_bar.cook_item(item_request.cook_time)
+
+func deliver_oreder():
+	print("cook completed")
+
+
+func _on_cook_bar_on_cook_completed() -> void:
+	cook_bar.hide()
+	cook_bar.reset_bar()
+	deliver_oreder()

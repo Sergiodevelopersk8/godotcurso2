@@ -68,3 +68,6 @@ offset_bottom = 131.0
 text = "3
 "
 label_settings = SubResource("LabelSettings_lu5oa")
+
+[node name="CookBar" parent="." index="3"]
+visible = false

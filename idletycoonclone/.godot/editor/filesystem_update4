@@ -1,10 +1,9 @@
-res://scenes/cashier/cashier.tscn
 res://data/item_coffe.tres
 res://data/item_burger.tres
+res://scenes/ui/cook_bar.tscn
+res://scenes/ui/cook_bar.gd
+res://scenes/cashier/cashier.tscn
 res://scenes/cashier/cashier.gd
-res://scenes/customer/customer.gd
-res://autoloads/game_manager.gd
-res://data/item.gd
-res://scenes/Game/game.tscn
 res://scenes/customer/customer.tscn
+res://scenes/Game/game.tscn
 res://autoloads/game_manager.tscn
