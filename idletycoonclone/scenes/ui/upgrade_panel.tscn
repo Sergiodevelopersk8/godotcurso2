@@ -1,0 +1,207 @@
+[gd_scene load_steps=12 format=3 uid="uid://8ubp2xjcuqhl"]
+
+[ext_resource type="LabelSettings" uid="uid://nm64xyi8l5da" path="res://Label_40_black.tres" id="1_07vy7"]
+[ext_resource type="Script" uid="uid://bedjn3u6ogvcr" path="res://scenes/ui/upgrade_panel.gd" id="1_h3cs2"]
+[ext_resource type="FontFile" uid="uid://due6jbyye53ld" path="res://Idle Tycoon Assets/Fonts/font_score.ttf" id="2_h3cs2"]
+[ext_resource type="Texture2D" uid="uid://bs3u2que1b1mp" path="res://Idle Tycoon Assets/Sprites/UI/star.png" id="3_yfgry"]
+[ext_resource type="Texture2D" uid="uid://crnkm457nig4l" path="res://Idle Tycoon Assets/Sprites/UI/coin_gold.png" id="4_hgys6"]
+[ext_resource type="Texture2D" uid="uid://csr7q5t8gp3dr" path="res://Idle Tycoon Assets/Sprites/UI/contrast.png" id="5_0bo23"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y41p1"]
+bg_color = Color(0.807843, 0.807843, 0.807843, 1)
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+border_color = Color(0.000693897, 0.000693898, 0.000693897, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_36bw7"]
+font = ExtResource("2_h3cs2")
+font_size = 70
+font_color = Color(0.0177324, 0.0177324, 0.0177324, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ma7n"]
+bg_color = Color(0.337255, 0.337255, 0.337255, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.0110876, 0.0110876, 0.0110876, 1)
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_17hn6"]
+bg_color = Color(0.0156863, 0.584314, 0.835294, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mwooa"]
+bg_color = Color(0.117647, 0.784314, 0.607843, 1)
+
+[node name="UpgradePanel" type="Control"]
+custom_minimum_size = Vector2(550, 650)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -530.0
+offset_bottom = -1270.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h3cs2")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_y41p1")
+
+[node name="Level" type="Label" parent="Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -44.5
+offset_top = 20.0
+offset_right = 44.5
+offset_bottom = 69.0
+grow_horizontal = 2
+text = "LV.0"
+label_settings = ExtResource("1_07vy7")
+
+[node name="ItemName" type="Label" parent="Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -68.5
+offset_top = 83.0
+offset_right = 68.5
+offset_bottom = 132.0
+grow_horizontal = 2
+text = "COFFE"
+label_settings = SubResource("LabelSettings_36bw7")
+
+[node name="StartHBox" type="HBoxContainer" parent="Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -184.0
+offset_top = -145.0
+offset_right = 184.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel/StartHBox"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+texture = ExtResource("3_yfgry")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="Panel/StartHBox"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+texture = ExtResource("3_yfgry")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect3" type="TextureRect" parent="Panel/StartHBox"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+texture = ExtResource("3_yfgry")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ProgressBar" type="ProgressBar" parent="Panel"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(420, 36)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -210.0
+offset_top = 17.0
+offset_right = 210.0
+offset_bottom = 53.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_3ma7n")
+theme_override_styles/fill = SubResource("StyleBoxFlat_17hn6")
+max_value = 1.0
+show_percentage = false
+
+[node name="ProfitHBox" type="HBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 406.0
+offset_right = 139.0
+offset_bottom = 455.0
+theme_override_constants/separation = 15
+
+[node name="TextureRect" type="TextureRect" parent="Panel/ProfitHBox"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("4_hgys6")
+expand_mode = 1
+
+[node name="Profit" type="Label" parent="Panel/ProfitHBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "1"
+label_settings = ExtResource("1_07vy7")
+
+[node name="TimeHBox" type="HBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 329.0
+offset_top = 398.0
+offset_right = 490.0
+offset_bottom = 462.0
+
+[node name="TextureRect" type="TextureRect" parent="Panel/TimeHBox"]
+modulate = Color(0.0901961, 0.768627, 0.878431, 1)
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("5_0bo23")
+expand_mode = 1
+
+[node name="CookTime" type="Label" parent="Panel/TimeHBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "10 s"
+label_settings = ExtResource("1_07vy7")
+
+[node name="UpgradeButton" type="Button" parent="Panel"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 115)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -147.0
+offset_right = 150.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_h3cs2")
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = SubResource("StyleBoxFlat_mwooa")
+text = "50"

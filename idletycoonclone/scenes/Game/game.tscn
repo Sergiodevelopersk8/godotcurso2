@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cpbrfn3i5jvui"]
+[gd_scene load_steps=20 format=3 uid="uid://cpbrfn3i5jvui"]
 
 [ext_resource type="Texture2D" uid="uid://i1v6d8iq58ox" path="res://Idle Tycoon Assets/Sprites/Fondo.png" id="1_jm17p"]
 [ext_resource type="Texture2D" uid="uid://dv0tmb053vwcd" path="res://Idle Tycoon Assets/Sprites/Counter.png" id="2_fc1p2"]
@@ -16,6 +16,9 @@
 [ext_resource type="PackedScene" uid="uid://wc0q8r5de70" path="res://scenes/customer/customer.tscn" id="12_yvoo5"]
 [ext_resource type="Script" uid="uid://df2np1jm3ynbb" path="res://scenes/manager/cashier_manager.gd" id="13_wg16f"]
 [ext_resource type="Script" uid="uid://045a07cxs2xs" path="res://scenes/manager/counter_manager.gd" id="13_y7cus"]
+[ext_resource type="Script" uid="uid://bb8kr0v86xhiq" path="res://scenes/Game/game_ui.gd" id="17_cueac"]
+[ext_resource type="PackedScene" uid="uid://8ubp2xjcuqhl" path="res://scenes/ui/upgrade_panel.tscn" id="18_r8o54"]
+[ext_resource type="Texture2D" uid="uid://nos5blhg2lyi" path="res://Idle Tycoon Assets/Sprites/UI/Arrow.png" id="18_rsxsa"]
 
 [node name="Game" type="Node2D"]
 
@@ -89,4 +92,39 @@ spawn_pos = NodePath("SpawnPos")
 [node name="SpawnPos" type="Marker2D" parent="CashierManager"]
 position = Vector2(521, 1081)
 
+[node name="GameUI" type="CanvasLayer" parent="."]
+script = ExtResource("17_cueac")
+
+[node name="CoffeButton" type="TextureButton" parent="GameUI"]
+offset_left = 407.0
+offset_top = 1317.0
+offset_right = 471.0
+offset_bottom = 1381.0
+texture_normal = ExtResource("18_rsxsa")
+
+[node name="BurgerButton" type="TextureButton" parent="GameUI"]
+offset_left = 659.0
+offset_top = 1317.0
+offset_right = 723.0
+offset_bottom = 1381.0
+texture_normal = ExtResource("18_rsxsa")
+
+[node name="CoffeUpgradePanel" parent="GameUI" instance=ExtResource("18_r8o54")]
+visible = false
+offset_left = 265.0
+offset_top = 530.0
+offset_right = -265.0
+offset_bottom = -740.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="BurgerUpgradePanel" parent="GameUI" instance=ExtResource("18_r8o54")]
+visible = false
+offset_left = 265.0
+offset_top = 530.0
+offset_right = -265.0
+offset_bottom = -740.0
+
 [connection signal="timeout" from="CustomerManager/SpawnTimer" to="CustomerManager" method="_on_spawn_timer_timeout"]
+[connection signal="pressed" from="GameUI/CoffeButton" to="GameUI" method="_on_coffe_button_pressed"]
+[connection signal="pressed" from="GameUI/BurgerButton" to="GameUI" method="_on_burger_button_pressed"]

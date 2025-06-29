@@ -1,3 +1,11 @@
+TextureButton
+Button
+CanvasLayer
+Label
+TextureRect
+HBoxContainer
+ProgressBar
+Panel
 AudioStreamPlayer
 Node
 GPUParticles2D
@@ -5,8 +13,3 @@ TextureProgressBar
 Marker2D
 Sprite2D
 Timer
-Label
-TextureRect
-Control
-Node2D
-AnimationPlayer

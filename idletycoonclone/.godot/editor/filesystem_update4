@@ -7,3 +7,6 @@ res://scenes/cashier/cashier.tscn
 res://scenes/customer/customer.tscn
 res://scenes/ui/cook_bar.tscn
 res://autoloads/sound_manager.tscn
+res://scenes/ui/upgrade_panel.tscn
+res://scenes/ui/upgrade_panel.gd
+res://scenes/Game/game_ui.gd

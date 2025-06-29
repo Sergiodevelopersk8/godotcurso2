@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://nm64xyi8l5da"]
+
+[ext_resource type="FontFile" uid="uid://due6jbyye53ld" path="res://Idle Tycoon Assets/Fonts/font_score.ttf" id="1_b43o7"]
+
+[resource]
+font = ExtResource("1_b43o7")
+font_size = 48
+font_color = Color(0.0177324, 0.0177324, 0.0177324, 1)
