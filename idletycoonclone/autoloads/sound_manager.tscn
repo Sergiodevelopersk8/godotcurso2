@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctdppvuqbnm1o"]
+
+[ext_resource type="Script" uid="uid://cy8spqfmbcs70" path="res://autoloads/sound_manager.gd" id="1_4udv5"]
+[ext_resource type="AudioStream" uid="uid://ee1clshwyfr0" path="res://Idle Tycoon Assets/Sound/flat-8-bit-gaming-music-instrumental-211547.mp3" id="2_xy5rq"]
+
+[node name="SoundManager" type="Node"]
+script = ExtResource("1_4udv5")
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_xy5rq")
+volume_db = 3.521
+autoplay = true
+bus = &"Music"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
+
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"

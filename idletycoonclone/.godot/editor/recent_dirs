@@ -1,6 +1,7 @@
+res://autoloads
+res://scenes/extra
 res://scenes/ui
 res://scenes/manager
-res://autoloads
 res://data
 res://scenes/customer
 res://scenes/cashier

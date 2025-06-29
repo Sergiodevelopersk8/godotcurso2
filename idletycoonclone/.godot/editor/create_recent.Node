@@ -1,7 +1,9 @@
+AudioStreamPlayer
+Node
+GPUParticles2D
 TextureProgressBar
 Marker2D
 Sprite2D
-Node
 Timer
 Label
 TextureRect

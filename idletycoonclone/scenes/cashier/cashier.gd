@@ -81,6 +81,8 @@ func deliver_oreder():
 	current_customer.receive_order()
 	#obtenemos las monedas 
 	GameManager.current_coins += item_request.profit
+	#llamamos a la funcion de la moneda
+	GameManager.play_coin_vfx(global_position)
 	# si faltan unidades por entregar
 	if not current_customer.current_order_status <= 0:
 		move_to_item_position()

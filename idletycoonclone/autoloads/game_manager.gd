@@ -5,6 +5,10 @@ signal on_customer_request(customer: Customer)
 #señal de orden completada
 signal on_customer_order_completed(customer : Customer)
 
+#referencia a la escena particula de las monedas
+const COIN_VFX = preload("res://scenes/extra/coin_vfx.tscn")
+
+
 #variable que almacena un item que es hamburguesa y cafe
 @export var coffe : Item 
 @export var burger : Item
@@ -30,4 +34,22 @@ func get_item_pos(item: Item) -> Vector2:
 		Item.ItemType.Burger:
 			return burguer_counter_pos
 	return Vector2.ZERO
+	
+
+func play_coin_vfx(spawn_pos: Vector2):
+	#creamos una variable para la instancia
+	var coin_instance = COIN_VFX.instantiate()
+	#obtenemos el arbol de nodos y lo instanciamos 
+	get_tree().root.add_child(coin_instance)
+	#sonido de recoger monedas
+	SoundManager.play_coins()
+	#variable para modificar su posicion de spawn 
+	var new_pos := Vector2(spawn_pos.x, spawn_pos.y - 70)
+	coin_instance.global_position = new_pos
+	#accedemos a su emiting de la moneda, 
+	# one shot de la moneda debe estar activado
+	coin_instance.emitting = true
+	#señal para finalizar y eliminar de memoria con funcion anonima
+	coin_instance.finished.connect(func(): coin_instance.queue_free())
+	
 	
