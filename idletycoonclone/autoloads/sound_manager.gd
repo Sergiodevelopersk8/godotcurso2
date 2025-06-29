@@ -31,11 +31,11 @@ func play_ui():
 
 
 #funcion para saber que audio esta disponible
-func get_free_audio_player()-> AudioStreamPlayer:
-	#recorremos para saber si existe un audio sin reproducir
-	for audio: AudioStreamPlayer in stream_players:
-		#si encuentra uno libre lo retorna
+func get_free_audio_player() -> AudioStreamPlayer :
+	#recorremos el arreglo para saber si un audio estadisponible
+	for audio: AudioStreamPlayer in stream_players :
+		#si existe un audio libre retorana ese nodo
 		if not audio.playing:
 			return audio
-	#si no encuentra uno libre retorna un nulo
+	#si estan todos ocupados retorna nulo
 	return null

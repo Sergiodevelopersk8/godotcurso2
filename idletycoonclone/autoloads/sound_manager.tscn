@@ -3,8 +3,9 @@
 [ext_resource type="Script" uid="uid://cy8spqfmbcs70" path="res://autoloads/sound_manager.gd" id="1_4udv5"]
 [ext_resource type="AudioStream" uid="uid://ee1clshwyfr0" path="res://Idle Tycoon Assets/Sound/flat-8-bit-gaming-music-instrumental-211547.mp3" id="2_xy5rq"]
 
-[node name="SoundManager" type="Node"]
+[node name="SoundManager" type="Node" node_paths=PackedStringArray("stream_players")]
 script = ExtResource("1_4udv5")
+stream_players = [NodePath("AudioStreamPlayer"), NodePath("AudioStreamPlayer2"), NodePath("AudioStreamPlayer3"), NodePath("AudioStreamPlayer4"), NodePath("AudioStreamPlayer5")]
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_xy5rq")

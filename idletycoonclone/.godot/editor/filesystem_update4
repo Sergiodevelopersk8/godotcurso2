@@ -1,10 +1,9 @@
-res://scenes/Game/game.tscn
+res://autoloads/game_manager.tscn
 res://data/item_coffe.tres
 res://data/item_burger.tres
+res://autoloads/sound_manager.gd
+res://scenes/Game/game.tscn
 res://scenes/cashier/cashier.tscn
 res://scenes/customer/customer.tscn
-res://autoloads/game_manager.tscn
 res://scenes/ui/cook_bar.tscn
 res://autoloads/sound_manager.tscn
-res://autoloads/game_manager.gd
-res://default_bus_layout.tres
