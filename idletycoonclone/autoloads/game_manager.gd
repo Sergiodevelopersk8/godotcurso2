@@ -15,9 +15,10 @@ const COIN_VFX = preload("res://scenes/extra/coin_vfx.tscn")
 
 #variables de la posicion del item cafe hamburguesa
 var coffe_counter_pos := Vector2(425, 1250)  
-var burguer_counter_pos := Vector2(680,1250)  
+var burguer_counter_pos := Vector2(680,1250) 
+ 
 #mondeas actuales 
-var current_coins : int
+var current_coins : int = 200000
 #funcion que regresa un item de manera random
 func get_random_item() -> Item:
 	# creamos un array 

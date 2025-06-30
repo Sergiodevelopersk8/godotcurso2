@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cpbrfn3i5jvui"]
+[gd_scene load_steps=23 format=3 uid="uid://cpbrfn3i5jvui"]
 
 [ext_resource type="Texture2D" uid="uid://i1v6d8iq58ox" path="res://Idle Tycoon Assets/Sprites/Fondo.png" id="1_jm17p"]
 [ext_resource type="Texture2D" uid="uid://dv0tmb053vwcd" path="res://Idle Tycoon Assets/Sprites/Counter.png" id="2_fc1p2"]
@@ -19,6 +19,13 @@
 [ext_resource type="Script" uid="uid://bb8kr0v86xhiq" path="res://scenes/Game/game_ui.gd" id="17_cueac"]
 [ext_resource type="PackedScene" uid="uid://8ubp2xjcuqhl" path="res://scenes/ui/upgrade_panel.tscn" id="18_r8o54"]
 [ext_resource type="Texture2D" uid="uid://nos5blhg2lyi" path="res://Idle Tycoon Assets/Sprites/UI/Arrow.png" id="18_rsxsa"]
+[ext_resource type="Texture2D" uid="uid://crnkm457nig4l" path="res://Idle Tycoon Assets/Sprites/UI/coin_gold.png" id="20_vom40"]
+[ext_resource type="FontFile" uid="uid://due6jbyye53ld" path="res://Idle Tycoon Assets/Fonts/font_score.ttf" id="21_ultrl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_80bkf"]
+font = ExtResource("21_ultrl")
+font_size = 64
+font_color = Color(0.99558, 0.99558, 0.99558, 1)
 
 [node name="Game" type="Node2D"]
 
@@ -124,6 +131,40 @@ offset_left = 265.0
 offset_top = 530.0
 offset_right = -265.0
 offset_bottom = -740.0
+
+[node name="TopBar" type="Panel" parent="GameUI"]
+custom_minimum_size = Vector2(0, 96)
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GameUI/TopBar"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.5
+offset_top = -32.5
+offset_right = 52.5
+offset_bottom = 32.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="TextureRect" type="TextureRect" parent="GameUI/TopBar/HBoxContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("20_vom40")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CurrentCoins" type="Label" parent="GameUI/TopBar/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_80bkf")
 
 [connection signal="timeout" from="CustomerManager/SpawnTimer" to="CustomerManager" method="_on_spawn_timer_timeout"]
 [connection signal="pressed" from="GameUI/CoffeButton" to="GameUI" method="_on_coffe_button_pressed"]
