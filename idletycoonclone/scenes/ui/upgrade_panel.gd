@@ -22,6 +22,10 @@ var current_value: int
 #variable de las estrellas actuales
 var current_starts : int = -1
 
+func _process(delta: float) -> void:
+	progress_bar.value = current_value / 25.0
+
+
 #inicializar el panel
 func init_upgrade_panel(item : Item):
 	#referencial del item
@@ -54,8 +58,6 @@ func update_starts():
 	upgrade_button.text = str(item_ref.upgrade_cost)
 
 #actualizar barra d eprogreso
-func _ready():
-	progress_bar.value = current_value / 25.0
 
 func _on_start_reached():
 	#reset de barra de progreso

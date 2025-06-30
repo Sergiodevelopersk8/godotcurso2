@@ -34,10 +34,6 @@ expand_margin_bottom = 8.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_17hn6"]
 bg_color = Color(0.0156863, 0.584314, 0.835294, 1)
-border_width_left = 8
-border_width_top = 8
-border_width_right = 8
-border_width_bottom = 8
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mwooa"]
 bg_color = Color(0.117647, 0.784314, 0.607843, 1)
@@ -147,7 +143,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/background = SubResource("StyleBoxFlat_3ma7n")
 theme_override_styles/fill = SubResource("StyleBoxFlat_17hn6")
-max_value = 2.0
+max_value = 1.0
 show_percentage = false
 
 [node name="ProfitHBox" type="HBoxContainer" parent="Panel"]
