@@ -9,3 +9,4 @@ res://scenes/cashier/cashier.tscn
 res://scenes/customer/customer.tscn
 res://autoloads/game_manager.tscn
 res://scenes/manager/cashier_manager.gd
+res://scenes/ui/upgrade_panel.gd

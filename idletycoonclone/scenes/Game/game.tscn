@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://cpbrfn3i5jvui"]
+[gd_scene load_steps=36 format=3 uid="uid://cpbrfn3i5jvui"]
 
 [ext_resource type="Texture2D" uid="uid://i1v6d8iq58ox" path="res://Idle Tycoon Assets/Sprites/Fondo.png" id="1_jm17p"]
 [ext_resource type="Texture2D" uid="uid://dv0tmb053vwcd" path="res://Idle Tycoon Assets/Sprites/Counter.png" id="2_fc1p2"]
@@ -23,6 +23,8 @@
 [ext_resource type="FontFile" uid="uid://due6jbyye53ld" path="res://Idle Tycoon Assets/Fonts/font_score.ttf" id="21_ultrl"]
 [ext_resource type="Texture2D" uid="uid://cfqdpejwaopsw" path="res://Idle Tycoon Assets/Sprites/UI/arrowUp.png" id="22_80bkf"]
 [ext_resource type="Texture2D" uid="uid://jf60677t635w" path="res://Idle Tycoon Assets/Sprites/Characters/face_a.png" id="22_ultrl"]
+[ext_resource type="Texture2D" uid="uid://dil20vk4ba28w" path="res://Idle Tycoon Assets/Sprites/UI/gear.png" id="23_my6rh"]
+[ext_resource type="LabelSettings" uid="uid://nm64xyi8l5da" path="res://Label_40_black.tres" id="24_i3l22"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_80bkf"]
 font = ExtResource("21_ultrl")
@@ -57,6 +59,20 @@ font_color = Color(0.000113828, 0.000113828, 0.000113828, 1)
 bg_color = Color(0.137255, 0.592157, 0, 1)
 shadow_size = 2
 shadow_offset = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_my6rh"]
+bg_color = Color(0.215686, 0.215686, 0.215686, 1)
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+
+[sub_resource type="LabelSettings" id="LabelSettings_my6rh"]
+font = ExtResource("21_ultrl")
+font_size = 48
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dadte"]
+bg_color = Color(0.172549, 0.6, 0.6, 1)
 
 [node name="Game" type="Node2D"]
 
@@ -220,6 +236,18 @@ offset_right = 507.0
 offset_bottom = -41.0
 grow_vertical = 0
 icon = ExtResource("22_80bkf")
+
+[node name="OptionsButton" type="Button" parent="GameUI/ButtomBar"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 369.0
+offset_top = -99.0
+offset_right = 427.0
+offset_bottom = -41.0
+grow_vertical = 0
+icon = ExtResource("23_my6rh")
 
 [node name="Shop" type="Panel" parent="GameUI"]
 visible = false
@@ -550,12 +578,97 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_ultrl")
 text = "50
 "
 
+[node name="Options" type="Panel" parent="GameUI"]
+visible = false
+custom_minimum_size = Vector2(650, 450)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -325.0
+offset_top = -225.0
+offset_right = 325.0
+offset_bottom = 225.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_my6rh")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameUI/Options"]
+custom_minimum_size = Vector2(550, 180)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GameUI/Options/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="GameUI/Options/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Music"
+label_settings = SubResource("LabelSettings_my6rh")
+
+[node name="MusicSlider" type="HSlider" parent="GameUI/Options/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 1
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_dadte")
+max_value = 1.0
+step = 0.01
+value = 0.5
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="GameUI/Options/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="GameUI/Options/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "SFX"
+label_settings = SubResource("LabelSettings_my6rh")
+
+[node name="SFXSlider" type="HSlider" parent="GameUI/Options/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 1
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_dadte")
+max_value = 1.0
+step = 0.01
+value = 0.5
+
+[node name="Label" type="Label" parent="GameUI/Options"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -89.0
+offset_top = 35.0
+offset_right = 89.0
+offset_bottom = 84.0
+grow_horizontal = 2
+text = "Options"
+label_settings = ExtResource("24_i3l22")
+
 [connection signal="timeout" from="CustomerManager/SpawnTimer" to="CustomerManager" method="_on_spawn_timer_timeout"]
 [connection signal="pressed" from="GameUI/CoffeButton" to="GameUI" method="_on_coffe_button_pressed"]
 [connection signal="pressed" from="GameUI/BurgerButton" to="GameUI" method="_on_burger_button_pressed"]
 [connection signal="pressed" from="GameUI/ButtomBar/ShopButton" to="GameUI" method="_on_shop_button_pressed"]
+[connection signal="pressed" from="GameUI/ButtomBar/OptionsButton" to="GameUI" method="_on_options_button_pressed"]
 [connection signal="pressed" from="GameUI/Shop/VBoxContainer/NewCashierCard_1/NewCashierButton_1" to="GameUI" method="_on_new_cashier_button_1_pressed"]
 [connection signal="pressed" from="GameUI/Shop/VBoxContainer/FasterCoffeCard/FasterCoffeButton" to="GameUI" method="_on_faster_coffe_button_pressed"]
 [connection signal="pressed" from="GameUI/Shop/VBoxContainer/NewCashierCard_2/NewCashierButton_2" to="GameUI" method="_on_new_cashier_button_2_pressed"]
 [connection signal="pressed" from="GameUI/Shop/VBoxContainer/FasterBurgerCard/FasterBurgerButton" to="GameUI" method="_on_faster_burger_button_pressed"]
 [connection signal="pressed" from="GameUI/Shop/VBoxContainer/NewCashierCard_3/NewCashierButton_3" to="GameUI" method="_on_new_cashier_button_3_pressed"]
+[connection signal="value_changed" from="GameUI/Options/VBoxContainer/HBoxContainer/MusicSlider" to="GameUI" method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="GameUI/Options/VBoxContainer/HBoxContainer2/SFXSlider" to="GameUI" method="_on_sfx_slider_value_changed"]

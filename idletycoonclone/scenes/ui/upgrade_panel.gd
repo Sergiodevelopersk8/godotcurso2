@@ -47,15 +47,15 @@ func update_starts():
 	#actualizar nombre
 	item_name.text = item_ref.id
 	#actualizar nivel y casteo a string
-	level.text = str(item_ref.current_level)
+	
 	#nivel actual                                             
 	level.text = "Lv . %s" % item_ref.current_level
 	#valor del profit
-	profit.text = str(item_ref.profit) 
+	profit.text = GameManager.format_coins(item_ref.profit) 
 	#valor de cocinado
 	cook_time.text = str(item_ref.cook_time)
 	#costo de mejora
-	upgrade_button.text = str(item_ref.upgrade_cost)
+	upgrade_button.text = GameManager.format_coins(item_ref.upgrade_cost)
 
 #actualizar barra d eprogreso
 

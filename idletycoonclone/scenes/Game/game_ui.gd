@@ -20,6 +20,11 @@ class_name GameUI
 @onready var new_cashier_card_3: Panel = %NewCashierCard_3
 @onready var new_cashier_button_3: Button = %NewCashierButton_3
 
+#referencia a panel de opciones
+@onready var options: Panel = $Options
+
+
+
 #variables para modificar precios en el inspector
 @export var cashier1_cost:= 50
 @export var cashier2_cost:= 500
@@ -33,16 +38,16 @@ func _ready() -> void:
 	coffe_upgrade_panel.init_upgrade_panel(GameManager.coffe)
 	burger_upgrade_panel.init_upgrade_panel(GameManager.burger)
 	
-	new_cashier_button_1.text = str(cashier1_cost)
-	new_cashier_button_2.text = str(cashier2_cost)
-	new_cashier_button_3.text = str(cashier3_cost)
+	new_cashier_button_1.text = GameManager.format_coins(cashier1_cost)
+	new_cashier_button_2.text = GameManager.format_coins(cashier2_cost)
+	new_cashier_button_3.text = GameManager.format_coins(cashier3_cost)
 	
-	faster_burger_button.text = str(faster_burger_cost)
-	faster_coffe_button.text = str(faster_coffe_cost)
+	faster_burger_button.text = GameManager.format_coins(faster_burger_cost)
+	faster_coffe_button.text = GameManager.format_coins(faster_coffe_cost)
 	
 
 func _process(delta: float) -> void:
-	current_coins.text = str(GameManager.current_coins)
+	current_coins.text = GameManager.format_coins(GameManager.current_coins)
 
 #abrir o cerrar panel shop
 func open_close_shop_panel():
@@ -141,3 +146,22 @@ func _on_new_cashier_button_3_pressed() -> void:
 
 func _on_shop_button_pressed() -> void:
 	open_close_shop_panel()
+
+
+func _on_music_slider_value_changed(value: float) -> void:
+	var music_index = AudioServer.get_bus_index("Music")
+	#accedemos al bus
+	AudioServer.set_bus_volume_db(music_index, linear_to_db(value))
+
+
+func _on_sfx_slider_value_changed(value: float) -> void:
+	var sfx_index = AudioServer.get_bus_index("SFX")
+	#accedemos al bus
+	AudioServer.set_bus_volume_db(sfx_index, linear_to_db(value))
+
+
+func _on_options_button_pressed() -> void:
+	if options.visible:
+		options.visible = false
+	else:
+		options.visible = true

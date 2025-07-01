@@ -59,3 +59,21 @@ func play_coin_vfx(spawn_pos: Vector2):
 	coin_instance.finished.connect(func(): coin_instance.queue_free())
 	
 	
+
+#funcion de formato de monedas
+func format_coins(amount : int) -> String:
+	var suffixes : Array = ["","K","M","B","T","Q"]
+	#alamacena un index
+	var index = 0
+	var display_amount := float(amount)
+	
+	while display_amount >= 1000 and index < suffixes.size() - 1:
+		display_amount /= 1000
+		index +=1
+	return str(round_to_decimal(display_amount)) + suffixes[index]
+
+
+func round_to_decimal(amount:float) -> float:
+	return floor(amount * 100 ) / 100.0
+	
+	
