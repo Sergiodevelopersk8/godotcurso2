@@ -1,9 +1,14 @@
 extends Node
+#game manager script
+
 
 #señal que notifica que un cliente quiere ser atendido
 signal on_customer_request(customer: Customer)
 #señal de orden completada
 signal on_customer_order_completed(customer : Customer)
+
+#señal para crear un nuevo cashier cuando se compre en tienda
+signal on_new_cashier
 
 #referencia a la escena particula de las monedas
 const COIN_VFX = preload("res://scenes/extra/coin_vfx.tscn")

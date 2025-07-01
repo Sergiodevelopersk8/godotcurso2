@@ -17,6 +17,8 @@ var cashier_list : Array[Cashier] = []
 func _ready():
 	#suscribe a la señal de atender a customer
 	GameManager.on_customer_request.connect(_on_customer_request)
+	#señal para hacer otro cashier por que se compro en la tienda
+	GameManager.on_new_cashier.connect(add_cashier)
 	add_cashier()
 
 

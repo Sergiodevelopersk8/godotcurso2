@@ -5,6 +5,7 @@
 
 [resource]
 script = ExtResource("1_qqmum")
+star_new_value = 3
 id = "Coffe"
 type = 0
 sprite = ExtResource("2_4i07b")

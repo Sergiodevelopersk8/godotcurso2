@@ -1,9 +1,10 @@
+Button
+TextureButton
 Label
 TextureRect
-HBoxContainer
 Panel
-TextureButton
-Button
+VBoxContainer
+HBoxContainer
 CanvasLayer
 ProgressBar
 AudioStreamPlayer
@@ -11,4 +12,3 @@ Node
 GPUParticles2D
 TextureProgressBar
 Marker2D
-Sprite2D
