@@ -1,0 +1,344 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1751526198
+icon.svg::CompressedTexture2D/CompressedTexture2D::3831482149535686457::1751396373::1751396383::1::::<><><>0<>0<>2837358ab6b123c48add67b5b337f25c<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+::res://LeapNight Assets/::1751526127
+::res://LeapNight Assets/Fonts/::1751526128
+Daydream.ttf::FontFile/FontFile::8859091698602346372::1751526126::1751526128::1::::<><><>0<>0<>a1add5f4f465bb66ae0280fbfa4fcfb3<>res://.godot/imported/Daydream.ttf-e2da0d8e7731a5a7b8994979c78509b1.fontdata::
+Pixel Game.otf::FontFile/FontFile::336445731180712830::1751526126::1751526128::1::::<><><>0<>0<>6fde7678a2794bc3d0e72a5bb07a021f<>res://.godot/imported/Pixel Game.otf-f0e914967d58f6eec7c9c366337ed0c4.fontdata::
+upheavtt.ttf::FontFile/FontFile::7176232765970083263::1751526126::1751526128::1::::<><><>0<>0<>f080ee65306e6ed784a801c7c722c064<>res://.godot/imported/upheavtt.ttf-6bd7668e65f42e9090b1b541e7d6599e.fontdata::
+::res://LeapNight Assets/Sound/::1751526128
+click1.ogg::AudioStreamOggVorbis/AudioStreamOggVorbis::8379043188328498711::1751526126::1751526128::1::::<><><>0<>0<>6e815eba4ad3dbccc81492bf0227e671<>res://.godot/imported/click1.ogg-e0b00cebeac2aa59aad8bee878ea59a0.oggvorbisstr::
+flat-8-bit-gaming-music-instrumental-211547.mp3::AudioStreamMP3/AudioStreamMP3::5615412426149909433::1751526126::1751526128::1::::<><><>0<>0<>564f7ec36a44eb75677503c26bf4e9f5<>res://.godot/imported/flat-8-bit-gaming-music-instrumental-211547.mp3-69c7f608c416e44645118795d4fb69b7.mp3str::
+impactBell_heavy_004.ogg::AudioStreamOggVorbis/AudioStreamOggVorbis::1355119427063200635::1751526126::1751526128::1::::<><><>0<>0<>2ebc0fe5c46859c2c24e886de0d5c8ad<>res://.godot/imported/impactBell_heavy_004.ogg-bfd9dd871d77521a9bbc27aab9cdd7f7.oggvorbisstr::
+impactWood_medium_002.ogg::AudioStreamOggVorbis/AudioStreamOggVorbis::6034488608843559202::1751526126::1751526128::1::::<><><>0<>0<>b5712e25c318c20a32cda8b9702f5b61<>res://.godot/imported/impactWood_medium_002.ogg-7d74b977fee32b60eddc0fb47e43bb69.oggvorbisstr::
+jumping sfx.mp3::AudioStreamMP3/AudioStreamMP3::468142171291985956::1751526127::1751526128::1::::<><><>0<>0<>bf06cebc2331e6fb09af821158ba0e27<>res://.godot/imported/jumping sfx.mp3-dfa321f3c44bede622edc14a143a71d0.mp3str::
+::res://LeapNight Assets/Sprites/::1751526127
+::res://LeapNight Assets/Sprites/Background/::1751526130
+Blue.png::CompressedTexture2D/CompressedTexture2D::4989794612778397268::1751526127::1751526130::1::::<><><>0<>0<>6d534954e6f1f942795a95c88f1655f8<>res://.godot/imported/Blue.png-b42c477dd46d892958ad932a16f63ed3.ctex::
+Brown.png::CompressedTexture2D/CompressedTexture2D::8785054532976931875::1751526127::1751526130::1::::<><><>0<>0<>4cd1c05aedd3f97a7ed659f39b7b6569<>res://.godot/imported/Brown.png-13a2b80fca9c1e809c10047a444a5c61.ctex::
+Gray.png::CompressedTexture2D/CompressedTexture2D::8959319650849379698::1751526127::1751526130::1::::<><><>0<>0<>a9d51870bafa922cae01d65864711780<>res://.godot/imported/Gray.png-e0a4f4d92678d1b728f7e49a0ff59828.ctex::
+Green.png::CompressedTexture2D/CompressedTexture2D::774285386010874389::1751526127::1751526130::1::::<><><>0<>0<>0ae5fa64589f67cb696a84d27a41a9b6<>res://.godot/imported/Green.png-37a92862316a2bdb36bc26d566c858f1.ctex::
+Pink.png::CompressedTexture2D/CompressedTexture2D::2555117925324243161::1751526127::1751526130::1::::<><><>0<>0<>612482a89260e99e220c22f6d799ba4e<>res://.godot/imported/Pink.png-5b3819a85933fda0783d41e5da98289a.ctex::
+Purple.png::CompressedTexture2D/CompressedTexture2D::1937943559559111525::1751526127::1751526130::1::::<><><>0<>0<>fc7b2acb49b775aa89e275d0acd4fcd4<>res://.godot/imported/Purple.png-9c6dce6a6e52a58e7025e298fb3368e1.ctex::
+Yellow.png::CompressedTexture2D/CompressedTexture2D::1854793712813093050::1751526127::1751526130::1::::<><><>0<>0<>e727896548babcf0da50a88bd7de6272<>res://.godot/imported/Yellow.png-d45faef64323857e68939b206862911c.ctex::
+::res://LeapNight Assets/Sprites/Enemies/::1751526127
+::res://LeapNight Assets/Sprites/Enemies/AngryPig/::1751526130
+Hit 1 (36x30).png::CompressedTexture2D/CompressedTexture2D::5496644337127134451::1751526127::1751526130::1::::<><><>0<>0<>57fb611aadbc24e1eec5908af8a55f0a<>res://.godot/imported/Hit 1 (36x30).png-b8c7fbc1a5eaafb4349672cf58fddb07.ctex::
+Hit 2 (36x30).png::CompressedTexture2D/CompressedTexture2D::5784793849093353552::1751526127::1751526130::1::::<><><>0<>0<>b2900833d0fb0c648d8e0ae2484c974d<>res://.godot/imported/Hit 2 (36x30).png-ef99954e2437bdab0f4100eeb7aa75fe.ctex::
+Idle (36x30).png::CompressedTexture2D/CompressedTexture2D::1836664801106949940::1751526127::1751526130::1::::<><><>0<>0<>179c7e2f31d74a050bea75ba6d922d4b<>res://.godot/imported/Idle (36x30).png-a1b0653fe0e5901284b0db0aa0b373a9.ctex::
+Run (36x30).png::CompressedTexture2D/CompressedTexture2D::5012289253080923071::1751526127::1751526130::1::::<><><>0<>0<>a5f92fbfb707c6940cf091ddeb48f67c<>res://.godot/imported/Run (36x30).png-59f407af49aefefac12a8312f03e970d.ctex::
+Walk (36x30).png::CompressedTexture2D/CompressedTexture2D::2560257540873313578::1751526127::1751526130::1::::<><><>0<>0<>6a186bdad17414189dfb115fe678f321<>res://.godot/imported/Walk (36x30).png-354623c4e910d51f3522e324e58451c5.ctex::
+::res://LeapNight Assets/Sprites/Enemies/Bat/::1751526130
+Ceiling In (46x30).png::CompressedTexture2D/CompressedTexture2D::73214150728073462::1751526127::1751526130::1::::<><><>0<>0<>9aea408e58fc6f2f802cdc6c0cccd715<>res://.godot/imported/Ceiling In (46x30).png-636c9055e63c093a2f3c232119bad44a.ctex::
+Ceiling Out (46x30).png::CompressedTexture2D/CompressedTexture2D::5511305591086053586::1751526127::1751526130::1::::<><><>0<>0<>83ca76968ec4642e4675140fcdb34384<>res://.godot/imported/Ceiling Out (46x30).png-22a72db9de22cc441e1cdc40c205338b.ctex::
+Flying (46x30).png::CompressedTexture2D/CompressedTexture2D::326989802448628241::1751526127::1751526130::1::::<><><>0<>0<>3fa027afcca558605429a1897497df2c<>res://.godot/imported/Flying (46x30).png-0ea4da2235f7d423842722ff629238ca.ctex::
+Hit (46x30).png::CompressedTexture2D/CompressedTexture2D::5934861303489945199::1751526127::1751526130::1::::<><><>0<>0<>d8a743e05f5447683511f0740572f514<>res://.godot/imported/Hit (46x30).png-7c1ae5fd47920b9f7e9d0790e1ebdd01.ctex::
+Idle (46x30).png::CompressedTexture2D/CompressedTexture2D::3121131418278541983::1751526127::1751526130::1::::<><><>0<>0<>106fc5e02e666ea7dd67181bbfdf6f42<>res://.godot/imported/Idle (46x30).png-b8b5137cea3dcc2f2db1bc21e8190b69.ctex::
+::res://LeapNight Assets/Sprites/Enemies/Bee/::1751526130
+Attack (36x34).png::CompressedTexture2D/CompressedTexture2D::850978666663967514::1751526127::1751526130::1::::<><><>0<>0<>d9d68a0de7d8dd3499f2b31c84ebdbca<>res://.godot/imported/Attack (36x34).png-b88658b30aa1199edc3a3fd3f40bef94.ctex::
+Bullet Pieces.png::CompressedTexture2D/CompressedTexture2D::252140424205645520::1751526127::1751526130::1::::<><><>0<>0<>7c684d8d8af75a74028643dc7c929719<>res://.godot/imported/Bullet Pieces.png-61e215a96696fe3c025f7435cbcab7e7.ctex::
+Bullet.png::CompressedTexture2D/CompressedTexture2D::4550308016212423499::1751526127::1751526130::1::::<><><>0<>0<>6e91655ea67804bb72746ff66316284a<>res://.godot/imported/Bullet.png-30031d2024ba6b795eaa5a2ecb4d5ae1.ctex::
+Hit (36x34).png::CompressedTexture2D/CompressedTexture2D::319289310324504409::1751526127::1751526130::1::::<><><>0<>0<>9ed934fff79dfbfb21154216b7c461a2<>res://.godot/imported/Hit (36x34).png-6a10eb584030105254cd093359a4f92e.ctex::
+Idle (36x34).png::CompressedTexture2D/CompressedTexture2D::6789872512592650565::1751526127::1751526130::1::::<><><>0<>0<>d5caac4a040a84f1fce0729ff5b1825d<>res://.godot/imported/Idle (36x34).png-002a0bcc198873acf5cce92fc4a0b7cd.ctex::
+::res://LeapNight Assets/Sprites/Enemies/BlueBird/::1751526130
+Flying (32x32).png::CompressedTexture2D/CompressedTexture2D::4307223445448014733::1751526127::1751526130::1::::<><><>0<>0<>ebfb242b72517fe1c7f9e34f374ee8e7<>res://.godot/imported/Flying (32x32).png-93f4e4a7173aaf9134f89aacc4abf216.ctex::
+Hit (32x32).png::CompressedTexture2D/CompressedTexture2D::4441226547318280393::1751526127::1751526130::1::::<><><>0<>0<>a00a427a1f49cb8f84d6921106e62fd0<>res://.godot/imported/Hit (32x32).png-04fd1046c7ebd4adc8236417942f763c.ctex::
+::res://LeapNight Assets/Sprites/Enemies/Bunny/::1751526130
+Fall.png::CompressedTexture2D/CompressedTexture2D::5438238343459924903::1751526127::1751526130::1::::<><><>0<>0<>59d6e673f2de90d259982726e35d0955<>res://.godot/imported/Fall.png-60843e6579f5186b2db26aa03156ecd5.ctex::
+Hit (34x44).png::CompressedTexture2D/CompressedTexture2D::5954423436317309898::1751526127::1751526130::1::::<><><>0<>0<>4ab9cef648706bf65c1130593c7635fb<>res://.godot/imported/Hit (34x44).png-92830c3a485f99d7f1f74afe4e921156.ctex::
+Idle (34x44).png::CompressedTexture2D/CompressedTexture2D::1865450191157469608::1751526127::1751526130::1::::<><><>0<>0<>88e4aafb82de30c2d43b8ff00b1570c5<>res://.godot/imported/Idle (34x44).png-ffdca50702cdd12d35f040f6e73c8fee.ctex::
+Jump.png::CompressedTexture2D/CompressedTexture2D::2971257101249443237::1751526127::1751526130::1::::<><><>0<>0<>ae577f1b9fbfd39a028918deacd6fdbf<>res://.godot/imported/Jump.png-e0d420514f02aef9bc342c0f9bcbc03d.ctex::
+Run (34x44).png::CompressedTexture2D/CompressedTexture2D::6746878294941448011::1751526127::1751526130::1::::<><><>0<>0<>eba4f820ee2f0ba6c2f57ff37344c2f6<>res://.godot/imported/Run (34x44).png-3dd4b6834c9dc12d35f8c7c89397c6c3.ctex::
+::res://LeapNight Assets/Sprites/Enemies/Chameleon/::1751526130
+Attack (84x38).png::CompressedTexture2D/CompressedTexture2D::897283000790015846::1751526127::1751526130::1::::<><><>0<>0<>b04150d355eb34b224726a3e8f2852fb<>res://.godot/imported/Attack (84x38).png-28e8182cc05aad581a94f320e1fb8b2e.ctex::
+Hit (84x38).png::CompressedTexture2D/CompressedTexture2D::2550142877171027537::1751526127::1751526130::1::::<><><>0<>0<>d8ada4a6732aef8a3e38db24b84d0cc0<>res://.godot/imported/Hit (84x38).png-0715cb367814ec9c3f4dd7ead515d378.ctex::
+Idle (84x38).png::CompressedTexture2D/CompressedTexture2D::1984096088025060217::1751526127::1751526130::1::::<><><>0<>0<>3c0a91fff8517cc3529c5fb786e94fb6<>res://.godot/imported/Idle (84x38).png-022aa5785af0e9492562785acc372c5a.ctex::
+Run (84x38).png::CompressedTexture2D/CompressedTexture2D::3378297890285308614::1751526127::1751526130::1::::<><><>0<>0<>d2124b7f2f07eb2a5d628469c992a792<>res://.godot/imported/Run (84x38).png-909875d285e481a22b9431ab551c2717.ctex::
+::res://LeapNight Assets/Sprites/Enemies/Chicken/::1751526130
+Hit (32x34).png::CompressedTexture2D/CompressedTexture2D::4420015554542229988::1751526127::1751526130::1::::<><><>0<>0<>59d8d8427117be7e0e12a2a9d97f591c<>res://.godot/imported/Hit (32x34).png-8580e2bb157ee80b939635ddf14de5ff.ctex::
+Idle (32x34).png::CompressedTexture2D/CompressedTexture2D::4409080494230481215::1751526127::1751526130::1::::<><><>0<>0<>842d11455f8cba5146aeb24136442034<>res://.godot/imported/Idle (32x34).png-760a011c846e1bf03c698e09ebb69228.ctex::
+Run (32x34).png::CompressedTexture2D/CompressedTexture2D::8240916372027648052::1751526127::1751526130::1::::<><><>0<>0<>a187414f8bc2853becb1d0a70b2c6262<>res://.godot/imported/Run (32x34).png-4c64da41a6ffd2d77fe323192569058b.ctex::
+::res://LeapNight Assets/Sprites/Enemies/Duck/::1751526130
+Fall (36x36).png::CompressedTexture2D/CompressedTexture2D::4550887906873130569::1751526127::1751526130::1::::<><><>0<>0<>d68d35059c3e1ac5fe66038ad95ac7ec<>res://.godot/imported/Fall (36x36).png-74eaef9b5cb3a4f08e3cb729ddd98bc0.ctex::
+Hit (36x36).png::CompressedTexture2D/CompressedTexture2D::8630716097947034550::1751526127::1751526130::1::::<><><>0<>0<>94d8a58527f132debfb4c52c5169c65e<>res://.godot/imported/Hit (36x36).png-9dca1a17825397580fbd471241ffeb08.ctex::
+Idle (36x36).png::CompressedTexture2D/CompressedTexture2D::5219093668389784956::1751526127::1751526130::1::::<><><>0<>0<>1988795067ba3d867ff0b708d712dc57<>res://.godot/imported/Idle (36x36).png-aa31708eddf565bdfe16789297b05f87.ctex::
+Jump (36x36).png::CompressedTexture2D/CompressedTexture2D::6751799749421212670::1751526127::1751526130::1::::<><><>0<>0<>b92b846176744c52eacef51726af66e7<>res://.godot/imported/Jump (36x36).png-585349ef7769f9cab57ead4117b378fa.ctex::
+Jump Anticipation (36x36).png::CompressedTexture2D/CompressedTexture2D::1163336403221899688::1751526127::1751526130::1::::<><><>0<>0<>fd5d1f45bd8befb8c4e604286f70eb50<>res://.godot/imported/Jump Anticipation (36x36).png-a5283f4d7fc2a605910618eb3024332b.ctex::
+::res://LeapNight Assets/Sprites/Enemies/FatBird/::1751526130
+Fall (40x48).png::CompressedTexture2D/CompressedTexture2D::6413908743035025815::1751526127::1751526130::1::::<><><>0<>0<>41aabea9c10652140d5a4e85799bb752<>res://.godot/imported/Fall (40x48).png-ab244a3e17a83923501b22afa68dbd59.ctex::
+Ground (40x48).png::CompressedTexture2D/CompressedTexture2D::2361336747435038140::1751526127::1751526130::1::::<><><>0<>0<>376ac4647744312aac1b5c9b920373d8<>res://.godot/imported/Ground (40x48).png-2ac64935da4cb14733a6cc96f548205d.ctex::
+Hit (40x48).png::CompressedTexture2D/CompressedTexture2D::9098422942889573826::1751526127::1751526130::1::::<><><>0<>0<>af419901888190d1f18d6a7647b92dc7<>res://.godot/imported/Hit (40x48).png-16e98034d3c64a968b73f1c6bd17d3b6.ctex::
+Idle (40x48).png::CompressedTexture2D/CompressedTexture2D::2466583534169930265::1751526127::1751526130::1::::<><><>0<>0<>baa96aaf0befbc32d5ba8058edb1be6c<>res://.godot/imported/Idle (40x48).png-655571b57a0aceece9a04a1d8cf40654.ctex::
+::res://LeapNight Assets/Sprites/Enemies/Ghost/::1751526130
+Appear (44x30).png::CompressedTexture2D/CompressedTexture2D::6065758236952224947::1751526127::1751526130::1::::<><><>0<>0<>328f577fbfb1046459a44779f55744cd<>res://.godot/imported/Appear (44x30).png-7691b2fa8bccc0ff33f1b9958e07c005.ctex::
+Desappear (44x30).png::CompressedTexture2D/CompressedTexture2D::1829818303998073868::1751526127::1751526130::1::::<><><>0<>0<>3d41e0ec16a6e8a5b175169a05171c46<>res://.godot/imported/Desappear (44x30).png-f65c8b24983597ebca722569162cd99b.ctex::
+Gost Particles (48x16).png::CompressedTexture2D/CompressedTexture2D::3844941542583314703::1751526127::1751526130::1::::<><><>0<>0<>aeebe0ea45dfe2ff904b6673e0b4fa80<>res://.godot/imported/Gost Particles (48x16).png-0975f80d011363733315bea27a47b33b.ctex::
+Hit (44x30).png::CompressedTexture2D/CompressedTexture2D::8192245833423067174::1751526127::1751526130::1::::<><><>0<>0<>734c20ed6d6d5e3d47ce82d4b3906023<>res://.godot/imported/Hit (44x30).png-08c13ac4d04f2c49eda4d95d006c143c.ctex::
+Idle (44x30).png::CompressedTexture2D/CompressedTexture2D::8346151531957866275::1751526127::1751526130::1::::<><><>0<>0<>5c6b6a6f6f81ac7267b8871304510134<>res://.godot/imported/Idle (44x30).png-2c79e19bc06e1440949b784c1699d37b.ctex::
+::res://LeapNight Assets/Sprites/Enemies/Mushroom/::1751526130
+Hit.png::CompressedTexture2D/CompressedTexture2D::8834279258903531471::1751526127::1751526130::1::::<><><>0<>0<>cdf545422bb94e914e56b4d13c1ac168<>res://.godot/imported/Hit.png-5c93e43613be8ff7af0dce8839b4ee7a.ctex::
+Idle (32x32).png::CompressedTexture2D/CompressedTexture2D::2990920720291796087::1751526127::1751526130::1::::<><><>0<>0<>e45c6b375427f265c51f9865c77d9838<>res://.godot/imported/Idle (32x32).png-5801a846a6d9962f5542513d6c0dc921.ctex::
+Run (32x32).png::CompressedTexture2D/CompressedTexture2D::920722915914500008::1751526127::1751526130::1::::<><><>0<>0<>d451767d01c6209d42552c01790c91c1<>res://.godot/imported/Run (32x32).png-201b226ffad14e1a353af57c9a4385a0.ctex::
+::res://LeapNight Assets/Sprites/Enemies/Plant/::1751526130
+Attack (44x42).png::CompressedTexture2D/CompressedTexture2D::2659012410687039232::1751526127::1751526130::1::::<><><>0<>0<>ea36fe5fe3d4b6e07f405a0e3fb7bfe0<>res://.godot/imported/Attack (44x42).png-1d8c25b031c6d8b0fcf679a0ed23c503.ctex::
+Bullet Pieces.png::CompressedTexture2D/CompressedTexture2D::2293763410870639524::1751526127::1751526130::1::::<><><>0<>0<>be8df5bcfd3ee96b412dbb412548bd8c<>res://.godot/imported/Bullet Pieces.png-1b69cbe6a2a3a0fc532e7699b1dcd5fe.ctex::
+Bullet.png::CompressedTexture2D/CompressedTexture2D::3216400400861897279::1751526127::1751526130::1::::<><><>0<>0<>e340302039c42676a2f241322f9f01cc<>res://.godot/imported/Bullet.png-5076e854478539b8fb99b4567a8616b3.ctex::
+Hit (44x42).png::CompressedTexture2D/CompressedTexture2D::7031341703265817493::1751526127::1751526130::1::::<><><>0<>0<>5b2021a43a30c86b89cbb1b7118dd323<>res://.godot/imported/Hit (44x42).png-5bb7d18b5bf982f6591944ae227ec82d.ctex::
+Idle (44x42).png::CompressedTexture2D/CompressedTexture2D::7936718978123795226::1751526127::1751526130::1::::<><><>0<>0<>5910348821762dfc304fdeff36cf2074<>res://.godot/imported/Idle (44x42).png-bfeb9993a1b470610fb81726b87e1105.ctex::
+::res://LeapNight Assets/Sprites/Enemies/Radish/::1751526130
+Hit (30x38).png::CompressedTexture2D/CompressedTexture2D::2672827474486733329::1751526127::1751526130::1::::<><><>0<>0<>9daec5849a7f1ae02cfc1a1b003e506a<>res://.godot/imported/Hit (30x38).png-4fe36166e8c95c3190d0931dd3858a7b.ctex::
+Idle 1 (30x38).png::CompressedTexture2D/CompressedTexture2D::5641247581738236649::1751526127::1751526130::1::::<><><>0<>0<>9c7cfc74b134eb65320eadd0c89d16ab<>res://.godot/imported/Idle 1 (30x38).png-0de0216929e0ceb6f2a5a21f646a4518.ctex::
+Idle 2 (30x38).png::CompressedTexture2D/CompressedTexture2D::1685611788053541114::1751526127::1751526130::1::::<><><>0<>0<>d3a67ed8c5cc9eb1c29f398cc5364ce3<>res://.godot/imported/Idle 2 (30x38).png-08dbf5944e59ef0be550970ca7350b11.ctex::
+Leafs.png::CompressedTexture2D/CompressedTexture2D::8814406371647215083::1751526127::1751526130::1::::<><><>0<>0<>ee97b266976a6478d24bafa0415ae888<>res://.godot/imported/Leafs.png-82226a53dc4fd6332cb2aac680e78384.ctex::
+Run (30x38).png::CompressedTexture2D/CompressedTexture2D::183774555005772480::1751526127::1751526130::1::::<><><>0<>0<>7723e53b50bd3dec58f3db29eb3932ae<>res://.godot/imported/Run (30x38).png-4161d66637dbc4814c0ff216cc35ed64.ctex::
+::res://LeapNight Assets/Sprites/Enemies/Rino/::1751526130
+Hit (52x34).png::CompressedTexture2D/CompressedTexture2D::8131203220763336739::1751526127::1751526130::1::::<><><>0<>0<>34132719cf97edfc174f060789b15aa5<>res://.godot/imported/Hit (52x34).png-6eed9387a2afe189e8756640abfb179a.ctex::
+Hit Wall (52x34).png::CompressedTexture2D/CompressedTexture2D::2137528582929718400::1751526127::1751526130::1::::<><><>0<>0<>a41a731e69fb6fbc2b69eec564336bde<>res://.godot/imported/Hit Wall (52x34).png-9319f8264eb372c6446f4045fa092cda.ctex::
+Idle (52x34).png::CompressedTexture2D/CompressedTexture2D::858339670176414769::1751526127::1751526130::1::::<><><>0<>0<>563ec7200ea9b334376cc551562e7443<>res://.godot/imported/Idle (52x34).png-3b4030570b339fb57fd0273572e4b9fd.ctex::
+Run (52x34).png::CompressedTexture2D/CompressedTexture2D::2946086923783999331::1751526127::1751526130::1::::<><><>0<>0<>49b3a101339b2571569a8978b68d525e<>res://.godot/imported/Run (52x34).png-3d745c989a19c6ace1557f06336d3e1e.ctex::
+::res://LeapNight Assets/Sprites/Enemies/Rocks/::1751526131
+Rock1_Hit.png::CompressedTexture2D/CompressedTexture2D::3612425245718204498::1751526127::1751526130::1::::<><><>0<>0<>570b0d650867a4cb6ec715a4eb9f7436<>res://.godot/imported/Rock1_Hit.png-50d34145e6f76ae96050500960c5b5a0.ctex::
+Rock1_Idle (38x34).png::CompressedTexture2D/CompressedTexture2D::6337370474035363098::1751526127::1751526131::1::::<><><>0<>0<>fb93035ae50d99b1132531bb2843ea9a<>res://.godot/imported/Rock1_Idle (38x34).png-fe4d2b91cecdf61643653059b63c043d.ctex::
+Rock1_Run (38x34).png::CompressedTexture2D/CompressedTexture2D::200092844386906273::1751526127::1751526131::1::::<><><>0<>0<>4cbc5e3c39f6349d0f9c97fde2acaf5b<>res://.godot/imported/Rock1_Run (38x34).png-0358d53456ea36c3d41022416b5d48b5.ctex::
+Rock2_Hit (32x28).png::CompressedTexture2D/CompressedTexture2D::7092672124888434175::1751526127::1751526131::1::::<><><>0<>0<>1f67111422ae5c9fa7ad660f31189cb5<>res://.godot/imported/Rock2_Hit (32x28).png-df590576cb82b8f433a47b5c125bff67.ctex::
+Rock2_Idle (32x28).png::CompressedTexture2D/CompressedTexture2D::8548102411765581611::1751526127::1751526131::1::::<><><>0<>0<>78b65508f5eeec8075aa9f25437dbc84<>res://.godot/imported/Rock2_Idle (32x28).png-9c8bc4d8f41a1d7ca032aa64663e9e72.ctex::
+Rock2_Run (32x28).png::CompressedTexture2D/CompressedTexture2D::8806490308893569665::1751526127::1751526131::1::::<><><>0<>0<>8dd98cb9f78edd0ad49e6b3d1518782d<>res://.godot/imported/Rock2_Run (32x28).png-f9f334b8dfe2ff7a143be61beb39d1db.ctex::
+Rock3_Hit (22x18).png::CompressedTexture2D/CompressedTexture2D::4163252887346115878::1751526127::1751526131::1::::<><><>0<>0<>f92d422e6179422373dcb6760cb555f2<>res://.godot/imported/Rock3_Hit (22x18).png-3bf098c4c89cbd5fe1612144f60b6c39.ctex::
+Rock3_Idle (22x18).png::CompressedTexture2D/CompressedTexture2D::8091426598139736073::1751526127::1751526131::1::::<><><>0<>0<>6c8d53e094474344f7b378efbe40e9cf<>res://.godot/imported/Rock3_Idle (22x18).png-3ca91d289cb3bd6ec005ae86b6fa18c3.ctex::
+Rock3_Run (22x18).png::CompressedTexture2D/CompressedTexture2D::146838424827700295::1751526127::1751526131::1::::<><><>0<>0<>d027b45d480b5d706c0c1939cdf39e83<>res://.godot/imported/Rock3_Run (22x18).png-f1b5162091c0f2f2b28e787e588fc788.ctex::
+::res://LeapNight Assets/Sprites/Enemies/Skull/::1751526131
+Hit (52x54).png::CompressedTexture2D/CompressedTexture2D::899290852579903560::1751526127::1751526131::1::::<><><>0<>0<>fe5c7c4179614adb7916769f18ee9e92<>res://.godot/imported/Hit (52x54).png-b1691b51a7159728e5a5fed0a46b8dc8.ctex::
+Hit Wall 1 (52x54).png::CompressedTexture2D/CompressedTexture2D::5406992197884770686::1751526127::1751526131::1::::<><><>0<>0<>46883d07ca6a76b14520004e99aa13ed<>res://.godot/imported/Hit Wall 1 (52x54).png-496eb14b27d9b03e3470c5166b8b251c.ctex::
+Hit Wall 2 (52x54).png::CompressedTexture2D/CompressedTexture2D::7362575579732150941::1751526127::1751526131::1::::<><><>0<>0<>32312abce05c07829f662601b9c641a1<>res://.godot/imported/Hit Wall 2 (52x54).png-51ee99f2a58b283f06d128b3586a2503.ctex::
+Idle 1 (52x54).png::CompressedTexture2D/CompressedTexture2D::5366000503087732681::1751526127::1751526131::1::::<><><>0<>0<>1640077e18adf3bee47bb3e1a6ec0a59<>res://.godot/imported/Idle 1 (52x54).png-77625ffe21341a67b062819c8baeeb55.ctex::
+Idle 2 (52x54).png::CompressedTexture2D/CompressedTexture2D::4383684555330360347::1751526127::1751526131::1::::<><><>0<>0<>ee49f4b6f7dc706246484a9f8037dcf9<>res://.godot/imported/Idle 2 (52x54).png-036b5aaf0b76b75b62d8405f05e38ccf.ctex::
+Orange Particle.png::CompressedTexture2D/CompressedTexture2D::595153420519711596::1751526127::1751526131::1::::<><><>0<>0<>81f5e32bef067ccf67dd20f4a194c201<>res://.godot/imported/Orange Particle.png-130347e6f9a7d9c0da9ffd8d431c0413.ctex::
+Red Particle.png::CompressedTexture2D/CompressedTexture2D::1515137498652149398::1751526127::1751526131::1::::<><><>0<>0<>01ce37608e7a1e6fbdb12a278cef3773<>res://.godot/imported/Red Particle.png-b23e4478a31fc00a7f9a0270c4bd9957.ctex::
+::res://LeapNight Assets/Sprites/Enemies/Slime/::1751526131
+Hit (44x30).png::CompressedTexture2D/CompressedTexture2D::3986521692288299135::1751526127::1751526131::1::::<><><>0<>0<>6381affef2cf48e379819f9cc166ff7e<>res://.godot/imported/Hit (44x30).png-c569069a44f281643a5cad0dee3e7c12.ctex::
+Idle-Run (44x30).png::CompressedTexture2D/CompressedTexture2D::3629045963713373067::1751526127::1751526131::1::::<><><>0<>0<>550a201974eeb62f921dc26dc0db145d<>res://.godot/imported/Idle-Run (44x30).png-2f3e53ca5701ac9d954882a42af78c09.ctex::
+Particles (62x16).png::CompressedTexture2D/CompressedTexture2D::370007186719454779::1751526127::1751526131::1::::<><><>0<>0<>3ed403ea3d92257b23174c0e681cd672<>res://.godot/imported/Particles (62x16).png-fd48f963c930f29da2b8888156b270eb.ctex::
+::res://LeapNight Assets/Sprites/Enemies/Snail/::1751526131
+Hit (38x24).png::CompressedTexture2D/CompressedTexture2D::3980821540082063794::1751526127::1751526131::1::::<><><>0<>0<>7cf459a2beb38fc01e65e1bc744199ab<>res://.godot/imported/Hit (38x24).png-1f78fb637d3b55b81205c136ec3301dc.ctex::
+Idle (38x24).png::CompressedTexture2D/CompressedTexture2D::5958499843954078595::1751526127::1751526131::1::::<><><>0<>0<>426253f25e4247616df4f30d79016dee<>res://.godot/imported/Idle (38x24).png-299765fdea0fb4f7ce51d7366d277eaa.ctex::
+Shell Idle (38x24).png::CompressedTexture2D/CompressedTexture2D::3973904507607126966::1751526127::1751526131::1::::<><><>0<>0<>0837a9c83b19fc2da04a86b3210160b0<>res://.godot/imported/Shell Idle (38x24).png-87c1d8707541019f6080b06d28ef69d8.ctex::
+Shell Top Hit (38x24).png::CompressedTexture2D/CompressedTexture2D::7813859448405123468::1751526127::1751526131::1::::<><><>0<>0<>da69e7e3b4b9d28c4e2175260514ca37<>res://.godot/imported/Shell Top Hit (38x24).png-879e90656b6f09fc1a93f0aa1b6409ed.ctex::
+Shell Wall Hit (38x24).png::CompressedTexture2D/CompressedTexture2D::7932280830011271959::1751526127::1751526131::1::::<><><>0<>0<>cedde975a4ffbec82cbe0c7064ff2d09<>res://.godot/imported/Shell Wall Hit (38x24).png-8b5b3f6bdba144c84fd84c3468e49a06.ctex::
+Snail without shell.png::CompressedTexture2D/CompressedTexture2D::7513227571459387889::1751526127::1751526131::1::::<><><>0<>0<>295b76f01d45eb4609584e97257c42de<>res://.godot/imported/Snail without shell.png-f39be8811ca74b2a3cfa959902db1a43.ctex::
+Walk (38x24).png::CompressedTexture2D/CompressedTexture2D::6675705610982804220::1751526127::1751526131::1::::<><><>0<>0<>11af786973cb598e4efe65704355c2fa<>res://.godot/imported/Walk (38x24).png-834825ab9abd58382fd554c84f4155e3.ctex::
+::res://LeapNight Assets/Sprites/Enemies/Trunk/::1751526131
+Attack (64x32).png::CompressedTexture2D/CompressedTexture2D::8234506622386804043::1751526127::1751526131::1::::<><><>0<>0<>2c1865562eb216c425c9e63498626712<>res://.godot/imported/Attack (64x32).png-a5e54c70b911357abab323e4c19f8192.ctex::
+Bullet Pieces.png::CompressedTexture2D/CompressedTexture2D::3917717577661146664::1751526127::1751526131::1::::<><><>0<>0<>79a5282f2bd0e7951cd3d007920839c6<>res://.godot/imported/Bullet Pieces.png-f9bd7b57fa31e1a80c582cd9a30d5135.ctex::
+Bullet.png::CompressedTexture2D/CompressedTexture2D::6263142997969409332::1751526127::1751526131::1::::<><><>0<>0<>c19dcdc137877fac75708cfac5b4e446<>res://.godot/imported/Bullet.png-3ffd676b18bdc0292ac7c6565e9e14b8.ctex::
+Hit (64x32).png::CompressedTexture2D/CompressedTexture2D::961293528761288036::1751526127::1751526131::1::::<><><>0<>0<>7d5bd903ee8ec2fb9dbaa0750ba16ecc<>res://.godot/imported/Hit (64x32).png-ff3ea3e2f61841e27bef59b3a7ec3846.ctex::
+Idle (64x32).png::CompressedTexture2D/CompressedTexture2D::2299715401441043886::1751526127::1751526131::1::::<><><>0<>0<>fe38abd31290a4eaac22799f2c1128f9<>res://.godot/imported/Idle (64x32).png-0fccbe0740840a8c12b3a96315531762.ctex::
+Run (64x32).png::CompressedTexture2D/CompressedTexture2D::3761475802394858012::1751526127::1751526131::1::::<><><>0<>0<>d0956462edba84e05e18443f180f7074<>res://.godot/imported/Run (64x32).png-d4e863cb9cc2d0b911c89c0110ba42c0.ctex::
+::res://LeapNight Assets/Sprites/Enemies/Turtle/::1751526131
+Hit (44x26).png::CompressedTexture2D/CompressedTexture2D::7559986583824440102::1751526127::1751526131::1::::<><><>0<>0<>0d838433f7608911d7993d39c05ddca0<>res://.godot/imported/Hit (44x26).png-f4ab439e338a3edbea24324df1b23de8.ctex::
+Idle 1 (44x26).png::CompressedTexture2D/CompressedTexture2D::5449341872805174751::1751526127::1751526131::1::::<><><>0<>0<>c87fa32d40fbb6c5573912fbbfd56138<>res://.godot/imported/Idle 1 (44x26).png-54c15b51d89462bb35c570d823ab36a7.ctex::
+Idle 2 (44x26).png::CompressedTexture2D/CompressedTexture2D::1679182986015043158::1751526127::1751526131::1::::<><><>0<>0<>d186138d86a67a4b7a4fdab0eb1e3abc<>res://.godot/imported/Idle 2 (44x26).png-99786178ac5c583e218563a253a5c8f2.ctex::
+Spikes in (44x26).png::CompressedTexture2D/CompressedTexture2D::4130928109889503597::1751526127::1751526131::1::::<><><>0<>0<>9ce11dff27bf93284037a1f75aa8b322<>res://.godot/imported/Spikes in (44x26).png-905697a5e629767bf5050b61aa3a1dd1.ctex::
+Spikes out (44x26).png::CompressedTexture2D/CompressedTexture2D::5345527543058334709::1751526127::1751526131::1::::<><><>0<>0<>21989eb3e4da4114e6966fd096fb254e<>res://.godot/imported/Spikes out (44x26).png-0162be5f67c1f9458f9a22608cc5540a.ctex::
+::res://LeapNight Assets/Sprites/Items/::1751526127
+::res://LeapNight Assets/Sprites/Items/Boxes/::1751526127
+::res://LeapNight Assets/Sprites/Items/Boxes/Box1/::1751526131
+Break.png::CompressedTexture2D/CompressedTexture2D::8507500732109907840::1751526127::1751526131::1::::<><><>0<>0<>b7b09739e4018c45bfcaf68f6c3e664c<>res://.godot/imported/Break.png-307d80d4cf7edce6c66df2aeaac10fa6.ctex::
+Hit (28x24).png::CompressedTexture2D/CompressedTexture2D::1817537678508149250::1751526127::1751526131::1::::<><><>0<>0<>e230eabcb6bc5e281e3edfbee160d15f<>res://.godot/imported/Hit (28x24).png-02bbb2c50a69b206150064764f84649f.ctex::
+Idle.png::CompressedTexture2D/CompressedTexture2D::5079213199262337287::1751526127::1751526130::1::::<><><>0<>0<>608c6a42f84e25bb0d907e08ba271b29<>res://.godot/imported/Idle.png-54b6bed647fd6a843223147d1a05945d.ctex::
+Terrain (16x16).png::CompressedTexture2D/CompressedTexture2D::1545553045402290941::1751526127::1751526130::1::::<><><>0<>0<>de56fee2f1d08f3061bd2185e05f0ad9<>res://.godot/imported/Terrain (16x16).png-0278aa1d3d181f95b0b99c912dfb0efc.ctex::
+::res://LeapNight Assets/Sprites/Items/Boxes/Box2/::1751526130
+Break.png::CompressedTexture2D/CompressedTexture2D::8638044279959887416::1751526127::1751526130::1::::<><><>0<>0<>43a6041311dfe4a952c6b74245c598a2<>res://.godot/imported/Break.png-0911881be3b6c1b519b26604e9886886.ctex::
+Hit (28x24).png::CompressedTexture2D/CompressedTexture2D::1993240027384116863::1751526127::1751526130::1::::<><><>0<>0<>c2989ec1ea41f79953f816b1b20529bc<>res://.godot/imported/Hit (28x24).png-ac8de3279c9070a181112cbdc3aa33b3.ctex::
+Idle.png::CompressedTexture2D/CompressedTexture2D::4666553804342927460::1751526127::1751526130::1::::<><><>0<>0<>80bbd4043e7824a1127180178e02e021<>res://.godot/imported/Idle.png-a5624f2844e396d5b1e736cef2c0205a.ctex::
+::res://LeapNight Assets/Sprites/Items/Boxes/Box3/::1751526130
+Break.png::CompressedTexture2D/CompressedTexture2D::8776861337955719514::1751526127::1751526130::1::::<><><>0<>0<>6176b797b9dce1186eaf34704cbb65f0<>res://.godot/imported/Break.png-9e7bfa98371a9a26d531f0dcffde3b01.ctex::
+Hit (28x24).png::CompressedTexture2D/CompressedTexture2D::3970633764099314683::1751526127::1751526130::1::::<><><>0<>0<>6a23549a510ebb1b552889bb735abb1b<>res://.godot/imported/Hit (28x24).png-7149105260c3d9f531f53f701f949957.ctex::
+Idle.png::CompressedTexture2D/CompressedTexture2D::562924506041734092::1751526127::1751526130::1::::<><><>0<>0<>ac993450685ef6c5a1272c9f1634c462<>res://.godot/imported/Idle.png-7c99251e8c043c26559ae6bfc0c93901.ctex::
+::res://LeapNight Assets/Sprites/Items/Checkpoints/::1751526127
+::res://LeapNight Assets/Sprites/Items/Checkpoints/Checkpoint/::1751526130
+Checkpoint (Flag Idle)(64x64).png::CompressedTexture2D/CompressedTexture2D::4983484742546152515::1751526127::1751526130::1::::<><><>0<>0<>0be3764c59730df165e387d325753bb0<>res://.godot/imported/Checkpoint (Flag Idle)(64x64).png-df2a4fef5f4e15b5ccacd7e18d5ff565.ctex::
+Checkpoint (Flag Out) (64x64).png::CompressedTexture2D/CompressedTexture2D::4387001591889715688::1751526127::1751526130::1::::<><><>0<>0<>79338e1f2a7af7b8bb52347d04520fb6<>res://.godot/imported/Checkpoint (Flag Out) (64x64).png-3aa65dfb1863dcaf0dab25bc1b9c9f94.ctex::
+Checkpoint (No Flag).png::CompressedTexture2D/CompressedTexture2D::2789310208801185916::1751526127::1751526130::1::::<><><>0<>0<>c14dd174aaea3f9bffc0e9acae196d94<>res://.godot/imported/Checkpoint (No Flag).png-6c15b564717987d19de0594825325be6.ctex::
+::res://LeapNight Assets/Sprites/Items/Checkpoints/End/::1751526130
+End (Idle).png::CompressedTexture2D/CompressedTexture2D::5120998170965535621::1751526127::1751526130::1::::<><><>0<>0<>0afa72c865a012cf8261dcdf2b42d672<>res://.godot/imported/End (Idle).png-eeeb1e7cd94d288b58f6f147fdb06af0.ctex::
+End (Pressed) (64x64).png::CompressedTexture2D/CompressedTexture2D::4580530746059685264::1751526127::1751526130::1::::<><><>0<>0<>3080d8af81ea4214165fd269ef3f44f2<>res://.godot/imported/End (Pressed) (64x64).png-50a9df5e9422c741adf2f251ff038318.ctex::
+::res://LeapNight Assets/Sprites/Items/Checkpoints/Start/::1751526131
+Start (Idle).png::CompressedTexture2D/CompressedTexture2D::6170682494729930612::1751526127::1751526131::1::::<><><>0<>0<>4a27bfdc8862d45786c9b5554437facb<>res://.godot/imported/Start (Idle).png-390afad829d08642d53e0244c9f8d613.ctex::
+Start (Moving) (64x64).png::CompressedTexture2D/CompressedTexture2D::4978737150176225489::1751526127::1751526131::1::::<><><>0<>0<>4c5b174e400671a3849def929bc48b44<>res://.godot/imported/Start (Moving) (64x64).png-f84493342d6254f1288986d385cf9fcf.ctex::
+::res://LeapNight Assets/Sprites/Items/Fruits/::1751526131
+Apple.png::CompressedTexture2D/CompressedTexture2D::6622617007835794391::1751526127::1751526131::1::::<><><>0<>0<>4406d0478c889a011a91ddecb00ad9dc<>res://.godot/imported/Apple.png-ed67c55aae816b48f8fde5a6fcf335da.ctex::
+Bananas.png::CompressedTexture2D/CompressedTexture2D::9154464003899205110::1751526127::1751526131::1::::<><><>0<>0<>f0c2ba880374607fdda1cf090c7135be<>res://.godot/imported/Bananas.png-527b989838a58137ad5de355de42613f.ctex::
+Cherries.png::CompressedTexture2D/CompressedTexture2D::744298806198580709::1751526127::1751526131::1::::<><><>0<>0<>f96a24f17b5703472f2ef1a1c4308047<>res://.godot/imported/Cherries.png-cf4036f7a5ede33ecb9d488ec874ee77.ctex::
+Collected.png::CompressedTexture2D/CompressedTexture2D::8955031495801175219::1751526127::1751526131::1::::<><><>0<>0<>ba1190270debd4367e7aa3eb7dd3b2d8<>res://.godot/imported/Collected.png-11b75f8a33151bf65b3dcfe7e10af8bb.ctex::
+Fruit.png::CompressedTexture2D/CompressedTexture2D::3365307194089627641::1751526127::1751526131::1::::<><><>0<>0<>21e5acb23629a6de7372e23a6016ddf2<>res://.godot/imported/Fruit.png-9dc89f04eed310b24f0296665f7127ed.ctex::
+Kiwi.png::CompressedTexture2D/CompressedTexture2D::7428953123194593048::1751526127::1751526131::1::::<><><>0<>0<>bc2037fa8e1910a4e305d8895a2dde85<>res://.godot/imported/Kiwi.png-d720c76efbea661bab6eb5901ff91f2d.ctex::
+Melon.png::CompressedTexture2D/CompressedTexture2D::600433189493477255::1751526127::1751526131::1::::<><><>0<>0<>3f1004d10ed4675ffa60127e6e85649d<>res://.godot/imported/Melon.png-909a567beecdf6780b03ecedf5da88f4.ctex::
+Orange.png::CompressedTexture2D/CompressedTexture2D::571643504218258856::1751526127::1751526131::1::::<><><>0<>0<>c30139e91130627e2fa9637060725ba8<>res://.godot/imported/Orange.png-3e3c7b09d864c0256ecf947a417193f0.ctex::
+Pineapple.png::CompressedTexture2D/CompressedTexture2D::6941131027973209791::1751526127::1751526131::1::::<><><>0<>0<>01aec979f465d3149ccd5db7a358f99b<>res://.godot/imported/Pineapple.png-17e01ead4c56ef2e54417dce8a75340d.ctex::
+Strawberry.png::CompressedTexture2D/CompressedTexture2D::5883241005715202604::1751526127::1751526131::1::::<><><>0<>0<>3e7761c7295e614fbae0eef06573a5f3<>res://.godot/imported/Strawberry.png-50d7424981c2a50066d6e4ff63da1b02.ctex::
+::res://LeapNight Assets/Sprites/Main Characters/::1751526129
+Appearing (96x96).png::CompressedTexture2D/CompressedTexture2D::3781473173536122377::1751526127::1751526129::1::::<><><>0<>0<>f30666f9f8e07d2869be580ed1145706<>res://.godot/imported/Appearing (96x96).png-1c420d1bb5e7e330f787d1e8369f8816.ctex::
+Desappearing (96x96).png::CompressedTexture2D/CompressedTexture2D::6194430882127923226::1751526127::1751526129::1::::<><><>0<>0<>efa4497b478ee8730e7f18cbae556151<>res://.godot/imported/Desappearing (96x96).png-fa22517136a206d14a701cc29bf2432a.ctex::
+::res://LeapNight Assets/Sprites/Main Characters/Mask Dude/::1751526131
+Double Jump (32x32).png::CompressedTexture2D/CompressedTexture2D::2544326687124064372::1751526127::1751526131::1::::<><><>0<>0<>5444f6d9b1d780df3f24d69dfe71d9bf<>res://.godot/imported/Double Jump (32x32).png-e016e1cea06ac3c547166156cd6dfae1.ctex::
+Fall (32x32).png::CompressedTexture2D/CompressedTexture2D::5185718154207974150::1751526127::1751526131::1::::<><><>0<>0<>09833c4fe4840fc2e1d217df494e1769<>res://.godot/imported/Fall (32x32).png-4cd3aa3d8b9d589f84de9ae16854a176.ctex::
+Hit (32x32).png::CompressedTexture2D/CompressedTexture2D::1578346320642680382::1751526127::1751526131::1::::<><><>0<>0<>113745b3afd7097cbda3901861dd22cc<>res://.godot/imported/Hit (32x32).png-d8a358db81a1db4babb9000dd585185e.ctex::
+Idle (32x32).png::CompressedTexture2D/CompressedTexture2D::4286922466107571470::1751526127::1751526131::1::::<><><>0<>0<>92966c8fadf17e9823c6b4968718ad36<>res://.godot/imported/Idle (32x32).png-8f7b350e95938b75d3c16112f1c1bd70.ctex::
+Jump (32x32).png::CompressedTexture2D/CompressedTexture2D::2708943070921564999::1751526127::1751526131::1::::<><><>0<>0<>dae273be99008c1181a5ad12c7bf6644<>res://.godot/imported/Jump (32x32).png-7b72c43bc57c466261f71d4caea1837a.ctex::
+Run (32x32).png::CompressedTexture2D/CompressedTexture2D::3292627201621995643::1751526127::1751526129::1::::<><><>0<>0<>0bbef0ffaa787649615fab58202b738a<>res://.godot/imported/Run (32x32).png-62273f191c96e23c934b6821c960ab0a.ctex::
+Wall Jump (32x32).png::CompressedTexture2D/CompressedTexture2D::3284196890577612835::1751526127::1751526129::1::::<><><>0<>0<>a02a2a5e7afdcfc0e4f73838cdcbbc71<>res://.godot/imported/Wall Jump (32x32).png-b390e94e9c43772759bcc10942de7dbb.ctex::
+::res://LeapNight Assets/Sprites/Main Characters/Ninja Frog/::1751526129
+Double Jump (32x32).png::CompressedTexture2D/CompressedTexture2D::5761950241331057999::1751526127::1751526129::1::::<><><>0<>0<>f43ea1e49cbd767ba4dd364d585727f5<>res://.godot/imported/Double Jump (32x32).png-48ac742f51fdc998366f311144a1d50e.ctex::
+Fall (32x32).png::CompressedTexture2D/CompressedTexture2D::7270837955921393802::1751526127::1751526129::1::::<><><>0<>0<>7766d76f074dc37e651cbd6e079b6640<>res://.godot/imported/Fall (32x32).png-566602bb8faee891834ba3dae40cd358.ctex::
+Hit (32x32).png::CompressedTexture2D/CompressedTexture2D::1229709602827950627::1751526127::1751526129::1::::<><><>0<>0<>5a8ed99a2eb611d12a93cda5608ebcaa<>res://.godot/imported/Hit (32x32).png-04f7190f57f2d0d109d98ae79d1ec7c9.ctex::
+Idle (32x32).png::CompressedTexture2D/CompressedTexture2D::2067438633245068137::1751526127::1751526129::1::::<><><>0<>0<>ec6333813418274422b0409e4bd4d2ab<>res://.godot/imported/Idle (32x32).png-68b20774713ac5ec7714d4afce6c45d2.ctex::
+Jump (32x32).png::CompressedTexture2D/CompressedTexture2D::3386217217466033240::1751526127::1751526129::1::::<><><>0<>0<>5f3e94dc5282fef92c02cd882adaae1f<>res://.godot/imported/Jump (32x32).png-fa0ab7499811651d64c61259567238d4.ctex::
+Run (32x32).png::CompressedTexture2D/CompressedTexture2D::398559582428438718::1751526127::1751526129::1::::<><><>0<>0<>c50025690bbb07be606fb81641343133<>res://.godot/imported/Run (32x32).png-c68bae1901d54c23c3f7e3de461798d0.ctex::
+Wall Jump (32x32).png::CompressedTexture2D/CompressedTexture2D::6017224078709386063::1751526127::1751526129::1::::<><><>0<>0<>f8a9b98048cca93d920f0ba122a2949b<>res://.godot/imported/Wall Jump (32x32).png-88a9333457dad52ffe748e414eedab1b.ctex::
+::res://LeapNight Assets/Sprites/Main Characters/Pink Man/::1751526129
+Double Jump (32x32).png::CompressedTexture2D/CompressedTexture2D::7243555326440088616::1751526127::1751526129::1::::<><><>0<>0<>50cee1fdf026438a2b4bf420b9bb21ea<>res://.godot/imported/Double Jump (32x32).png-01435882e2edf8404a7bc9e0e17665c6.ctex::
+Fall (32x32).png::CompressedTexture2D/CompressedTexture2D::1773970742135028103::1751526127::1751526129::1::::<><><>0<>0<>e664c8c829a73b8401827bea3727dbd7<>res://.godot/imported/Fall (32x32).png-a9feff5694d7d0d40023ec0e50840f19.ctex::
+Hit (32x32).png::CompressedTexture2D/CompressedTexture2D::8324329621036158027::1751526127::1751526129::1::::<><><>0<>0<>7406e596910c8ccf399ad9ee83676195<>res://.godot/imported/Hit (32x32).png-649a067a742bbb6c87d76488698bc436.ctex::
+Idle (32x32).png::CompressedTexture2D/CompressedTexture2D::3625222373540090106::1751526127::1751526129::1::::<><><>0<>0<>608767b0ab0500562c9438b3640b5b8d<>res://.godot/imported/Idle (32x32).png-1e8121d99a39a383259de39854bf104f.ctex::
+Jump (32x32).png::CompressedTexture2D/CompressedTexture2D::2579043467310865626::1751526127::1751526129::1::::<><><>0<>0<>e555a522942137cf088ae3db1c7698d3<>res://.godot/imported/Jump (32x32).png-18790215dbae97760119083de9f93ed8.ctex::
+Run (32x32).png::CompressedTexture2D/CompressedTexture2D::5852918770531808116::1751526127::1751526129::1::::<><><>0<>0<>3f79717f840fcaf1567f6d78a2cb4899<>res://.godot/imported/Run (32x32).png-24b8a135618f74d75ea64e3e2d40fd1e.ctex::
+Wall Jump (32x32).png::CompressedTexture2D/CompressedTexture2D::9109487178881304101::1751526127::1751526129::1::::<><><>0<>0<>e779a72b17e8a32a3df7d4d6b22374af<>res://.godot/imported/Wall Jump (32x32).png-d9dda3d572938665afef3a273aa0c21a.ctex::
+::res://LeapNight Assets/Sprites/Main Characters/Virtual Guy/::1751526129
+Double Jump (32x32).png::CompressedTexture2D/CompressedTexture2D::8488439867430498583::1751526127::1751526129::1::::<><><>0<>0<>9ae1df6895beb300e96e4b86ba2a8ce1<>res://.godot/imported/Double Jump (32x32).png-babaf461ec9492313e0a2a957da6c2fe.ctex::
+Fall (32x32).png::CompressedTexture2D/CompressedTexture2D::2801217786978102164::1751526127::1751526129::1::::<><><>0<>0<>3831c7af36cfd42d516e991c0888005f<>res://.godot/imported/Fall (32x32).png-514466ffd27aef02e3b442f451f4e37e.ctex::
+Hit (32x32).png::CompressedTexture2D/CompressedTexture2D::1880543823907626751::1751526127::1751526129::1::::<><><>0<>0<>d3f1ffc9a9c066c8e065b0f00771d08e<>res://.godot/imported/Hit (32x32).png-0a2ddfdec475e05637fa1810e60bf739.ctex::
+Idle (32x32).png::CompressedTexture2D/CompressedTexture2D::2151018180775955467::1751526127::1751526129::1::::<><><>0<>0<>8639a755c91328bb3a09b0ef2f895eb7<>res://.godot/imported/Idle (32x32).png-a3bcc3a7abbb9a7a8cbf4cf8ddcb4d09.ctex::
+Jump (32x32).png::CompressedTexture2D/CompressedTexture2D::8493187845892819815::1751526127::1751526129::1::::<><><>0<>0<>35be3da8aaa27de6964051e8974938c3<>res://.godot/imported/Jump (32x32).png-360d9c069dc0abfca430e541d847bfce.ctex::
+Run (32x32).png::CompressedTexture2D/CompressedTexture2D::3431758995615768657::1751526127::1751526129::1::::<><><>0<>0<>ffbad6537a3edb5af660ccaea59391b6<>res://.godot/imported/Run (32x32).png-f17a58c82ed34faf9843b5c63e7491b3.ctex::
+Wall Jump (32x32).png::CompressedTexture2D/CompressedTexture2D::8963791838822542938::1751526127::1751526129::1::::<><><>0<>0<>52db14edddcd1207a64c1dfcaa1d4c23<>res://.godot/imported/Wall Jump (32x32).png-24534f3aa3e2a41266fd99326d7920a1.ctex::
+::res://LeapNight Assets/Sprites/Menu/::1751526127
+::res://LeapNight Assets/Sprites/Menu/Buttons/::1751526129
+Achievements.png::CompressedTexture2D/CompressedTexture2D::2796307314395426434::1751526127::1751526129::1::::<><><>0<>0<>d51fd3dd9439340c7365ae7d065a25f6<>res://.godot/imported/Achievements.png-b8d388769eee481283aeb3181c0582a3.ctex::
+Back.png::CompressedTexture2D/CompressedTexture2D::4080747082046632885::1751526127::1751526129::1::::<><><>0<>0<>876d631847ec8472e758a8c99f4868de<>res://.godot/imported/Back.png-cfa786ab41cb0adeba0686b07dba08de.ctex::
+Close.png::CompressedTexture2D/CompressedTexture2D::7609853910924200624::1751526127::1751526129::1::::<><><>0<>0<>ae3e2c570d1555c97c214ddad9a9f535<>res://.godot/imported/Close.png-d5adadd13b4676771cbe36d0a1ebcc02.ctex::
+Leaderboard.png::CompressedTexture2D/CompressedTexture2D::6530001081097363192::1751526127::1751526129::1::::<><><>0<>0<>1a3d350ddc97a7b95c3339a6a9d47a9c<>res://.godot/imported/Leaderboard.png-e38dc2f4575fad9c093c50a4c5443f9b.ctex::
+Levels.png::CompressedTexture2D/CompressedTexture2D::3696204907391556273::1751526127::1751526129::1::::<><><>0<>0<>29b641b9cfe76d7daa7d8d65afcdec9b<>res://.godot/imported/Levels.png-923f104b15e8bac689786bbcfadc5765.ctex::
+Next.png::CompressedTexture2D/CompressedTexture2D::282072288446655377::1751526127::1751526129::1::::<><><>0<>0<>545f181b9596ac233ee13249139dd104<>res://.godot/imported/Next.png-2cb9b949de8c7540f61dc57106d81581.ctex::
+Play.png::CompressedTexture2D/CompressedTexture2D::3933698426006479165::1751526127::1751526129::1::::<><><>0<>0<>a13fa61cbbcd4759bec5b6eabbd54f9a<>res://.godot/imported/Play.png-933e3c25276f228a265d969130921635.ctex::
+Previous.png::CompressedTexture2D/CompressedTexture2D::3437718565082510177::1751526127::1751526129::1::::<><><>0<>0<>2cb622cd8bbf2d277838b7c8f965fcc8<>res://.godot/imported/Previous.png-0354f40d91f657dcbcd2a563382fc518.ctex::
+Restart.png::CompressedTexture2D/CompressedTexture2D::7029748460105293222::1751526127::1751526129::1::::<><><>0<>0<>ae2638a6637240626a2a442566dce754<>res://.godot/imported/Restart.png-debb5de372e8a0752740eb606cab4a10.ctex::
+Settings.png::CompressedTexture2D/CompressedTexture2D::3503377832856051118::1751526127::1751526128::1::::<><><>0<>0<>00af4f305050db8b8d5181494ada30cb<>res://.godot/imported/Settings.png-c60e42f6f963896113d7a6fdd39fbe69.ctex::
+Volume.png::CompressedTexture2D/CompressedTexture2D::600223766690955168::1751526127::1751526128::1::::<><><>0<>0<>604a94f026848949a69eed361bc297b9<>res://.godot/imported/Volume.png-688a6352667c3a0961ecf23c6b2ae240.ctex::
+::res://LeapNight Assets/Sprites/Menu/Levels/::1751526130
+01.png::CompressedTexture2D/CompressedTexture2D::8898463014418229479::1751526127::1751526128::1::::<><><>0<>0<>e03be8b47c0a1a08972a2fcc210db308<>res://.godot/imported/01.png-4c71b5eea202183ba63a11aee1a0fd4c.ctex::
+02.png::CompressedTexture2D/CompressedTexture2D::7046278878013014273::1751526127::1751526128::1::::<><><>0<>0<>06f813c47b34bb15e57884f7036b187a<>res://.godot/imported/02.png-05c97af561eb7a522ca4ef59f729b8b0.ctex::
+03.png::CompressedTexture2D/CompressedTexture2D::7988676574649443031::1751526127::1751526128::1::::<><><>0<>0<>673cab492bf10afeb936245e5e8663a1<>res://.godot/imported/03.png-5abaffc8b8946f295ece2bca8675956c.ctex::
+04.png::CompressedTexture2D/CompressedTexture2D::1333517783125418876::1751526127::1751526128::1::::<><><>0<>0<>57723dcde66fab5dee27a57feed7560f<>res://.godot/imported/04.png-63542400922ca444ccca4fd47ff97a14.ctex::
+05.png::CompressedTexture2D/CompressedTexture2D::1093089806286378432::1751526127::1751526128::1::::<><><>0<>0<>f0d17200d0921c800695f67bb21af698<>res://.godot/imported/05.png-779afefb7a6c2f2cfd72f86b825ffc34.ctex::
+06.png::CompressedTexture2D/CompressedTexture2D::986824610368323245::1751526127::1751526128::1::::<><><>0<>0<>07a5134559a47eac0f81d9b60e29d369<>res://.godot/imported/06.png-5db1410de1049f220c4ec77aef8e2584.ctex::
+07.png::CompressedTexture2D/CompressedTexture2D::5068203599735656189::1751526127::1751526128::1::::<><><>0<>0<>6bb5cd6616428832ac65fba2ac9c293d<>res://.godot/imported/07.png-358a024aee6d897ff2afbad8c0c0ba8f.ctex::
+08.png::CompressedTexture2D/CompressedTexture2D::8881696318044136677::1751526127::1751526128::1::::<><><>0<>0<>36015edf45d1400f7c2a4f3c7348eac5<>res://.godot/imported/08.png-e384896da3719a03aca9e0d6e8d65542.ctex::
+09.png::CompressedTexture2D/CompressedTexture2D::1842753252643398508::1751526127::1751526128::1::::<><><>0<>0<>fe1c6b738b1fab83dba183947b27378c<>res://.godot/imported/09.png-855e30a2277cd520acc09c5d4d648b15.ctex::
+10.png::CompressedTexture2D/CompressedTexture2D::7158966967439596624::1751526127::1751526128::1::::<><><>0<>0<>5abff4284b6d314822d2803a23ef0e78<>res://.godot/imported/10.png-6b1f78d8561bf77b783a9f83a63b9b52.ctex::
+11.png::CompressedTexture2D/CompressedTexture2D::7024486607652504815::1751526127::1751526128::1::::<><><>0<>0<>60123d623a111c31595a20db45f22aa9<>res://.godot/imported/11.png-88c3b49384c316eb307438952401a981.ctex::
+12.png::CompressedTexture2D/CompressedTexture2D::5777734018919345362::1751526127::1751526128::1::::<><><>0<>0<>802486fc5c047bfc28221c459efaee58<>res://.godot/imported/12.png-f3d6a5712f1ea1226cfb4ed044217ba9.ctex::
+13.png::CompressedTexture2D/CompressedTexture2D::3705338251227394880::1751526127::1751526128::1::::<><><>0<>0<>6d3341dee8cfa24f8492a86e3a253433<>res://.godot/imported/13.png-e41f0c9f1ad8170a04d8bc83e5444366.ctex::
+14.png::CompressedTexture2D/CompressedTexture2D::217819763476614395::1751526127::1751526128::1::::<><><>0<>0<>6a20f5554bc5d193ecb38bb77cec120e<>res://.godot/imported/14.png-c00165ee3dd67c03a3bc74da5077d326.ctex::
+15.png::CompressedTexture2D/CompressedTexture2D::8780364572717603729::1751526127::1751526128::1::::<><><>0<>0<>be345c0b020a65ed93ee2052b268c446<>res://.godot/imported/15.png-9d3bc2d87e623d433cf95f4c66e9c27e.ctex::
+16.png::CompressedTexture2D/CompressedTexture2D::1006773553359461823::1751526127::1751526129::1::::<><><>0<>0<>042df5fc2860a1969014d1e2159e8359<>res://.godot/imported/16.png-3478182ed0419c60e496c9e6df7497d1.ctex::
+17.png::CompressedTexture2D/CompressedTexture2D::6008972183009038234::1751526127::1751526129::1::::<><><>0<>0<>6602555c58501c0d3b89ac193a18320e<>res://.godot/imported/17.png-55b8ee455cd48008305f226c47b63678.ctex::
+18.png::CompressedTexture2D/CompressedTexture2D::2571167647704485297::1751526127::1751526129::1::::<><><>0<>0<>bbe22e62c437a81b38dcd32f3a4c1233<>res://.godot/imported/18.png-79b93d50d136edb1dbcd188a529a8e75.ctex::
+19.png::CompressedTexture2D/CompressedTexture2D::4897761088649237761::1751526127::1751526129::1::::<><><>0<>0<>ab9fa27f7413d8c36669ff2b39508207<>res://.godot/imported/19.png-62f2cf0a17ce44cb30a8f40aa90d5b9a.ctex::
+20.png::CompressedTexture2D/CompressedTexture2D::7068979332019354901::1751526127::1751526129::1::::<><><>0<>0<>9a01226215c8e40910bcf75763727598<>res://.godot/imported/20.png-ac7c33b6003172d3e2400e4131116b81.ctex::
+21.png::CompressedTexture2D/CompressedTexture2D::6331808315013601222::1751526127::1751526129::1::::<><><>0<>0<>4bea0d4c9d4b32d72fa32372423372a3<>res://.godot/imported/21.png-7a0700e52b21d2b261fe9cd477c6b39b.ctex::
+22.png::CompressedTexture2D/CompressedTexture2D::1391373420814841530::1751526127::1751526129::1::::<><><>0<>0<>bee6e1323b743af99e25491be676a85f<>res://.godot/imported/22.png-4141a80ffbfa6f7f0355bc47983ca913.ctex::
+23.png::CompressedTexture2D/CompressedTexture2D::3564243501831057031::1751526127::1751526129::1::::<><><>0<>0<>580d429e533da8e876c9c2380108b381<>res://.godot/imported/23.png-2e5bcbeb72bcd5766893ae008fb22e36.ctex::
+24.png::CompressedTexture2D/CompressedTexture2D::8672833954912709706::1751526127::1751526129::1::::<><><>0<>0<>331da63f09ee7a098afbb6e5e2d4caf0<>res://.godot/imported/24.png-dfbf329f5095108acb28e53c941f4405.ctex::
+25.png::CompressedTexture2D/CompressedTexture2D::2552490530740122998::1751526127::1751526129::1::::<><><>0<>0<>944157809bb77cbfd8b15b54bc94a5d3<>res://.godot/imported/25.png-867ddb1a70253066be55d1db9fb11813.ctex::
+26.png::CompressedTexture2D/CompressedTexture2D::2663977884874831450::1751526127::1751526129::1::::<><><>0<>0<>0f10945952d45310176405150d6ef3ff<>res://.godot/imported/26.png-982debb3bb9bd0bf5390051193fc8000.ctex::
+27.png::CompressedTexture2D/CompressedTexture2D::1011242350984642118::1751526127::1751526129::1::::<><><>0<>0<>121194454bc5c6b41b8b85ca1fffef55<>res://.godot/imported/27.png-9ad520e3821a85497743585cd23717d8.ctex::
+28.png::CompressedTexture2D/CompressedTexture2D::1736951150938455829::1751526127::1751526129::1::::<><><>0<>0<>df6dfb0246ae78d6b834346e25eb7f79<>res://.godot/imported/28.png-48e68ede0c497e1644dfc55cee3c247e.ctex::
+29.png::CompressedTexture2D/CompressedTexture2D::270521281785147883::1751526127::1751526129::1::::<><><>0<>0<>95db768a9dcc12187500aa85f4952df5<>res://.godot/imported/29.png-8e030e1fcff7a5dedb3d89b8d435ec73.ctex::
+30.png::CompressedTexture2D/CompressedTexture2D::8005449740660528393::1751526127::1751526129::1::::<><><>0<>0<>32a7485d6aeb99d7f46c515c38df2d87<>res://.godot/imported/30.png-f3dd102832f4d7e96083d9d63cadb845.ctex::
+31.png::CompressedTexture2D/CompressedTexture2D::5625776818579827343::1751526127::1751526129::1::::<><><>0<>0<>68fa925fab9bbd2ff9d9c4bdf6de3453<>res://.godot/imported/31.png-605318700fba9f8b0d183d9b471358fe.ctex::
+32.png::CompressedTexture2D/CompressedTexture2D::1405246547935710353::1751526127::1751526128::1::::<><><>0<>0<>8ae0829d110bf55adf60ef4215304a86<>res://.godot/imported/32.png-b213d9b43187fae26ecaa5e9bbb88f98.ctex::
+33.png::CompressedTexture2D/CompressedTexture2D::5478448370385441372::1751526127::1751526129::1::::<><><>0<>0<>31caa3622039646e7543a96deaa0d7f2<>res://.godot/imported/33.png-7d0f9cedf8c6a692d06476e991d1c028.ctex::
+34.png::CompressedTexture2D/CompressedTexture2D::7125457119490621190::1751526127::1751526129::1::::<><><>0<>0<>40a76a33aa1a0483095aa1ffa54b9016<>res://.godot/imported/34.png-bfa98bac84fae04694fbc0ae8a688371.ctex::
+35.png::CompressedTexture2D/CompressedTexture2D::6373115534926587533::1751526127::1751526129::1::::<><><>0<>0<>d4b64bfd86f51b34f545a9bb2a243e3d<>res://.godot/imported/35.png-2f80f189efb06dfbddfdc3d314fae00b.ctex::
+36.png::CompressedTexture2D/CompressedTexture2D::1612425972431447293::1751526127::1751526129::1::::<><><>0<>0<>8a0f333c561f59c479c33d9dce659956<>res://.godot/imported/36.png-a5ed6afcc9a233cfcd5ade668a8b014b.ctex::
+37.png::CompressedTexture2D/CompressedTexture2D::8297239177186499132::1751526127::1751526129::1::::<><><>0<>0<>abe88613729cf9ca624866b274b8fab4<>res://.godot/imported/37.png-348fa53edc2c2538c296c160854be6cd.ctex::
+38.png::CompressedTexture2D/CompressedTexture2D::65654445142377983::1751526127::1751526129::1::::<><><>0<>0<>76c835a902c7d8bbccdd8b2aa4bb9bc5<>res://.godot/imported/38.png-773508386f8fde42fb8a9457b709a9bf.ctex::
+39.png::CompressedTexture2D/CompressedTexture2D::758412761545518957::1751526127::1751526129::1::::<><><>0<>0<>470bdb58182e47629785c6e6747191a1<>res://.godot/imported/39.png-5679098ce5b45d01402afd2b91e99a9b.ctex::
+40.png::CompressedTexture2D/CompressedTexture2D::7830834697172887024::1751526127::1751526129::1::::<><><>0<>0<>e0100a4ec6455f48d004a791ebc43896<>res://.godot/imported/40.png-f903270cb2bc99d32d4bd50b5e0b1965.ctex::
+41.png::CompressedTexture2D/CompressedTexture2D::3056960966892442044::1751526127::1751526129::1::::<><><>0<>0<>771bc9c91a74da9bd5006973c9d86686<>res://.godot/imported/41.png-1e01f131610d5dfa1e5de70fa4ea436f.ctex::
+42.png::CompressedTexture2D/CompressedTexture2D::2161491622252908232::1751526127::1751526129::1::::<><><>0<>0<>3d81b259840d7667bf0906ac7f2f2955<>res://.godot/imported/42.png-a6e9c838a037b4b51f0d1cd27a8681c2.ctex::
+43.png::CompressedTexture2D/CompressedTexture2D::6922557538545623725::1751526127::1751526129::1::::<><><>0<>0<>0dc4687e598d538a6bffc403b6bb1944<>res://.godot/imported/43.png-d828a19b276a861ab0d65b533d5b6209.ctex::
+44.png::CompressedTexture2D/CompressedTexture2D::4362077449736873515::1751526127::1751526129::1::::<><><>0<>0<>743d917125e7ddfba56e2e93d444e70a<>res://.godot/imported/44.png-6a8411106c52a42f0dda101b71dec96c.ctex::
+45.png::CompressedTexture2D/CompressedTexture2D::6515691962354344111::1751526127::1751526129::1::::<><><>0<>0<>2d74b39fe3badf959a268a8d3a11157b<>res://.godot/imported/45.png-061438a269ab7907a0bfe2f6b253dccf.ctex::
+46.png::CompressedTexture2D/CompressedTexture2D::346427020353975674::1751526127::1751526129::1::::<><><>0<>0<>b9c589bcfe324bfbcc33ab137eae76cb<>res://.godot/imported/46.png-4d4b49cd2da66a5cc46427ce51665fe6.ctex::
+47.png::CompressedTexture2D/CompressedTexture2D::9187072046703715469::1751526127::1751526129::1::::<><><>0<>0<>8056c330c1172db8ac3caab6da4d43fb<>res://.godot/imported/47.png-0a3b8c32d765554cf5e5a17b441a29c3.ctex::
+48.png::CompressedTexture2D/CompressedTexture2D::3676787332998661205::1751526127::1751526129::1::::<><><>0<>0<>0fc17cf1acf0a02a7c54dd6ef24f74ef<>res://.godot/imported/48.png-67b767391543f57c2d72315c438de101.ctex::
+49.png::CompressedTexture2D/CompressedTexture2D::5067889502377935701::1751526127::1751526129::1::::<><><>0<>0<>a6f4a4745800ed4ee4a9f6bea1b3a4f4<>res://.godot/imported/49.png-dcfd08bbb9c1069d1e58165b61448ccc.ctex::
+50.png::CompressedTexture2D/CompressedTexture2D::6475567094835855428::1751526127::1751526130::1::::<><><>0<>0<>94ca466cedd8b50c1d40d114c30373a1<>res://.godot/imported/50.png-b634fceeea06239654a0d74453c7a3c9.ctex::
+::res://LeapNight Assets/Sprites/Menu/Text/::1751526130
+Text (Black) (8x10).png::CompressedTexture2D/CompressedTexture2D::781758973750583679::1751526127::1751526130::1::::<><><>0<>0<>e356860226dcd88328a513343d5822e4<>res://.godot/imported/Text (Black) (8x10).png-4757c204b0cdda25c8b95f1257bcc965.ctex::
+Text (White) (8x10).png::CompressedTexture2D/CompressedTexture2D::5564328377128987820::1751526127::1751526130::1::::<><><>0<>0<>9ad47d5afceb183536ce74c0e6b3240f<>res://.godot/imported/Text (White) (8x10).png-3740c7852e0659f5acf57b9a1b4bc3da.ctex::
+::res://LeapNight Assets/Sprites/Other/::1751526130
+Confetti (16x16).png::CompressedTexture2D/CompressedTexture2D::3799992696939843676::1751526127::1751526130::1::::<><><>0<>0<>294bb4e8d4c256742d534d5ad5865fdd<>res://.godot/imported/Confetti (16x16).png-573c6c8823cbc0ce9fdedf39c4c2ec56.ctex::
+Dust Particle.png::CompressedTexture2D/CompressedTexture2D::3823165148770522466::1751526127::1751526130::1::::<><><>0<>0<>20f0d75735bdb7162d2198702b7d43b7<>res://.godot/imported/Dust Particle.png-f8ff8a6c674e5b527b4dcc5bdc236fdf.ctex::
+Shadow.png::CompressedTexture2D/CompressedTexture2D::8421052051105681757::1751526127::1751526130::1::::<><><>0<>0<>cac6ed240b302d6416722ae9f4ebbc3b<>res://.godot/imported/Shadow.png-2bfdf6824dffd96a2e76ad17a19c9811.ctex::
+Transition.png::CompressedTexture2D/CompressedTexture2D::606631126227033362::1751526127::1751526130::1::::<><><>0<>0<>13f5976d76154e1e31c1fa7e36516d16<>res://.godot/imported/Transition.png-b04b2f48ad5a41314f62c32edfae938c.ctex::
+::res://LeapNight Assets/Sprites/Terrain/::1751526130
+Terrain (16x16).png::CompressedTexture2D/CompressedTexture2D::1113767652825163257::1751526127::1751526130::1::::<><><>0<>0<>298b545a15c97821b9696b5d008d304a<>res://.godot/imported/Terrain (16x16).png-f65e22a523f2e8e754883e16502ce6bd.ctex::
+::res://LeapNight Assets/Sprites/Traps/::1751526128
+::res://LeapNight Assets/Sprites/Traps/Arrow/::1751526130
+Hit (18x18).png::CompressedTexture2D/CompressedTexture2D::6341005800494635674::1751526127::1751526130::1::::<><><>0<>0<>1d16d07174b20a2cd9e96b5b822f6476<>res://.godot/imported/Hit (18x18).png-9f7b1a19c982ed45df15028b092f4eb7.ctex::
+Idle (18x18).png::CompressedTexture2D/CompressedTexture2D::4012248784954109929::1751526127::1751526130::1::::<><><>0<>0<>62a9a4be0e85381e837d88d75a006ad2<>res://.godot/imported/Idle (18x18).png-b7140537895ab2c27517f79d39f036e1.ctex::
+::res://LeapNight Assets/Sprites/Traps/Blocks/::1751526130
+HitSide (22x22).png::CompressedTexture2D/CompressedTexture2D::5247067250939921383::1751526127::1751526130::1::::<><><>0<>0<>208f7ecc47dd6525cdf0bbcb8f272515<>res://.godot/imported/HitSide (22x22).png-7e5e75d2a44ec32b1a879f16469123ad.ctex::
+HitTop (22x22).png::CompressedTexture2D/CompressedTexture2D::6195700058200409182::1751526127::1751526130::1::::<><><>0<>0<>05270e847a16a3b4c3bf1233214577c5<>res://.godot/imported/HitTop (22x22).png-0b2f9ef9b3d33fd7d8d517cbe6bd7c51.ctex::
+Idle.png::CompressedTexture2D/CompressedTexture2D::4645549768631494772::1751526127::1751526130::1::::<><><>0<>0<>e1c6e59a6ee60132d75e736443869d53<>res://.godot/imported/Idle.png-a02c163558fc58a46ce24e55e16a2774.ctex::
+Part 1 (22x22).png::CompressedTexture2D/CompressedTexture2D::1091350906386789835::1751526127::1751526130::1::::<><><>0<>0<>c937927b1e57a802c1875f8bb4c58f38<>res://.godot/imported/Part 1 (22x22).png-f967b8df5300ed14d973fe3e9a7c7cf8.ctex::
+Part 2 (22x22).png::CompressedTexture2D/CompressedTexture2D::1976482204086816268::1751526127::1751526130::1::::<><><>0<>0<>6df4f1fdf6665f1877bd4eb57174fe1e<>res://.godot/imported/Part 2 (22x22).png-9603249f554111854d0d6e19692a569a.ctex::
+::res://LeapNight Assets/Sprites/Traps/Falling Platforms/::1751526130
+Off.png::CompressedTexture2D/CompressedTexture2D::7301449583506710166::1751526127::1751526130::1::::<><><>0<>0<>1e237614c1d5c85d29e43b80be8a4aa3<>res://.godot/imported/Off.png-588227d92ded051171bf46e6be3bb2c1.ctex::
+On (32x10).png::CompressedTexture2D/CompressedTexture2D::7716057466765493680::1751526127::1751526130::1::::<><><>0<>0<>054735f84878c32684202ebac6456eed<>res://.godot/imported/On (32x10).png-62fa3832c1daeb89a66d68b2b762f0d5.ctex::
+::res://LeapNight Assets/Sprites/Traps/Fan/::1751526129
+Off.png::CompressedTexture2D/CompressedTexture2D::4184179180431254263::1751526127::1751526129::1::::<><><>0<>0<>e8ae0d37696de5fbccded606dae20be2<>res://.godot/imported/Off.png-9a71b38bf3e4b19209c589779d1bc6e3.ctex::
+On (24x8).png::CompressedTexture2D/CompressedTexture2D::7709161808970110493::1751526127::1751526129::1::::<><><>0<>0<>7b1e9b8e0e3ec7904f207ac9250535e0<>res://.godot/imported/On (24x8).png-2fffae62c1a741dde3816059c51fb79f.ctex::
+::res://LeapNight Assets/Sprites/Traps/Fire/::1751526129
+Hit (16x32).png::CompressedTexture2D/CompressedTexture2D::6491525344545815322::1751526127::1751526129::1::::<><><>0<>0<>780668c99e446f756dab9dfa7d942cc5<>res://.godot/imported/Hit (16x32).png-9cf621253de2cab78ac105409947228e.ctex::
+Off.png::CompressedTexture2D/CompressedTexture2D::3874578750751926959::1751526127::1751526129::1::::<><><>0<>0<>20781f8aea12c9c2f39ed2e24af46eda<>res://.godot/imported/Off.png-5309b995dea39f05312a340b56c6f5a4.ctex::
+On (16x32).png::CompressedTexture2D/CompressedTexture2D::32243874773202058::1751526127::1751526129::1::::<><><>0<>0<>0b714da1db1373491c1082910e08bc4c<>res://.godot/imported/On (16x32).png-8fae646d6a04c242e5df8f5129be2413.ctex::
+::res://LeapNight Assets/Sprites/Traps/Platforms/::1751526129
+Brown Off.png::CompressedTexture2D/CompressedTexture2D::554621584142513473::1751526127::1751526129::1::::<><><>0<>0<>42e7358f08bc41072dc2306c2debabe7<>res://.godot/imported/Brown Off.png-aa9fe2512e306a3ce5b418417bf9a6e2.ctex::
+Brown On (32x8).png::CompressedTexture2D/CompressedTexture2D::5975522705121877694::1751526127::1751526129::1::::<><><>0<>0<>0a40e5caa87d6a0d09849e5c59260e1c<>res://.godot/imported/Brown On (32x8).png-03d16ed6b0499ca2f4ffbe7daf6da4f9.ctex::
+Chain.png::CompressedTexture2D/CompressedTexture2D::8152006111395305053::1751526127::1751526129::1::::<><><>0<>0<>91720dbfc56a5fdc848ac1349cbd48f7<>res://.godot/imported/Chain.png-ff2801644f860400262ea68a0bebe3cc.ctex::
+Grey Off.png::CompressedTexture2D/CompressedTexture2D::8245533205385667002::1751526127::1751526129::1::::<><><>0<>0<>4e180a9b356cd15a1151a8752412fa88<>res://.godot/imported/Grey Off.png-5d19484637cacc6d37d7ed6e698beaea.ctex::
+Grey On (32x8).png::CompressedTexture2D/CompressedTexture2D::1668347130538901112::1751526127::1751526129::1::::<><><>0<>0<>ffdbe102406b0c8e3002cb3078114d29<>res://.godot/imported/Grey On (32x8).png-1c35a9e60cea3696bbea3eb784a64e00.ctex::
+::res://LeapNight Assets/Sprites/Traps/Rock Head/::1751526129
+Blink (42x42).png::CompressedTexture2D/CompressedTexture2D::2368662253082238363::1751526127::1751526129::1::::<><><>0<>0<>959c620802dc45a5277aa4c0477879fb<>res://.godot/imported/Blink (42x42).png-71db20834d2266ea80805fafa548cf56.ctex::
+Bottom Hit (42x42).png::CompressedTexture2D/CompressedTexture2D::2633060060587400111::1751526127::1751526129::1::::<><><>0<>0<>ceb8e281a20a3fda0953b30504b6fb23<>res://.godot/imported/Bottom Hit (42x42).png-10e371ce72f777c5704a52d3023bd137.ctex::
+Idle.png::CompressedTexture2D/CompressedTexture2D::4257316053500943679::1751526127::1751526129::1::::<><><>0<>0<>ea345d17a6d46e175c740a3ee542a792<>res://.godot/imported/Idle.png-2f2411ad688de2758a150c6c9d5eb772.ctex::
+Left Hit (42x42).png::CompressedTexture2D/CompressedTexture2D::4055481242788369039::1751526127::1751526129::1::::<><><>0<>0<>b24020e6e12c4fbe4fdf0526cdd25b6e<>res://.godot/imported/Left Hit (42x42).png-ae3645afc8357091b2e0677b1f95bb46.ctex::
+Right Hit (42x42).png::CompressedTexture2D/CompressedTexture2D::4185188028265053868::1751526127::1751526129::1::::<><><>0<>0<>210ab56f61e628820ab52db63be49b4a<>res://.godot/imported/Right Hit (42x42).png-073c0b02c8c3ac7ffd9cf8474638259d.ctex::
+Top Hit (42x42).png::CompressedTexture2D/CompressedTexture2D::9088434922239016494::1751526127::1751526129::1::::<><><>0<>0<>1a3e6ba4bb1e1eeb1d3b7360eb36fd67<>res://.godot/imported/Top Hit (42x42).png-9b3d92204e8f0539b3a275fec1c892a4.ctex::
+::res://LeapNight Assets/Sprites/Traps/Sand Mud Ice/::1751526129
+Ice Particle.png::CompressedTexture2D/CompressedTexture2D::6613910696264401490::1751526127::1751526129::1::::<><><>0<>0<>b08818b604e124a2e60eebd15fd6f967<>res://.godot/imported/Ice Particle.png-9ec766522676de8d2c07df79a5aec3c0.ctex::
+Mud Particle.png::CompressedTexture2D/CompressedTexture2D::4268541053397656670::1751526127::1751526129::1::::<><><>0<>0<>46ba71cc6bbe57b7b9c80b3ff94410f8<>res://.godot/imported/Mud Particle.png-5faca26ba62c5c9a6fff26965a2ea4b1.ctex::
+Sand Mud Ice (16x6).png::CompressedTexture2D/CompressedTexture2D::3694319721797811708::1751526127::1751526129::1::::<><><>0<>0<>16779233e6b2172f9daa19ae9ee655af<>res://.godot/imported/Sand Mud Ice (16x6).png-91da4508cc36b2a690231db5c9d8bd74.ctex::
+Sand Particle.png::CompressedTexture2D/CompressedTexture2D::7000861982268472196::1751526127::1751526129::1::::<><><>0<>0<>79e00e83139db29a84dce9901efcb9c2<>res://.godot/imported/Sand Particle.png-6cada7d441259b51c241f7eb12dda5f0.ctex::
+::res://LeapNight Assets/Sprites/Traps/Saw/::1751526129
+Chain.png::CompressedTexture2D/CompressedTexture2D::2386725142482343088::1751526127::1751526129::1::::<><><>0<>0<>b0ddfcd7840dfd569439de9ac7a0c179<>res://.godot/imported/Chain.png-8acd555f297a6f9286a3ad50e5c94e06.ctex::
+Off.png::CompressedTexture2D/CompressedTexture2D::6349460963245344666::1751526127::1751526129::1::::<><><>0<>0<>f9b6116a1e1dc4fc91e85dccb92283eb<>res://.godot/imported/Off.png-402502f6573e3caa229f6c8fabb7cba2.ctex::
+On (38x38).png::CompressedTexture2D/CompressedTexture2D::1971490511608059988::1751526127::1751526129::1::::<><><>0<>0<>7c55e2ba31b203ac083430a9f46c94bb<>res://.godot/imported/On (38x38).png-e08bc3bbc31227f5342cb5ce4a4884aa.ctex::
+::res://LeapNight Assets/Sprites/Traps/Spike Head/::1751526129
+Blink (54x52).png::CompressedTexture2D/CompressedTexture2D::7815560365899493304::1751526127::1751526129::1::::<><><>0<>0<>16f14ddde37fcb11fc20275cc58e3f82<>res://.godot/imported/Blink (54x52).png-31fae5470f7d2f68bb4d10a8f8905f72.ctex::
+Bottom Hit (54x52).png::CompressedTexture2D/CompressedTexture2D::136279915804445298::1751526127::1751526129::1::::<><><>0<>0<>7b309e821420e6371d865d2e3481c7ec<>res://.godot/imported/Bottom Hit (54x52).png-586d7b277946e6295a2522a9af2adc84.ctex::
+Idle.png::CompressedTexture2D/CompressedTexture2D::5185256320634689326::1751526127::1751526129::1::::<><><>0<>0<>efc3df783eb2b9c7b752451a0f5a7b8c<>res://.godot/imported/Idle.png-18518e76c20198589d3d49d7e4a5aa8a.ctex::
+Left Hit (54x52).png::CompressedTexture2D/CompressedTexture2D::8549590176683976489::1751526127::1751526129::1::::<><><>0<>0<>af4275891490e876b6f5cb6a8f58fc7e<>res://.godot/imported/Left Hit (54x52).png-68daac66f4bbefce605a2a945ea0e949.ctex::
+Right Hit (54x52).png::CompressedTexture2D/CompressedTexture2D::977715171616487699::1751526127::1751526129::1::::<><><>0<>0<>f9a270648168edc479322f0fa00b6580<>res://.godot/imported/Right Hit (54x52).png-b423dfcfe07c441645f560a9bbde03e6.ctex::
+Top Hit (54x52).png::CompressedTexture2D/CompressedTexture2D::4351095003260572452::1751526127::1751526129::1::::<><><>0<>0<>10504c6337c59f6800ce5b2ee55ebc2b<>res://.godot/imported/Top Hit (54x52).png-edb69dc69cadbbc3f4c0fc9d8730b0a5.ctex::
+::res://LeapNight Assets/Sprites/Traps/Spiked Ball/::1751526129
+Chain.png::CompressedTexture2D/CompressedTexture2D::1481434040364308183::1751526127::1751526129::1::::<><><>0<>0<>f63292d3d696e766b75b25429a22a1b3<>res://.godot/imported/Chain.png-f8e9f606bd236284a360afb81943b4ce.ctex::
+Spiked Ball.png::CompressedTexture2D/CompressedTexture2D::3902655401613908847::1751526127::1751526129::1::::<><><>0<>0<>7c7a6992269d12b74cc76e4168026a4e<>res://.godot/imported/Spiked Ball.png-e2023d951c633e28e8aa6046e0ffb2c6.ctex::
+::res://LeapNight Assets/Sprites/Traps/Spikes/::1751526129
+Idle.png::CompressedTexture2D/CompressedTexture2D::1305712540234885740::1751526128::1751526129::1::::<><><>0<>0<>34936e39409a50057b7f56d6f58d39aa<>res://.godot/imported/Idle.png-560d2d6c33fd6ba16b09eea5f86ae8ee.ctex::
+::res://LeapNight Assets/Sprites/Traps/Trampoline/::1751526129
+Idle.png::CompressedTexture2D/CompressedTexture2D::7925372918632396462::1751526128::1751526129::1::::<><><>0<>0<>5e64a4a329a1414a809c19fb1319c73c<>res://.godot/imported/Idle.png-8d26a280b220c72f1cabfee7bc34c492.ctex::
+Jump (28x28).png::CompressedTexture2D/CompressedTexture2D::470028449663930890::1751526128::1751526129::1::::<><><>0<>0<>9709dd8e26dd55293e135e8239663248<>res://.godot/imported/Jump (28x28).png-601936e05ed042f3637f3f24f8e7d760.ctex::
