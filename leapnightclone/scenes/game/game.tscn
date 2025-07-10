@@ -1,16 +1,33 @@
-[gd_scene load_steps=3 format=3 uid="uid://cc3cr532lhwvs"]
+[gd_scene load_steps=4 format=3 uid="uid://cc3cr532lhwvs"]
 
 [ext_resource type="PackedScene" uid="uid://cy5e443jbuhyp" path="res://scenes/player/player.tscn" id="1_sul5r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sul5r"]
 size = Vector2(380, 20)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7h61r"]
+size = Vector2(27, 199)
+
 [node name="Game" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_sul5r")]
+position = Vector2(125, 467)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(134, 477)
 shape = SubResource("RectangleShape2D_sul5r")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(-5, -82)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(17, 473)
+rotation = -3.14159
+shape = SubResource("RectangleShape2D_7h61r")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(262, 471)
+rotation = -3.14159
+shape = SubResource("RectangleShape2D_7h61r")
