@@ -1,2 +1,4 @@
 res://scenes/game/game.tscn
 res://scenes/player/player.tscn
+res://scenes/game/bg.gdshader
+res://gaem_tile.tres
