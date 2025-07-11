@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://puq1vnfoltey"]
+
+[ext_resource type="Script" uid="uid://cc3fj1qmto1ma" path="res://scenes/traps/spikes.gd" id="1_k7bup"]
+[ext_resource type="Texture2D" uid="uid://suq5omcjghge" path="res://LeapNight Assets/Sprites/Traps/Spikes/Idle.png" id="1_x0y1a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k7bup"]
+size = Vector2(15, 7)
+
+[node name="Spikes" type="Area2D"]
+collision_layer = 0
+script = ExtResource("1_k7bup")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -8)
+texture = ExtResource("1_x0y1a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -3.5)
+shape = SubResource("RectangleShape2D_k7bup")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

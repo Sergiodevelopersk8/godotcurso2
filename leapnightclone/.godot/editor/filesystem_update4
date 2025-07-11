@@ -1,4 +1,5 @@
-res://scenes/game/game.tscn
-res://scenes/player/player.tscn
 res://scenes/game/bg.gdshader
 res://gaem_tile.tres
+res://scenes/traps/spikes.gd
+res://scenes/traps/spikes.tscn
+res://autoloads/event_manager.gd
