@@ -97,3 +97,9 @@ func change_direction():
 
 func reset_jump():
 	jump_left = max_jumps
+
+
+func player_dead():
+	can_move = false
+	velocity = Vector2.ZERO
+	anim_sprite.play("dead")

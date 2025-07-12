@@ -1,3 +1,28 @@
-[gd_scene format=3 uid="uid://cq3n7h2tdhgh7"]
+[gd_scene load_steps=5 format=3 uid="uid://cq3n7h2tdhgh7"]
+
+[ext_resource type="Texture2D" uid="uid://b1wjmxwdgvywl" path="res://LeapNight Assets/Sprites/Traps/Rock Head/Idle.png" id="1_b2ayx"]
+[ext_resource type="Script" uid="uid://bkdla0n7h62lw" path="res://scenes/traps/spike_block.gd" id="1_qowo6"]
+[ext_resource type="PackedScene" uid="uid://puq1vnfoltey" path="res://scenes/traps/spikes.tscn" id="2_yos4f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yos4f"]
+size = Vector2(32, 31)
 
 [node name="SpikeBlock" type="StaticBody2D"]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_qowo6")
+
+[node name="Visuals" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Visuals"]
+texture = ExtResource("1_b2ayx")
+
+[node name="Spikes" parent="Visuals" instance=ExtResource("2_yos4f")]
+position = Vector2(-7, -16)
+
+[node name="Spikes2" parent="Visuals" instance=ExtResource("2_yos4f")]
+position = Vector2(8, -16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_yos4f")
