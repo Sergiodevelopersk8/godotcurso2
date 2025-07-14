@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://qvvo2w7i2lha"]
+
+[ext_resource type="Script" uid="uid://b6xtm0g0ml1bk" path="res://scenes/fruits/fruit.gd" id="1_iagoq"]
+
+[node name="FruitBase" type="Area2D"]
+collision_layer = 8
+script = ExtResource("1_iagoq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

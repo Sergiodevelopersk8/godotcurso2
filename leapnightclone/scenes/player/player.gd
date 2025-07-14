@@ -100,6 +100,7 @@ func reset_jump():
 
 
 func player_dead():
+	#el movimiento es falso
 	can_move = false
 	velocity = Vector2.ZERO
 	anim_sprite.play("dead")
