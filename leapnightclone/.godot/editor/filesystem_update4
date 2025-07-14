@@ -1,14 +1,9 @@
-res://scenes/traps/spikes.tscn
 res://scenes/game/bg.gdshader
 res://gaem_tile.tres
-res://scenes/traps/spikes.gd
-res://autoloads/event_manager.gd
-res://scenes/traps/spike_block.tscn
-res://scenes/traps/spike_block.gd
+res://scenes/fruits/fruit_apple.tscn
 res://scenes/game/game.tscn
 res://scenes/player/player.tscn
-res://scenes/game/game.gd
-res://scenes/player/player.gd
+res://scenes/traps/spikes.tscn
+res://scenes/traps/spike_block.tscn
 res://scenes/fruits/fruit_base.tscn
-res://scenes/fruits/fruit.gd
 res://scenes/fruits/fruit_banana.tscn

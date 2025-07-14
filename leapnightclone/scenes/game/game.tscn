@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://cc3cr532lhwvs"]
+[gd_scene load_steps=11 format=4 uid="uid://cc3cr532lhwvs"]
 
 [ext_resource type="Shader" uid="uid://c3jypj074e8te" path="res://scenes/game/bg.gdshader" id="1_0sr1o"]
 [ext_resource type="Script" uid="uid://dtotblq0mlyd4" path="res://scenes/game/game.gd" id="1_5i0tg"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://d0v7xkv3g2f8e" path="res://LeapNight Assets/Sprites/Background/Gray.png" id="2_kelw5"]
 [ext_resource type="PackedScene" uid="uid://cq3n7h2tdhgh7" path="res://scenes/traps/spike_block.tscn" id="5_lfrn8"]
 [ext_resource type="PackedScene" uid="uid://bijghrtqqp77f" path="res://scenes/fruits/fruit_banana.tscn" id="7_bdhmt"]
+[ext_resource type="PackedScene" uid="uid://bpygxh7ueg7rd" path="res://scenes/fruits/fruit_apple.tscn" id="8_87uf6"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_kelw5"]
 shader = ExtResource("1_0sr1o")
@@ -83,3 +84,15 @@ position = Vector2(55, 5)
 
 [node name="FruitBanana4" parent="Floor_2" instance=ExtResource("7_bdhmt")]
 position = Vector2(112, 3)
+
+[node name="FruitApple" parent="Floor_2" instance=ExtResource("8_87uf6")]
+position = Vector2(-20, -54)
+
+[node name="FruitApple2" parent="Floor_2" instance=ExtResource("8_87uf6")]
+position = Vector2(199, -53)
+
+[node name="FruitApple3" parent="Floor_2" instance=ExtResource("8_87uf6")]
+position = Vector2(164, -121)
+
+[node name="FruitApple4" parent="Floor_2" instance=ExtResource("8_87uf6")]
+position = Vector2(6, -122)
