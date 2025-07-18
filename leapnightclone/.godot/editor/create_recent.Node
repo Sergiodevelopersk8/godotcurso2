@@ -1,8 +1,11 @@
+Camera2D
+PathFollow2D
+Path2D
+Node2D
 AnimationPlayer
 AnimatedSprite2D
 CollisionShape2D
 Area2D
-Node2D
 Sprite2D
 StaticBody2D
 Control
@@ -10,4 +13,3 @@ TextureRect
 TileMapLayer
 TileMap
 RayCast2D
-CharacterBody2D
