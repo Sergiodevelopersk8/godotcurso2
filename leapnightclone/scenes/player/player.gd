@@ -11,6 +11,7 @@ class_name Player
 @onready var visuals: Node2D = $Visuals
 @onready var anim_sprite: AnimatedSprite2D = $Visuals/AnimatedSprite2D
 @onready var ray_cast: RayCast2D = $Visuals/RayCast2D
+@onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 
 #guardar los saltos que quedan
 var jump_left : int
@@ -104,3 +105,10 @@ func player_dead():
 	can_move = false
 	velocity = Vector2.ZERO
 	anim_sprite.play("dead")
+	collision_shape_2d.set_deferred("disabled",true)
+
+func player_respawn():
+	anim_sprite.play("respawn")
+	await  anim_sprite.animation_finished
+	can_move = true
+	collision_shape_2d.set_deferred("disabled",false)

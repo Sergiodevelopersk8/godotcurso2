@@ -1,10 +1,13 @@
-res://scenes/game/game.tscn
 res://scenes/game/bg.gdshader
 res://gaem_tile.tres
-res://scenes/extra/custom_path_follow_2d.tscn
-res://scenes/extra/custom_path_follow_2d.gd
+res://scenes/enemy/enemy_blue_bird.tscn
+res://scenes/enemy/enemy_blue_bird.gd
+res://scenes/game/game.tscn
+res://scenes/enemy/enemy_base.tscn
 res://scenes/player/player.tscn
 res://scenes/traps/spikes.tscn
 res://scenes/traps/spike_block.tscn
 res://scenes/fruits/fruit_base.tscn
-res://scenes/game/camera_2d.gd
+res://scenes/extra/custom_path_follow_2d.tscn
+res://scenes/game/game.gd
+res://scenes/player/player.gd

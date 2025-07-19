@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://cc3cr532lhwvs"]
+[gd_scene load_steps=17 format=4 uid="uid://cc3cr532lhwvs"]
 
 [ext_resource type="Shader" uid="uid://c3jypj074e8te" path="res://scenes/game/bg.gdshader" id="1_0sr1o"]
 [ext_resource type="Script" uid="uid://dtotblq0mlyd4" path="res://scenes/game/game.gd" id="1_5i0tg"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://d3trne0p8q5xa" path="res://scenes/fruits/fruit_pineapple.tscn" id="9_2a8rs"]
 [ext_resource type="PackedScene" uid="uid://puq1vnfoltey" path="res://scenes/traps/spikes.tscn" id="10_4j704"]
 [ext_resource type="PackedScene" uid="uid://crhahvl5125ih" path="res://scenes/extra/custom_path_follow_2d.tscn" id="11_kp23o"]
+[ext_resource type="PackedScene" uid="uid://c4og6hwbin0hr" path="res://scenes/enemy/enemy_blue_bird.tscn" id="13_vaxfo"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_kelw5"]
 shader = ExtResource("1_0sr1o")
@@ -21,9 +22,9 @@ size = Vector2(238, 5.5)
 
 [sub_resource type="Curve2D" id="Curve2D_4j704"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -102, -117, 0, 0, 0, 0, 106, -118)
+"points": PackedVector2Array(0, 0, 0, 0, -102, -117, 0, 0, 0, 0, -93, -117, 0, 0, 0, 0, -61.2224, -117.3, 0, 0, 0, 0, 106, -118)
 }
-point_count = 2
+point_count = 4
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_5i0tg")
@@ -152,7 +153,7 @@ position = Vector2(-116, -154)
 position = Vector2(-89, -154)
 
 [node name="Floor_5" type="Node2D" parent="."]
-position = Vector2(132, -448)
+position = Vector2(132, -452)
 
 [node name="Spikes" parent="Floor_5" instance=ExtResource("10_4j704")]
 position = Vector2(-36, 79)
@@ -169,7 +170,6 @@ curve = SubResource("Curve2D_4j704")
 
 [node name="CustomPathFollow2D" parent="Floor_5/Path2D" instance=ExtResource("11_kp23o")]
 position = Vector2(-102, -117)
-rotation = -0.00480766
 move_speed = 0.15
 
 [node name="FruitBase" parent="Floor_5/Path2D/CustomPathFollow2D" instance=ExtResource("8_87uf6")]
@@ -180,22 +180,34 @@ curve = SubResource("Curve2D_4j704")
 
 [node name="CustomPathFollow2D" parent="Floor_5/Path2D2" instance=ExtResource("11_kp23o")]
 position = Vector2(-102, -117)
-rotation = -0.00480766
 move_speed = 0.35
 
 [node name="FruitBase" parent="Floor_5/Path2D2/CustomPathFollow2D" instance=ExtResource("9_2a8rs")]
 
 [node name="Path2D3" type="Path2D" parent="Floor_5"]
-position = Vector2(1, 76)
+position = Vector2(1, 68)
 curve = SubResource("Curve2D_4j704")
 
 [node name="CustomPathFollow2D" parent="Floor_5/Path2D3" instance=ExtResource("11_kp23o")]
 position = Vector2(-102, -117)
-rotation = -0.00480766
 move_speed = 0.45
 
 [node name="FruitBanana" parent="Floor_5/Path2D3/CustomPathFollow2D" instance=ExtResource("7_bdhmt")]
 position = Vector2(-0.995182, -1.0048)
 
+[node name="Path2D4" type="Path2D" parent="Floor_5"]
+position = Vector2(1, 99)
+curve = SubResource("Curve2D_4j704")
+
+[node name="CustomPathFollow2D" parent="Floor_5/Path2D4" instance=ExtResource("11_kp23o")]
+position = Vector2(-102, -117)
+move_speed = 0.15
+
+[node name="EnemyBlueBird" parent="Floor_5/Path2D4/CustomPathFollow2D" node_paths=PackedStringArray("path") instance=ExtResource("13_vaxfo")]
+path = NodePath("..")
+
 [node name="Floor_6" type="Node2D" parent="."]
 position = Vector2(136, -650)
+
+[node name="SpawnPos" type="Marker2D" parent="."]
+position = Vector2(125, 367)
