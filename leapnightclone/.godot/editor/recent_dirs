@@ -1,9 +1,11 @@
+res://scenes/traps
+res://LeapNight Assets/Sprites/Items/Checkpoints/Checkpoint
+res://scenes/extra
+res://LeapNight Assets/Sprites/Traps/Rock Head
 res://LeapNight Assets/Sprites/Enemies/BlueBird
 res://scenes/enemy
-res://scenes/extra
 res://scenes/fruits
 res://LeapNight Assets/Sprites/Items/Fruits
-res://scenes/traps
 res://autoloads
 res://
 res://scenes

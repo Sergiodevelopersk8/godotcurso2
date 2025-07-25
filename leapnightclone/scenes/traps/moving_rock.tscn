@@ -1,0 +1,91 @@
+[gd_scene load_steps=12 format=3 uid="uid://cyu0o5xsereu2"]
+
+[ext_resource type="Texture2D" uid="uid://bdrqd5mopxeup" path="res://LeapNight Assets/Sprites/Traps/Rock Head/Bottom Hit (42x42).png" id="1_6omoy"]
+[ext_resource type="Script" uid="uid://c2lfkjhts87hr" path="res://scenes/traps/moving_rock.gd" id="1_813wf"]
+[ext_resource type="Texture2D" uid="uid://b1wjmxwdgvywl" path="res://LeapNight Assets/Sprites/Traps/Rock Head/Idle.png" id="2_813wf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dnh3m"]
+atlas = ExtResource("1_6omoy")
+region = Rect2(0, 0, 42, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q4ahm"]
+atlas = ExtResource("1_6omoy")
+region = Rect2(42, 0, 42, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rimvo"]
+atlas = ExtResource("1_6omoy")
+region = Rect2(84, 0, 42, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0qq2y"]
+atlas = ExtResource("1_6omoy")
+region = Rect2(126, 0, 42, 42)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7rrux"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dnh3m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q4ahm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rimvo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0qq2y")
+}],
+"loop": true,
+"name": &"bottom_hit",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_813wf")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dnh3m"]
+size = Vector2(32, 28)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0aehi"]
+size = Vector2(31, 45)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_flemb"]
+size = Vector2(32, 7)
+
+[node name="MovingRock" type="StaticBody2D"]
+collision_layer = 4
+script = ExtResource("1_813wf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_7rrux")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_dnh3m")
+
+[node name="ActionArea" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionArea"]
+position = Vector2(-0.5, 39.5)
+shape = SubResource("RectangleShape2D_0aehi")
+debug_color = Color(0.419608, 0.94902, 0.180392, 0.419608)
+
+[node name="KillArea" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillArea"]
+position = Vector2(0, 15.5)
+shape = SubResource("RectangleShape2D_flemb")
+debug_color = Color(0.897737, 0.249156, 0.496638, 0.42)
+
+[connection signal="body_entered" from="ActionArea" to="." method="_on_action_area_body_entered"]
+[connection signal="body_entered" from="KillArea" to="." method="_on_kill_area_body_entered"]

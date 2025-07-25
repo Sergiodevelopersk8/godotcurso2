@@ -7,3 +7,7 @@ signal on_played_dead
 
 #señal de coleccion de fruta
 signal on_fruit_collected
+
+
+#señal de checkpoint
+signal on_checkpoint_reached
