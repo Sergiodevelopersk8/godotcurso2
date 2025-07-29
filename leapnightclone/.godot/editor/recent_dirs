@@ -1,9 +1,11 @@
+res://LeapNight Assets/Sprites/Enemies/AngryPig
+res://scenes/enemy
+res://LeapNight Assets/Sprites/Enemies/Rino
 res://scenes/traps
 res://LeapNight Assets/Sprites/Items/Checkpoints/Checkpoint
 res://scenes/extra
 res://LeapNight Assets/Sprites/Traps/Rock Head
 res://LeapNight Assets/Sprites/Enemies/BlueBird
-res://scenes/enemy
 res://scenes/fruits
 res://LeapNight Assets/Sprites/Items/Fruits
 res://autoloads
