@@ -16,6 +16,7 @@ func _on_body_entered(body: Node2D) -> void:
 	# si la estamos recolectando
 	collected = true
 	anim_sprite.play("collected")
+	SoundManager.play_fruit()
 	EventManager.on_fruit_collected.emit()
 	#esperamos 
 	await get_tree().create_timer(0.5).timeout

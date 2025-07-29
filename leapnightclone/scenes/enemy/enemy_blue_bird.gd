@@ -24,6 +24,8 @@ func _on_top_area_body_entered(body: Node2D) -> void:
 	#salto para el player cuando colisiona
 	body.velocity.y = -250
 	dead = true 
+	#sonido
+	SoundManager.play_impact()
 	#eliminar
 	await anim_sprite.animation_finished
 	queue_free()

@@ -65,6 +65,7 @@ func _on_top_area_body_entered(body: Node2D) -> void:
 	defeated = true
 	can_move = false
 	anim_sprite.play("hit")
+	SoundManager.play_impact()
 	await get_tree().create_timer(1.2).timeout
 	queue_free()
 

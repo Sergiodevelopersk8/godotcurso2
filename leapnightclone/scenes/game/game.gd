@@ -4,6 +4,11 @@ class_name Game
 # referencia al player
 @onready var player: Player = $Player
 
+#referencia a label points ui
+@onready var points_label: Label = $GameUI/Control/Points_Label
+
+
+
 #variable de puntos
 var points : int
 #variable para el checkpoint
@@ -14,6 +19,8 @@ var checkpoint_reached: bool
 
 #referencia al maker chckpoint
 @onready var checkpoint_respawn_pos: Marker2D = $CheckpointRespawnPos
+
+@onready var game_won_panel: Panel = $GameUI/GameWonPanel
 
 
 
@@ -29,10 +36,16 @@ func _ready() -> void:
 	#emicion de checkpoint
 	EventManager.on_checkpoint_reached.connect(_on_checkpoint_reached)
 	
+	#emicion de checkpoint final
+	EventManager.on_game_won.connect(_on_game_won)
+	
+
+
+
 
 func _on_fruit_collected():
 	points += 1
-	print(points)
+	points_label.text = str(points)
 
 func get_respawn_pos()-> Vector2:
 	#si ya se tocco el checkpoint 
@@ -60,3 +73,10 @@ func _on_played_dead():
 #funcion de check point
 func _on_checkpoint_reached():
 	checkpoint_reached = true
+
+func _on_game_won():
+	game_won_panel.show()
+
+
+func _on_play_button_pressed() -> void:
+	get_tree().reload_current_scene()

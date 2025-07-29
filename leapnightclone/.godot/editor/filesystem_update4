@@ -8,3 +8,16 @@ res://scenes/extra/checkpoint.tscn
 res://scenes/traps/spike_ball.tscn
 res://scenes/enemy/enemy_pig.tscn
 res://scenes/enemy/enemy_pig.gd
+res://scenes/extra/end_checkpoint.tscn
+res://scenes/extra/end_checkpoint.gd
+res://autoloads/event_manager.gd
+res://scenes/game/game.gd
+res://default_bus_layout.tres
+res://autoloads/sound_manager.tscn
+res://autoloads/sound_manager.gd
+res://scenes/enemy/enemy_blue_bird.gd
+res://scenes/fruits/fruit.gd
+res://scenes/player/player.gd
+res://scenes/traps/spikes.gd
+res://scenes/traps/spike_ball.gd
+res://scenes/traps/moving_rock.gd

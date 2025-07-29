@@ -82,6 +82,7 @@ func jump():
 	if jump_left <= 0:
 		return
 	
+	SoundManager.play_jump()
 	velocity.y = -jump_force
 	jump_left -= 1
 	if jump_left <= 0:
