@@ -1,0 +1,7 @@
+res://Scenes/coin.tscn
+res://Scenes/coin.gd
+res://Scenes/Escena3D.tscn
+res://Player/player.tscn
+res://Scenes/platforms.tscn
+res://Scenes/game.gd
+res://Player/player.gd

@@ -24,8 +24,9 @@ var checkpoint_reached: bool
 
 
 
-
+#script de game
 #funcion de ready
+
 func _ready() -> void:
 	#el eventmanager invoca la funcion de morir y conecta con la
 	#funcion de morir
