@@ -17,15 +17,18 @@ var mouse_sensitivity_vertical = 0.1
 
 @onready var camera_arm: Node3D = $CameraArm
 
+@onready var animplayer: AnimationPlayer = $gobot/AnimationPlayer
 
 
 
 func _ready() -> void:
 	#ocultar el raton
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	animplayer.play("Idle")
 
 
 func _physics_process(delta: float) -> void:
+	animaciones()
 	#MOSTRAR EL RATON
 	if Input.is_action_just_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
@@ -40,12 +43,17 @@ func move_player(delta: float):
 	# mapeos de las teclas para mover al personaje
 	if Input.is_action_pressed("derecha"): 
 		input_dir.x += 1
-	if Input.is_action_pressed("izquierda"): 
+
+		
+	if Input.is_action_pressed("izquierda") : 
 		input_dir.x -= 1
+
 	if Input.is_action_pressed("arriba"): 
 		input_dir.z -= 1
+
 	if Input.is_action_pressed("abajo"): 
 		input_dir.z += 1
+
 	
 	# normalizamos para evitar boost en diagonal
 	input_dir = input_dir.normalized()
@@ -54,6 +62,7 @@ func move_player(delta: float):
 	
 	# valida si puede saltar
 	if  is_on_floor() and Input.is_action_pressed("jump"):
+		animplayer.play("Jump")
 		# aplica el salto 
 		velocity.y = jump_velocity
 	
@@ -100,3 +109,13 @@ func _input(event) :
 			camera_arm.rotate_x(deg_to_rad(-event.relative.y * mouse_sensitivity_vertical))
 			#limites de rotacion de la camara
 			camera_arm.rotation.x = clamp(camera_arm.rotation.x, deg_to_rad(-90.0),deg_to_rad(30.0))
+
+func is_moving():
+	return abs(velocity.z) > 0 || abs(velocity.x) > 0
+
+func animaciones():
+	if is_on_floor():
+		if is_moving():
+			animplayer.play("Run",0.5)
+		else:
+			animplayer.play("Idle")
