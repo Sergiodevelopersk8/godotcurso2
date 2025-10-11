@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://hk525qwxfdu6"]
+
+[ext_resource type="Texture2D" uid="uid://cuhk8orspp8lq" path="res://assets/sprites/rock-small.png" id="1_ckhff"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ckhff"]
+radius = 36.0
+
+[node name="SmallAsteroid" type="Area2D"]
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ckhff")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -3)
+shape = SubResource("CircleShape2D_ckhff")

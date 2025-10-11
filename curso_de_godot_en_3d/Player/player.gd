@@ -19,6 +19,7 @@ var mouse_sensitivity_vertical = 0.1
 
 @onready var animplayer: AnimationPlayer = $gobot/AnimationPlayer
 
+@onready var modelo = $gobot
 
 
 func _ready() -> void:
@@ -35,6 +36,13 @@ func _physics_process(delta: float) -> void:
 	
 	# llama la funcion para mover al player
 	move_player(delta)
+
+func _process(delta: float) -> void:
+	if is_moving():
+		
+		var look_rotate = Vector2(velocity.z,velocity.x)
+		modelo.rotation.y = lerp_angle(modelo.rotation.y, look_rotate.angle(), delta * 12)
+	
 
 func move_player(delta: float):
 	
@@ -58,11 +66,11 @@ func move_player(delta: float):
 	# normalizamos para evitar boost en diagonal
 	input_dir = input_dir.normalized()
 	# Convertimos dirección local a global según la rotación del jugador
-	var Ddirection = (transform.basis * input_dir).normalized()
+	
 	
 	# valida si puede saltar
 	if  is_on_floor() and Input.is_action_pressed("jump"):
-		animplayer.play("Jump")
+		animplayer.play("Jump",0.5)
 		# aplica el salto 
 		velocity.y = jump_velocity
 	
@@ -76,7 +84,8 @@ func move_player(delta: float):
 	input_dir = input_dir.normalized()
 
 	# convertir a dirección global según rotación del jugador
-	var direction = (transform.basis * input_dir).normalized()
+	var cam_yaw = camera_arm.global_transform.basis.get_euler().y
+	var direction = (Basis(Vector3.UP, cam_yaw) * input_dir).normalized()
 	
 	
 	#traduce intención de movimiento a desplazamiento real.
@@ -85,13 +94,20 @@ func move_player(delta: float):
 	
 	#gravedad
 	gravedad(delta)
-	#print("esta es la velocidad en y",velocity.y)
+	
+	#rotarModelo(velocity.z,velocity.x, delta)
+	
 	move_and_slide()
 
 func gravedad(delta: float):
 	# Gravedad
 	if not is_on_floor():
 		velocity.y -= gravity * delta
+
+#func rotarModelo(velocidad_z,velocidad_x, delta):
+
+
+
 
 func zone_deadth():
 	if position.y < -25:
@@ -118,4 +134,4 @@ func animaciones():
 		if is_moving():
 			animplayer.play("Run",0.5)
 		else:
-			animplayer.play("Idle")
+			animplayer.play("Idle",0.5)

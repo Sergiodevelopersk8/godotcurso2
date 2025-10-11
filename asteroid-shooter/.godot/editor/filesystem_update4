@@ -1,0 +1,5 @@
+res://scenes/main/main.tscn
+res://scenes/Player/player.tscn
+res://scenes/Player/player.gd
+res://scenes/main/asteroid_spawner.gd
+res://scenes/asteroids/big_asteroid.tscn

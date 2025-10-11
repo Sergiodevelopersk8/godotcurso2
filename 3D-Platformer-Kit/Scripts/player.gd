@@ -29,6 +29,7 @@ var can_double_jump = false
 @onready var particle_trail = $ParticleTrail
 @onready var footsteps = $Footsteps
 
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity") * 2
 

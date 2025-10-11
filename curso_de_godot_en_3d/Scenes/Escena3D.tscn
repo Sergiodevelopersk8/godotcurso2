@@ -1,9 +1,9 @@
 [gd_scene load_steps=27 format=4 uid="uid://pjqfva21fw6p"]
 
 [ext_resource type="Script" uid="uid://c184ckokdqxqn" path="res://Scenes/game.gd" id="1_2lfkc"]
-[ext_resource type="PackedScene" uid="uid://cbm4krjybj7lq" path="res://Player/player.tscn" id="2_5xha7"]
 [ext_resource type="PackedScene" uid="uid://b7440yggb47s8" path="res://Scenes/coin.tscn" id="2_equcc"]
 [ext_resource type="Texture2D" uid="uid://cnbbny7qjh2xn" path="res://Assets/Textures/coin.png" id="3_equcc"]
+[ext_resource type="PackedScene" uid="uid://dseiga4c7cjpd" path="res://Player/playerpov.tscn" id="4_2lfkc"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_spyxv"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -387,13 +387,6 @@ environment = SubResource("Environment_5xha7")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.39801, 0, 0)
 
-[node name="Player" parent="." instance=ExtResource("2_5xha7")]
-transform = Transform3D(-0.0898852, 0, 0.995952, 0, 1, 0, -0.995952, 0, -0.0898852, 3.71848, 0, 0)
-jump_velocity = 9.9
-
-[node name="Camera3D" type="Camera3D" parent="Player"]
-transform = Transform3D(0.0251999, 0, -0.999682, 0, 1, 0, 0.999682, 0, 0.0251999, -2.98419, 0.61035, -1.122)
-
 [node name="Cube" type="MeshInstance3D" parent="."]
 transform = Transform3D(5, 0, 0, 0, 0.5, 0, 0, 0, 5, 1.47411, -1.54703, -2.12358)
 mesh = SubResource("ArrayMesh_5xha7")
@@ -451,3 +444,5 @@ skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cube2/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_rniql")
+
+[node name="playerpov" parent="." instance=ExtResource("4_2lfkc")]

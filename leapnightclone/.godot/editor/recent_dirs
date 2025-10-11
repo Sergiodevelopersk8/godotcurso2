@@ -1,3 +1,4 @@
+res://scenes/player
 res://autoloads
 res://scenes/extra
 res://LeapNight Assets/Sprites/Enemies/AngryPig
@@ -14,4 +15,3 @@ res://scenes
 res://scenes/game
 res://LeapNight Assets/Sprites/Main Characters
 res://LeapNight Assets/Sprites/Main Characters/Ninja Frog
-res://scenes/player
