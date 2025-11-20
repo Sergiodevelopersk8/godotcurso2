@@ -1,5 +1,0 @@
-res://scenes/game/bg.gdshader
-res://gaem_tile.tres
-res://scenes/player/player_first_view.tscn
-res://scenes/game/game.tscn
-res://autoloads/sound_manager.tscn
