@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://cn4il5vlbktjh"]
+
+[ext_resource type="Script" uid="uid://wse3sp6g8ddp" path="res://Scripts/GUI/Inventory/inventory_main.gd" id="1_btv15"]
+[ext_resource type="Script" uid="uid://u0mgp5iv75tu" path="res://Scripts/GUI/Inventory/inventory_slot.gd" id="2_ja6kd"]
+
+[node name="inventory" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_btv15")
+
+[node name="InventorySlot" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_left = 512.0
+offset_top = 144.0
+offset_right = 512.0
+offset_bottom = 144.0
+script = ExtResource("2_ja6kd")
+metadata/_custom_type_script = "uid://u0mgp5iv75tu"
+
+[node name="grid" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 776.0
+offset_top = 136.0
+offset_right = 912.0
+offset_bottom = 248.0

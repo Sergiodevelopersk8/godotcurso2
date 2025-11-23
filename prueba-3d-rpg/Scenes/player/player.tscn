@@ -3188,6 +3188,7 @@ tracks/68/keys = PackedFloat32Array(0, 1, 1, 1, 1)
 [sub_resource type="Animation" id="Animation_sxeyt"]
 resource_name = "Idle_A"
 length = 1.0666667
+loop_mode = 1
 tracks/0/type = "position_3d"
 tracks/0/imported = true
 tracks/0/enabled = true
@@ -8134,7 +8135,7 @@ animation = &"Hit_A"
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_mxepk"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_e41v5"]
-graph_offset = Vector2(-336.63223, 105.446045)
+graph_offset = Vector2(-193.32245, 245.90802)
 nodes/output/position = Vector2(440, 200)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_mxepk")
 nodes/Animation/position = Vector2(-80, 260)
@@ -8148,14 +8149,14 @@ animation = &"Death_A"
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ca0mu"]
 animation = &"Idle_A"
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xxarj"]
+animation = &"jump_Full_Long"
+
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6k3cy"]
 animation = &"running"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6upyo"]
 animation = &"Walking_A"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xxarj"]
-animation = &"jump_Full_Long"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_mxepk"]
 advance_mode = 2
@@ -8178,6 +8179,7 @@ advance_condition = &"IsRunning"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_t3oqc"]
 advance_mode = 2
+advance_condition = &"IsInAir"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_e41v5"]
 advance_mode = 2
@@ -8188,6 +8190,7 @@ advance_mode = 2
 advance_condition = &"is_dying"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_p8lfk"]
+advance_mode = 2
 advance_condition = &"Is_dying"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_uawwb"]
@@ -8216,15 +8219,16 @@ states/Death/node = SubResource("AnimationNodeAnimation_e41v5")
 states/Death/position = Vector2(817, 33)
 states/End/position = Vector2(894, 146)
 states/Idle/node = SubResource("AnimationNodeAnimation_ca0mu")
-states/Idle/position = Vector2(350, 146)
+states/Idle/position = Vector2(340, 135)
+states/Jump/node = SubResource("AnimationNodeAnimation_xxarj")
+states/Jump/position = Vector2(530, 322)
 states/Run/node = SubResource("AnimationNodeAnimation_6k3cy")
 states/Run/position = Vector2(778, 146)
 states/Start/position = Vector2(185, 146)
 states/Walk/node = SubResource("AnimationNodeAnimation_6upyo")
 states/Walk/position = Vector2(530, 146)
-states/jump/node = SubResource("AnimationNodeAnimation_xxarj")
-states/jump/position = Vector2(530, 322)
-transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_mxepk"), "Run", "jump", SubResource("AnimationNodeStateMachineTransition_6upyo"), "Idle", "jump", SubResource("AnimationNodeStateMachineTransition_xxarj"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_6k3cy"), "Walk", "Run", SubResource("AnimationNodeStateMachineTransition_kd672"), "Walk", "jump", SubResource("AnimationNodeStateMachineTransition_t3oqc"), "Walk", "Death", SubResource("AnimationNodeStateMachineTransition_e41v5"), "Run", "Death", SubResource("AnimationNodeStateMachineTransition_ca0mu"), "Idle", "Death", SubResource("AnimationNodeStateMachineTransition_p8lfk"), "Idle", "Attack1", SubResource("AnimationNodeStateMachineTransition_uawwb"), "Attack1", "Idle", SubResource("AnimationNodeStateMachineTransition_ag54m"), "jump", "Walk", SubResource("AnimationNodeStateMachineTransition_g7b1g"), "Run", "Walk", SubResource("AnimationNodeStateMachineTransition_h0khc"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_6vj4j")]
+transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_mxepk"), "Run", "Jump", SubResource("AnimationNodeStateMachineTransition_6upyo"), "Idle", "Jump", SubResource("AnimationNodeStateMachineTransition_xxarj"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_6k3cy"), "Walk", "Run", SubResource("AnimationNodeStateMachineTransition_kd672"), "Walk", "Jump", SubResource("AnimationNodeStateMachineTransition_t3oqc"), "Walk", "Death", SubResource("AnimationNodeStateMachineTransition_e41v5"), "Run", "Death", SubResource("AnimationNodeStateMachineTransition_ca0mu"), "Idle", "Death", SubResource("AnimationNodeStateMachineTransition_p8lfk"), "Idle", "Attack1", SubResource("AnimationNodeStateMachineTransition_uawwb"), "Attack1", "Idle", SubResource("AnimationNodeStateMachineTransition_ag54m"), "Jump", "Walk", SubResource("AnimationNodeStateMachineTransition_g7b1g"), "Run", "Walk", SubResource("AnimationNodeStateMachineTransition_h0khc"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_6vj4j")]
+graph_offset = Vector2(58, 94.28522)
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_eo61r")
@@ -8438,7 +8442,7 @@ skin = SubResource("Skin_pqh00")
 libraries = {
 &"": SubResource("AnimationLibrary_ijudv")
 }
-autoplay = "Walking_A"
+autoplay = "Idle_A"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2132743, 0.71120596, 0.24637526)

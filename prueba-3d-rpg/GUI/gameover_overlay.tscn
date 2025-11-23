@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=3 uid="uid://dyp6bxo3ugl8"]
+
+[ext_resource type="Script" uid="uid://1f7wnwaemgax" path="res://Scripts/GUI/gameover_overlay.gd" id="1_xw1vj"]
+
+[node name="gameover_overlay" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_xw1vj")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 56.0
+offset_top = 56.0
+offset_right = 1008.0
+offset_bottom = 528.0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -472.0
+offset_right = 472.0
+offset_bottom = 176.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 32
+theme_override_font_sizes/font_size = 56
+text = "game over 
+try again"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="retry" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 360.0
+offset_top = 376.0
+offset_right = 632.0
+offset_bottom = 440.0
+text = "RETRY"
+
+[connection signal="pressed" from="Panel/retry" to="." method="_on_button_pressed"]

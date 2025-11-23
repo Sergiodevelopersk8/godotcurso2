@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://bx55wxcbwcrq5"]
+
+[ext_resource type="Texture2D" uid="uid://dnmwfjk7g1xiv" path="res://Assets/16x16 RPG Item Pack/Item__00.png" id="1_34d25"]
+[ext_resource type="Script" uid="uid://ckq3dbwn6eddq" path="res://Scripts/GUI/Inventory/item_data.gd" id="2_ppku7"]
+
+[resource]
+script = ExtResource("2_ppku7")
+item_name = "Iron Sword"
+item_damage = 5
+description = "this is a iron sword"
+item_texture = ExtResource("1_34d25")

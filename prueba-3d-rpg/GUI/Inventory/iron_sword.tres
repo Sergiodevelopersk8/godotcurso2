@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://c7adqc3qv2h8j"]
+
+[ext_resource type="Script" uid="uid://ckq3dbwn6eddq" path="res://Scripts/GUI/Inventory/item_data.gd" id="1_s6oqk"]
+[ext_resource type="Texture2D" uid="uid://cfci7lqk8cyg1" path="res://Assets/16x16 RPG Item Pack/Item__28.png" id="1_x5t16"]
+
+[resource]
+script = ExtResource("1_s6oqk")
+type = 5
+item_name = "small potion"
+item_damage = 3
+count = "1"
+description = "small potion"
+item_texture = ExtResource("1_x5t16")

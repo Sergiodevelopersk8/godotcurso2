@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://bwc3vxdeinjhf"]
+[gd_scene load_steps=5 format=3 uid="uid://bwc3vxdeinjhf"]
 
 [ext_resource type="MeshLibrary" uid="uid://di2h5b2pmbq50" path="res://Scenes/Levels/library.tres" id="1_cp10e"]
 [ext_resource type="PackedScene" uid="uid://ddr2wd8w7fw7" path="res://Scenes/player/player.tscn" id="2_7pr3o"]
+[ext_resource type="PackedScene" uid="uid://dyp6bxo3ugl8" path="res://GUI/gameover_overlay.tscn" id="3_q8yj7"]
+[ext_resource type="PackedScene" uid="uid://b4kegaeddk3fn" path="res://Scenes/player/GUI.tscn" id="4_87l2y"]
 
 [node name="Level_1" type="Node3D"]
 
@@ -15,3 +17,7 @@ data = {
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5828515, 1.2770844, -10.70405)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+
+[node name="gameover_overlay" parent="." instance=ExtResource("3_q8yj7")]
+
+[node name="CanvasLayer" parent="." instance=ExtResource("4_87l2y")]
