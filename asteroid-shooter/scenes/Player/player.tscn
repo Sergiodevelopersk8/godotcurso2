@@ -1,10 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://c43bd64v0q4o8"]
+[gd_scene load_steps=5 format=3 uid="uid://c43bd64v0q4o8"]
 
 [ext_resource type="Script" uid="uid://c3mjxumeiggnd" path="res://scenes/Player/player.gd" id="1_1kbk7"]
 [ext_resource type="Texture2D" uid="uid://cgycwb844k62m" path="res://assets/sprites/ship.png" id="1_cyojo"]
+[ext_resource type="PackedScene" uid="uid://dmgd456i1f5ny" path="res://scenes/laser/laser.tscn" id="2_gqjuk"]
 
-[node name="Player" type="CharacterBody2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_gqjuk"]
+radius = 51.009804
+
+[node name="Player" type="CharacterBody2D" groups=["asteroides", "player"]]
+z_index = 1
 script = ExtResource("1_1kbk7")
+laser_scene = ExtResource("2_gqjuk")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -13,3 +19,11 @@ texture = ExtResource("1_cyojo")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(58, 0, -39, -73, -37, 72)
+
+[node name="DetectionArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
+position = Vector2(-14, 1)
+shape = SubResource("CircleShape2D_gqjuk")
+
+[connection signal="area_entered" from="DetectionArea" to="." method="_on_detection_area_area_entered"]
