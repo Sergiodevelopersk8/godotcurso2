@@ -12,6 +12,7 @@ min_speed = 300.0
 max_speed = 400.0
 min_rotation_speed = -180.0
 max_rotation_speed = 180.0
+points = 5
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

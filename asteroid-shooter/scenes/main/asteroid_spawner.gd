@@ -1,25 +1,29 @@
 extends Marker2D
+class_name AsteroidSpawner
 
-#instanciar la escena de asteroide grande
-
-@export var big_asteroid_scene : PackedScene
+#instanciar las escenas de los asteroides en un array
+@export var asteroids:Array[PackedScene]
 @export var min_y : float 
 @export var max_y : float
 @export var destroy_asteroid_screen : float
+@onready var timer: Timer = $Timer
 
 
 
 
 func create_asteroid():
-	#se genera la instancia del asteroide
-	var big_asteroid_instance = big_asteroid_scene.instantiate()
-	add_child(big_asteroid_instance)
-	var random_y = randf_range(min_y, max_y)
-	big_asteroid_instance.global_position.y = random_y
+	if GameManager.is_game_over:
+		timer.stop()
 	
-
-
-
+	#genera alateoria del array de los asteroides
+	var random_asteroid_scene = asteroids.pick_random()
+	#se genera la instancia del asteroide
+	var random_asteroid_instance = random_asteroid_scene.instantiate()
+	#lo aghrega como hijo
+	add_child(random_asteroid_instance)
+	var random_y = randf_range(min_y, max_y)
+	random_asteroid_instance.global_position.y = random_y
+	
 
 func destroy_Asteroid():
 	

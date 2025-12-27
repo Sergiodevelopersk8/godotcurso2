@@ -1,3 +1,7 @@
+res://resources
+res://scenes/UI/GameOver
+res://Autoloads
+res://scenes/UI
 res://scenes/Player
 res://scenes/asteroids
 res://scenes/main

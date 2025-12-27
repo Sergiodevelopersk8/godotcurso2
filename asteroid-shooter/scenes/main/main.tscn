@@ -1,12 +1,20 @@
-[gd_scene load_steps=6 format=3 uid="uid://4wnlkbfwv5hp"]
+[gd_scene load_steps=12 format=3 uid="uid://4wnlkbfwv5hp"]
 
 [ext_resource type="Texture2D" uid="uid://c3f455ou3ql7q" path="res://assets/sprites/background.png" id="1_hyk8p"]
 [ext_resource type="PackedScene" uid="uid://cxn2fonw53gio" path="res://scenes/asteroids/big_asteroid.tscn" id="2_iuonh"]
 [ext_resource type="PackedScene" uid="uid://c43bd64v0q4o8" path="res://scenes/Player/player.tscn" id="2_l3cfh"]
 [ext_resource type="Script" uid="uid://nye2vl1stxnc" path="res://scenes/main/asteroid_spawner.gd" id="3_k2fmo"]
+[ext_resource type="PackedScene" uid="uid://ddanxbxix03mn" path="res://scenes/asteroids/medium_asteroid.tscn" id="4_ow5a4"]
+[ext_resource type="PackedScene" uid="uid://hk525qwxfdu6" path="res://scenes/asteroids/small_asteroid.tscn" id="5_hujxm"]
+[ext_resource type="Script" uid="uid://ppsrtc1hes58" path="res://scenes/main/gameovertrigger.gd" id="7_b1x3f"]
+[ext_resource type="PackedScene" uid="uid://xkx7crbufw3b" path="res://scenes/UI/HUD/hud.tscn" id="7_hujxm"]
+[ext_resource type="PackedScene" uid="uid://bw2gg2ro0b6x3" path="res://scenes/UI/GameOver/game_over_ui.tscn" id="8_yyfjg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l3cfh"]
 size = Vector2(1162, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yyfjg"]
+size = Vector2(67, 669.5)
 
 [node name="Main" type="Node2D"]
 
@@ -15,6 +23,7 @@ position = Vector2(628, 348)
 texture = ExtResource("1_hyk8p")
 
 [node name="Player" parent="Background" instance=ExtResource("2_l3cfh")]
+position = Vector2(-442, -31)
 
 [node name="Walls" type="Node2D" parent="."]
 
@@ -58,7 +67,7 @@ shape = SubResource("RectangleShape2D_l3cfh")
 [node name="AsteroidSpawner" type="Marker2D" parent="." groups=["asteroides"]]
 position = Vector2(1366, 285)
 script = ExtResource("3_k2fmo")
-big_asteroid_scene = ExtResource("2_iuonh")
+asteroids = Array[PackedScene]([ExtResource("4_ow5a4"), ExtResource("5_hujxm"), ExtResource("2_iuonh")])
 min_y = 70.0
 max_y = 585.0
 destroy_asteroid_screen = -119.0
@@ -66,4 +75,22 @@ destroy_asteroid_screen = -119.0
 [node name="Timer" type="Timer" parent="AsteroidSpawner"]
 autostart = true
 
+[node name="gameovertrigger" type="Area2D" parent="."]
+position = Vector2(-60, 0)
+script = ExtResource("7_b1x3f")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gameovertrigger"]
+position = Vector2(-75.5, 333.25)
+shape = SubResource("RectangleShape2D_yyfjg")
+
+[node name="UILayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="UILayer" instance=ExtResource("7_hujxm")]
+metadata/_edit_lock_ = true
+
+[node name="GameOverUI" parent="UILayer" instance=ExtResource("8_yyfjg")]
+visible = false
+
 [connection signal="timeout" from="AsteroidSpawner/Timer" to="AsteroidSpawner" method="_on_timer_timeout"]
+[connection signal="area_entered" from="gameovertrigger" to="gameovertrigger" method="_on_area_entered"]

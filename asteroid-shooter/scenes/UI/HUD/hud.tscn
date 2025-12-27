@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://xkx7crbufw3b"]
+
+[ext_resource type="LabelSettings" uid="uid://bx32n18b8l8w6" path="res://resources/zyzol_white_28.tres" id="1_5f3yu"]
+[ext_resource type="Script" uid="uid://c7ky67tvgki0w" path="res://scenes/UI/HUD/score_label.gd" id="2_76m5x"]
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="ScoreLabel" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "SCORE : 0"
+label_settings = ExtResource("1_5f3yu")
+script = ExtResource("2_76m5x")
