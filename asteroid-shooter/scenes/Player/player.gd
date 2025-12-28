@@ -12,7 +12,7 @@ var x_input
 
 
 
-func _physics_process(delta) :
+func _physics_process(_delta) :
 	if GameManager.is_game_over: return
 	
 	player_move(x_input,y_input)
@@ -41,7 +41,8 @@ func create_laser():
 
 
 func _on_detection_area_area_entered(area: Area2D) -> void:
-	#elimino la nave si esta colisiona con el asteroide  
+	#elimino la nave si esta colisiona con la colision que este 
+	#en el grupo de asteroides  
 	if area.is_in_group("asteroides"):
 		GameManager.set_is_game_over(true)
 		queue_free()

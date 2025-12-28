@@ -19,9 +19,15 @@ config/icon="res://icon.svg"
 
 GameManager="*res://Autoloads/game_manager.gd"
 
+[display]
+
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
 [global_group]
 
 asteroides=""
+player=""
 
 [input]
 

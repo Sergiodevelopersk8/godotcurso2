@@ -7,7 +7,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_gqjuk"]
 radius = 51.009804
 
-[node name="Player" type="CharacterBody2D" groups=["asteroides", "player"]]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 z_index = 1
 script = ExtResource("1_1kbk7")
 laser_scene = ExtResource("2_gqjuk")
@@ -17,10 +17,10 @@ metadata/_edit_group_ = true
 rotation = 1.5708
 texture = ExtResource("1_cyojo")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." groups=["player"]]
 polygon = PackedVector2Array(58, 0, -39, -73, -37, 72)
 
-[node name="DetectionArea" type="Area2D" parent="."]
+[node name="DetectionArea" type="Area2D" parent="." groups=["player"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
 position = Vector2(-14, 1)

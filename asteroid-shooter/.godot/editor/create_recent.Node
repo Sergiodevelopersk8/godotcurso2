@@ -1,3 +1,7 @@
+GPUParticles2D
+Node
+Timer
+Marker2D
 CollisionShape2D
 Area2D
 Label
@@ -8,7 +12,4 @@ Panel
 VisibleOnScreenEnabler2D
 VisibleOnScreenNotifier2D
 CanvasLayer
-Marker2D
 StaticBody2D
-Timer
-Node2D

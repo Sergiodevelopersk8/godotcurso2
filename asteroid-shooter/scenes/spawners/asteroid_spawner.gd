@@ -33,3 +33,5 @@ func destroy_Asteroid():
 #intervalos de tiempo de spawner
 func _on_timer_timeout() -> void:
 	create_asteroid()
+	#var instances = 3
+	#for i in range(instances): create_asteroid()

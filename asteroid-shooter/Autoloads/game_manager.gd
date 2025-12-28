@@ -5,7 +5,7 @@ var is_game_over = false
 
 
 
-func _process(delta):
+func _process(_delta):
 	if is_game_over and Input.is_action_just_pressed("shoot"):
 		restar_game()
 

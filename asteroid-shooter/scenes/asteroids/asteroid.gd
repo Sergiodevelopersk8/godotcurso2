@@ -6,6 +6,7 @@ class_name Asteroid
 @export var min_rotation_speed:float
 @export var max_rotation_speed:float
 @export var points : int 
+@export var explosion_scene: PackedScene
 var random_speed
 var random_rotation_speed
 
@@ -32,4 +33,12 @@ func _on_area_entered(area: Area2D) -> void:
 	
 	#si colisiona el meteorito con el laser o el player este se elimina
 	if is_player or is_laser :
-		queue_free()
+		destroy()
+
+
+
+func destroy():
+	var explosion_instance = explosion_scene.instantiate()
+	add_sibling(explosion_instance)
+	explosion_instance.position = position
+	queue_free()

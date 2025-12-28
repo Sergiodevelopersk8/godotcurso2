@@ -1,3 +1,6 @@
+res://scenes/particles
+res://scenes/spawners
+res://scenes/power_up
 res://resources
 res://scenes/UI/GameOver
 res://Autoloads
