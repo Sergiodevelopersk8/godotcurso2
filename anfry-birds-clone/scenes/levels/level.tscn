@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://cwrd1ljrkds6g"]
+
+[ext_resource type="Texture2D" uid="uid://du7sxsh668akq" path="res://assets/sprites/bg.png" id="1_377w7"]
+[ext_resource type="Texture2D" uid="uid://dkolv1560o3wq" path="res://assets/sprites/ground.png" id="2_bovvr"]
+[ext_resource type="PackedScene" uid="uid://ha41qoxj51cl" path="res://scenes/Crate/crate.tscn" id="3_b2cq8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b2cq8"]
+size = Vector2(2395, 152)
+
+[node name="Level" type="Node2D"]
+
+[node name="Enviroment" type="Node2D" parent="."]
+
+[node name="BackGround" type="Sprite2D" parent="Enviroment"]
+position = Vector2(972, 535)
+texture = ExtResource("1_377w7")
+metadata/_edit_lock_ = true
+
+[node name="BackGround2" type="Sprite2D" parent="Enviroment"]
+position = Vector2(3366, 536)
+texture = ExtResource("1_377w7")
+metadata/_edit_lock_ = true
+
+[node name="Ground" type="StaticBody2D" parent="Enviroment"]
+z_index = 1
+position = Vector2(972, 1070)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Enviroment/Ground"]
+texture = ExtResource("2_bovvr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enviroment/Ground"]
+position = Vector2(-2.5, -4)
+shape = SubResource("RectangleShape2D_b2cq8")
+
+[node name="Ground2" type="StaticBody2D" parent="Enviroment"]
+z_index = 1
+position = Vector2(3365, 1070)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Enviroment/Ground2"]
+texture = ExtResource("2_bovvr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enviroment/Ground2"]
+position = Vector2(-2.5, -4)
+shape = SubResource("RectangleShape2D_b2cq8")
+
+[node name="Crate" parent="." instance=ExtResource("3_b2cq8")]
+position = Vector2(996, 456)

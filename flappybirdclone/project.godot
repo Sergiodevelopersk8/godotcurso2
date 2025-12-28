@@ -12,7 +12,7 @@ config_version=5
 
 config/name="FlappyBirdClone"
 run/main_scene="uid://dv80h38ka22l2"
-config/features=PackedStringArray("4.4", "Mobile")
+config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
 
 [display]
