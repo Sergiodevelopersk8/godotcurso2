@@ -1,2 +1,5 @@
 res://scenes/levels/level.tscn
-res://scenes/Crate/crate.tscn
+res://scenes/Player/player.tscn
+res://scenes/Enemy/enemy.tscn
+res://Scripts/player.gd
+res://Scripts/player_spawner.gd

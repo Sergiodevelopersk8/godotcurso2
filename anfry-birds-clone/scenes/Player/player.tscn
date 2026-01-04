@@ -1,0 +1,64 @@
+[gd_scene load_steps=9 format=3 uid="uid://caxcp52mfylon"]
+
+[ext_resource type="Script" uid="uid://c4w8pplb1qr8r" path="res://Scripts/player.gd" id="1_1kbk7"]
+[ext_resource type="Texture2D" uid="uid://vfchwwda22dc" path="res://assets/sprites/bird.png" id="1_cyojo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1kbk7"]
+atlas = ExtResource("1_cyojo")
+region = Rect2(0, 0, 115, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gqjuk"]
+atlas = ExtResource("1_cyojo")
+region = Rect2(115, 0, 115, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c4h5g"]
+atlas = ExtResource("1_cyojo")
+region = Rect2(230, 0, 115, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uiqp4"]
+atlas = ExtResource("1_cyojo")
+region = Rect2(345, 0, 115, 90)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hvfru"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1kbk7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gqjuk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c4h5g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uiqp4")
+}],
+"loop": true,
+"name": &"flap",
+"speed": 15.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cyojo"]
+radius = 33.0
+height = 74.0
+
+[node name="Player" type="RigidBody2D"]
+input_pickable = true
+freeze = true
+script = ExtResource("1_1kbk7")
+force_multiplayer = 10.0
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_hvfru")
+animation = &"flap"
+autoplay = "flap"
+frame_progress = 0.80545
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 2)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_cyojo")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

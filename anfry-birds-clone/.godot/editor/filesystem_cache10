@@ -1,10 +1,10 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1766953329
+::res://::1767503260
 icon.svg::CompressedTexture2D::4709934542732407726::1766953299::1766953309::1::::<><><>0<>0<>9a78788c917039750d6120fa42b4dc96<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://assets/::1734027257
-::res://assets/fonts/::1724851260
+::res://assets/fonts/::1766953338
 BD_Cartoon_Shout.ttf::FontFile::2774288206062473171::1724521992::1766953338::1::::<><><>0<>0<>ec5b9c9ec78fb372ed8b7dccb73dee90<>res://.godot/imported/BD_Cartoon_Shout.ttf-ad566bae1012cff23d97597a4ddd638d.fontdata::
-::res://assets/sprites/::1734027251
+::res://assets/sprites/::1766953338
 bg.png::CompressedTexture2D::8630233948784628092::1724084458::1766953338::1::::<><><>0<>0<>59ded85b322243e6db50d48030db55e7<>res://.godot/imported/bg.png-c77278129744470f7e66ac3bb62c4cd4.ctex::
 bird.png::CompressedTexture2D::1484422729348645260::1724089313::1766953338::1::::<><><>0<>0<>41658408918f1f2c2a36bd0cbb8455d6<>res://.godot/imported/bird.png-d5598eedc3457f5032d15d804457e260.ctex::
 button-hover.png::CompressedTexture2D::893870213186595377::1724524419::1766953338::1::::<><><>0<>0<>da553c51afafaab359a4a22013dc131f<>res://.godot/imported/button-hover.png-f49debc033563071170fb7d56326530f.ctex::
@@ -15,3 +15,8 @@ crate.png::CompressedTexture2D::3847899091896703575::1725734374::1766953338::1::
 explosion.png::CompressedTexture2D::3893600744655991702::1724435535::1766953338::1::::<><><>0<>0<>b415dbcae5d17ed997a8bd55e07ef524<>res://.godot/imported/explosion.png-9cc5a79bdd01a0eeac6b161c8d594f1f.ctex::
 ground.png::CompressedTexture2D::7890758578002623948::1724084464::1766953338::1::::<><><>0<>0<>089915d2bf78e9b0ac81e5625d191df9<>res://.godot/imported/ground.png-2752b5d28f9196b8533751adb848ed24.ctex::
 monster.png::CompressedTexture2D::4032041392132398858::1724090329::1766953338::1::::<><><>0<>0<>cba6f938ceda8a04cf9c338138e3400e<>res://.godot/imported/monster.png-e0a0bbc750c8f948db8e044cc06d2e5d.ctex::
+::res://scenes/::1766954217
+::res://scenes/Crate/::1766954285
+crate.tscn::PackedScene::493129991957096599::1766954285::0::1::::<><><>0<>0<><>::uid://bu27loity4712::::res://assets/sprites/crate.png
+::res://scenes/levels/::1766954624
+level.tscn::PackedScene::6352319523307754116::1766954624::0::1::::<><><>0<>0<><>::uid://du7sxsh668akq::::res://assets/sprites/bg.png<>uid://dkolv1560o3wq::::res://assets/sprites/ground.png<>uid://ha41qoxj51cl::::res://scenes/Crate/crate.tscn

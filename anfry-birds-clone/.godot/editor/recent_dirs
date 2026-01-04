@@ -1,2 +1,5 @@
+res://assets/sprites
+res://scenes/Enemy
+res://scenes/Player
 res://scenes/Crate
 res://scenes/levels
