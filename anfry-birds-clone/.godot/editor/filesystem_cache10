@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1767578563
+::res://::1767729765
 icon.svg::CompressedTexture2D::4709934542732407726::1766953299::1766953309::1::::<><><>0<>0<>9a78788c917039750d6120fa42b4dc96<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://assets/::1734027257
 ::res://assets/fonts/::1766953338
@@ -20,10 +20,10 @@ monster.png::CompressedTexture2D::4032041392132398858::1724090329::1766953338::1
 crate.tscn::PackedScene::493129991957096599::1766954285::0::1::::<><><>0<>0<><>::uid://bu27loity4712::::res://assets/sprites/crate.png
 ::res://scenes/Enemy/::1767504234
 enemy.tscn::PackedScene::7026618160424644660::1767504234::0::1::::<><><>0<>0<><>::uid://bxpferljlt78a::::res://assets/sprites/monster.png
-::res://scenes/levels/::1767508119
-level.tscn::PackedScene::6352319523307754116::1767508119::0::1::::<><><>0<>0<><>::uid://du7sxsh668akq::::res://assets/sprites/bg.png<>uid://dkolv1560o3wq::::res://assets/sprites/ground.png<>uid://ha41qoxj51cl::::res://scenes/Crate/crate.tscn<>uid://caxcp52mfylon::::res://scenes/Player/player.tscn<>uid://bgvwa4hn4gvth::::res://Scripts/player_spawner.gd<>uid://c7d0my6mn7js3::::res://scenes/Enemy/enemy.tscn
+::res://scenes/levels/::1767587201
+level.tscn::PackedScene::6352319523307754116::1767587201::0::1::::<><><>0<>0<><>::uid://du7sxsh668akq::::res://assets/sprites/bg.png<>uid://dkolv1560o3wq::::res://assets/sprites/ground.png<>uid://ha41qoxj51cl::::res://scenes/Crate/crate.tscn<>uid://caxcp52mfylon::::res://scenes/Player/player.tscn<>uid://bgvwa4hn4gvth::::res://Scripts/player_spawner.gd<>uid://c7d0my6mn7js3::::res://scenes/Enemy/enemy.tscn
 ::res://scenes/Player/::1767508226
 player.tscn::PackedScene::4820471894586770149::1767508226::0::1::::<><><>0<>0<><>::uid://c4w8pplb1qr8r::::res://Scripts/player.gd<>uid://vfchwwda22dc::::res://assets/sprites/bird.png
-::res://Scripts/::1767508226
-player.gd::GDScript::6855765396072253623::1767508226::0::1::::Palyer<>RigidBody2D<><>0<>0<><>::
+::res://Scripts/::1767587200
+player.gd::GDScript::6855765396072253623::1767587200::0::1::::Palyer<>RigidBody2D<><>0<>0<><>::
 player_spawner.gd::GDScript::2852242986817872961::1767507241::0::1::::PlayerSpawner<>Marker2D<><>0<>0<><>::
