@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3 uid="uid://bhpgcjw0h01ch"]
+
+[ext_resource type="Script" uid="uid://d0xp0kjhq7sye" path="res://Scripts/player.gd" id="1_l8h54"]
+[ext_resource type="Script" uid="uid://e27nnfusj2ft" path="res://Scripts/States/StateMachine.gd" id="2_4ntmi"]
+[ext_resource type="Script" uid="uid://c072aky3067fy" path="res://Scripts/States/Idle.gd" id="3_btcbx"]
+[ext_resource type="Script" uid="uid://dytmgat17ubi0" path="res://Scripts/States/Walk.gd" id="4_gwnis"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hvfyp"]
+height = 2.5
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_hvfyp"]
+height = 2.5
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_l8h54")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+current = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_hvfyp")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_hvfyp")
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("2_4ntmi")
+initial_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="StateMachine"]
+script = ExtResource("3_btcbx")
+
+[node name="Walk" type="Node" parent="StateMachine"]
+script = ExtResource("4_gwnis")
