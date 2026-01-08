@@ -3,10 +3,18 @@ extends PlayerState
 class_name Idle
 
 
+func update(delta):
+	player._delta += delta
+	var cam_bob = floor(abs(1) + abs(1)) * player._delta * 1
+	var objCam = player.origCamPos + Vector3.UP * sin(cam_bob) * .05
+	
+	player.camera_3d.position = player.camera_3d.position.lerp(objCam, delta)
+	if player._delta > 20:
+		player._delta = 0
 
 func physics_update(delta: float) -> void:
 	
-	if not player.process_input(delta) != Vector3.ZERO:
+	if player.process_input(delta) != Vector3.ZERO:
 		state_machine.transition_to("Walk",{})
 		return
 	

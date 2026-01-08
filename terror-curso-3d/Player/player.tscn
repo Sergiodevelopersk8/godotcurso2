@@ -33,3 +33,7 @@ script = ExtResource("3_btcbx")
 
 [node name="Walk" type="Node" parent="StateMachine"]
 script = ExtResource("4_gwnis")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0

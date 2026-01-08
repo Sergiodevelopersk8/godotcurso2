@@ -46,6 +46,6 @@ func transition_to(target_state_name : String, msg : Dictionary):
 	emit_signal("transitioned", state.name) # emitimos la señal y pasamos el estado 
 
 
-func get_state():
+func get_state() -> String:
 	# obtenemos en que estado estamos 
 	return state.name as String 

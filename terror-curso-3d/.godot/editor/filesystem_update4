@@ -1,8 +1,6 @@
-res://Maps/test_map.tscn
 res://Player/player.tscn
 res://Scripts/player.gd
-res://Scripts/States/State.gd
-res://Scripts/States/PlayerState.gd
-res://Scripts/States/StateMachine.gd
 res://Scripts/States/Idle.gd
 res://Scripts/States/Walk.gd
+res://Maps/test_map.tscn
+res://Scripts/States/StateMachine.gd
