@@ -6,6 +6,9 @@ class_name Player
 @onready var camera_3d: Camera3D = $Camera3D
 @onready var origCamPos : Vector3 = camera_3d.position
 @onready var label: Label = $Label
+@onready var ray_cast_ground_detector: RayCast3D = $Node3D/RayCastGroundDetector
+@onready var state_machine: StateMachine = $StateMachine
+@onready var footstep_sound: AudioStreamPlayer = $FootstepSound
 
 #----------VARIABLES---------
 var canMoveAndRotate := true #sirve para habilitar si se mueve la camara o no
@@ -21,6 +24,10 @@ var controller_sensitivity = .05 #sensibilidad del control
 var camBobSpeed := 5 #que tan rapido se mueve la camara
 var camBobUpDown := 1 #cuanto se mueve de arriba y abajo
 var _delta = 0
+
+var distanceFootstep = 0.0
+var playFootstep := 1
+
 #***************CAMARA************
 
 func _ready() -> void:
@@ -39,6 +46,8 @@ func _input(event: InputEvent) -> void:
 func _process(delta) :
 	label.text = $StateMachine.get_state()
 	process_camera_jostick()
+	processGroundSounds()
+	
 	#process_input(delta)
 
 
@@ -73,3 +82,42 @@ func process_input(delta) -> Vector3:
 	
 	direction = Vector3(side_input, 0, forward_input).rotated(Vector3.UP,h_rot).normalized()
 	return direction
+
+
+
+
+
+func processGroundSounds():
+	
+	var st = state_machine.get_state()
+	match st:
+		"RUN":
+			playFootstep = 2
+		"Walk":
+			playFootstep = 3
+		"Crouch":
+			playFootstep = 5 
+		_:
+			playFootstep = 100
+	
+	if playFootstep != 100 and (int(velocity.x) != 0) || int (velocity.z) != 0:
+		distanceFootstep += .1
+	
+	if distanceFootstep > playFootstep and is_on_floor():
+		if ray_cast_ground_detector.is_colliding():
+			var sueloNombre = ray_cast_ground_detector.get_collider().get_parent()
+			print(sueloNombre)
+			if sueloNombre != null and sueloNombre is MeshInstance3D and sueloNombre.get_active_material(0) != null:
+				var nameMat = sueloNombre.get_active_material(0).resource_path
+				
+				if "Grass" in nameMat:
+					footstep_sound.stream = load("res://Player/footsteps/grass/0.ogg")
+				if "Metal" in nameMat:
+					footstep_sound.stream = load("res://Player/footsteps/metal/0.ogg")
+					
+		footstep_sound.pitch_scale = randf_range(.8,1.2)
+		footstep_sound.play()
+		distanceFootstep = 0
+	
+	
+	

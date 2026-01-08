@@ -37,3 +37,11 @@ script = ExtResource("4_gwnis")
 [node name="Label" type="Label" parent="."]
 offset_right = 40.0
 offset_bottom = 23.0
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="RayCastGroundDetector" type="RayCast3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+collide_with_areas = true
+
+[node name="FootstepSound" type="AudioStreamPlayer" parent="."]

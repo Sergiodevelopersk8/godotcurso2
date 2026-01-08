@@ -1,7 +1,11 @@
+AudioStreamPlayer
+AudioStreamPlayer3D
+MeshInstance3D
+Node3D
+RayCast3D
 Label
 CSGBox3D
 Node
-MeshInstance3D
 CollisionShape3D
 Camera3D
 CharacterBody3D
