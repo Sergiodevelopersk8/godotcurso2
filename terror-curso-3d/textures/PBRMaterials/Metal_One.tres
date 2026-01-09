@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://doful2d8tput4"]
+
+[ext_resource type="Texture2D" uid="uid://rqa4s4jrn4mw" path="res://textures/DiamondPlate008C_1K_Color.png" id="1_d621t"]
+[ext_resource type="Texture2D" uid="uid://t6dvxt8dcmx6" path="res://textures/DiamondPlate008C_1K_Metalness.png" id="2_ky24j"]
+[ext_resource type="Texture2D" uid="uid://cdgtvvhuf8koe" path="res://textures/DiamondPlate008C_1K_NormalGL.png" id="3_spyhf"]
+[ext_resource type="Texture2D" uid="uid://dfgntj8xt64ff" path="res://textures/DiamondPlate008C_1K_Roughness.png" id="4_v8fcd"]
+
+[resource]
+albedo_texture = ExtResource("1_d621t")
+metallic = 1.0
+metallic_texture = ExtResource("2_ky24j")
+roughness_texture = ExtResource("4_v8fcd")
+normal_enabled = true
+normal_texture = ExtResource("3_spyhf")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+uv1_world_triplanar = true

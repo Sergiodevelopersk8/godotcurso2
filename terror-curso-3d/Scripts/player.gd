@@ -91,7 +91,7 @@ func processGroundSounds():
 	
 	var st = state_machine.get_state()
 	match st:
-		"RUN":
+		"Run":
 			playFootstep = 2
 		"Walk":
 			playFootstep = 3
@@ -109,15 +109,20 @@ func processGroundSounds():
 			print(sueloNombre)
 			if sueloNombre != null and sueloNombre is MeshInstance3D and sueloNombre.get_active_material(0) != null:
 				var nameMat = sueloNombre.get_active_material(0).resource_path
-				
-				if "Grass" in nameMat:
-					footstep_sound.stream = load("res://Player/footsteps/grass/0.ogg")
-				if "Metal" in nameMat:
-					footstep_sound.stream = load("res://Player/footsteps/metal/0.ogg")
-					
+				floor_sounds_path(nameMat)
+		
 		footstep_sound.pitch_scale = randf_range(.8,1.2)
 		footstep_sound.play()
 		distanceFootstep = 0
 	
-	
-	
+
+
+func floor_sounds_path(nameMat):
+	if "Grass" in nameMat:
+		footstep_sound.stream = load("res://Player/footsteps/grass/0.ogg")
+	elif "Metal" in nameMat:
+		footstep_sound.stream = load("res://Player/footsteps/metal/0.ogg")
+	elif "Wood" in nameMat:
+		footstep_sound.stream = load("res://Player/footsteps/wood/0.ogg")
+	else:
+		footstep_sound.stream = load("res://Player/footsteps/boots/0.ogg")

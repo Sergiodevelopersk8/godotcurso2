@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://cglaru28jfnwu"]
+
+[ext_resource type="Texture2D" uid="uid://d1qnvge455eur" path="res://textures/Grass004_1K_Color.png" id="1_xhdbv"]
+[ext_resource type="Texture2D" uid="uid://bv66qg0ccqejx" path="res://textures/Grass004_1K_NormalDX.png" id="2_k6v6l"]
+[ext_resource type="Texture2D" uid="uid://hyclrrojqwov" path="res://textures/Grass004_1K_Roughness.png" id="3_4fhkb"]
+
+[resource]
+albedo_texture = ExtResource("1_xhdbv")
+metallic_specular = 0.0
+roughness_texture = ExtResource("3_4fhkb")
+normal_enabled = true
+normal_texture = ExtResource("2_k6v6l")
+bent_normal_texture = ExtResource("2_k6v6l")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv2_triplanar = true
+uv2_world_triplanar = true

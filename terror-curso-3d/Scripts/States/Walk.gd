@@ -7,6 +7,19 @@ func update(delta):
 	if player.process_input(delta) == Vector3.ZERO:
 		state_machine.transition_to("Idle",{})
 		
+	camera_bob(delta)
+	
+	if Input.is_action_just_pressed("action_run"):
+		state_machine.transition_to("Run",{})
+	
+
+func physics_update(delta: float) -> void:
+	player.velocity = player.velocity.lerp(player.direction * player.speed, player.accel * delta)
+	player.move_and_slide()
+	
+
+
+func camera_bob(delta):
 	player._delta += delta
 	
 	var cam_bob = floor(abs(player.direction.z) + abs(player.direction.x)) * player._delta * player.camBobSpeed
@@ -15,10 +28,3 @@ func update(delta):
 	
 	if player._delta > 20:
 		player._delta = 0
-	
-	
-
-func physics_update(delta: float) -> void:
-	player.velocity = player.velocity.lerp(player.direction * player.speed, player.accel * delta)
-	player.move_and_slide()
-	

@@ -22,3 +22,7 @@ func enter(_msg := {}) -> void:
 
 func exit() -> void:
 	pass
+
+
+func camera_bob(_delta):
+	pass

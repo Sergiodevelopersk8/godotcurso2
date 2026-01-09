@@ -1,3 +1,10 @@
 res://Player/player.tscn
-res://Scripts/player.gd
+res://textures/PBRMaterials/Wood_One.tres
 res://Maps/test_map.tscn
+res://Scripts/player.gd
+res://textures/PBRMaterials/Metal_One.tres
+res://textures/PBRMaterials/Grass_One.tres
+res://textures/PBRMaterials/Concrete_One.tres
+res://Scripts/States/Run.gd
+res://Scripts/States/Walk.gd
+res://Scripts/States/State.gd

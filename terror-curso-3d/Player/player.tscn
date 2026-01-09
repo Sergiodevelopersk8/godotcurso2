@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bhpgcjw0h01ch"]
+[gd_scene load_steps=8 format=3 uid="uid://bhpgcjw0h01ch"]
 
 [ext_resource type="Script" uid="uid://d0xp0kjhq7sye" path="res://Scripts/player.gd" id="1_l8h54"]
 [ext_resource type="Script" uid="uid://e27nnfusj2ft" path="res://Scripts/States/StateMachine.gd" id="2_4ntmi"]
 [ext_resource type="Script" uid="uid://c072aky3067fy" path="res://Scripts/States/Idle.gd" id="3_btcbx"]
 [ext_resource type="Script" uid="uid://dytmgat17ubi0" path="res://Scripts/States/Walk.gd" id="4_gwnis"]
+[ext_resource type="Script" uid="uid://kecg1befn3o3" path="res://Scripts/States/Run.gd" id="5_k53q1"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hvfyp"]
 height = 2.5
@@ -15,7 +16,7 @@ height = 2.5
 script = ExtResource("1_l8h54")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.3)
 current = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -33,6 +34,9 @@ script = ExtResource("3_btcbx")
 
 [node name="Walk" type="Node" parent="StateMachine"]
 script = ExtResource("4_gwnis")
+
+[node name="Run" type="Node" parent="StateMachine"]
+script = ExtResource("5_k53q1")
 
 [node name="Label" type="Label" parent="."]
 offset_right = 40.0
