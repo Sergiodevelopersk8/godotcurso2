@@ -2,8 +2,6 @@
 extends CharacterBody3D
 class_name Player
 
-const GRAVITY = 50
-var jumpForce = 20
 #-------onreadys----------
 @onready var camera_3d: Camera3D = $Camera3D
 @onready var origCamPos : Vector3 = camera_3d.position
@@ -11,13 +9,20 @@ var jumpForce = 20
 @onready var ray_cast_ground_detector: RayCast3D = $Raycasts/RayCastGroundDetector
 @onready var state_machine: StateMachine = $StateMachine
 @onready var footstep_sound: AudioStreamPlayer = $FootstepSound
+@export var canJump = true
 #----------VARIABLES---------
 var canMoveAndRotate := true #sirve para habilitar si se mueve la camara o no
 var mouse_sens = 0.25 #sensibilidad con la que rota la camara
 var friction := 20 #AL DETENERSE
 var direction := Vector3()
+
+
+#--------- VELOCIDADES -----------
 var speed := 5 #VELOCIDAD DEL PLAYER
 var accel = 5   #ACELERACIÓN 
+var jumpForce = 20
+var ACCEL_AIR = 5
+const GRAVITY = 50
 
 var joystick_deadzone = 0.2 #saber si el jostic se mueve 
 var controller_sensitivity = .05 #sensibilidad del control

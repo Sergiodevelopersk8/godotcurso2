@@ -19,7 +19,7 @@ func enter(_msg = {}) -> void:
 
 func update(delta: float) -> void:
 	if !hasCrouched:
-		if pcap.shape.height >= 0:
+		if pcap.shape.height >= 1.5:
 			#interpolacion lineal
 			pcap.shape.height -= crouchSpeed * delta
 		
@@ -36,6 +36,9 @@ func update(delta: float) -> void:
 		
 		if pcap.shape.height >= 2.5:
 			state_machine.transition_to("Idle",{}) 
+	
+	#if !player.is_on_floor():
+		#state_machine.transition_to("Air",{})
 	
 	
 

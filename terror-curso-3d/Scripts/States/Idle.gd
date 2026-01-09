@@ -21,6 +21,11 @@ func physics_update(delta: float) -> void:
 	if Input.is_action_just_pressed("action_crouch"):
 		state_machine.transition_to("Crouch",{})
 	
+	if !player.is_on_floor():
+		state_machine.transition_to("Air",{})
+	if Input.is_action_just_pressed("action_jump") and player.canJump:
+		state_machine.transition_to("Air",{do_jump = true})
+	
 	
 	player.velocity = player.velocity.lerp(Vector3.ZERO, player.friction * delta)
 	player.move_and_slide()

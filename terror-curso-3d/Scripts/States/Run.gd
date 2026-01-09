@@ -12,6 +12,12 @@ func update(delta):
 	
 	if Input.is_action_just_released("action_run"):
 		state_machine.transition_to("Walk",{})
+	
+	if !player.is_on_floor():
+		state_machine.transition_to("Air",{})
+	
+	if Input.is_action_just_pressed("action_jump") and player.canJump:
+		state_machine.transition_to("Air",{do_jump = true})
 	camera_bob(delta)
 	
 	

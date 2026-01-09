@@ -9,10 +9,15 @@ func update(delta):
 		
 	camera_bob(delta)
 	
-	if Input.is_action_just_pressed("action_run"):
+	if Input.is_action_pressed("action_run"):
 		state_machine.transition_to("Run",{})
-	if Input.is_action_just_pressed("action_crouch"):
+	if Input.is_action_pressed("action_crouch"):
 		state_machine.transition_to("Crouch",{})
+	if Input.is_action_just_pressed("action_jump") and player.canJump:
+		state_machine.transition_to("Air",{do_jump = true})
+	if !player.is_on_floor():
+		state_machine.transition_to("Air",{})
+	
 	
 
 func physics_update(delta: float) -> void:
