@@ -8,3 +8,5 @@ res://textures/PBRMaterials/Concrete_One.tres
 res://Scripts/States/Run.gd
 res://Scripts/States/Walk.gd
 res://Scripts/States/State.gd
+res://Scripts/States/Crouch.gd
+res://Scripts/States/Idle.gd

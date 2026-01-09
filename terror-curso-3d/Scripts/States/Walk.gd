@@ -11,6 +11,8 @@ func update(delta):
 	
 	if Input.is_action_just_pressed("action_run"):
 		state_machine.transition_to("Run",{})
+	if Input.is_action_just_pressed("action_crouch"):
+		state_machine.transition_to("Crouch",{})
 	
 
 func physics_update(delta: float) -> void:

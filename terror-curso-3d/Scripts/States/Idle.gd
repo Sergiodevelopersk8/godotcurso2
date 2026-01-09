@@ -18,6 +18,10 @@ func physics_update(delta: float) -> void:
 		state_machine.transition_to("Walk",{})
 		return
 	
+	if Input.is_action_just_pressed("action_crouch"):
+		state_machine.transition_to("Crouch",{})
+	
+	
 	player.velocity = player.velocity.lerp(Vector3.ZERO, player.friction * delta)
 	player.move_and_slide()
 	

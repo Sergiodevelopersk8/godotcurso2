@@ -58,8 +58,12 @@ mesh = SubResource("BoxMesh_podvm")
 shape = SubResource("ConcavePolygonShape3D_podvm")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 2.5, -16)
-size = Vector3(16, 4, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 3, -16)
+size = Vector3(16, 5, 1)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 2.65, -14)
+size = Vector3(16, 0.7, 4)
 
 [node name="Player" parent="." instance=ExtResource("1_nxrqf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.95, 0)

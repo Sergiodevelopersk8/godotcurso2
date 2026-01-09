@@ -1,9 +1,9 @@
+RayCast3D
 Node
 AudioStreamPlayer
 AudioStreamPlayer3D
 MeshInstance3D
 Node3D
-RayCast3D
 Label
 CSGBox3D
 CollisionShape3D
