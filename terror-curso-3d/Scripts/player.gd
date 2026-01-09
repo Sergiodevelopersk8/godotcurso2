@@ -3,6 +3,7 @@ extends CharacterBody3D
 class_name Player
 
 const GRAVITY = 50
+var jumpForce = 20
 #-------onreadys----------
 @onready var camera_3d: Camera3D = $Camera3D
 @onready var origCamPos : Vector3 = camera_3d.position
@@ -10,7 +11,6 @@ const GRAVITY = 50
 @onready var ray_cast_ground_detector: RayCast3D = $Raycasts/RayCastGroundDetector
 @onready var state_machine: StateMachine = $StateMachine
 @onready var footstep_sound: AudioStreamPlayer = $FootstepSound
-
 #----------VARIABLES---------
 var canMoveAndRotate := true #sirve para habilitar si se mueve la camara o no
 var mouse_sens = 0.25 #sensibilidad con la que rota la camara

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bhpgcjw0h01ch"]
+[gd_scene load_steps=10 format=3 uid="uid://bhpgcjw0h01ch"]
 
 [ext_resource type="Script" uid="uid://d0xp0kjhq7sye" path="res://Scripts/player.gd" id="1_l8h54"]
 [ext_resource type="Script" uid="uid://e27nnfusj2ft" path="res://Scripts/States/StateMachine.gd" id="2_4ntmi"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://dytmgat17ubi0" path="res://Scripts/States/Walk.gd" id="4_gwnis"]
 [ext_resource type="Script" uid="uid://kecg1befn3o3" path="res://Scripts/States/Run.gd" id="5_k53q1"]
 [ext_resource type="Script" uid="uid://dje3xms25uvof" path="res://Scripts/States/Crouch.gd" id="6_fhl08"]
+[ext_resource type="Script" uid="uid://bcmye6yqcknac" path="res://Scripts/States/Air.gd" id="7_vtle1"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hvfyp"]
 height = 2.5
@@ -41,6 +42,9 @@ script = ExtResource("5_k53q1")
 
 [node name="Crouch" type="Node" parent="StateMachine"]
 script = ExtResource("6_fhl08")
+
+[node name="Air" type="Node" parent="StateMachine"]
+script = ExtResource("7_vtle1")
 
 [node name="Label" type="Label" parent="."]
 offset_right = 40.0
