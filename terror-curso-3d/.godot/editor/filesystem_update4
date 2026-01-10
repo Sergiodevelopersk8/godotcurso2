@@ -8,3 +8,6 @@ res://Scripts/interact.gd
 res://Interacts/interact.tscn
 res://Interacts/door_interact.tscn
 res://Scripts/door_interact.gd
+res://default_bus_layout.tres
+res://Interacts/key_interact.tscn
+res://Scripts/key_interact.gd

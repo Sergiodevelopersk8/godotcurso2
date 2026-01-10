@@ -11,10 +11,13 @@ class_name Player
 @onready var footstep_sound: AudioStreamPlayer = $FootstepSound
 @onready var raycast_interactuar: RayCast3D = $Camera3D/RayCastInteractuar
 @onready var descriptinteract_label: Label = $GUIPlayer/DescriptinteractLabel
+@onready var h_box_container: HBoxContainer = $GUIPlayer/HBoxContainer
 
 
 @export var canJump = true
+
 #----------VARIABLES---------
+var keyUI = preload("res://Interacts/key_texture_rect.tscn")
 var canMoveAndRotate := true #sirve para habilitar si se mueve la camara o no
 var mouse_sens = 0.25 #sensibilidad con la que rota la camara
 var friction := 20 #AL DETENERSE
@@ -43,7 +46,17 @@ var playFootstep := 1
 func _ready() -> void:
 	#se ouclta el mouse
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	var keys = get_tree().get_nodes_in_group("Keys")
+	for key in keys:
+		key.connect("keyTaken", drawkeyInterface)
 
+func drawkeyInterface():
+	var key = keyUI.instantiate()
+	h_box_container.add_child(key)
+
+func deleteKeyFromUI():
+	if h_box_container.get_children().size() > 0: 
+		h_box_container.get_children()[0].queue_free()
 
 func _input(event: InputEvent) -> void:
 	#si se puede rotar la camara

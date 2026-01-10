@@ -1,3 +1,6 @@
+TextureRect
+HBoxContainer
+AudioStreamPlayer3D
 AnimationPlayer
 AnimationTree
 Area3D
@@ -7,8 +10,5 @@ Label
 MeshInstance3D
 CollisionShape3D
 RayCast3D
-TextureRect
 CanvasLayer
 Node
-AudioStreamPlayer
-AudioStreamPlayer3D

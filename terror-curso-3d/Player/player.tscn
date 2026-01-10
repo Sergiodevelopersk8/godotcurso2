@@ -18,7 +18,7 @@ height = 2.5
 [sub_resource type="LabelSettings" id="LabelSettings_od3ui"]
 font_color = Color(0.099985994, 0.099985994, 0.099985994, 1)
 
-[node name="Player" type="CharacterBody3D"]
+[node name="Player" type="CharacterBody3D" groups=["Player"]]
 script = ExtResource("1_l8h54")
 
 [node name="Camera3D" type="Camera3D" parent="."]
@@ -102,3 +102,11 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Door"
 label_settings = SubResource("LabelSettings_od3ui")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GUIPlayer"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -61.0
+offset_right = 254.0
+grow_vertical = 0
