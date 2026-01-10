@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://bhpgcjw0h01ch"]
+[gd_scene load_steps=13 format=3 uid="uid://bhpgcjw0h01ch"]
 
 [ext_resource type="Script" uid="uid://d0xp0kjhq7sye" path="res://Scripts/player.gd" id="1_l8h54"]
+[ext_resource type="Texture2D" uid="uid://dkmxhnu0lq5fn" path="res://Assets/flashLightTexture.jpeg" id="2_00tjw"]
 [ext_resource type="Script" uid="uid://e27nnfusj2ft" path="res://Scripts/States/StateMachine.gd" id="2_4ntmi"]
 [ext_resource type="Script" uid="uid://c072aky3067fy" path="res://Scripts/States/Idle.gd" id="3_btcbx"]
 [ext_resource type="Script" uid="uid://dytmgat17ubi0" path="res://Scripts/States/Walk.gd" id="4_gwnis"]
@@ -28,6 +29,13 @@ current = true
 [node name="RayCastInteractuar" type="RayCast3D" parent="Camera3D"]
 target_position = Vector3(0, 0, -5)
 collide_with_areas = true
+
+[node name="Flashligth" type="SpotLight3D" parent="Camera3D"]
+visible = false
+light_projector = ExtResource("2_00tjw")
+shadow_enabled = true
+spot_range = 35.475
+spot_angle = 43.45
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_hvfyp")

@@ -12,19 +12,23 @@ class_name Player
 @onready var raycast_interactuar: RayCast3D = $Camera3D/RayCastInteractuar
 @onready var descriptinteract_label: Label = $GUIPlayer/DescriptinteractLabel
 @onready var h_box_container: HBoxContainer = $GUIPlayer/HBoxContainer
+@onready var flashligth: SpotLight3D = $Camera3D/Flashligth
 
-
+#----------Exports---------
 @export var canJump = true
+@export var flashlightEquipped := true
 
-#----------VARIABLES---------
+#----------VARIABLES UI---------
 var keyUI = preload("res://Interacts/key_texture_rect.tscn")
+
+#----------VARIABLES CAMARA---------
 var canMoveAndRotate := true #sirve para habilitar si se mueve la camara o no
 var mouse_sens = 0.25 #sensibilidad con la que rota la camara
 var friction := 20 #AL DETENERSE
 var direction := Vector3()
 
 
-#--------- VELOCIDADES -----------
+#--------- VARIABLES DE VELOCIDADES, GRAVEDAD Y MOVIMIENTO_DE_CAMARA -----------
 var speed := 5 #VELOCIDAD DEL PLAYER
 var accel = 5   #ACELERACIÓN 
 var jumpForce = 20
@@ -63,7 +67,13 @@ func _input(event: InputEvent) -> void:
 	if canMoveAndRotate:
 		#entra a la funcion 
 		rotate_camera(event)
-	
+		if Input.is_action_just_pressed("action_flashlight") and flashlightEquipped:
+			flashligth.visible = not flashligth.visible
+			if flashligth.visible:
+				AudioStreamManager.play("res://AssetsModels/FlashLigth/FlashlightOff.ogg")
+			else:
+				AudioStreamManager.play("res://AssetsModels/FlashLigth/FlashlightOn.ogg")
+
 
 
 func _process(delta) :

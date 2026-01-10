@@ -1,3 +1,5 @@
+CSGBox3D
+SpotLight3D
 TextureRect
 HBoxContainer
 AudioStreamPlayer3D
@@ -11,4 +13,3 @@ MeshInstance3D
 CollisionShape3D
 RayCast3D
 CanvasLayer
-Node
