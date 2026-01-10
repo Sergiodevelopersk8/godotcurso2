@@ -2,7 +2,7 @@
 extends PlayerState
 class_name Run
 
-func enter(msg = {}):
+func enter(_msg = {}):
 	pass
 
 func update(delta):

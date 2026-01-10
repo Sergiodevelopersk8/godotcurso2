@@ -1,3 +1,7 @@
 res://Player/player.tscn
-res://Scripts/player.gd
 res://Maps/test_map.tscn
+res://Interacts/interact_flashlight.tscn
+res://Scripts/interact_flashlight.gd
+res://Scripts/Manager/AudioStreamManager.gd
+res://Scripts/player.gd
+res://Scripts/States/Run.gd

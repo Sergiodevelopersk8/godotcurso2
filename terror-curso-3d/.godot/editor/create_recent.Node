@@ -1,5 +1,6 @@
-CSGBox3D
 SpotLight3D
+CSGBox3D
+Node
 TextureRect
 HBoxContainer
 AudioStreamPlayer3D
@@ -11,5 +12,3 @@ RigidBody3D
 Label
 MeshInstance3D
 CollisionShape3D
-RayCast3D
-CanvasLayer

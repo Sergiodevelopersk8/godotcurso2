@@ -31,7 +31,7 @@ func play(sound_path:String):
 	
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if not queue.is_empty() and not available.is_empty():
 		available[0].stream = load(queue.pop_front())
 		available[0].play()

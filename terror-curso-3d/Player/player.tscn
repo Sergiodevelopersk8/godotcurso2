@@ -34,8 +34,8 @@ collide_with_areas = true
 visible = false
 light_projector = ExtResource("2_00tjw")
 shadow_enabled = true
-spot_range = 35.475
-spot_angle = 43.45
+spot_range = 6.937
+spot_angle = 30.83
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_hvfyp")

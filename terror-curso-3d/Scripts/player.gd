@@ -76,7 +76,7 @@ func _input(event: InputEvent) -> void:
 
 
 
-func _process(delta) :
+func _process(_delta) :
 	label.text = $StateMachine.get_state()
 	process_camera_jostick()
 	processGroundSounds()
@@ -112,12 +112,13 @@ func processInteract():
 
 
 func process_camera_jostick():
+	pass
 	#funcion de rotar la camara con un control de consola de videojuego
-	if Input.get_joy_axis(0,2) < -joystick_deadzone or Input.get_joy_axis(0,2) > joystick_deadzone:
-		rotation.y -= Input.get_joy_axis(0,2) * controller_sensitivity
-	
-	if Input.get_joy_axis(0,3) < -joystick_deadzone or Input.get_joy_axis(0,3) > joystick_deadzone:
-		camera_3d.rotation.x = clamp(camera_3d.rotation.x - Input.get_joy_axis(0,3) * controller_sensitivity, -1.55, 1.55)
+	#if Input.get_joy_axis(0,2) < -joystick_deadzone or Input.get_joy_axis(0,2) > joystick_deadzone:
+		#rotation.y -= Input.get_joy_axis(0,2) * controller_sensitivity
+	#
+	#if Input.get_joy_axis(0,3) < -joystick_deadzone or Input.get_joy_axis(0,3) > joystick_deadzone:
+		#camera_3d.rotation.x = clamp(camera_3d.rotation.x - Input.get_joy_axis(0,3) * controller_sensitivity, -1.55, 1.55)
 
 
 
