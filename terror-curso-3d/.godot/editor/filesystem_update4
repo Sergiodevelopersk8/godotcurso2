@@ -3,3 +3,8 @@ res://Scripts/player.gd
 res://Interacts/static_bodyinteract.tscn
 res://Maps/test_map.tscn
 res://Scripts/static_body_interact.gd
+res://AssetsModels/Door/textures/doorMat.tres
+res://Scripts/interact.gd
+res://Interacts/interact.tscn
+res://Interacts/door_interact.tscn
+res://Scripts/door_interact.gd

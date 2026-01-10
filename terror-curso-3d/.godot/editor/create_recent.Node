@@ -1,3 +1,6 @@
+AnimationPlayer
+AnimationTree
+Area3D
 StaticBody3D
 RigidBody3D
 Label
@@ -9,6 +12,3 @@ CanvasLayer
 Node
 AudioStreamPlayer
 AudioStreamPlayer3D
-Node3D
-CSGBox3D
-Camera3D

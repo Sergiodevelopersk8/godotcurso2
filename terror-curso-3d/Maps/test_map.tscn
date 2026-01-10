@@ -1,11 +1,12 @@
-[gd_scene load_steps=18 format=3 uid="uid://wwnf7ynx5dp"]
+[gd_scene load_steps=19 format=3 uid="uid://wwnf7ynx5dp"]
 
 [ext_resource type="PackedScene" uid="uid://bhpgcjw0h01ch" path="res://Player/player.tscn" id="1_nxrqf"]
 [ext_resource type="Material" uid="uid://doful2d8tput4" path="res://textures/PBRMaterials/Metal_One.tres" id="1_p5beq"]
 [ext_resource type="Material" uid="uid://buq7cfnvbumo4" path="res://textures/PBRMaterials/Wood_One.tres" id="2_hj615"]
 [ext_resource type="Material" uid="uid://cglaru28jfnwu" path="res://textures/PBRMaterials/Grass_One.tres" id="4_xtlx7"]
 [ext_resource type="Material" uid="uid://bhajd1u5k1dsp" path="res://textures/PBRMaterials/Concrete_One.tres" id="5_usaaq"]
-[ext_resource type="PackedScene" uid="uid://djh3guyqag51w" path="res://Interacts/static_bodyinteract.tscn" id="6_3odly"]
+[ext_resource type="PackedScene" uid="uid://djh3guyqag51w" path="res://Interacts/interact.tscn" id="6_3odly"]
+[ext_resource type="PackedScene" uid="uid://bp5ixy42qvf2i" path="res://Interacts/door_interact.tscn" id="7_scyfp"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nxrqf"]
 sky_top_color = Color(0.89711756, 0.9266333, 0.9889186, 1)
@@ -109,3 +110,6 @@ shape = SubResource("BoxShape3D_3odly")
 
 [node name="StaticBodyinteract" parent="." instance=ExtResource("6_3odly")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.2, 0)
+
+[node name="DoorInteract" parent="." instance=ExtResource("7_scyfp")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6, 0.795, 0)
