@@ -1,13 +1,14 @@
-[gd_scene load_steps=17 format=3 uid="uid://wwnf7ynx5dp"]
+[gd_scene load_steps=18 format=3 uid="uid://wwnf7ynx5dp"]
 
 [ext_resource type="PackedScene" uid="uid://bhpgcjw0h01ch" path="res://Player/player.tscn" id="1_nxrqf"]
 [ext_resource type="Material" uid="uid://doful2d8tput4" path="res://textures/PBRMaterials/Metal_One.tres" id="1_p5beq"]
 [ext_resource type="Material" uid="uid://buq7cfnvbumo4" path="res://textures/PBRMaterials/Wood_One.tres" id="2_hj615"]
 [ext_resource type="Material" uid="uid://cglaru28jfnwu" path="res://textures/PBRMaterials/Grass_One.tres" id="4_xtlx7"]
 [ext_resource type="Material" uid="uid://bhajd1u5k1dsp" path="res://textures/PBRMaterials/Concrete_One.tres" id="5_usaaq"]
+[ext_resource type="PackedScene" uid="uid://djh3guyqag51w" path="res://Interacts/static_bodyinteract.tscn" id="6_3odly"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nxrqf"]
-sky_top_color = Color(0.40240046, 0.57752967, 0.939825, 1)
+sky_top_color = Color(0.89711756, 0.9266333, 0.9889186, 1)
 sky_horizon_color = Color(1.1895442, 1.0898018, 1.256696, 1)
 ground_bottom_color = Color(0.14151835, 0.14866132, 0.32704702, 1)
 ground_horizon_color = Color(1.1895442, 1.0898018, 1.256696, 1)
@@ -54,7 +55,7 @@ transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545
 shadow_enabled = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(94.622856, 0, 0, 0, 1.4, 0, 0, 0, 72.03456, 0, 0, 0)
+transform = Transform3D(60.48816, 0, 0, 0, 1.4, 0, 0, 0, 45.898876, 0, 0, -4.9007845)
 mesh = SubResource("BoxMesh_podvm")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
@@ -105,3 +106,6 @@ mesh = SubResource("BoxMesh_usaaq")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="tech/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.2, 0, 0, 0.019999504)
 shape = SubResource("BoxShape3D_3odly")
+
+[node name="StaticBodyinteract" parent="." instance=ExtResource("6_3odly")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.2, 0)

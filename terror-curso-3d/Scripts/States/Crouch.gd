@@ -37,8 +37,8 @@ func update(delta: float) -> void:
 		if pcap.shape.height >= 2.5:
 			state_machine.transition_to("Idle",{}) 
 	
-	#if !player.is_on_floor():
-		#state_machine.transition_to("Air",{})
+	if !player.is_on_floor() and !Input.is_action_pressed("action_crouch"):
+		state_machine.transition_to("Air",{})
 	
 	
 

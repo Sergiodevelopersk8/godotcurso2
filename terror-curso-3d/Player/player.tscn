@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bhpgcjw0h01ch"]
+[gd_scene load_steps=12 format=3 uid="uid://bhpgcjw0h01ch"]
 
 [ext_resource type="Script" uid="uid://d0xp0kjhq7sye" path="res://Scripts/player.gd" id="1_l8h54"]
 [ext_resource type="Script" uid="uid://e27nnfusj2ft" path="res://Scripts/States/StateMachine.gd" id="2_4ntmi"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://kecg1befn3o3" path="res://Scripts/States/Run.gd" id="5_k53q1"]
 [ext_resource type="Script" uid="uid://dje3xms25uvof" path="res://Scripts/States/Crouch.gd" id="6_fhl08"]
 [ext_resource type="Script" uid="uid://bcmye6yqcknac" path="res://Scripts/States/Air.gd" id="7_vtle1"]
+[ext_resource type="Texture2D" uid="uid://yqn8epupeex4" path="res://Assets/crosshair.png" id="8_od3ui"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hvfyp"]
 height = 2.5
@@ -14,12 +15,19 @@ height = 2.5
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_hvfyp"]
 height = 2.5
 
+[sub_resource type="LabelSettings" id="LabelSettings_od3ui"]
+font_color = Color(0.099985994, 0.099985994, 0.099985994, 1)
+
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_l8h54")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.3)
 current = true
+
+[node name="RayCastInteractuar" type="RayCast3D" parent="Camera3D"]
+target_position = Vector3(0, 0, -5)
+collide_with_areas = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_hvfyp")
@@ -47,6 +55,7 @@ script = ExtResource("6_fhl08")
 script = ExtResource("7_vtle1")
 
 [node name="Label" type="Label" parent="."]
+visible = false
 offset_right = 40.0
 offset_bottom = 23.0
 
@@ -61,3 +70,35 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
 target_position = Vector3(0, 2, 0)
 
 [node name="FootstepSound" type="AudioStreamPlayer" parent="."]
+
+[node name="GUIPlayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="GUIPlayer"]
+anchors_preset = -1
+anchor_left = 0.497
+anchor_top = 0.49500003
+anchor_right = 0.497
+anchor_bottom = 0.49500003
+offset_left = -3.1600342
+offset_top = -3.4000244
+offset_right = 10.839966
+offset_bottom = 10.599976
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_od3ui")
+
+[node name="DescriptinteractLabel" type="Label" parent="GUIPlayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -38.0
+offset_right = 18.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Door"
+label_settings = SubResource("LabelSettings_od3ui")

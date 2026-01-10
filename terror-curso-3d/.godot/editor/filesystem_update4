@@ -1,8 +1,5 @@
 res://Player/player.tscn
-res://Scripts/States/Air.gd
 res://Scripts/player.gd
-res://Scripts/States/Idle.gd
-res://Scripts/States/Walk.gd
-res://Scripts/States/Run.gd
-res://Scripts/States/Crouch.gd
+res://Interacts/static_bodyinteract.tscn
 res://Maps/test_map.tscn
+res://Scripts/static_body_interact.gd

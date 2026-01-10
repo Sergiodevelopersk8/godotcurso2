@@ -9,6 +9,10 @@ class_name Player
 @onready var ray_cast_ground_detector: RayCast3D = $Raycasts/RayCastGroundDetector
 @onready var state_machine: StateMachine = $StateMachine
 @onready var footstep_sound: AudioStreamPlayer = $FootstepSound
+@onready var raycast_interactuar: RayCast3D = $Camera3D/RayCastInteractuar
+@onready var descriptinteract_label: Label = $GUIPlayer/DescriptinteractLabel
+
+
 @export var canJump = true
 #----------VARIABLES---------
 var canMoveAndRotate := true #sirve para habilitar si se mueve la camara o no
@@ -53,7 +57,7 @@ func _process(delta) :
 	label.text = $StateMachine.get_state()
 	process_camera_jostick()
 	processGroundSounds()
-	
+	processInteract()
 	#process_input(delta)
 
 
@@ -66,7 +70,22 @@ func rotate_camera(event):
 		camera_3d.rotate_x(deg_to_rad(-event.relative.y * mouse_sens))
 		#limite de arriba y abajo al rotar la camara
 		camera_3d.rotation.x = clamp(camera_3d.rotation.x, deg_to_rad(-89), deg_to_rad(89))
-		 
+ 
+
+func processInteract():
+	if raycast_interactuar.is_colliding():
+		if raycast_interactuar.get_collider().is_in_group("Interacts"):
+			var interact = raycast_interactuar.get_collider()
+			
+			if interact.get("id"): #si existe la variable id en el script de interact
+				descriptinteract_label.text = interact.id
+			if interact.has_method("action_use") and Input.is_action_just_pressed("action_use"):
+				interact.action_use()
+		else:
+			descriptinteract_label.text = ""
+	else:
+		descriptinteract_label.text = ""
+
 
 
 func process_camera_jostick():
@@ -76,7 +95,7 @@ func process_camera_jostick():
 	
 	if Input.get_joy_axis(0,3) < -joystick_deadzone or Input.get_joy_axis(0,3) > joystick_deadzone:
 		camera_3d.rotation.x = clamp(camera_3d.rotation.x - Input.get_joy_axis(0,3) * controller_sensitivity, -1.55, 1.55)
-	
+
 
 
 func process_input(delta) -> Vector3:
@@ -112,7 +131,7 @@ func processGroundSounds():
 	if distanceFootstep > playFootstep and is_on_floor():
 		if ray_cast_ground_detector.is_colliding():
 			var sueloNombre = ray_cast_ground_detector.get_collider().get_parent()
-			print(sueloNombre)
+			
 			if sueloNombre != null and sueloNombre is MeshInstance3D and sueloNombre.get_active_material(0) != null:
 				var nameMat = sueloNombre.get_active_material(0).resource_path
 				floor_sounds_path(nameMat)
@@ -120,7 +139,7 @@ func processGroundSounds():
 		footstep_sound.pitch_scale = randf_range(.8,1.2)
 		footstep_sound.play()
 		distanceFootstep = 0
-	
+
 
 
 func floor_sounds_path(nameMat):
