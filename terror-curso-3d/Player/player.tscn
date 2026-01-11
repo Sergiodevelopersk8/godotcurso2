@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bhpgcjw0h01ch"]
+[gd_scene load_steps=15 format=3 uid="uid://bhpgcjw0h01ch"]
 
 [ext_resource type="Script" uid="uid://d0xp0kjhq7sye" path="res://Scripts/player.gd" id="1_l8h54"]
 [ext_resource type="Texture2D" uid="uid://dkmxhnu0lq5fn" path="res://Assets/flashLightTexture.jpeg" id="2_00tjw"]
@@ -17,7 +17,25 @@ height = 2.5
 height = 2.5
 
 [sub_resource type="LabelSettings" id="LabelSettings_od3ui"]
-font_color = Color(0.099985994, 0.099985994, 0.099985994, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_00tjw"]
+bg_color = Color(0.6137425, 0.13986552, 0.1699129, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.21568628, 0, 0.011764706, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x3vf3"]
+bg_color = Color(0.83277047, 0, 0.12321869, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [node name="Player" type="CharacterBody3D" groups=["Player"]]
 script = ExtResource("1_l8h54")
@@ -118,3 +136,13 @@ anchor_bottom = 1.0
 offset_top = -61.0
 offset_right = 254.0
 grow_vertical = 0
+
+[node name="HealthProgressBar" type="ProgressBar" parent="GUIPlayer"]
+offset_top = 7.0
+offset_right = 385.0
+offset_bottom = 34.0
+scale = Vector2(0.55089605, 0.6841542)
+theme_override_styles/background = SubResource("StyleBoxFlat_00tjw")
+theme_override_styles/fill = SubResource("StyleBoxFlat_x3vf3")
+value = 50.0
+show_percentage = false

@@ -13,6 +13,7 @@ class_name Player
 @onready var descriptinteract_label: Label = $GUIPlayer/DescriptinteractLabel
 @onready var h_box_container: HBoxContainer = $GUIPlayer/HBoxContainer
 @onready var flashligth: SpotLight3D = $Camera3D/Flashligth
+@onready var health_progress_bar: ProgressBar = $GUIPlayer/HealthProgressBar
 
 #----------Exports---------
 @export var canJump = true
@@ -20,6 +21,15 @@ class_name Player
 
 #----------VARIABLES UI---------
 var keyUI = preload("res://Interacts/key_texture_rect.tscn")
+var maxHealth := 100
+var health : int = 100 :
+	set(value):
+		health = value
+		health_progress_bar.value = health
+		health = clamp(health, 0, maxHealth)
+		health_progress_bar.visible = false if health>= maxHealth else true
+
+
 
 #----------VARIABLES CAMARA---------
 var canMoveAndRotate := true #sirve para habilitar si se mueve la camara o no
@@ -29,12 +39,11 @@ var direction := Vector3()
 
 
 #--------- VARIABLES DE VELOCIDADES, GRAVEDAD Y MOVIMIENTO_DE_CAMARA -----------
-var speed := 5 #VELOCIDAD DEL PLAYER
+var speed := 3 #VELOCIDAD DEL PLAYER
 var accel = 5   #ACELERACIÓN 
 var jumpForce = 20
 var ACCEL_AIR = 5
 const GRAVITY = 50
-
 var joystick_deadzone = 0.2 #saber si el jostic se mueve 
 var controller_sensitivity = .05 #sensibilidad del control
 
@@ -53,6 +62,7 @@ func _ready() -> void:
 	var keys = get_tree().get_nodes_in_group("Keys")
 	for key in keys:
 		key.connect("keyTaken", drawkeyInterface)
+	health = maxHealth
 
 func drawkeyInterface():
 	var key = keyUI.instantiate()
@@ -73,8 +83,6 @@ func _input(event: InputEvent) -> void:
 				AudioStreamManager.play("res://AssetsModels/FlashLigth/FlashlightOff.ogg")
 			else:
 				AudioStreamManager.play("res://AssetsModels/FlashLigth/FlashlightOn.ogg")
-
-
 
 func _process(delta) :
 	label.text = $StateMachine.get_state()

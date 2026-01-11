@@ -10,6 +10,7 @@ size = Vector3(2.4, 1.4, 1)
 
 [node name="LightSwitchInteract" instance=ExtResource("1_ikded")]
 script = ExtResource("2_bm48e")
+id = "SwitchLight"
 
 [node name="CollisionShape3D" parent="." index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.29999995, 0.19999999, 0)

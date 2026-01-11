@@ -1,3 +1,5 @@
+Label
+ProgressBar
 AudioStreamPlayer3D
 Timer
 OmniLight3D      - Matches the "point" keyword.
@@ -11,4 +13,3 @@ AnimationPlayer
 AnimationTree
 Area3D
 StaticBody3D
-RigidBody3D
