@@ -76,7 +76,7 @@ func _input(event: InputEvent) -> void:
 
 
 
-func _process(_delta) :
+func _process(delta) :
 	label.text = $StateMachine.get_state()
 	process_camera_jostick()
 	processGroundSounds()

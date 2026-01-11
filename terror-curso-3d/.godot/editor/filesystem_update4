@@ -1,7 +1,2 @@
-res://Player/player.tscn
 res://Maps/test_map.tscn
-res://Interacts/interact_flashlight.tscn
-res://Scripts/interact_flashlight.gd
-res://Scripts/Manager/AudioStreamManager.gd
-res://Scripts/player.gd
-res://Scripts/States/Run.gd
+res://textures/PBRMaterials/Metal_One.tres

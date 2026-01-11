@@ -1,6 +1,7 @@
-SpotLight3D
-CSGBox3D
 Node
+SpotLight3D
+MeshInstance3D
+CSGBox3D
 TextureRect
 HBoxContainer
 AudioStreamPlayer3D
@@ -10,5 +11,4 @@ Area3D
 StaticBody3D
 RigidBody3D
 Label
-MeshInstance3D
 CollisionShape3D

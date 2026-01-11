@@ -1,100 +1,70 @@
-[gd_scene load_steps=16 format=3 uid="uid://wwnf7ynx5dp"]
+[gd_scene load_steps=10 format=3 uid="uid://wwnf7ynx5dp"]
 
 [ext_resource type="PackedScene" uid="uid://bhpgcjw0h01ch" path="res://Player/player.tscn" id="1_nxrqf"]
 [ext_resource type="Material" uid="uid://doful2d8tput4" path="res://textures/PBRMaterials/Metal_One.tres" id="1_p5beq"]
-[ext_resource type="Material" uid="uid://buq7cfnvbumo4" path="res://textures/PBRMaterials/Wood_One.tres" id="2_hj615"]
+[ext_resource type="Material" uid="uid://bhajd1u5k1dsp" path="res://textures/PBRMaterials/Concrete_One.tres" id="2_hj615"]
 [ext_resource type="PackedScene" uid="uid://bp5ixy42qvf2i" path="res://Interacts/door_interact.tscn" id="7_scyfp"]
 [ext_resource type="PackedScene" uid="uid://cmomnisnhgpkt" path="res://Interacts/interact_flashlight.tscn" id="7_sm2fj"]
 [ext_resource type="PackedScene" uid="uid://dreuu20jec3sx" path="res://Interacts/key_interact.tscn" id="8_sm2fj"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nxrqf"]
-sky_top_color = Color(0.89711756, 0.9266333, 0.9889186, 1)
-sky_horizon_color = Color(1.1895442, 1.0898018, 1.256696, 1)
-ground_bottom_color = Color(0.14151835, 0.14866132, 0.32704702, 1)
-ground_horizon_color = Color(1.1895442, 1.0898018, 1.256696, 1)
-
-[sub_resource type="Sky" id="Sky_hj615"]
-sky_material = SubResource("ProceduralSkyMaterial_nxrqf")
-
-[sub_resource type="Environment" id="Environment_p5beq"]
-background_mode = 2
-sky = SubResource("Sky_hj615")
-tonemap_mode = 2
-sdfgi_enabled = true
-glow_enabled = true
-
-[sub_resource type="BoxMesh" id="BoxMesh_podvm"]
+[sub_resource type="BoxMesh" id="BoxMesh_nxrqf"]
 material = ExtResource("1_p5beq")
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_podvm"]
-data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_hj615"]
+points = PackedVector3Array(-0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5)
 
-[sub_resource type="BoxMesh" id="BoxMesh_nxrqf"]
+[sub_resource type="PlaneMesh" id="PlaneMesh_p5beq"]
 material = ExtResource("2_hj615")
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_hj615"]
-data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+[node name="Test_map" type="Node"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_usaaq"]
+[node name="floor_adn_wall" type="Node" parent="."]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_3odly"]
-size = Vector3(1, 1, 0.8)
-
-[node name="Test_Map" type="Node"]
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_p5beq")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
-visible = false
-shadow_enabled = true
-
-[node name="Player" parent="." instance=ExtResource("1_nxrqf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3666258, 1.9499999, 0.84950805)
-
-[node name="Interacuables" type="Node" parent="."]
-
-[node name="DoorInteract" parent="Interacuables" node_paths=PackedStringArray("key") instance=ExtResource("7_scyfp")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6, 0.795, 0)
-needsKey = true
-key = NodePath("../Key_interact")
-
-[node name="Key_interact" parent="Interacuables" instance=ExtResource("8_sm2fj")]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3, 1.8, -6)
-
-[node name="InteractFlashlight" parent="Interacuables" instance=ExtResource("7_sm2fj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 2, -6)
-
-[node name="floor__wall" type="Node" parent="."]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="floor__wall"]
-transform = Transform3D(38.107536, 0, 0, 0, 1.4, 0, 0, 0, 18.359549, 0, 0, -4.9007845)
-mesh = SubResource("BoxMesh_podvm")
-skeleton = NodePath("../..")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="floor__wall/MeshInstance3D"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="floor__wall/MeshInstance3D/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_podvm")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="floor__wall"]
-transform = Transform3D(4.3700004, 0, 0, 0, 0.99, 0, 0, 0, 7.905304, 5, 0.3, 0)
+[node name="floor" type="MeshInstance3D" parent="floor_adn_wall"]
+transform = Transform3D(4.131, 0, 0, 0, 0.099999964, 0, 0, 0, 5.7200003, 0, 0, 0)
 mesh = SubResource("BoxMesh_nxrqf")
 skeleton = NodePath("../..")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="floor__wall/MeshInstance3D2"]
+[node name="StaticBody3D" type="StaticBody3D" parent="floor_adn_wall/floor"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="floor__wall/MeshInstance3D2/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_hj615")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor_adn_wall/floor/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_hj615")
 
-[node name="tech2" type="MeshInstance3D" parent="floor__wall"]
-transform = Transform3D(-6.137078e-08, 0, -4.3700004, 0, 1, 0, 1.4039997, 0, -1.9101878e-07, -4.6000004, 1.1999998, -6.2)
-mesh = SubResource("BoxMesh_usaaq")
-skeleton = NodePath("../..")
+[node name="wall" type="MeshInstance3D" parent="floor_adn_wall"]
+transform = Transform3D(2.0500002, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 1, 2.9)
+mesh = SubResource("PlaneMesh_p5beq")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="floor__wall/tech2"]
+[node name="wall2" type="MeshInstance3D" parent="floor_adn_wall"]
+transform = Transform3D(-2.0500002, 8.742278e-08, 3.821371e-15, 0, -4.371139e-08, 1, 1.7921671e-07, 1, 4.371139e-08, 0, 1, -2.8999999)
+mesh = SubResource("PlaneMesh_p5beq")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="floor__wall/tech2/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.2, 0, 0, 0.019999504)
-shape = SubResource("BoxShape3D_3odly")
+[node name="wall3" type="MeshInstance3D" parent="floor_adn_wall"]
+transform = Transform3D(4.1667883e-07, 0.99999994, 4.371139e-08, -1.3457237e-21, -4.3711385e-08, 1, 3.1775002, -1.3113414e-07, -5.7320566e-15, -2, 1, 0.10000014)
+mesh = SubResource("PlaneMesh_p5beq")
+
+[node name="wall4" type="MeshInstance3D" parent="floor_adn_wall"]
+transform = Transform3D(-1.3889294e-07, -0.99999994, 4.371139e-08, 0, -4.3711385e-08, -1, 3.1775002, -4.3711385e-08, 1.9106855e-15, 2.1, 1, 0.10000014)
+mesh = SubResource("PlaneMesh_p5beq")
+
+[node name="wall5" type="MeshInstance3D" parent="floor_adn_wall"]
+transform = Transform3D(1.7359952e-14, 8.742278e-08, 2.7124999, -1.3889294e-07, -1, 2.3713429e-07, 3.1775002, -4.371139e-08, 5.182734e-15, -0.10000008, 2, 0.10000014)
+mesh = SubResource("PlaneMesh_p5beq")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="floor_adn_wall"]
+transform = Transform3D(-0.9980573, 0.062302895, -1.16048185e-10, 0.001019926, 0.01633864, 0.999866, 0.062294547, 0.99792355, -0.016370445, 0, 2.14319, 0)
+spot_range = 2.083
+spot_angle = 38.24
+
+[node name="Player" parent="." instance=ExtResource("1_nxrqf")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.36249998, 2)
+
+[node name="interactuables" type="Node" parent="."]
+
+[node name="Key_interact" parent="interactuables" instance=ExtResource("8_sm2fj")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.7, 0.3, 0)
+
+[node name="InteractFlashlight" parent="interactuables" instance=ExtResource("7_sm2fj")]
+transform = Transform3D(0.68, 0, 0, 0, 0.68, 0, 0, 0, 0.68, -1.6, 0.1, -0.5)
+
+[node name="DoorInteract" parent="interactuables" instance=ExtResource("7_scyfp")]
+transform = Transform3D(0.355, 0, 0, 0, 0.355, 0, 0, 0, 0.355, -0.4, 0, -1.9)
