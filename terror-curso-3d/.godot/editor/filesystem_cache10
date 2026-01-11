@@ -2,8 +2,9 @@
 ::res://::1768112028
 default_bus_layout.tres::AudioBusLayout::8925132200983310006::1768025962::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D::7721836920140080278::1767734594::1767734604::1::::<><><>0<>0<>47776ba47ea17309a7725348c4cc5068<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-::res://Assets/::1768074414
+::res://Assets/::1768116650
 crosshair.png::CompressedTexture2D::1718410777676942219::1768009088::1768009089::1::::<><><>0<>0<>c09e1437fbab86c31be307ef82f08d0f<>res://.godot/imported/crosshair.png-7bed3294e640fe9ca357247b0602b756.ctex::
+damage_overlay.png::CompressedTexture2D::870093302024956515::1768116650::1768116651::1::::<><><>0<>0<>1c8d179b6a021b7e10204988e45215fe<>res://.godot/imported/damage_overlay.png-b64b7b5b61d66c98fda603cb81e230aa.ctex::
 flashLightTexture.jpeg::CompressedTexture2D::7887332726750196479::1768074413::1768074414::1::::<><><>0<>0<>43f75cb9112e0cfd2df26e83cc6926ca<>res://.godot/imported/flashLightTexture.jpeg-a1dd6cc7a63c6b71eed8ffe5b3af8014.ctex::
 ::res://AssetsModels/::1768112351
 ::res://AssetsModels/CeilingLight/::1768110584
@@ -48,7 +49,7 @@ DefaultMaterial_Metallic.jpg::CompressedTexture2D::5383925365726534196::17680775
 DefaultMaterial_Normal.jpg::CompressedTexture2D::1797037664207545348::1768077525::1768077909::1::::<><><>0<>0<>b8ceafa1b4bb1bc6d9eb912605d0c302<>res://.godot/imported/DefaultMaterial_Normal.jpg-e7ecbb959197f1588f8724b423424d75.s3tc.ctex::
 DefaultMaterial_Roughness.jpg::CompressedTexture2D::6337715086604149869::1768077526::1768077924::1::::<><><>0<>0<>f256ad99e5566197fe7791419003a71f<>res://.godot/imported/DefaultMaterial_Roughness.jpg-37e718e560a3e4ba80777bcb81d2cc08.s3tc.ctex::
 Flashlight.fbx::PackedScene::4816197060792897785::1768077526::1768078839::1::::<><><>0<>0<>1fc524558428aadfb99188b3f2dc3649<>res://.godot/imported/Flashlight.fbx-6e47dac66494b9eb42466ddd12d8bff3.scn::
-::res://AssetsModels/LightSwitch/::1768112351
+::res://AssetsModels/LightSwitch/::1768112353
 Lightswitch edit.FBX::PackedScene::7801597608705789567::1768112351::1768112353::1::::<><><>0<>0<>835a7a12159c68f5d6858c5095dd9bd0<>res://.godot/imported/Lightswitch edit.FBX-fdb91c473d506e4cb081c8058ba8bff3.scn::
 t_lightswitch_a.tga::CompressedTexture2D::4751736426673042421::1768112351::1768112351::1::::<><><>0<>0<>31326678290472cb27181c050c104b6d<>res://.godot/imported/t_lightswitch_a.tga-e5ff2ffca1a59495d41c25c087210ea4.ctex::
 t_lightswitch_ao.tga::CompressedTexture2D::4377185569544051133::1768112351::1768112351::1::::<><><>0<>0<>86463a1fb74676be1469c0619160dc13<>res://.godot/imported/t_lightswitch_ao.tga-1557407a66dce33660a4068212d46d8e.ctex::
@@ -58,17 +59,20 @@ t_lightswitch_r.tga::CompressedTexture2D::8666407660564495878::1768112351::17681
 119910__ftpalad__fluorescent-lightbulb-hum.ogg::AudioStreamOggVorbis::5870114076060255970::1768112028::1768112090::1::::<><><>0<>0<>3397e21d45501d0f57539139c40838d5<>res://.godot/imported/119910__ftpalad__fluorescent-lightbulb-hum.ogg-5f9e0a13e6b547358b8d139acccff754.oggvorbisstr::
 237944__supersnd__light-switch-off.wav::AudioStreamWAV::812595783423821442::1768112028::1768112029::1::::<><><>0<>0<>8dd901e5e9771efaabbdd16bdd8ebd4a<>res://.godot/imported/237944__supersnd__light-switch-off.wav-2160b937019d7cef50f67e0f09a78f2a.sample::
 ::res://Convert_fbx_app/::1767734732
-::res://Interacts/::1768112228
+::res://Interacts/::1768115667
 door_interact.tscn::PackedScene::3501712786696025850::1768029704::0::1::::<><><>0<>0<><>::uid://djh3guyqag51w::::res://Interacts/interact.tscn<>uid://3lik3ayhkvi5::::res://Scripts/door_interact.gd<>uid://bbypskrqlkpbq::::res://AssetsModels/Door/source/door1.fbx<>uid://ca261hfg673qm::::res://AssetsModels/Door/SoundsDoor/1open_door.ogg<>uid://bhjnvt6ybvhvf::::res://AssetsModels/Door/SoundsDoor/1locked_door.wav<>uid://d187j7vi4srkb::::res://AssetsModels/Door/SoundsDoor/1close_door.ogg
 interact.tscn::PackedScene::7807124166930450482::1768078141::0::1::::<><><>0<>0<><>::uid://de2stikd1ouwg::::res://Scripts/interact.gd
 interact_flashlight.tscn::PackedScene::5644761047426937827::1768079373::0::1::::<><><>0<>0<><>::uid://djh3guyqag51w::::res://Interacts/interact.tscn<>uid://cyerp0sl7835i::::res://textures/PBRMaterials/FlashlightMaterial.tres<>uid://ru7tu07cs8er::::res://Scripts/interact_flashlight.gd
 key_interact.tscn::PackedScene::8361981416840460059::1768028510::0::1::::<><><>0<>0<><>::uid://djh3guyqag51w::::res://Interacts/interact.tscn<>uid://ch600b1rufyuk::::res://AssetsModels/Door/Key/old_key/textures/material_baseColor.png<>uid://bdb46kdp4mguy::::res://Scripts/key_interact.gd<>uid://04y4m8v5yb5i::::res://AssetsModels/Door/Key/old_key/textures/material_metallicRoughness.png<>uid://bksyqm7orufel::::res://AssetsModels/Door/Key/old_key/textures/material_normal.png
 key_texture_rect.tscn::PackedScene::3680378221235133539::1768028877::0::1::::<><><>0<>0<><>::uid://bido873wl03dp::::res://AssetsModels/Door/Key/keyUI.png
 light_celling.tscn::PackedScene::5095457216266127490::1768112228::0::1::::<><><>0<>0<><>::uid://b8gcufoujyaxf::::res://Scripts/LightCelling.gd<>uid://cd8xyahbn7flv::::res://AssetsModels/CeilingLight/simple_ceiling_light.fbx<>uid://cpvr6k51p6lao::::res://AssetsSoundsModels/119910__ftpalad__fluorescent-lightbulb-hum.ogg
-::res://Maps/::1768112031
-test_map.tscn::PackedScene::46775612910194293::1768112031::0::1::::<><><>0<>0<><>::uid://bhpgcjw0h01ch::::res://Player/player.tscn<>uid://doful2d8tput4::::res://textures/PBRMaterials/Metal_One.tres<>uid://bhajd1u5k1dsp::::res://textures/PBRMaterials/Concrete_One.tres<>uid://ceujo25p5vamc::::res://Interacts/light_celling.tscn<>uid://bp5ixy42qvf2i::::res://Interacts/door_interact.tscn<>uid://cmomnisnhgpkt::::res://Interacts/interact_flashlight.tscn<>uid://dreuu20jec3sx::::res://Interacts/key_interact.tscn
-::res://Player/::1768079880
-player.tscn::PackedScene::2909076636856734091::1768079880::0::1::::<><><>0<>0<><>::uid://d0xp0kjhq7sye::::res://Scripts/player.gd<>uid://dkmxhnu0lq5fn::::res://Assets/flashLightTexture.jpeg<>uid://e27nnfusj2ft::::res://Scripts/States/StateMachine.gd<>uid://c072aky3067fy::::res://Scripts/States/Idle.gd<>uid://dytmgat17ubi0::::res://Scripts/States/Walk.gd<>uid://kecg1befn3o3::::res://Scripts/States/Run.gd<>uid://dje3xms25uvof::::res://Scripts/States/Crouch.gd<>uid://bcmye6yqcknac::::res://Scripts/States/Air.gd<>uid://yqn8epupeex4::::res://Assets/crosshair.png
+light_switch_interact.tscn::PackedScene::2324294545663792517::1768114249::0::1::::<><><>0<>0<><>::uid://djh3guyqag51w::::res://Interacts/interact.tscn<>uid://cyhd20f11fuce::::res://Scripts/light_switch_interact.gd<>uid://djfff40io2sq6::::res://AssetsModels/LightSwitch/Lightswitch edit.FBX<>uid://ceujo25p5vamc::::res://Interacts/light_celling.tscn
+::res://Interacts/AREAS/::1768116491
+damage_spike_area_3d.tscn::PackedScene::7119991499255481362::1768116491::0::1::::<><><>0<>0<><>::uid://c3rscatr5gok8::::res://Scripts/damage_spike_area_3d.gd
+::res://Maps/::1768116301
+test_map.tscn::PackedScene::46775612910194293::1768116301::0::1::::<><><>0<>0<><>::uid://bhpgcjw0h01ch::::res://Player/player.tscn<>uid://doful2d8tput4::::res://textures/PBRMaterials/Metal_One.tres<>uid://bhajd1u5k1dsp::::res://textures/PBRMaterials/Concrete_One.tres<>uid://c8o8hqbaphqv7::::res://Interacts/AREAS/damage_spike_area_3d.tscn<>uid://8d516cnnnn8x::::res://Interacts/light_switch_interact.tscn<>uid://bp5ixy42qvf2i::::res://Interacts/door_interact.tscn<>uid://cmomnisnhgpkt::::res://Interacts/interact_flashlight.tscn<>uid://dreuu20jec3sx::::res://Interacts/key_interact.tscn
+::res://Player/::1768116624
+player.tscn::PackedScene::2909076636856734091::1768116624::0::1::::<><><>0<>0<><>::uid://d0xp0kjhq7sye::::res://Scripts/player.gd<>uid://dkmxhnu0lq5fn::::res://Assets/flashLightTexture.jpeg<>uid://e27nnfusj2ft::::res://Scripts/States/StateMachine.gd<>uid://c072aky3067fy::::res://Scripts/States/Idle.gd<>uid://dytmgat17ubi0::::res://Scripts/States/Walk.gd<>uid://kecg1befn3o3::::res://Scripts/States/Run.gd<>uid://dje3xms25uvof::::res://Scripts/States/Crouch.gd<>uid://bcmye6yqcknac::::res://Scripts/States/Air.gd<>uid://yqn8epupeex4::::res://Assets/crosshair.png
 ::res://Player/footsteps/::1767904977
 ::res://Player/footsteps/bones/::1767904978
 0.ogg::AudioStreamOggVorbis::4398669893440773868::1767904976::1767904978::1::::<><><>0<>0<>c204d886689248cbe67410207500f19e<>res://.godot/imported/0.ogg-7222ae5feebab9b7e5f82ada16c0c906.oggvorbisstr::
@@ -168,13 +172,15 @@ license.txt::TextFile::-1::1767904977::0::1::::<><><>0<>0<><>::
 7.ogg::AudioStreamOggVorbis::68752436154645612::1767904977::1767904978::1::::<><><>0<>0<>587179b8466ddb28ca2aff042efec25b<>res://.godot/imported/7.ogg-efdb2406d2b125a5b49f2fe9812f8b48.oggvorbisstr::
 8.ogg::AudioStreamOggVorbis::8619058738330163073::1767904977::1767904978::1::::<><><>0<>0<>756eb4b7bc39f6487334a3349688c1fc<>res://.godot/imported/8.ogg-1bb9c0856daf85497514d3259fd65c40.oggvorbisstr::
 license.txt::TextFile::-1::1767904977::0::1::::<><><>0<>0<><>::
-::res://Scripts/::1768112223
+::res://Scripts/::1768116567
 door_interact.gd::GDScript::1988500842794771138::1768029622::0::1::::DoorInteract<>Interact<><>0<>0<><>::
 interact.gd::GDScript::7496882896751506482::1768028283::0::1::::Interact<>Area3D<><>0<>0<><>::
 interact_flashlight.gd::GDScript::1236475861324931213::1768079869::0::1::::FlashLightInteract<>Interact<><>0<>0<><>::
 key_interact.gd::GDScript::2600868275351216296::1768028463::0::1::::KeyInteract<>Interact<><>0<>0<><>::
-player.gd::GDScript::8962419769590056860::1768080348::0::1::::Player<>CharacterBody3D<><>0<>0<><>::
-LightCelling.gd::GDScript::4715196225301851363::1768112223::0::1::::LightCelling<>Node3D<><>0<>0<><>::
+player.gd::GDScript::8962419769590056860::1768116567::0::1::::Player<>CharacterBody3D<><>0<>0<><>::
+LightCelling.gd::GDScript::4715196225301851363::1768112986::0::1::::LightCelling<>Node3D<><>0<>0<><>::
+light_switch_interact.gd::GDScript::6472055948415190496::1768113726::0::1::::LigthSwitch<>Interact<><>0<>0<><>::
+damage_spike_area_3d.gd::GDScript::6774319918691759773::1768116491::0::1::::<>Area3D<><>0<>0<><>::
 ::res://Scripts/Manager/::1768080144
 AudioStreamManager.gd::GDScript::8261598891618375505::1768080144::0::1::::<>Node<><>0<>0<><>::
 ::res://Scripts/States/::1768080187

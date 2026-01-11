@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bhpgcjw0h01ch"]
+[gd_scene load_steps=19 format=3 uid="uid://bhpgcjw0h01ch"]
 
 [ext_resource type="Script" uid="uid://d0xp0kjhq7sye" path="res://Scripts/player.gd" id="1_l8h54"]
 [ext_resource type="Texture2D" uid="uid://dkmxhnu0lq5fn" path="res://Assets/flashLightTexture.jpeg" id="2_00tjw"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://dje3xms25uvof" path="res://Scripts/States/Crouch.gd" id="6_fhl08"]
 [ext_resource type="Script" uid="uid://bcmye6yqcknac" path="res://Scripts/States/Air.gd" id="7_vtle1"]
 [ext_resource type="Texture2D" uid="uid://yqn8epupeex4" path="res://Assets/crosshair.png" id="8_od3ui"]
+[ext_resource type="Texture2D" uid="uid://mnqkr4batnup" path="res://Assets/damage_overlay.png" id="10_x3vf3"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hvfyp"]
 height = 2.5
@@ -36,6 +37,43 @@ corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
+
+[sub_resource type="Animation" id="Animation_x3vf3"]
+resource_name = "damage.anim"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.20463458, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_apopc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5htga"]
+_data = {
+&"RESET": SubResource("Animation_apopc"),
+&"damage.anim": SubResource("Animation_x3vf3")
+}
 
 [node name="Player" type="CharacterBody3D" groups=["Player"]]
 script = ExtResource("1_l8h54")
@@ -146,3 +184,18 @@ theme_override_styles/background = SubResource("StyleBoxFlat_00tjw")
 theme_override_styles/fill = SubResource("StyleBoxFlat_x3vf3")
 value = 50.0
 show_percentage = false
+
+[node name="DamageTextureRect" type="TextureRect" parent="GUIPlayer"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_x3vf3")
+
+[node name="UIAnimationPlayer" type="AnimationPlayer" parent="GUIPlayer"]
+root_node = NodePath("../DamageTextureRect")
+libraries = {
+&"": SubResource("AnimationLibrary_5htga")
+}

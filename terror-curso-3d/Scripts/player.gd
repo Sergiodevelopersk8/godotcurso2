@@ -14,6 +14,7 @@ class_name Player
 @onready var h_box_container: HBoxContainer = $GUIPlayer/HBoxContainer
 @onready var flashligth: SpotLight3D = $Camera3D/Flashligth
 @onready var health_progress_bar: ProgressBar = $GUIPlayer/HealthProgressBar
+@onready var ui_animation_player: AnimationPlayer = $GUIPlayer/UIAnimationPlayer
 
 #----------Exports---------
 @export var canJump = true
@@ -24,11 +25,15 @@ var keyUI = preload("res://Interacts/key_texture_rect.tscn")
 var maxHealth := 100
 var health : int = 100 :
 	set(value):
+		if health > value:
+			ui_animation_player.play("damage.anim")
+			#AudioStreamManager.play("")
 		health = value
 		health_progress_bar.value = health
 		health = clamp(health, 0, maxHealth)
 		health_progress_bar.visible = false if health>= maxHealth else true
-
+		if health <= 0:
+			justDead()
 
 
 #----------VARIABLES CAMARA---------
@@ -183,3 +188,7 @@ func floor_sounds_path(nameMat):
 		footstep_sound.stream = load("res://Player/footsteps/wood/0.ogg")
 	else:
 		footstep_sound.stream = load("res://Player/footsteps/boots/0.ogg")
+
+
+func justDead():
+	get_tree().reload_current_scene()

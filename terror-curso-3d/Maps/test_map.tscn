@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://wwnf7ynx5dp"]
+[gd_scene load_steps=12 format=3 uid="uid://wwnf7ynx5dp"]
 
 [ext_resource type="PackedScene" uid="uid://bhpgcjw0h01ch" path="res://Player/player.tscn" id="1_nxrqf"]
 [ext_resource type="Material" uid="uid://doful2d8tput4" path="res://textures/PBRMaterials/Metal_One.tres" id="1_p5beq"]
 [ext_resource type="Material" uid="uid://bhajd1u5k1dsp" path="res://textures/PBRMaterials/Concrete_One.tres" id="2_hj615"]
+[ext_resource type="PackedScene" uid="uid://c8o8hqbaphqv7" path="res://Interacts/AREAS/damage_spike_area_3d.tscn" id="3_sm2fj"]
 [ext_resource type="PackedScene" uid="uid://8d516cnnnn8x" path="res://Interacts/light_switch_interact.tscn" id="7_ifrnq"]
 [ext_resource type="PackedScene" uid="uid://bp5ixy42qvf2i" path="res://Interacts/door_interact.tscn" id="7_scyfp"]
 [ext_resource type="PackedScene" uid="uid://cmomnisnhgpkt" path="res://Interacts/interact_flashlight.tscn" id="7_sm2fj"]
@@ -51,6 +52,29 @@ mesh = SubResource("PlaneMesh_p5beq")
 transform = Transform3D(1.7359952e-14, 8.742278e-08, 2.7124999, -1.3889294e-07, -1, 2.3713429e-07, 3.1775002, -4.371139e-08, 5.182734e-15, -0.10000008, 2, 0.10000014)
 mesh = SubResource("PlaneMesh_p5beq")
 
+[node name="DamageSpikeArea3D" parent="floor_adn_wall" instance=ExtResource("3_sm2fj")]
+
+[node name="MeshInstance3D" parent="floor_adn_wall/DamageSpikeArea3D" index="0"]
+transform = Transform3D(0.575, 0, 0, 0, 0.575, 0, 0, 0, 0.575, 0.3478261, 0, 0)
+
+[node name="MeshInstance3D2" parent="floor_adn_wall/DamageSpikeArea3D" index="1"]
+transform = Transform3D(0.575, 0, 0, 0, 0.575, 0, 0, 0, 0.575, 0.5260869, 0, 0)
+
+[node name="MeshInstance3D3" parent="floor_adn_wall/DamageSpikeArea3D" index="2"]
+transform = Transform3D(0.575, 0, 0, 0, 0.575, 0, 0, 0, 0.575, 0.60434777, 0, 0)
+
+[node name="MeshInstance3D4" parent="floor_adn_wall/DamageSpikeArea3D" index="3"]
+transform = Transform3D(0.575, 0, 0, 0, 0.575, 0, 0, 0, 0.575, 0.68260866, 0, 0)
+
+[node name="MeshInstance3D5" parent="floor_adn_wall/DamageSpikeArea3D" index="4"]
+transform = Transform3D(0.575, 0, 0, 0, 0.575, 0, 0, 0, 0.575, 0.55652153, 0, -0.2782609)
+
+[node name="MeshInstance3D6" parent="floor_adn_wall/DamageSpikeArea3D" index="5"]
+transform = Transform3D(0.575, 0, 0, 0, 0.575, 0, 0, 0, 0.575, 0.4782608, 0, -0.2782609)
+
+[node name="CollisionShape3D" parent="floor_adn_wall/DamageSpikeArea3D" index="7"]
+transform = Transform3D(0.575, 0, 0, 0, 0.575, 0, 0, 0, 0.575, 0.49000016, 0, -0.11250013)
+
 [node name="Player" parent="." instance=ExtResource("1_nxrqf")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.36249998, 2)
 
@@ -72,5 +96,6 @@ transform = Transform3D(-0.07246933, 0, -0.27045923, 0, 0.28, 0, 0.27045923, 0, 
 [node name="LightCelling" parent="interactuables/LightSwitchInteract" index="3"]
 transform = Transform3D(1.1600001, 0, 0, 0, 1.16, 0, 0, 0, 1.1600001, 1.478966, 4.5142856, 9.419577)
 
+[editable path="floor_adn_wall/DamageSpikeArea3D"]
 [editable path="interactuables/LightSwitchInteract"]
 [editable path="interactuables/LightSwitchInteract/LightCelling"]

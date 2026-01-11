@@ -6,3 +6,5 @@ res://Interacts/light_switch_interact.tscn
 res://Scripts/light_switch_interact.gd
 res://Player/player.tscn
 res://Scripts/player.gd
+res://Interacts/AREAS/damage_spike_area_3d.tscn
+res://Scripts/damage_spike_area_3d.gd

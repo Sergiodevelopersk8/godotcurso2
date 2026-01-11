@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://c8o8hqbaphqv7"]
+
+[ext_resource type="Script" uid="uid://c3rscatr5gok8" path="res://Scripts/damage_spike_area_3d.gd" id="1_6fgub"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_25vvj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_25vvj"]
+size = Vector3(0.90000004, 1, 1.4)
+
+[node name="DamageSpikeArea3D" type="Area3D"]
+transform = Transform3D(0.575, 0, 0, 0, 0.575, 0, 0, 0, 0.575, 0, 0, 0)
+script = ExtResource("1_6fgub")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.575, 0, 0, 0, 0.575, 0, 0, 0, 0.575, 0.17391305, 0, 0)
+mesh = SubResource("PrismMesh_25vvj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.575, 0, 0, 0, 0.575, 0, 0, 0, 0.575, 0.19543493, 0, 0.0024998966)
+shape = SubResource("BoxShape3D_25vvj")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
