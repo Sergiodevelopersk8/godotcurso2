@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://wwnf7ynx5dp"]
+[gd_scene load_steps=11 format=3 uid="uid://wwnf7ynx5dp"]
 
 [ext_resource type="PackedScene" uid="uid://bhpgcjw0h01ch" path="res://Player/player.tscn" id="1_nxrqf"]
 [ext_resource type="Material" uid="uid://doful2d8tput4" path="res://textures/PBRMaterials/Metal_One.tres" id="1_p5beq"]
 [ext_resource type="Material" uid="uid://bhajd1u5k1dsp" path="res://textures/PBRMaterials/Concrete_One.tres" id="2_hj615"]
+[ext_resource type="PackedScene" uid="uid://ceujo25p5vamc" path="res://Interacts/light_celling.tscn" id="7_ifrnq"]
 [ext_resource type="PackedScene" uid="uid://bp5ixy42qvf2i" path="res://Interacts/door_interact.tscn" id="7_scyfp"]
 [ext_resource type="PackedScene" uid="uid://cmomnisnhgpkt" path="res://Interacts/interact_flashlight.tscn" id="7_sm2fj"]
 [ext_resource type="PackedScene" uid="uid://dreuu20jec3sx" path="res://Interacts/key_interact.tscn" id="8_sm2fj"]
@@ -50,11 +51,6 @@ mesh = SubResource("PlaneMesh_p5beq")
 transform = Transform3D(1.7359952e-14, 8.742278e-08, 2.7124999, -1.3889294e-07, -1, 2.3713429e-07, 3.1775002, -4.371139e-08, 5.182734e-15, -0.10000008, 2, 0.10000014)
 mesh = SubResource("PlaneMesh_p5beq")
 
-[node name="SpotLight3D" type="SpotLight3D" parent="floor_adn_wall"]
-transform = Transform3D(-0.9980573, 0.062302895, -1.16048185e-10, 0.001019926, 0.01633864, 0.999866, 0.062294547, 0.99792355, -0.016370445, 0, 2.14319, 0)
-spot_range = 2.083
-spot_angle = 38.24
-
 [node name="Player" parent="." instance=ExtResource("1_nxrqf")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.36249998, 2)
 
@@ -68,3 +64,10 @@ transform = Transform3D(0.68, 0, 0, 0, 0.68, 0, 0, 0, 0.68, -1.6, 0.1, -0.5)
 
 [node name="DoorInteract" parent="interactuables" instance=ExtResource("7_scyfp")]
 transform = Transform3D(0.355, 0, 0, 0, 0.355, 0, 0, 0, 0.355, -0.4, 0, -1.9)
+needsKey = true
+
+[node name="LightCelling" parent="interactuables" instance=ExtResource("7_ifrnq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+flickering = true
+
+[editable path="interactuables/LightCelling"]

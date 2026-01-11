@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://ceujo25p5vamc"]
+
+[ext_resource type="Script" uid="uid://b8gcufoujyaxf" path="res://Scripts/LightCelling.gd" id="1_qbo0c"]
+[ext_resource type="PackedScene" uid="uid://cd8xyahbn7flv" path="res://AssetsModels/CeilingLight/simple_ceiling_light.fbx" id="1_qo785"]
+[ext_resource type="AudioStream" uid="uid://cpvr6k51p6lao" path="res://AssetsSoundsModels/119910__ftpalad__fluorescent-lightbulb-hum.ogg" id="3_2xxc6"]
+
+[node name="LightCelling" type="Node3D"]
+script = ExtResource("1_qbo0c")
+
+[node name="simple_ceiling_light" parent="." instance=ExtResource("1_qo785")]
+
+[node name="SpotLight3D" type="OmniLight3D" parent="."]
+
+[node name="TimerParpadeo" type="Timer" parent="."]
+
+[node name="FlickerLight" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_2xxc6")

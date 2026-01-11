@@ -1,14 +1,14 @@
-Node
+AudioStreamPlayer3D
+Timer
+OmniLight3D      - Matches the "point" keyword.
 SpotLight3D
+Node
 MeshInstance3D
 CSGBox3D
 TextureRect
 HBoxContainer
-AudioStreamPlayer3D
 AnimationPlayer
 AnimationTree
 Area3D
 StaticBody3D
 RigidBody3D
-Label
-CollisionShape3D

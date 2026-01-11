@@ -1,2 +1,4 @@
 res://Maps/test_map.tscn
 res://textures/PBRMaterials/Metal_One.tres
+res://Interacts/light_celling.tscn
+res://Scripts/LightCelling.gd
