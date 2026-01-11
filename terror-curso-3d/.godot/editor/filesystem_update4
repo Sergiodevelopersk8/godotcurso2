@@ -2,3 +2,5 @@ res://Maps/test_map.tscn
 res://textures/PBRMaterials/Metal_One.tres
 res://Interacts/light_celling.tscn
 res://Scripts/LightCelling.gd
+res://Interacts/light_switch_interact.tscn
+res://Scripts/light_switch_interact.gd
