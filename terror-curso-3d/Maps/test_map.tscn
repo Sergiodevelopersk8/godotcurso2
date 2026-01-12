@@ -1,5 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://wwnf7ynx5dp"]
+[gd_scene load_steps=15 format=3 uid="uid://wwnf7ynx5dp"]
 
+[ext_resource type="Script" uid="uid://bb6j13wjddfi8" path="res://Maps/test_map.gd" id="1_k8cy2"]
 [ext_resource type="PackedScene" uid="uid://bhpgcjw0h01ch" path="res://Player/player.tscn" id="1_nxrqf"]
 [ext_resource type="Material" uid="uid://doful2d8tput4" path="res://textures/PBRMaterials/Metal_One.tres" id="1_p5beq"]
 [ext_resource type="Material" uid="uid://bhajd1u5k1dsp" path="res://textures/PBRMaterials/Concrete_One.tres" id="2_hj615"]
@@ -8,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://bp5ixy42qvf2i" path="res://Interacts/door_interact.tscn" id="7_scyfp"]
 [ext_resource type="PackedScene" uid="uid://cmomnisnhgpkt" path="res://Interacts/interact_flashlight.tscn" id="7_sm2fj"]
 [ext_resource type="PackedScene" uid="uid://dreuu20jec3sx" path="res://Interacts/key_interact.tscn" id="8_sm2fj"]
+[ext_resource type="PackedScene" uid="uid://dag00da5wx0cw" path="res://Interacts/button_interact.tscn" id="9_ifrnq"]
+[ext_resource type="PackedScene" uid="uid://bh0wi2rfgc36v" path="res://Interacts/paper_interact.tscn" id="11_5w2il"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_nxrqf"]
 material = ExtResource("1_p5beq")
@@ -19,6 +22,7 @@ points = PackedVector3Array(-0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5
 material = ExtResource("2_hj615")
 
 [node name="Test_map" type="Node"]
+script = ExtResource("1_k8cy2")
 
 [node name="floor_adn_wall" type="Node" parent="."]
 
@@ -57,23 +61,8 @@ mesh = SubResource("PlaneMesh_p5beq")
 [node name="MeshInstance3D" parent="floor_adn_wall/DamageSpikeArea3D" index="0"]
 transform = Transform3D(0.575, 0, 0, 0, 0.575, 0, 0, 0, 0.575, 0.3478261, 0, 0)
 
-[node name="MeshInstance3D2" parent="floor_adn_wall/DamageSpikeArea3D" index="1"]
-transform = Transform3D(0.575, 0, 0, 0, 0.575, 0, 0, 0, 0.575, 0.5260869, 0, 0)
-
-[node name="MeshInstance3D3" parent="floor_adn_wall/DamageSpikeArea3D" index="2"]
-transform = Transform3D(0.575, 0, 0, 0, 0.575, 0, 0, 0, 0.575, 0.60434777, 0, 0)
-
-[node name="MeshInstance3D4" parent="floor_adn_wall/DamageSpikeArea3D" index="3"]
-transform = Transform3D(0.575, 0, 0, 0, 0.575, 0, 0, 0, 0.575, 0.68260866, 0, 0)
-
-[node name="MeshInstance3D5" parent="floor_adn_wall/DamageSpikeArea3D" index="4"]
-transform = Transform3D(0.575, 0, 0, 0, 0.575, 0, 0, 0, 0.575, 0.55652153, 0, -0.2782609)
-
-[node name="MeshInstance3D6" parent="floor_adn_wall/DamageSpikeArea3D" index="5"]
-transform = Transform3D(0.575, 0, 0, 0, 0.575, 0, 0, 0, 0.575, 0.4782608, 0, -0.2782609)
-
-[node name="CollisionShape3D" parent="floor_adn_wall/DamageSpikeArea3D" index="7"]
-transform = Transform3D(0.575, 0, 0, 0, 0.575, 0, 0, 0, 0.575, 0.49000016, 0, -0.11250013)
+[node name="CollisionShape3D" parent="floor_adn_wall/DamageSpikeArea3D" index="1"]
+transform = Transform3D(0.575, 0, 0, 0, 0.575, 0, 0, 0, 0.575, 0.23153764, 0, -0.11250013)
 
 [node name="Player" parent="." instance=ExtResource("1_nxrqf")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.36249998, 2)
@@ -95,6 +84,15 @@ transform = Transform3D(-0.07246933, 0, -0.27045923, 0, 0.28, 0, 0.27045923, 0, 
 
 [node name="LightCelling" parent="interactuables/LightSwitchInteract" index="3"]
 transform = Transform3D(1.1600001, 0, 0, 0, 1.16, 0, 0, 0, 1.1600001, 1.478966, 4.5142856, 9.419577)
+
+[node name="ButtonInteract" parent="interactuables" instance=ExtResource("9_ifrnq")]
+transform = Transform3D(-0.2639916, 0, -0.023096243, 0, 0.265, 0, 0.023096243, 0, -0.2639916, 0, 0.8, 2.7999997)
+
+[node name="PaperInteract" parent="interactuables" instance=ExtResource("11_5w2il")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7, 0.2, 1)
+text = "Esto es una prueba de papel jajajajajaya que salga mi juego y me haga millonario"
+
+[connection signal="isInteracted" from="interactuables/ButtonInteract" to="." method="_on_button_interact_is_interacted"]
 
 [editable path="floor_adn_wall/DamageSpikeArea3D"]
 [editable path="interactuables/LightSwitchInteract"]

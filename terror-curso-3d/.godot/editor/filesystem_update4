@@ -1,10 +1,10 @@
+res://Interacts/button_interact.tscn
 res://Maps/test_map.tscn
-res://textures/PBRMaterials/Metal_One.tres
-res://Interacts/light_celling.tscn
-res://Scripts/LightCelling.gd
-res://Interacts/light_switch_interact.tscn
+res://Scripts/button_interact.gd
+res://Scripts/interact.gd
+res://Maps/test_map.gd
 res://Scripts/light_switch_interact.gd
+res://Interacts/paper_interact.tscn
+res://Scripts/paper_interact.gd
 res://Player/player.tscn
 res://Scripts/player.gd
-res://Interacts/AREAS/damage_spike_area_3d.tscn
-res://Scripts/damage_spike_area_3d.gd

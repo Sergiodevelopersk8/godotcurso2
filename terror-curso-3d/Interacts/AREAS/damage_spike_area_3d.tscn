@@ -5,7 +5,7 @@
 [sub_resource type="PrismMesh" id="PrismMesh_25vvj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_25vvj"]
-size = Vector3(0.90000004, 1, 1.4)
+size = Vector3(0.001, 1, 1.4)
 
 [node name="DamageSpikeArea3D" type="Area3D"]
 transform = Transform3D(0.575, 0, 0, 0, 0.575, 0, 0, 0, 0.575, 0, 0, 0)

@@ -15,13 +15,13 @@ class_name Player
 @onready var flashligth: SpotLight3D = $Camera3D/Flashligth
 @onready var health_progress_bar: ProgressBar = $GUIPlayer/HealthProgressBar
 @onready var ui_animation_player: AnimationPlayer = $GUIPlayer/UIAnimationPlayer
-
 #----------Exports---------
 @export var canJump = true
 @export var flashlightEquipped := true
 
 #----------VARIABLES UI---------
-var keyUI = preload("res://Interacts/key_texture_rect.tscn")
+const uiKey_path = "res://Interacts/key_texture_rect.tscn"
+var keyUI = preload(uiKey_path)
 var maxHealth := 100
 var health : int = 100 :
 	set(value):
@@ -90,11 +90,12 @@ func _input(event: InputEvent) -> void:
 				AudioStreamManager.play("res://AssetsModels/FlashLigth/FlashlightOn.ogg")
 
 func _process(delta) :
-	label.text = $StateMachine.get_state()
-	process_camera_jostick()
-	processGroundSounds()
+	if canMoveAndRotate:
+		label.text = $StateMachine.get_state()
+		process_camera_jostick()
+		processGroundSounds()
+		#process_input(delta)
 	processInteract()
-	#process_input(delta)
 
 
 func rotate_camera(event):

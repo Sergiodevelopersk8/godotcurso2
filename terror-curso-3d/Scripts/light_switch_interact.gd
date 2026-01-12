@@ -5,6 +5,6 @@ class_name LigthSwitch
 
 
 func action_use():
-	light_celling.visible = not light_celling.visible
+	light_celling.flicker()
 	AudioStreamManager.play("res://AssetsSoundsModels/237944__supersnd__light-switch-off.wav")
 	pass
