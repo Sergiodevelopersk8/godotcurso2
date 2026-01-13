@@ -13,6 +13,7 @@ size = Vector3(0.4, 0.4, 0.1)
 
 [node name="Key" type="StaticBody3D" groups=["Interacts"]]
 script = ExtResource("1_lkxp8")
+id = null
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.0046189064, 0, -0.24420321, 0, 0.24749997, 0, 0.052794322, 0, -0.021365019, 0, 0, 0)
@@ -24,5 +25,5 @@ shape = SubResource("BoxShape3D_uso2e")
 
 [node name="Label3D" type="Label3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.04)
-text = "1
+text = "
 "

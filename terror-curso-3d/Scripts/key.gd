@@ -1,16 +1,16 @@
 @tool
 extends StaticBody3D
 class_name Key
-
-@onready var label_3d: Label3D = $Label3D
+@export var id: String = "Key"
 
 @export var number : String = "." : 
 	set(value):
 		number = value
 		if number != ".":
-			label_3d.text = number
+			$Label3D.text = number
 
 signal on_interact
 
 func action_use():
+	AudioStreamManager.play("res://AssetsModels/Numpad/pressed_key.wav")
 	emit_signal("on_interact", number)

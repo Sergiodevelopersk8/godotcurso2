@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://bk8u0be6h228v"]
+[gd_scene load_steps=8 format=3 uid="uid://bk8u0be6h228v"]
 
+[ext_resource type="Script" uid="uid://36t53ie6y5fc" path="res://Scripts/keypad.gd" id="1_hhejf"]
 [ext_resource type="PackedScene" uid="uid://b688xmqjpt8nh" path="res://Numpad/key.tscn" id="1_o6qsd"]
 [ext_resource type="Texture2D" uid="uid://cw6pibvef4u7i" path="res://AssetsModels/Numpad/white tick.png" id="2_jh6wp"]
 
@@ -16,6 +17,7 @@ albedo_color = Color(0.99999994, 0.12718996, 0.056414984, 1)
 material = SubResource("StandardMaterial3D_o6qsd")
 
 [node name="Keypad" type="Node3D"]
+script = ExtResource("1_hhejf")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.1, 0, 0, 0, 0.945, 0, 0, 0, 0.6, 0, 0, 0)
@@ -26,7 +28,7 @@ transform = Transform3D(0.5610002, 0, 0, 0, 0.18518516, 0, 0, 0, 0.8999999, 0.3,
 mesh = SubResource("BoxMesh_jh6wp")
 skeleton = NodePath("../..")
 
-[node name="Label3D" type="Label3D" parent="."]
+[node name="password_Label" type="Label3D" parent="."]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.06, 0.345, 0)
 text = "0000"
 
@@ -34,49 +36,62 @@ text = "0000"
 
 [node name="Key" parent="Keys" instance=ExtResource("1_o6qsd")]
 transform = Transform3D(-1.9888683e-08, 0, 0.455, 0, 0.455, 0, -0.455, 0, -1.9888683e-08, 0.05, 0.165, 0.19)
+id = "Key"
+number = "1"
 
 [node name="Key2" parent="Keys" instance=ExtResource("1_o6qsd")]
 transform = Transform3D(-1.9888683e-08, 0, 0.455, 0, 0.455, 0, -0.455, 0, -1.9888683e-08, 0.05, 0.165, 0)
+id = "Key"
 number = "2"
 
 [node name="Key3" parent="Keys" instance=ExtResource("1_o6qsd")]
 transform = Transform3D(-1.9888683e-08, 0, 0.455, 0, 0.455, 0, -0.455, 0, -1.9888683e-08, 0.05, 0.165, -0.195)
+id = "Key"
 number = "3"
 
 [node name="Key4" parent="Keys" instance=ExtResource("1_o6qsd")]
 transform = Transform3D(-1.9888683e-08, 0, 0.455, 0, 0.455, 0, -0.455, 0, -1.9888683e-08, 0.05, 0.02, 0.19)
+id = "Key"
 number = "4"
 
 [node name="Key5" parent="Keys" instance=ExtResource("1_o6qsd")]
 transform = Transform3D(-1.9888683e-08, 0, 0.455, 0, 0.455, 0, -0.455, 0, -1.9888683e-08, 0.05, 0.02, 0)
+id = "Key"
 number = "5"
 
 [node name="Key6" parent="Keys" instance=ExtResource("1_o6qsd")]
 transform = Transform3D(-1.9888683e-08, 0, 0.455, 0, 0.455, 0, -0.455, 0, -1.9888683e-08, 0.05, 0.02, -0.195)
+id = "Key"
 number = "6"
 
 [node name="Key7" parent="Keys" instance=ExtResource("1_o6qsd")]
 transform = Transform3D(-1.9888683e-08, 0, 0.455, 0, 0.455, 0, -0.455, 0, -1.9888683e-08, 0.05, -0.135, 0.19)
+id = "Key"
 number = "7"
 
 [node name="Key8" parent="Keys" instance=ExtResource("1_o6qsd")]
 transform = Transform3D(-1.9888683e-08, 0, 0.455, 0, 0.455, 0, -0.455, 0, -1.9888683e-08, 0.05, -0.135, 0)
+id = "Key"
 number = "8"
 
 [node name="Key9" parent="Keys" instance=ExtResource("1_o6qsd")]
 transform = Transform3D(-1.9888683e-08, 0, 0.455, 0, 0.455, 0, -0.455, 0, -1.9888683e-08, 0.05, -0.135, -0.195)
+id = "Key"
 number = "9"
 
 [node name="Key10" parent="Keys" instance=ExtResource("1_o6qsd")]
 transform = Transform3D(-1.9888683e-08, 0, 0.455, 0, 0.455, 0, -0.455, 0, -1.9888683e-08, 0.05, -0.305, 0.19)
+id = "Key"
 number = "C"
 
 [node name="Key11" parent="Keys" instance=ExtResource("1_o6qsd")]
 transform = Transform3D(-1.9888683e-08, 0, 0.455, 0, 0.455, 0, -0.455, 0, -1.9888683e-08, 0.05, -0.305, 0)
+id = "Key"
 number = "0"
 
 [node name="Key12" parent="Keys" instance=ExtResource("1_o6qsd")]
 transform = Transform3D(-1.9888683e-08, 0, 0.455, 0, 0.455, 0, -0.455, 0, -1.9888683e-08, 0.05, -0.305, -0.195)
+id = "Key"
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(-8.742278e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.742278e-09, 0.07, -0.305, -0.195)
