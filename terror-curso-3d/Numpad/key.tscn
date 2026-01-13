@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://b688xmqjpt8nh"]
+
+[ext_resource type="Script" uid="uid://cvoiwfu6ejf4s" path="res://Scripts/key.gd" id="1_lkxp8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uso2e"]
+albedo_color = Color(0.5569851, 0.9994208, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_uso2e"]
+material = SubResource("StandardMaterial3D_uso2e")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uso2e"]
+size = Vector3(0.4, 0.4, 0.1)
+
+[node name="Key" type="StaticBody3D" groups=["Interacts"]]
+script = ExtResource("1_lkxp8")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.0046189064, 0, -0.24420321, 0, 0.24749997, 0, 0.052794322, 0, -0.021365019, 0, 0, 0)
+mesh = SubResource("BoxMesh_uso2e")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.69, 0, 0, 0, 0.69, 0, 0, 0, 0.69, 1.4901161e-08, 0.0049999803, 0.005)
+shape = SubResource("BoxShape3D_uso2e")
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.04)
+text = "1
+"
