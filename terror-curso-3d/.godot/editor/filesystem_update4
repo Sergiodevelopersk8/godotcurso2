@@ -1,4 +1,8 @@
+res://global.tscn
+res://Scripts/Manager/global.gd
+res://Interacts/NPCS/Template_Npc_Interact.tscn
+res://Scripts/template_npc_interact.gd
 res://Maps/test_map.tscn
-res://Scripts/key.gd
-res://Numpad/keypad.tscn
-res://Numpad/key.tscn
+res://Player/player.tscn
+res://Interacts/interact.tscn
+res://Scripts/player.gd

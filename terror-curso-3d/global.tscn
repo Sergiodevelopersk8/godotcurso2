@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0qr4l5kp1m32"]
+
+[ext_resource type="Script" uid="uid://bbbuq0xtcbnme" path="res://Scripts/Manager/global.gd" id="1_6q3x5"]
+[ext_resource type="Texture2D" uid="uid://c52vcnem0e1c1" path="res://Assets/ui_dialogue.png" id="2_qxp0b"]
+
+[node name="Global" type="Node"]
+process_mode = 3
+script = ExtResource("1_6q3x5")
+
+[node name="DialogueCanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="NinePatchRect" type="NinePatchRect" parent="DialogueCanvasLayer"]
+offset_left = 173.0
+offset_top = 438.0
+offset_right = 1728.0
+offset_bottom = 1298.0
+scale = Vector2(0.6204068, 0.30926892)
+texture = ExtResource("2_qxp0b")
+region_rect = Rect2(0.9581299, 84.89679, 1521.3965, 867.1032)
+patch_margin_right = 130
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="TextDialogueRichTextLabel" type="RichTextLabel" parent="DialogueCanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -340.0
+offset_top = -243.0
+offset_right = 361.0
+offset_bottom = -62.146484
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/normal_font_size = 40
+text = "hOLA ESTE ES UN DIALOGO JAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJ JAJAJAJAJAJAJAJAJAJAJAJAJAJAJAAJJA"
+
+[node name="NameRichTextLabel" type="RichTextLabel" parent="DialogueCanvasLayer"]
+offset_left = 258.0
+offset_top = 366.0
+offset_right = 531.0
+offset_bottom = 450.0
+theme_override_font_sizes/normal_font_size = 50
+text = "Hola"

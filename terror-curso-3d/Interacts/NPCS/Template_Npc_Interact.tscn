@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://c0vix31l6mbkd"]
+
+[ext_resource type="PackedScene" uid="uid://djh3guyqag51w" path="res://Interacts/interact.tscn" id="1_reb8o"]
+[ext_resource type="Script" uid="uid://dl407552a845g" path="res://Scripts/template_npc_interact.gd" id="2_obdns"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_obdns"]
+albedo_color = Color(0, 0.91764706, 0.7647059, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_vvmmc"]
+material = SubResource("StandardMaterial3D_obdns")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_obdns"]
+
+[node name="tempalteNpcInteract" instance=ExtResource("1_reb8o")]
+script = ExtResource("2_obdns")
+dialogue = ""
+mensaje = ""
+id = "npc"
+
+[node name="MeshInstance3D" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.90000004, 0)
+visible = true
+mesh = SubResource("CapsuleMesh_vvmmc")
+
+[node name="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.90000004, 0)
+shape = SubResource("CapsuleShape3D_obdns")

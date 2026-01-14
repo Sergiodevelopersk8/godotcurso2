@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://wwnf7ynx5dp"]
+[gd_scene load_steps=18 format=3 uid="uid://wwnf7ynx5dp"]
 
 [ext_resource type="Script" uid="uid://bb6j13wjddfi8" path="res://Maps/test_map.gd" id="1_k8cy2"]
 [ext_resource type="PackedScene" uid="uid://bhpgcjw0h01ch" path="res://Player/player.tscn" id="1_nxrqf"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dag00da5wx0cw" path="res://Interacts/button_interact.tscn" id="9_ifrnq"]
 [ext_resource type="PackedScene" uid="uid://bh0wi2rfgc36v" path="res://Interacts/paper_interact.tscn" id="11_5w2il"]
 [ext_resource type="PackedScene" uid="uid://bk8u0be6h228v" path="res://Numpad/keypad.tscn" id="12_dl8p7"]
+[ext_resource type="PackedScene" uid="uid://c0vix31l6mbkd" path="res://Interacts/NPCS/Template_Npc_Interact.tscn" id="12_o1htb"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_nxrqf"]
 material = ExtResource("1_p5beq")
@@ -21,6 +22,8 @@ points = PackedVector3Array(-0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_p5beq"]
 material = ExtResource("2_hj615")
+
+[sub_resource type="BoxMesh" id="BoxMesh_dl8p7"]
 
 [node name="Test_map" type="Node"]
 script = ExtResource("1_k8cy2")
@@ -65,8 +68,9 @@ transform = Transform3D(0.575, 0, 0, 0, 0.575, 0, 0, 0, 0.575, 0.3478261, 0, 0)
 [node name="CollisionShape3D" parent="floor_adn_wall/DamageSpikeArea3D" index="1"]
 transform = Transform3D(0.575, 0, 0, 0, 0.575, 0, 0, 0, 0.575, 0.23153764, 0, -0.11250013)
 
-[node name="Player" parent="." instance=ExtResource("1_nxrqf")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.36249998, 2)
+[node name="cubo_destruir" type="MeshInstance3D" parent="floor_adn_wall"]
+transform = Transform3D(0.275, 0, 0, 0, 0.275, 0, 0, 0, 0.275, 1.9000001, 0.6, 2.2)
+mesh = SubResource("BoxMesh_dl8p7")
 
 [node name="interactuables" type="Node" parent="."]
 
@@ -96,43 +100,17 @@ text = "Esto es una prueba de papel jajajajajaya que salga mi juego y me haga mi
 [node name="Keypad" parent="interactuables" instance=ExtResource("12_dl8p7")]
 transform = Transform3D(-0.3, 0, 4.5298744e-08, 0, 0.3, 0, -4.5298744e-08, 0, -0.3, 2.1, 0.655, 1.8)
 
-[node name="Key" parent="interactuables/Keypad/Keys" index="0"]
-id = "Key"
+[node name="tempalteNpcInteract" parent="interactuables" instance=ExtResource("12_o1htb")]
+transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, 2, 0, -1)
+dialogue = "ya que funcione"
+mensaje = "hola script"
+id = "elnpc"
 
-[node name="Key2" parent="interactuables/Keypad/Keys" index="1"]
-id = "Key"
-
-[node name="Key3" parent="interactuables/Keypad/Keys" index="2"]
-id = "Key"
-
-[node name="Key4" parent="interactuables/Keypad/Keys" index="3"]
-id = "Key"
-
-[node name="Key5" parent="interactuables/Keypad/Keys" index="4"]
-id = "Key"
-
-[node name="Key6" parent="interactuables/Keypad/Keys" index="5"]
-id = "Key"
-
-[node name="Key7" parent="interactuables/Keypad/Keys" index="6"]
-id = "Key"
-
-[node name="Key8" parent="interactuables/Keypad/Keys" index="7"]
-id = "Key"
-
-[node name="Key9" parent="interactuables/Keypad/Keys" index="8"]
-id = "Key"
-
-[node name="Key10" parent="interactuables/Keypad/Keys" index="9"]
-id = "Key"
-
-[node name="Key11" parent="interactuables/Keypad/Keys" index="10"]
-id = "Key"
-
-[node name="Key12" parent="interactuables/Keypad/Keys" index="11"]
-id = "Key"
+[node name="Player" parent="." instance=ExtResource("1_nxrqf")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.36249998, 2)
 
 [connection signal="isInteracted" from="interactuables/ButtonInteract" to="." method="_on_button_interact_is_interacted"]
+[connection signal="on_correct_pass" from="interactuables/Keypad" to="." method="_on_keypad_on_correct_pass"]
 
 [editable path="floor_adn_wall/DamageSpikeArea3D"]
 [editable path="interactuables/LightSwitchInteract"]

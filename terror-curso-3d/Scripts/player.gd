@@ -110,6 +110,8 @@ func rotate_camera(event):
  
 
 func processInteract():
+	if Global.is_dialogue_active:
+		return
 	if raycast_interactuar.is_colliding():
 		if raycast_interactuar.get_collider().is_in_group("Interacts"):
 			var interact = raycast_interactuar.get_collider()
