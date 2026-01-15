@@ -1,5 +1,5 @@
 res://Menu/main_menu.tscn
+res://Scripts/Manager/Save.gd
 res://Maps/test_map.tscn
-res://Scripts/main_menu.gd
+res://Maps/test_map.gd
 res://Scripts/settings_menu.gd
-res://Player/player.tscn

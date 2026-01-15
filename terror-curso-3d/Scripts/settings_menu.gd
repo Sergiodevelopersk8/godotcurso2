@@ -8,6 +8,19 @@ class_name SettingsMenu
 @onready var volumen_slider: HSlider = $Panel/VBoxContainer/HBoxContainer7/VolumenSlider
 
 
+func _ready():
+	hide()
+	full_screen_checkbox.button_pressed = Save.game_data.fullscreen_on
+	_on_full_screencheckbox_pressed()
+	sf_xslider.value = Save.game_data.sfx_vol
+	music_sider.value = Save.game_data.music_vol
+	volumen_slider.value = Save.game_data.master_vol
+	window_size.selected = Save.game_data.screen_res
+	_on_window_size_item_selected(Save.game_data.screen_res)
+
+
+
+
 
 func _on_button_pressed() -> void:
 	hide()
@@ -22,9 +35,13 @@ func changeScreenResolution():
 	if full_screen_checkbox.button_pressed:
 		print("entro al if")
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+		
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+		
 		print("entro al else")
+	Save.game_data.fullscreen_on = full_screen_checkbox.button_pressed
+	Save.save_data()
 
 
 func _on_window_size_item_selected(index: int) -> void:
@@ -38,11 +55,23 @@ func _on_window_size_item_selected(index: int) -> void:
 		2:
 			size = Vector2(1920,1080)
 	
-	
 	DisplayServer.window_set_size(size)
+	Save.game_data.screen_res = index
+	Save.save_data()
+	
 
 func update_vol(index,vol):
 	AudioServer.set_bus_volume_db(index,vol)
+	
+	match index:
+		0:
+			Save.game_data.master_vol = vol
+		1:
+			Save.game_data.sfx_vol = vol
+		2:
+			Save.game_data.music_vol = vol
+	Save.save_data()
+	
 	
 
 

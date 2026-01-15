@@ -1,9 +1,9 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1768434069
+::res://::1768448443
 default_bus_layout.tres::AudioBusLayout::8925132200983310006::1768025962::0::1::::<><><>0<>0<><>::
 global.tscn::PackedScene::4175256420185559043::1768376738::0::1::::<><><>0<>0<><>::uid://bbbuq0xtcbnme::::res://Scripts/Manager/global.gd<>uid://c52vcnem0e1c1::::res://Assets/ui_dialogue.png
 icon.svg::CompressedTexture2D::7721836920140080278::1767734594::1767734604::1::::<><><>0<>0<>47776ba47ea17309a7725348c4cc5068<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-::res://Assets/::1768443742
+::res://Assets/::1768443743
 crosshair.png::CompressedTexture2D::1718410777676942219::1768009088::1768009089::1::::<><><>0<>0<>c09e1437fbab86c31be307ef82f08d0f<>res://.godot/imported/crosshair.png-7bed3294e640fe9ca357247b0602b756.ctex::
 damage_overlay.png::CompressedTexture2D::870093302024956515::1768116650::1768116651::1::::<><><>0<>0<>1c8d179b6a021b7e10204988e45215fe<>res://.godot/imported/damage_overlay.png-b64b7b5b61d66c98fda603cb81e230aa.ctex::
 flashLightTexture.jpeg::CompressedTexture2D::7887332726750196479::1768074413::1768074414::1::::<><><>0<>0<>43f75cb9112e0cfd2df26e83cc6926ca<>res://.godot/imported/flashLightTexture.jpeg-a1dd6cc7a63c6b71eed8ffe5b3af8014.ctex::
@@ -87,8 +87,8 @@ Template_Npc_Interact.tscn::PackedScene::6571442711734619403::1768377887::0::1::
 ::res://Maps/::1768433784
 test_map.gd::GDScript::2521199626335964973::1768336684::0::1::::<>Node<><>0<>0<><>::
 test_map.tscn::PackedScene::46775612910194293::1768433784::0::1::::<><><>0<>0<><>::uid://bb6j13wjddfi8::::res://Maps/test_map.gd<>uid://bhpgcjw0h01ch::::res://Player/player.tscn<>uid://doful2d8tput4::::res://textures/PBRMaterials/Metal_One.tres<>uid://bhajd1u5k1dsp::::res://textures/PBRMaterials/Concrete_One.tres<>uid://c8o8hqbaphqv7::::res://Interacts/AREAS/damage_spike_area_3d.tscn<>uid://8d516cnnnn8x::::res://Interacts/light_switch_interact.tscn<>uid://bp5ixy42qvf2i::::res://Interacts/door_interact.tscn<>uid://cmomnisnhgpkt::::res://Interacts/interact_flashlight.tscn<>uid://dreuu20jec3sx::::res://Interacts/key_interact.tscn<>uid://dag00da5wx0cw::::res://Interacts/button_interact.tscn<>uid://bh0wi2rfgc36v::::res://Interacts/paper_interact.tscn<>uid://bk8u0be6h228v::::res://Numpad/keypad.tscn<>uid://c0vix31l6mbkd::::res://Interacts/NPCS/Template_Npc_Interact.tscn
-::res://Menu/::1768442607
-main_menu.tscn::PackedScene::317484576164575946::1768442607::0::1::::<><><>0<>0<><>::uid://2aq2afbxh6m5::::res://Scripts/main_menu.gd<>uid://doful2d8tput4::::res://textures/PBRMaterials/Metal_One.tres<>uid://bhajd1u5k1dsp::::res://textures/PBRMaterials/Concrete_One.tres<>uid://dreuu20jec3sx::::res://Interacts/key_interact.tscn<>uid://cmomnisnhgpkt::::res://Interacts/interact_flashlight.tscn<>uid://bp5ixy42qvf2i::::res://Interacts/door_interact.tscn<>uid://8d516cnnnn8x::::res://Interacts/light_switch_interact.tscn<>uid://bk8u0be6h228v::::res://Numpad/keypad.tscn<>uid://dvkroi07e5rs4::::res://Scripts/settings_menu.gd
+::res://Menu/::1768443775
+main_menu.tscn::PackedScene::317484576164575946::1768443775::0::1::::<><><>0<>0<><>::uid://2aq2afbxh6m5::::res://Scripts/main_menu.gd<>uid://doful2d8tput4::::res://textures/PBRMaterials/Metal_One.tres<>uid://bhajd1u5k1dsp::::res://textures/PBRMaterials/Concrete_One.tres<>uid://dreuu20jec3sx::::res://Interacts/key_interact.tscn<>uid://cmomnisnhgpkt::::res://Interacts/interact_flashlight.tscn<>uid://bp5ixy42qvf2i::::res://Interacts/door_interact.tscn<>uid://8d516cnnnn8x::::res://Interacts/light_switch_interact.tscn<>uid://bk8u0be6h228v::::res://Numpad/keypad.tscn<>uid://dvkroi07e5rs4::::res://Scripts/settings_menu.gd<>uid://dnqrok8fo5po8::::res://Assets/Infestation in the Control Room.mp3
 ::res://Numpad/::1768329548
 key.tscn::PackedScene::4632444691804005101::1768329543::0::1::::<><><>0<>0<><>::uid://cvoiwfu6ejf4s::::res://Scripts/key.gd
 keypad.tscn::PackedScene::3157692630781863051::1768329548::0::1::::<><><>0<>0<><>::uid://36t53ie6y5fc::::res://Scripts/keypad.gd<>uid://b688xmqjpt8nh::::res://Numpad/key.tscn<>uid://cw6pibvef4u7i::::res://AssetsModels/Numpad/white tick.png
@@ -193,6 +193,7 @@ license.txt::TextFile::-1::1767904977::0::1::::<><><>0<>0<><>::
 7.ogg::AudioStreamOggVorbis::68752436154645612::1767904977::1767904978::1::::<><><>0<>0<>587179b8466ddb28ca2aff042efec25b<>res://.godot/imported/7.ogg-efdb2406d2b125a5b49f2fe9812f8b48.oggvorbisstr::
 8.ogg::AudioStreamOggVorbis::8619058738330163073::1767904977::1767904978::1::::<><><>0<>0<>756eb4b7bc39f6487334a3349688c1fc<>res://.godot/imported/8.ogg-1bb9c0856daf85497514d3259fd65c40.oggvorbisstr::
 license.txt::TextFile::-1::1767904977::0::1::::<><><>0<>0<><>::
+::res://Save_data/::0
 ::res://Scripts/::1768442409
 button_interact.gd::GDScript::2969798237437701609::1768195196::0::1::::ButtonInteract<>Interact<><>0<>0<><>::
 damage_spike_area_3d.gd::GDScript::6774319918691759773::1768116491::0::1::::<>Area3D<><>0<>0<><>::
@@ -204,14 +205,15 @@ keypad.gd::GDScript::2030492012156855124::1768327416::0::1::::KeyPad<>Node3D<><>
 key_interact.gd::GDScript::2600868275351216296::1768028463::0::1::::KeyInteract<>Interact<><>0<>0<><>::
 LightCelling.gd::GDScript::4715196225301851363::1768112986::0::1::::LightCelling<>Node3D<><>0<>0<><>::
 light_switch_interact.gd::GDScript::6472055948415190496::1768195897::0::1::::LigthSwitch<>Interact<><>0<>0<><>::
+main_menu.gd::GDScript::1896118474347074618::1768438653::0::1::::<>CanvasLayer<><>0<>0<><>::
 paper_interact.gd::GDScript::5809766468996448797::1768200823::0::1::::PaperInteract<>Interact<><>0<>0<><>::
 player.gd::GDScript::8962419769590056860::1768377330::0::1::::Player<>CharacterBody3D<><>0<>0<><>::
-main_menu.gd::GDScript::1896118474347074618::1768438653::0::1::::<>CanvasLayer<><>0<>0<><>::
 settings_menu.gd::GDScript::8654929195277669301::1768442409::0::1::::SettingsMenu<>CanvasLayer<><>0<>0<><>::
 template_npc_interact.gd::GDScript::7992782979462235998::1768376905::0::1::::<>Interact<><>0<>0<><>::
 ::res://Scripts/Manager/::1768377735
 AudioStreamManager.gd::GDScript::8261598891618375505::1768080144::0::1::::<>Node<><>0<>0<><>::
 global.gd::GDScript::2459918167123256472::1768377735::0::1::::<>Node<><>0<>0<><>::
+Save.gd::GDScript::1926430146504929375::1768449196::0::1::::<>Node<><>0<>0<><>::
 ::res://Scripts/States/::1768080187
 Air.gd::GDScript::2553036921049105830::1767988137::0::1::::Air<>PlayerState<><>0<>0<><>::
 Crouch.gd::GDScript::7800960963249445909::1767991407::0::1::::Crouch<>PlayerState<><>0<>0<><>::
