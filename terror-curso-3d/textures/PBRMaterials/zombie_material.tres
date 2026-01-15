@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://ctcydwloc86nm"]
+
+[ext_resource type="Texture2D" uid="uid://b5kvantfumm03" path="res://Enemy/textures/monster_LP_DefaultMaterial_BaseColor.png" id="1_trh41"]
+[ext_resource type="Texture2D" uid="uid://drtglfndbbvni" path="res://Enemy/textures/monster_LP_DefaultMaterial_Roughness.png" id="2_hfd7a"]
+[ext_resource type="Texture2D" uid="uid://bfyj4t2hwgb1f" path="res://Enemy/textures/monster_LP_DefaultMaterial_Metallic.png" id="2_slt32"]
+[ext_resource type="Texture2D" uid="uid://bakiasavae1a1" path="res://Enemy/textures/monster_LP_DefaultMaterial_Normal.png" id="3_q6v1k"]
+
+[resource]
+albedo_texture = ExtResource("1_trh41")
+metallic = 1.0
+metallic_texture = ExtResource("2_slt32")
+roughness_texture = ExtResource("2_hfd7a")
+normal_enabled = true
+normal_texture = ExtResource("3_q6v1k")

@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1768448443
+::res://::1768506380
 default_bus_layout.tres::AudioBusLayout::8925132200983310006::1768025962::0::1::::<><><>0<>0<><>::
 global.tscn::PackedScene::4175256420185559043::1768376738::0::1::::<><><>0<>0<><>::uid://bbbuq0xtcbnme::::res://Scripts/Manager/global.gd<>uid://c52vcnem0e1c1::::res://Assets/ui_dialogue.png
 icon.svg::CompressedTexture2D::7721836920140080278::1767734594::1767734604::1::::<><><>0<>0<>47776ba47ea17309a7725348c4cc5068<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
@@ -70,7 +70,18 @@ paper.fbx::PackedScene::1519570745330747353::1768196658::1768196659::1::::<><><>
 119910__ftpalad__fluorescent-lightbulb-hum.ogg::AudioStreamOggVorbis::5870114076060255970::1768112028::1768112090::1::::<><><>0<>0<>3397e21d45501d0f57539139c40838d5<>res://.godot/imported/119910__ftpalad__fluorescent-lightbulb-hum.ogg-5f9e0a13e6b547358b8d139acccff754.oggvorbisstr::
 237944__supersnd__light-switch-off.wav::AudioStreamWAV::812595783423821442::1768112028::1768112029::1::::<><><>0<>0<>8dd901e5e9771efaabbdd16bdd8ebd4a<>res://.godot/imported/237944__supersnd__light-switch-off.wav-2160b937019d7cef50f67e0f09a78f2a.sample::
 ::res://Convert_fbx_app/::1767734732
-::res://Interacts/::1768371554
+::res://Enemy/::1768504477
+::res://Enemy/source/::1768513055
+EnemyWAnimGLTF.glb::PackedScene::78776971106576471::1768513055::1768513056::1::::<><><>0<>0<>9d6ead4dbaf8cb4fb0f88e817b5692e3<>res://.godot/imported/EnemyWAnimGLTF.glb-b7ec7c16ac4aa69258200283ee062ce3.scn::
+ZombieWAnimsfbx.fbx::PackedScene::2456376618434035605::1768512777::1768512809::1::::<><><>0<>0<>a1dbec9ebb5f262d66e622915bcdc42b<>res://.godot/imported/ZombieWAnimsfbx.fbx-b67e0c56c8932dc07943aaafdb3d639c.scn::
+Zombie_Agonizing_model.fbx::PackedScene::3392399861312467010::1768504469::1768505908::1::::<><><>0<>0<>d8cb2be794e6b389004eb39990b9a2b6<>res://.godot/imported/Zombie_Agonizing_model.fbx-153cf521e1286fa5940f806a88f00ae8.scn::
+::res://Enemy/textures/::1768512712
+monster_LP_DefaultMaterial_AOGrayscale.png::CompressedTexture2D::7880209683835563038::1768504477::1768504480::1::::<><><>0<>0<>dfbcdd343d302ca6695370986a712fb4<>res://.godot/imported/monster_LP_DefaultMaterial_AOGrayscale.png-cf187db820e303a99e08b38901ee7bdb.ctex::
+monster_LP_DefaultMaterial_BaseColor.png::CompressedTexture2D::4514005539631992094::1768504477::1768512463::1::::<><><>0<>0<>507c13c070ca4ba855d28a899543feb6<>res://.godot/imported/monster_LP_DefaultMaterial_BaseColor.png-8fc3a881c49836633682fd70b70bbfec.s3tc.ctex::
+monster_LP_DefaultMaterial_Metallic.png::CompressedTexture2D::2787509248939894957::1768504477::1768512611::1::::<><><>0<>0<>6f0bc947078bc73b29a43f30cedf14dd<>res://.godot/imported/monster_LP_DefaultMaterial_Metallic.png-030caa8c4496bb8772835213c2a0eeb8.s3tc.ctex::
+monster_LP_DefaultMaterial_Normal.png::CompressedTexture2D::2407551143550464322::1768504477::1768512712::1::::<><><>0<>0<>79b54b14e0f2ea6b6ea7b683452cf7e7<>res://.godot/imported/monster_LP_DefaultMaterial_Normal.png-ffab887c73a6657e156325141a6504cb.s3tc.ctex::
+monster_LP_DefaultMaterial_Roughness.png::CompressedTexture2D::8392079798779456846::1768504477::1768512564::1::::<><><>0<>0<>cfb6772d3f9dacd9942246eac4875bae<>res://.godot/imported/monster_LP_DefaultMaterial_Roughness.png-45ed90d8c3d0ac8318d409ba37975293.s3tc.ctex::
+::res://Interacts/::1768512947
 button_interact.tscn::PackedScene::7173211046233891350::1768198477::0::1::::<><><>0<>0<><>::uid://bikue4nr2r2sb::::res://Scripts/button_interact.gd
 door_interact.tscn::PackedScene::3501712786696025850::1768029704::0::1::::<><><>0<>0<><>::uid://djh3guyqag51w::::res://Interacts/interact.tscn<>uid://3lik3ayhkvi5::::res://Scripts/door_interact.gd<>uid://bbypskrqlkpbq::::res://AssetsModels/Door/source/door1.fbx<>uid://ca261hfg673qm::::res://AssetsModels/Door/SoundsDoor/1open_door.ogg<>uid://bhjnvt6ybvhvf::::res://AssetsModels/Door/SoundsDoor/1locked_door.wav<>uid://d187j7vi4srkb::::res://AssetsModels/Door/SoundsDoor/1close_door.ogg
 interact.tscn::PackedScene::7807124166930450482::1768371554::0::1::::<><><>0<>0<><>::uid://de2stikd1ouwg::::res://Scripts/interact.gd
@@ -80,15 +91,16 @@ key_texture_rect.tscn::PackedScene::3680378221235133539::1768028877::0::1::::<><
 light_celling.tscn::PackedScene::5095457216266127490::1768112228::0::1::::<><><>0<>0<><>::uid://b8gcufoujyaxf::::res://Scripts/LightCelling.gd<>uid://cd8xyahbn7flv::::res://AssetsModels/CeilingLight/simple_ceiling_light.fbx<>uid://cpvr6k51p6lao::::res://AssetsSoundsModels/119910__ftpalad__fluorescent-lightbulb-hum.ogg
 light_switch_interact.tscn::PackedScene::2324294545663792517::1768114249::0::1::::<><><>0<>0<><>::uid://djh3guyqag51w::::res://Interacts/interact.tscn<>uid://cyhd20f11fuce::::res://Scripts/light_switch_interact.gd<>uid://djfff40io2sq6::::res://AssetsModels/LightSwitch/Lightswitch edit.FBX<>uid://ceujo25p5vamc::::res://Interacts/light_celling.tscn
 paper_interact.tscn::PackedScene::2930703537830359667::1768200823::0::1::::<><><>0<>0<><>::uid://djh3guyqag51w::::res://Interacts/interact.tscn<>uid://co1kafxv7ktqb::::res://Scripts/paper_interact.gd<>uid://bhbmuq24y8roh::::res://AssetsModels/Paper/5.jpg
+enemy.tscn::PackedScene::5117793158077636398::1768512947::0::1::::<><><>0<>0<><>::
 ::res://Interacts/AREAS/::1768178297
 damage_spike_area_3d.tscn::PackedScene::7119991499255481362::1768178297::0::1::::<><><>0<>0<><>::uid://c3rscatr5gok8::::res://Scripts/damage_spike_area_3d.gd
 ::res://Interacts/NPCS/::1768377887
 Template_Npc_Interact.tscn::PackedScene::6571442711734619403::1768377887::0::1::::<><><>0<>0<><>::uid://djh3guyqag51w::::res://Interacts/interact.tscn<>uid://dl407552a845g::::res://Scripts/template_npc_interact.gd
-::res://Maps/::1768433784
-test_map.gd::GDScript::2521199626335964973::1768336684::0::1::::<>Node<><>0<>0<><>::
-test_map.tscn::PackedScene::46775612910194293::1768433784::0::1::::<><><>0<>0<><>::uid://bb6j13wjddfi8::::res://Maps/test_map.gd<>uid://bhpgcjw0h01ch::::res://Player/player.tscn<>uid://doful2d8tput4::::res://textures/PBRMaterials/Metal_One.tres<>uid://bhajd1u5k1dsp::::res://textures/PBRMaterials/Concrete_One.tres<>uid://c8o8hqbaphqv7::::res://Interacts/AREAS/damage_spike_area_3d.tscn<>uid://8d516cnnnn8x::::res://Interacts/light_switch_interact.tscn<>uid://bp5ixy42qvf2i::::res://Interacts/door_interact.tscn<>uid://cmomnisnhgpkt::::res://Interacts/interact_flashlight.tscn<>uid://dreuu20jec3sx::::res://Interacts/key_interact.tscn<>uid://dag00da5wx0cw::::res://Interacts/button_interact.tscn<>uid://bh0wi2rfgc36v::::res://Interacts/paper_interact.tscn<>uid://bk8u0be6h228v::::res://Numpad/keypad.tscn<>uid://c0vix31l6mbkd::::res://Interacts/NPCS/Template_Npc_Interact.tscn
-::res://Menu/::1768443775
-main_menu.tscn::PackedScene::317484576164575946::1768443775::0::1::::<><><>0<>0<><>::uid://2aq2afbxh6m5::::res://Scripts/main_menu.gd<>uid://doful2d8tput4::::res://textures/PBRMaterials/Metal_One.tres<>uid://bhajd1u5k1dsp::::res://textures/PBRMaterials/Concrete_One.tres<>uid://dreuu20jec3sx::::res://Interacts/key_interact.tscn<>uid://cmomnisnhgpkt::::res://Interacts/interact_flashlight.tscn<>uid://bp5ixy42qvf2i::::res://Interacts/door_interact.tscn<>uid://8d516cnnnn8x::::res://Interacts/light_switch_interact.tscn<>uid://bk8u0be6h228v::::res://Numpad/keypad.tscn<>uid://dvkroi07e5rs4::::res://Scripts/settings_menu.gd<>uid://dnqrok8fo5po8::::res://Assets/Infestation in the Control Room.mp3
+::res://Maps/::1768512740
+test_map.gd::GDScript::2521199626335964973::1768454302::0::1::::<>Node<><>0<>0<><>::
+test_map.tscn::PackedScene::46775612910194293::1768512740::0::1::::<><><>0<>0<><>::uid://bb6j13wjddfi8::::res://Maps/test_map.gd<>uid://bhpgcjw0h01ch::::res://Player/player.tscn<>uid://doful2d8tput4::::res://textures/PBRMaterials/Metal_One.tres<>uid://bhajd1u5k1dsp::::res://textures/PBRMaterials/Concrete_One.tres<>uid://c8o8hqbaphqv7::::res://Interacts/AREAS/damage_spike_area_3d.tscn<>uid://8d516cnnnn8x::::res://Interacts/light_switch_interact.tscn<>uid://bp5ixy42qvf2i::::res://Interacts/door_interact.tscn<>uid://cmomnisnhgpkt::::res://Interacts/interact_flashlight.tscn<>uid://dreuu20jec3sx::::res://Interacts/key_interact.tscn<>uid://dag00da5wx0cw::::res://Interacts/button_interact.tscn<>uid://bh0wi2rfgc36v::::res://Interacts/paper_interact.tscn<>uid://bk8u0be6h228v::::res://Numpad/keypad.tscn<>uid://c0vix31l6mbkd::::res://Interacts/NPCS/Template_Npc_Interact.tscn
+::res://Menu/::1768458044
+main_menu.tscn::PackedScene::317484576164575946::1768458044::0::1::::<><><>0<>0<><>::uid://2aq2afbxh6m5::::res://Scripts/main_menu.gd<>uid://doful2d8tput4::::res://textures/PBRMaterials/Metal_One.tres<>uid://bhajd1u5k1dsp::::res://textures/PBRMaterials/Concrete_One.tres<>uid://dreuu20jec3sx::::res://Interacts/key_interact.tscn<>uid://cmomnisnhgpkt::::res://Interacts/interact_flashlight.tscn<>uid://bp5ixy42qvf2i::::res://Interacts/door_interact.tscn<>uid://8d516cnnnn8x::::res://Interacts/light_switch_interact.tscn<>uid://bk8u0be6h228v::::res://Numpad/keypad.tscn<>uid://dvkroi07e5rs4::::res://Scripts/settings_menu.gd<>uid://dnqrok8fo5po8::::res://Assets/Infestation in the Control Room.mp3
 ::res://Numpad/::1768329548
 key.tscn::PackedScene::4632444691804005101::1768329543::0::1::::<><><>0<>0<><>::uid://cvoiwfu6ejf4s::::res://Scripts/key.gd
 keypad.tscn::PackedScene::3157692630781863051::1768329548::0::1::::<><><>0<>0<><>::uid://36t53ie6y5fc::::res://Scripts/keypad.gd<>uid://b688xmqjpt8nh::::res://Numpad/key.tscn<>uid://cw6pibvef4u7i::::res://AssetsModels/Numpad/white tick.png
@@ -193,8 +205,8 @@ license.txt::TextFile::-1::1767904977::0::1::::<><><>0<>0<><>::
 7.ogg::AudioStreamOggVorbis::68752436154645612::1767904977::1767904978::1::::<><><>0<>0<>587179b8466ddb28ca2aff042efec25b<>res://.godot/imported/7.ogg-efdb2406d2b125a5b49f2fe9812f8b48.oggvorbisstr::
 8.ogg::AudioStreamOggVorbis::8619058738330163073::1767904977::1767904978::1::::<><><>0<>0<>756eb4b7bc39f6487334a3349688c1fc<>res://.godot/imported/8.ogg-1bb9c0856daf85497514d3259fd65c40.oggvorbisstr::
 license.txt::TextFile::-1::1767904977::0::1::::<><><>0<>0<><>::
-::res://Save_data/::0
-::res://Scripts/::1768442409
+::res://Save_Data/::1768456067
+::res://Scripts/::1768458044
 button_interact.gd::GDScript::2969798237437701609::1768195196::0::1::::ButtonInteract<>Interact<><>0<>0<><>::
 damage_spike_area_3d.gd::GDScript::6774319918691759773::1768116491::0::1::::<>Area3D<><>0<>0<><>::
 door_interact.gd::GDScript::1988500842794771138::1768029622::0::1::::DoorInteract<>Interact<><>0<>0<><>::
@@ -208,12 +220,12 @@ light_switch_interact.gd::GDScript::6472055948415190496::1768195897::0::1::::Lig
 main_menu.gd::GDScript::1896118474347074618::1768438653::0::1::::<>CanvasLayer<><>0<>0<><>::
 paper_interact.gd::GDScript::5809766468996448797::1768200823::0::1::::PaperInteract<>Interact<><>0<>0<><>::
 player.gd::GDScript::8962419769590056860::1768377330::0::1::::Player<>CharacterBody3D<><>0<>0<><>::
-settings_menu.gd::GDScript::8654929195277669301::1768442409::0::1::::SettingsMenu<>CanvasLayer<><>0<>0<><>::
+settings_menu.gd::GDScript::8654929195277669301::1768458044::0::1::::SettingsMenu<>CanvasLayer<><>0<>0<><>::
 template_npc_interact.gd::GDScript::7992782979462235998::1768376905::0::1::::<>Interact<><>0<>0<><>::
-::res://Scripts/Manager/::1768377735
+::res://Scripts/Manager/::1768454879
 AudioStreamManager.gd::GDScript::8261598891618375505::1768080144::0::1::::<>Node<><>0<>0<><>::
 global.gd::GDScript::2459918167123256472::1768377735::0::1::::<>Node<><>0<>0<><>::
-Save.gd::GDScript::1926430146504929375::1768449196::0::1::::<>Node<><>0<>0<><>::
+Save.gd::GDScript::1926430146504929375::1768454879::0::1::::<>Node<><>0<>0<><>::
 ::res://Scripts/States/::1768080187
 Air.gd::GDScript::2553036921049105830::1767988137::0::1::::Air<>PlayerState<><>0<>0<><>::
 Crouch.gd::GDScript::7800960963249445909::1767991407::0::1::::Crouch<>PlayerState<><>0<>0<><>::
@@ -237,9 +249,10 @@ Grass004_1K_Roughness.png::CompressedTexture2D::541008969089553369::1767925390::
 WoodFloor051_1K_Color.png::CompressedTexture2D::5981899398726235226::1767925390::1767928452::1::::<><><>0<>0<>df10da2b579c0aad966d2ce04e1d5e63<>res://.godot/imported/WoodFloor051_1K_Color.png-fb5a8519c36f6edcf453345280365b28.s3tc.ctex::
 WoodFloor051_1K_NormalGL.png::CompressedTexture2D::4470270929425006010::1767925390::1767928507::1::::<><><>0<>0<>0c822c15073463f917ce977c99740c1f<>res://.godot/imported/WoodFloor051_1K_NormalGL.png-261a439e4ce944c5d1d1dbf8b13ebe33.s3tc.ctex::
 WoodFloor051_1K_Roughness.png::CompressedTexture2D::2615990900412523235::1767925390::1767928480::1::::<><><>0<>0<>fd6f20be8d7607dafa7444e97715e34f<>res://.godot/imported/WoodFloor051_1K_Roughness.png-fae87e71d4678b477923fb8296c91dd8.s3tc.ctex::
-::res://textures/PBRMaterials/::1768109655
+::res://textures/PBRMaterials/::1768512740
 Concrete_One.tres::StandardMaterial3D::2878295797356584751::1767930094::0::1::::<><><>0<>0<><>::uid://dpk80sq1nn5fm::::res://textures/Concrete001_2K_Color.jpg<>uid://bc7hf31gcd32k::::res://textures/Concrete001_2K_NormalDX.jpg
 FlashlightMaterial.tres::StandardMaterial3D::6466691442934937692::1768078023::0::1::::<><><>0<>0<><>::uid://bq3ekg5gqw1w7::::res://AssetsModels/FlashLigth/Flashlight_model/DefaultMaterial_Base_Color.jpg<>uid://ciyap1t28u54s::::res://AssetsModels/FlashLigth/Flashlight_model/DefaultMaterial_Metallic.jpg<>uid://0uq7hvrhfufs::::res://AssetsModels/FlashLigth/Flashlight_model/DefaultMaterial_Normal.jpg<>uid://cwkbihg5a74m8::::res://AssetsModels/FlashLigth/Flashlight_model/DefaultMaterial_Roughness.jpg
 Grass_One.tres::StandardMaterial3D::5216714036693767628::1767929850::0::1::::<><><>0<>0<><>::uid://d1qnvge455eur::::res://textures/Grass004_1K_Color.png<>uid://bv66qg0ccqejx::::res://textures/Grass004_1K_NormalDX.png<>uid://hyclrrojqwov::::res://textures/Grass004_1K_Roughness.png
 Metal_One.tres::StandardMaterial3D::8153463158660578427::1768109655::0::1::::<><><>0<>0<><>::uid://rqa4s4jrn4mw::::res://textures/DiamondPlate008C_1K_Color.png<>uid://t6dvxt8dcmx6::::res://textures/DiamondPlate008C_1K_Metalness.png<>uid://cdgtvvhuf8koe::::res://textures/DiamondPlate008C_1K_NormalGL.png<>uid://dfgntj8xt64ff::::res://textures/DiamondPlate008C_1K_Roughness.png
+zombie_material.tres::StandardMaterial3D::6112021890371700458::1768512740::0::1::::<><><>0<>0<><>::uid://b5kvantfumm03::::res://Enemy/textures/monster_LP_DefaultMaterial_BaseColor.png<>uid://drtglfndbbvni::::res://Enemy/textures/monster_LP_DefaultMaterial_Roughness.png<>uid://bfyj4t2hwgb1f::::res://Enemy/textures/monster_LP_DefaultMaterial_Metallic.png<>uid://bakiasavae1a1::::res://Enemy/textures/monster_LP_DefaultMaterial_Normal.png
 Wood_One.tres::StandardMaterial3D::3825174399530530617::1767928663::0::1::::<><><>0<>0<><>::uid://crhxaks4r3h2y::::res://textures/WoodFloor051_1K_Color.png<>uid://b4xoydyglmcko::::res://textures/WoodFloor051_1K_NormalGL.png<>uid://bdjg8ubs0g7qd::::res://textures/WoodFloor051_1K_Roughness.png

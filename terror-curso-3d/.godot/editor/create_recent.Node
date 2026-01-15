@@ -1,3 +1,4 @@
+CharacterBody3D
 AudioStreamPlayer
 Button
 HSlider
@@ -12,4 +13,3 @@ Node3D
 Camera3D
 RichTextLabel
 NinePatchRect
-Node

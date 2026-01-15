@@ -1,5 +1,3 @@
-res://Menu/main_menu.tscn
-res://Scripts/Manager/Save.gd
 res://Maps/test_map.tscn
-res://Maps/test_map.gd
-res://Scripts/settings_menu.gd
+res://textures/PBRMaterials/zombie_material.tres
+res://Interacts/enemy.tscn
