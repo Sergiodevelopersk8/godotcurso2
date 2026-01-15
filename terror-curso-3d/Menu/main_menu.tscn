@@ -1,0 +1,293 @@
+[gd_scene load_steps=18 format=3 uid="uid://er16o24mehos"]
+
+[ext_resource type="Script" uid="uid://2aq2afbxh6m5" path="res://Scripts/main_menu.gd" id="1_218iu"]
+[ext_resource type="Material" uid="uid://doful2d8tput4" path="res://textures/PBRMaterials/Metal_One.tres" id="1_vv7ca"]
+[ext_resource type="Material" uid="uid://bhajd1u5k1dsp" path="res://textures/PBRMaterials/Concrete_One.tres" id="2_218iu"]
+[ext_resource type="PackedScene" uid="uid://dreuu20jec3sx" path="res://Interacts/key_interact.tscn" id="3_ywk15"]
+[ext_resource type="PackedScene" uid="uid://cmomnisnhgpkt" path="res://Interacts/interact_flashlight.tscn" id="4_ws7s4"]
+[ext_resource type="PackedScene" uid="uid://bp5ixy42qvf2i" path="res://Interacts/door_interact.tscn" id="5_fduiw"]
+[ext_resource type="PackedScene" uid="uid://8d516cnnnn8x" path="res://Interacts/light_switch_interact.tscn" id="6_cgse8"]
+[ext_resource type="PackedScene" uid="uid://bk8u0be6h228v" path="res://Numpad/keypad.tscn" id="8_dqyvv"]
+[ext_resource type="Script" uid="uid://dvkroi07e5rs4" path="res://Scripts/settings_menu.gd" id="9_218iu"]
+[ext_resource type="AudioStream" uid="uid://dnqrok8fo5po8" path="res://Assets/Infestation in the Control Room.mp3" id="10_ywk15"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_m8x2t"]
+material = ExtResource("1_vv7ca")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_e2v8n"]
+points = PackedVector3Array(-0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_is5sc"]
+material = ExtResource("2_218iu")
+
+[sub_resource type="LabelSettings" id="LabelSettings_cn2sd"]
+font_size = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vv7ca"]
+bg_color = Color(0.38928655, 0.38928664, 0.38928658, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_vv7ca"]
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_218iu"]
+font_size = 30
+
+[node name="MainMenu" type="CanvasLayer"]
+script = ExtResource("1_218iu")
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1.8000001)
+
+[node name="Map_Menu" type="Node3D" parent="."]
+
+[node name="floor_adn_wall" type="Node" parent="Map_Menu"]
+
+[node name="floor" type="MeshInstance3D" parent="Map_Menu/floor_adn_wall"]
+transform = Transform3D(4.131, 0, 0, 0, 0.099999964, 0, 0, 0, 5.7200003, 0, 0, 0)
+mesh = SubResource("BoxMesh_m8x2t")
+skeleton = NodePath("../../../Node3D/Camera3D")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Map_Menu/floor_adn_wall/floor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map_Menu/floor_adn_wall/floor/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_e2v8n")
+
+[node name="wall2" type="MeshInstance3D" parent="Map_Menu/floor_adn_wall"]
+transform = Transform3D(-2.0500002, 8.742278e-08, 3.821371e-15, 0, -4.371139e-08, 1, 1.7921671e-07, 1, 4.371139e-08, 0, 1, -2.8999999)
+mesh = SubResource("PlaneMesh_is5sc")
+
+[node name="wall3" type="MeshInstance3D" parent="Map_Menu/floor_adn_wall"]
+transform = Transform3D(4.1667883e-07, 0.99999994, 4.371139e-08, -1.3457237e-21, -4.3711385e-08, 1, 3.1775002, -1.3113414e-07, -5.7320566e-15, -2, 1, 0.10000014)
+mesh = SubResource("PlaneMesh_is5sc")
+
+[node name="wall4" type="MeshInstance3D" parent="Map_Menu/floor_adn_wall"]
+transform = Transform3D(-1.3889294e-07, -0.99999994, 4.371139e-08, 0, -4.3711385e-08, -1, 3.1775002, -4.3711385e-08, 1.9106855e-15, 2.1, 1, 0.10000014)
+mesh = SubResource("PlaneMesh_is5sc")
+
+[node name="wall5" type="MeshInstance3D" parent="Map_Menu/floor_adn_wall"]
+transform = Transform3D(1.7359952e-14, 8.742278e-08, 2.7124999, -1.3889294e-07, -1, 2.3713429e-07, 3.1775002, -4.371139e-08, 5.182734e-15, -0.10000008, 2, 0.10000014)
+mesh = SubResource("PlaneMesh_is5sc")
+
+[node name="interactuables" type="Node" parent="Map_Menu"]
+
+[node name="Key_interact" parent="Map_Menu/interactuables" instance=ExtResource("3_ywk15")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.7, 0.3, 0)
+
+[node name="InteractFlashlight" parent="Map_Menu/interactuables" instance=ExtResource("4_ws7s4")]
+transform = Transform3D(0.68, 0, 0, 0, 0.68, 0, 0, 0, 0.68, -1.6, 0.1, -0.5)
+
+[node name="DoorInteract" parent="Map_Menu/interactuables" instance=ExtResource("5_fduiw")]
+transform = Transform3D(0.355, 0, 0, 0, 0.355, 0, 0, 0, 0.355, -0.099999994, 0, -0.9)
+needsKey = true
+
+[node name="LightSwitchInteract" parent="Map_Menu/interactuables" instance=ExtResource("6_cgse8")]
+transform = Transform3D(-0.07246933, 0, -0.27045923, 0, 0.28, 0, 0.27045923, 0, -0.07246933, 2.092507, 0.5, 0)
+
+[node name="LightCelling" parent="Map_Menu/interactuables/LightSwitchInteract" index="3"]
+transform = Transform3D(1.1600001, 0, 0, 0, 1.16, 0, 0, 0, 1.1600001, 1.478966, 4.5142856, 9.419577)
+flickering = true
+time_flicker = 3.0
+
+[node name="Keypad" parent="Map_Menu/interactuables" instance=ExtResource("8_dqyvv")]
+transform = Transform3D(-0.3, 0, 4.5298744e-08, 0, 0.3, 0, -4.5298744e-08, 0, -0.3, 2.1, 0.655, -0.5000001)
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -253.0
+offset_top = 42.0
+offset_right = 266.0
+offset_bottom = 169.0
+grow_horizontal = 2
+text = "Nombre del Juego"
+label_settings = SubResource("LabelSettings_cn2sd")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -231.0
+offset_top = -337.0
+offset_right = 239.0
+offset_bottom = -158.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Start
+"
+
+[node name="SettingsButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Settings"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Quit"
+
+[node name="SettingsMenu" type="CanvasLayer" parent="."]
+script = ExtResource("9_218iu")
+
+[node name="Panel" type="Panel" parent="SettingsMenu"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -245.0
+offset_top = -276.5
+offset_right = 245.0
+offset_bottom = 276.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vv7ca")
+
+[node name="Label" type="Label" parent="SettingsMenu/Panel"]
+layout_mode = 0
+offset_left = 184.0
+offset_right = 329.0
+offset_bottom = 87.0
+text = "Settings
+"
+label_settings = SubResource("LabelSettings_vv7ca")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsMenu/Panel"]
+layout_mode = 0
+offset_top = 43.5
+offset_right = 484.0
+offset_bottom = 539.5
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="SettingsMenu/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="SettingsMenu/Panel/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Video"
+label_settings = SubResource("LabelSettings_218iu")
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SettingsMenu/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="SettingsMenu/Panel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Fullscreen"
+label_settings = SubResource("LabelSettings_218iu")
+
+[node name="FullScreencheckbox" type="CheckBox" parent="SettingsMenu/Panel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "FS"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="SettingsMenu/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="SettingsMenu/Panel/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Window Size"
+label_settings = SubResource("LabelSettings_218iu")
+
+[node name="WindowSize" type="OptionButton" parent="SettingsMenu/Panel/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+item_count = 3
+popup/item_0/text = "640 x 360"
+popup/item_0/id = 0
+popup/item_1/text = "1280 x 720"
+popup/item_1/id = 1
+popup/item_2/text = "1920 x 1080"
+popup/item_2/id = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="SettingsMenu/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="SettingsMenu/Panel/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Sound"
+label_settings = SubResource("LabelSettings_218iu")
+horizontal_alignment = 1
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="SettingsMenu/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="SettingsMenu/Panel/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "SFX"
+label_settings = SubResource("LabelSettings_218iu")
+
+[node name="SFXslider" type="HSlider" parent="SettingsMenu/Panel/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = -50.0
+max_value = 5.0
+value = -10.0
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="SettingsMenu/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="SettingsMenu/Panel/VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Music"
+label_settings = SubResource("LabelSettings_218iu")
+
+[node name="MusicSider" type="HSlider" parent="SettingsMenu/Panel/VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = -50.0
+max_value = 5.0
+value = -10.0
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="SettingsMenu/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="SettingsMenu/Panel/VBoxContainer/HBoxContainer7"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Master"
+label_settings = SubResource("LabelSettings_218iu")
+
+[node name="VolumenSlider" type="HSlider" parent="SettingsMenu/Panel/VBoxContainer/HBoxContainer7"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = -50.0
+max_value = 5.0
+value = -10.0
+
+[node name="Button" type="Button" parent="SettingsMenu/Panel"]
+layout_mode = 0
+offset_left = 163.0
+offset_top = 485.5
+offset_right = 336.0
+offset_bottom = 529.0
+text = "Accept"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_ywk15")
+autoplay = true
+bus = &"Music"
+
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="SettingsMenu/Panel/VBoxContainer/HBoxContainer/FullScreencheckbox" to="SettingsMenu" method="_on_full_screencheckbox_pressed"]
+[connection signal="item_selected" from="SettingsMenu/Panel/VBoxContainer/HBoxContainer2/WindowSize" to="SettingsMenu" method="_on_window_size_item_selected"]
+[connection signal="value_changed" from="SettingsMenu/Panel/VBoxContainer/HBoxContainer5/SFXslider" to="SettingsMenu" method="_on_sf_xslider_value_changed"]
+[connection signal="value_changed" from="SettingsMenu/Panel/VBoxContainer/HBoxContainer6/MusicSider" to="SettingsMenu" method="_on_music_sider_value_changed"]
+[connection signal="value_changed" from="SettingsMenu/Panel/VBoxContainer/HBoxContainer7/VolumenSlider" to="SettingsMenu" method="_on_volumen_slider_value_changed"]
+[connection signal="pressed" from="SettingsMenu/Panel/Button" to="SettingsMenu" method="_on_button_pressed"]
+
+[editable path="Map_Menu/interactuables/LightSwitchInteract"]
+[editable path="Map_Menu/interactuables/Keypad"]

@@ -1,8 +1,5 @@
-res://global.tscn
-res://Scripts/Manager/global.gd
-res://Interacts/NPCS/Template_Npc_Interact.tscn
-res://Scripts/template_npc_interact.gd
+res://Menu/main_menu.tscn
 res://Maps/test_map.tscn
+res://Scripts/main_menu.gd
+res://Scripts/settings_menu.gd
 res://Player/player.tscn
-res://Interacts/interact.tscn
-res://Scripts/player.gd
