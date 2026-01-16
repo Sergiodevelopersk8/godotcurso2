@@ -1,5 +1,11 @@
-CharacterBody3D
+AudioStreamPlayer3D
 AudioStreamPlayer
+NavigationAgent3D
+CollisionShape3D
+Area3D
+Timer
+Node
+CharacterBody3D
 Button
 HSlider
 VBoxContainer
@@ -7,9 +13,3 @@ OptionButton
 CheckBox
 Label
 HBoxContainer
-Panel
-CanvasLayer
-Node3D
-Camera3D
-RichTextLabel
-NinePatchRect
