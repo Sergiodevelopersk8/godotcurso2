@@ -130,6 +130,21 @@ bind/32/name = &"mixamorig_RightToe_End"
 bind/32/bone = -1
 bind/32/pose = Transform3D(-99.05124, -3.200913, 13.36902, 13.431936, -1.8296671, 99.07694, -2.9268584, 99.93201, 2.2422197, -19.67525, -17.701857, -1.4366114)
 
+[sub_resource type="Animation" id="Animation_kb4o6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../FootSoundEffect:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
 [sub_resource type="Animation" id="Animation_4yyr7"]
 resource_name = "attck"
 length = 4.6666665
@@ -2193,21 +2208,6 @@ tracks/49/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, true]
-}
-
-[sub_resource type="Animation" id="Animation_kb4o6"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../FootSoundEffect:playing")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8hyio"]

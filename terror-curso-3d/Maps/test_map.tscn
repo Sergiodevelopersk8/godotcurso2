@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://wwnf7ynx5dp"]
+[gd_scene load_steps=20 format=3 uid="uid://wwnf7ynx5dp"]
 
 [ext_resource type="Script" uid="uid://bb6j13wjddfi8" path="res://Maps/test_map.gd" id="1_k8cy2"]
 [ext_resource type="PackedScene" uid="uid://bhpgcjw0h01ch" path="res://Player/player.tscn" id="1_nxrqf"]
@@ -15,6 +15,10 @@
 [ext_resource type="PackedScene" uid="uid://c0vix31l6mbkd" path="res://Interacts/NPCS/Template_Npc_Interact.tscn" id="12_o1htb"]
 [ext_resource type="PackedScene" uid="uid://ce6dknjdcip4y" path="res://Interacts/enemy.tscn" id="13_e5x5w"]
 
+[sub_resource type="NavigationMesh" id="NavigationMesh_e5x5w"]
+vertices = PackedVector3Array(0.8035002, 0.51, 2.3159995, 1.0535002, 0.51, 2.3159995, 1.0535002, 0.51, 1.5659995, 0.5535002, 0.51, 1.3159995, 0.053500175, 0.51, 0.06599951, 1.3035002, 0.51, 0.5659995, 1.3035002, 0.51, -1.4340005, 0.30350018, 0.51, -1.1840005, -0.19649982, 0.51, -0.9340005, -1.6964998, 0.76, -0.9340005, -1.6964998, 1.01, -0.18400049, -1.1964998, 0.76, -0.18400049, -0.9464998, 0.51, -0.9340005, -1.1964998, 0.51, -1.1840005, -1.4464998, 0.51, -2.4340005, -2.4464998, 0.51, -0.9340005, 2.0535002, 0.51, 1.0659995, 2.0535002, 0.51, 0.8159995, -0.44649982, 0.51, -4.6840005, -5.6965, 0.51, -4.9340005, -5.4465, 0.51, -0.18400049, 1.8035002, 0.51, -1.6840005, 0.5535002, 0.51, -2.1840005, -0.44649982, 0.51, -2.6840005, -1.4464998, 0.51, 0.8159995, -0.6964998, 0.51, 1.8159995, -0.44649982, 0.51, 1.3159995, -2.6964998, 0.51, -0.18400049, 2.8035002, 0.51, 0.5659995, 2.8035002, 0.51, 1.3159995, 2.5535002, 0.51, 2.8159995, 5.8035, 0.51, 4.8159995, 1.3035002, 0.51, 3.0659995, 0.30350018, 0.51, 3.5659995, 0.30350018, 0.51, -2.6840005, 2.8035002, 0.51, -1.4340005, 5.8035, 0.51, -4.9340005, -2.4464998, 0.51, 0.8159995, -5.6965, 0.51, 4.8159995, -2.6964998, 0.51, 4.8159995, -2.4464998, 0.51, 4.3159995, -0.44649982, 0.51, 3.5659995)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(8, 7, 4), PackedInt32Array(4, 7, 6), PackedInt32Array(4, 6, 5), PackedInt32Array(13, 12, 9), PackedInt32Array(9, 12, 11), PackedInt32Array(9, 11, 10), PackedInt32Array(9, 15, 13), PackedInt32Array(13, 15, 14), PackedInt32Array(17, 16, 5), PackedInt32Array(5, 16, 2), PackedInt32Array(5, 2, 3), PackedInt32Array(14, 15, 18), PackedInt32Array(18, 15, 20), PackedInt32Array(18, 20, 19), PackedInt32Array(12, 13, 8), PackedInt32Array(8, 13, 7), PackedInt32Array(21, 6, 22), PackedInt32Array(22, 6, 7), PackedInt32Array(18, 23, 14), PackedInt32Array(24, 26, 25), PackedInt32Array(5, 3, 4), PackedInt32Array(4, 3, 26), PackedInt32Array(4, 26, 24), PackedInt32Array(20, 15, 27), PackedInt32Array(17, 28, 16), PackedInt32Array(16, 28, 29), PackedInt32Array(29, 31, 30), PackedInt32Array(1, 32, 0), PackedInt32Array(0, 32, 33), PackedInt32Array(31, 29, 28), PackedInt32Array(22, 34, 21), PackedInt32Array(21, 34, 35), PackedInt32Array(35, 34, 18), PackedInt32Array(35, 18, 36), PackedInt32Array(37, 24, 25), PackedInt32Array(34, 23, 18), PackedInt32Array(32, 30, 33), PackedInt32Array(33, 30, 31), PackedInt32Array(35, 36, 28), PackedInt32Array(28, 36, 31), PackedInt32Array(20, 27, 37), PackedInt32Array(40, 39, 38), PackedInt32Array(41, 40, 25), PackedInt32Array(25, 40, 37), PackedInt32Array(37, 40, 38), PackedInt32Array(37, 38, 20), PackedInt32Array(41, 33, 40), PackedInt32Array(40, 33, 31)]
+
 [sub_resource type="BoxMesh" id="BoxMesh_nxrqf"]
 material = ExtResource("1_p5beq")
 
@@ -29,93 +33,97 @@ material = ExtResource("2_hj615")
 [node name="Test_map" type="Node"]
 script = ExtResource("1_k8cy2")
 
-[node name="floor_adn_wall" type="Node" parent="."]
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_e5x5w")
 
-[node name="floor" type="MeshInstance3D" parent="floor_adn_wall"]
+[node name="floor_adn_wall" type="Node" parent="NavigationRegion3D"]
+
+[node name="floor" type="MeshInstance3D" parent="NavigationRegion3D/floor_adn_wall"]
 transform = Transform3D(12.393, 0, 0, 0, 0.099999964, 0, 0, 0, 10.868001, 0, 0, 0)
 mesh = SubResource("BoxMesh_nxrqf")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="floor_adn_wall/floor"]
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/floor_adn_wall/floor"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="floor_adn_wall/floor/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/floor_adn_wall/floor/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_hj615")
 
-[node name="wall" type="MeshInstance3D" parent="floor_adn_wall"]
+[node name="wall" type="MeshInstance3D" parent="NavigationRegion3D/floor_adn_wall"]
 transform = Transform3D(2.0500002, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 1, 4.9)
 mesh = SubResource("PlaneMesh_p5beq")
 
-[node name="wall2" type="MeshInstance3D" parent="floor_adn_wall"]
+[node name="wall2" type="MeshInstance3D" parent="NavigationRegion3D/floor_adn_wall"]
 transform = Transform3D(-2.0500002, 8.742278e-08, 3.821371e-15, 0, -4.371139e-08, 1, 1.7921671e-07, 1, 4.371139e-08, 0, 1, -5.2)
 mesh = SubResource("PlaneMesh_p5beq")
 
-[node name="wall3" type="MeshInstance3D" parent="floor_adn_wall"]
+[node name="wall3" type="MeshInstance3D" parent="NavigationRegion3D/floor_adn_wall"]
 transform = Transform3D(4.1667883e-07, 0.99999994, 4.371139e-08, -1.3457237e-21, -4.3711385e-08, 1, 3.1775002, -1.3113414e-07, -5.7320566e-15, -6, 1, 0.10000014)
 mesh = SubResource("PlaneMesh_p5beq")
 
-[node name="wall4" type="MeshInstance3D" parent="floor_adn_wall"]
+[node name="wall4" type="MeshInstance3D" parent="NavigationRegion3D/floor_adn_wall"]
 transform = Transform3D(-1.3889294e-07, -0.99999994, 4.371139e-08, 0, -4.3711385e-08, -1, 3.1775002, -4.3711385e-08, 1.9106855e-15, 6.1, 1, 0.10000014)
 mesh = SubResource("PlaneMesh_p5beq")
 
-[node name="wall5" type="MeshInstance3D" parent="floor_adn_wall"]
+[node name="wall5" type="MeshInstance3D" parent="NavigationRegion3D/floor_adn_wall"]
 transform = Transform3D(1.7359952e-14, 8.742278e-08, 2.7124999, -1.3889294e-07, -1, 2.3713429e-07, 3.1775002, -4.371139e-08, 5.182734e-15, -0.10000008, 3.3000002, 0.10000014)
 mesh = SubResource("PlaneMesh_p5beq")
 
-[node name="DamageSpikeArea3D" parent="floor_adn_wall" instance=ExtResource("3_sm2fj")]
+[node name="DamageSpikeArea3D" parent="NavigationRegion3D/floor_adn_wall" instance=ExtResource("3_sm2fj")]
 
-[node name="MeshInstance3D" parent="floor_adn_wall/DamageSpikeArea3D" index="0"]
+[node name="MeshInstance3D" parent="NavigationRegion3D/floor_adn_wall/DamageSpikeArea3D" index="0"]
 transform = Transform3D(0.575, 0, 0, 0, 0.575, 0, 0, 0, 0.575, 2.0869567, 0, 0)
 
-[node name="CollisionShape3D" parent="floor_adn_wall/DamageSpikeArea3D" index="1"]
+[node name="CollisionShape3D" parent="NavigationRegion3D/floor_adn_wall/DamageSpikeArea3D" index="1"]
 transform = Transform3D(0.575, 0, 0, 0, 0.575, 0, 0, 0, 0.575, 0.23153764, 0, -0.11250013)
 
-[node name="cubo_destruir" type="MeshInstance3D" parent="floor_adn_wall"]
+[node name="cubo_destruir" type="MeshInstance3D" parent="NavigationRegion3D/floor_adn_wall"]
 transform = Transform3D(0.275, 0, 0, 0, 0.275, 0, 0, 0, 0.275, 1.9000001, 0.6, 2.2)
 mesh = SubResource("BoxMesh_dl8p7")
 
-[node name="interactuables" type="Node" parent="."]
+[node name="interactuables" type="Node" parent="NavigationRegion3D"]
 
-[node name="Key_interact" parent="interactuables" instance=ExtResource("8_sm2fj")]
+[node name="Key_interact" parent="NavigationRegion3D/interactuables" instance=ExtResource("8_sm2fj")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.7, 0.3, 0)
 
-[node name="InteractFlashlight" parent="interactuables" instance=ExtResource("7_sm2fj")]
+[node name="InteractFlashlight" parent="NavigationRegion3D/interactuables" instance=ExtResource("7_sm2fj")]
 transform = Transform3D(0.68, 0, 0, 0, 0.68, 0, 0, 0, 0.68, -1.6, 0.1, -0.5)
 
-[node name="DoorInteract" parent="interactuables" instance=ExtResource("7_scyfp")]
+[node name="DoorInteract" parent="NavigationRegion3D/interactuables" instance=ExtResource("7_scyfp")]
 transform = Transform3D(0.355, 0, 0, 0, 0.355, 0, 0, 0, 0.355, -0.4, 0, -1.9)
 needsKey = true
 
-[node name="LightSwitchInteract" parent="interactuables" instance=ExtResource("7_ifrnq")]
+[node name="LightSwitchInteract" parent="NavigationRegion3D/interactuables" instance=ExtResource("7_ifrnq")]
 transform = Transform3D(-0.07246933, 0, -0.27045923, 0, 0.28, 0, 0.27045923, 0, -0.07246933, 2.092507, 0.5, 0)
 
-[node name="LightCelling" parent="interactuables/LightSwitchInteract" index="3"]
+[node name="LightCelling" parent="NavigationRegion3D/interactuables/LightSwitchInteract" index="3"]
 transform = Transform3D(1.1600001, 0, 0, 0, 1.16, 0, 0, 0, 1.1600001, 1.478966, 4.5142856, 9.419577)
 
-[node name="ButtonInteract" parent="interactuables" instance=ExtResource("9_ifrnq")]
+[node name="ButtonInteract" parent="NavigationRegion3D/interactuables" instance=ExtResource("9_ifrnq")]
 transform = Transform3D(-0.2639916, 0, -0.023096243, 0, 0.265, 0, 0.023096243, 0, -0.2639916, 0, 0.8, 2.7999997)
 
-[node name="PaperInteract" parent="interactuables" instance=ExtResource("11_5w2il")]
+[node name="PaperInteract" parent="NavigationRegion3D/interactuables" instance=ExtResource("11_5w2il")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7, 0.2, 1)
 text = "Esto es una prueba de papel jajajajajaya que salga mi juego y me haga millonario"
 
-[node name="Keypad" parent="interactuables" instance=ExtResource("12_dl8p7")]
+[node name="Keypad" parent="NavigationRegion3D/interactuables" instance=ExtResource("12_dl8p7")]
 transform = Transform3D(-0.3, 0, 4.5298744e-08, 0, 0.3, 0, -4.5298744e-08, 0, -0.3, 2.1, 0.655, 1.8)
 
-[node name="tempalteNpcInteract" parent="interactuables" instance=ExtResource("12_o1htb")]
+[node name="tempalteNpcInteract" parent="NavigationRegion3D/interactuables" instance=ExtResource("12_o1htb")]
 transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, 2, 0, -1)
 dialogue = "ya que funcione"
 mensaje = "hola script"
 id = "elnpc"
 
-[node name="Enemy" parent="interactuables" instance=ExtResource("13_e5x5w")]
+[node name="Enemy" parent="NavigationRegion3D/interactuables" instance=ExtResource("13_e5x5w")]
+transform = Transform3D(0.715, 0, 0, 0, 0.715, 0, 0, 0, 0.715, -4, 0, 0)
 
-[node name="Player" parent="." instance=ExtResource("1_nxrqf")]
+[node name="Player" parent="NavigationRegion3D" instance=ExtResource("1_nxrqf")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.36249998, 2)
 
-[connection signal="isInteracted" from="interactuables/ButtonInteract" to="." method="_on_button_interact_is_interacted"]
-[connection signal="on_correct_pass" from="interactuables/Keypad" to="." method="_on_keypad_on_correct_pass"]
+[connection signal="isInteracted" from="NavigationRegion3D/interactuables/ButtonInteract" to="." method="_on_button_interact_is_interacted"]
+[connection signal="on_correct_pass" from="NavigationRegion3D/interactuables/Keypad" to="." method="_on_keypad_on_correct_pass"]
 
-[editable path="floor_adn_wall/DamageSpikeArea3D"]
-[editable path="interactuables/LightSwitchInteract"]
-[editable path="interactuables/LightSwitchInteract/LightCelling"]
-[editable path="interactuables/Keypad"]
+[editable path="NavigationRegion3D/floor_adn_wall/DamageSpikeArea3D"]
+[editable path="NavigationRegion3D/interactuables/LightSwitchInteract"]
+[editable path="NavigationRegion3D/interactuables/LightSwitchInteract/LightCelling"]
+[editable path="NavigationRegion3D/interactuables/Keypad"]

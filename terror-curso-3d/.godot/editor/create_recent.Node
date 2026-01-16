@@ -1,3 +1,4 @@
+NavigationRegion3D
 AudioStreamPlayer3D
 AudioStreamPlayer
 NavigationAgent3D
@@ -12,4 +13,3 @@ VBoxContainer
 OptionButton
 CheckBox
 Label
-HBoxContainer

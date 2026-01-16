@@ -1,8 +1,5 @@
-res://Interacts/enemy.tscn
-res://Scripts/idle.gd
-res://Scripts/Enemy_states/roam.gd
-res://Scripts/Enemy_states/chase.gd
-res://Scripts/Enemy_states/idle.gd
-res://Scripts/enemy.gd
 res://Maps/test_map.tscn
-res://Scripts/Enemy_states/attack.gd
+res://Interacts/enemy.tscn
+res://Scripts/Enemy_states/roam.gd
+res://Scripts/enemy.gd
+res://Maps/test_map.gd
