@@ -10,7 +10,7 @@ func update(_delta: float) -> void :
 
 
 func physics_update(_delta: float) -> void:
-	pass
+	owner.anim_enemy.play("runloop")
 
 func enter(_msg := {}) -> void:
 	pass

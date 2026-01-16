@@ -5,3 +5,4 @@ res://Scripts/Enemy_states/chase.gd
 res://Scripts/Enemy_states/idle.gd
 res://Scripts/enemy.gd
 res://Maps/test_map.tscn
+res://Scripts/Enemy_states/attack.gd

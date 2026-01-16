@@ -1,5 +1,5 @@
 extends State
-class_name RoamEnemyState
+class_name AttackStateEnemy
 
 
 func _handled_input(_event: InputEvent) -> void:
@@ -10,10 +10,10 @@ func update(_delta: float) -> void :
 
 
 func physics_update(_delta: float) -> void:
-	pass
+	owner.anim_enemy.play("attack")
 
 func enter(_msg := {}) -> void:
-	owner.anim_enemy.play("runloop")
+	pass
 
 func exit() -> void:
 	pass
