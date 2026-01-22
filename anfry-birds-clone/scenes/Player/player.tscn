@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://caxcp52mfylon"]
+[gd_scene load_steps=10 format=3 uid="uid://caxcp52mfylon"]
 
 [ext_resource type="Script" uid="uid://c4w8pplb1qr8r" path="res://Scripts/player.gd" id="1_1kbk7"]
 [ext_resource type="Texture2D" uid="uid://vfchwwda22dc" path="res://assets/sprites/bird.png" id="1_cyojo"]
+[ext_resource type="Texture2D" uid="uid://gaqe7fl6f4cp" path="res://assets/sprites/circles.png" id="3_gqjuk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1kbk7"]
 atlas = ExtResource("1_cyojo")
@@ -43,7 +44,7 @@ animations = [{
 radius = 33.0
 height = 74.0
 
-[node name="Player" type="RigidBody2D"]
+[node name="Player" type="RigidBody2D" groups=["Player"]]
 input_pickable = true
 freeze = true
 script = ExtResource("1_1kbk7")
@@ -51,6 +52,7 @@ force_multiplayer = 10.0
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 1
 sprite_frames = SubResource("SpriteFrames_hvfru")
 animation = &"flap"
 autoplay = "flap"
@@ -60,5 +62,12 @@ frame_progress = 0.80545
 position = Vector2(2, 2)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_cyojo")
+
+[node name="Line2D" type="Line2D" parent="."]
+texture_repeat = 2
+width = 8.0
+default_color = Color(0.92156863, 0.24313726, 0.21176471, 1)
+texture = ExtResource("3_gqjuk")
+texture_mode = 1
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]

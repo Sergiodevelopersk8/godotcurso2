@@ -3,9 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://du7sxsh668akq" path="res://assets/sprites/bg.png" id="1_377w7"]
 [ext_resource type="Texture2D" uid="uid://dkolv1560o3wq" path="res://assets/sprites/ground.png" id="2_bovvr"]
 [ext_resource type="PackedScene" uid="uid://ha41qoxj51cl" path="res://scenes/Crate/crate.tscn" id="3_b2cq8"]
-[ext_resource type="PackedScene" uid="uid://caxcp52mfylon" path="res://scenes/Player/player.tscn" id="4_xb4v1"]
 [ext_resource type="Script" uid="uid://bgvwa4hn4gvth" path="res://Scripts/player_spawner.gd" id="5_d4w6o"]
 [ext_resource type="PackedScene" uid="uid://c7d0my6mn7js3" path="res://scenes/Enemy/enemy.tscn" id="5_urvlt"]
+[ext_resource type="Script" uid="uid://dwv75ctyw84vy" path="res://scenes/levels/follow_camera.gd" id="7_mbbpy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b2cq8"]
 size = Vector2(2395, 152)
@@ -51,10 +51,28 @@ shape = SubResource("RectangleShape2D_b2cq8")
 [node name="Crate" parent="." instance=ExtResource("3_b2cq8")]
 position = Vector2(1517, 943)
 
+[node name="Crate2" parent="." instance=ExtResource("3_b2cq8")]
+position = Vector2(1516, 846)
+
+[node name="Crate3" parent="." instance=ExtResource("3_b2cq8")]
+position = Vector2(1516, 748)
+
+[node name="Crate4" parent="." instance=ExtResource("3_b2cq8")]
+position = Vector2(1516, 651)
+
+[node name="Crate5" parent="." instance=ExtResource("3_b2cq8")]
+position = Vector2(1516, 551)
+
 [node name="Enemy" parent="." instance=ExtResource("5_urvlt")]
-position = Vector2(1329, 943)
+position = Vector2(1665, 948)
 
 [node name="PlayerSpawner" type="Marker2D" parent="."]
 position = Vector2(193, 583)
 script = ExtResource("5_d4w6o")
-player_scene = ExtResource("4_xb4v1")
+
+[node name="FollowCamera" type="Camera2D" parent="."]
+position = Vector2(960, 540)
+position_smoothing_enabled = true
+script = ExtResource("7_mbbpy")
+
+[connection signal="player_spawned" from="PlayerSpawner" to="FollowCamera" method="_on_player_spawner_player_spawned"]

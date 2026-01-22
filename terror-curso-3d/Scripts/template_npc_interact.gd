@@ -3,5 +3,7 @@ extends Interact
 
 @export var dialogue : String = ""
 @export var mensaje :String = ""
+
 func action_use():
-	Global.show_dialogue(id,mensaje)
+	if !Global.is_dialogue_active:
+		Global.show_dialogue(id,dialogue)

@@ -132,7 +132,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 collide_with_areas = true
 
 [node name="RaycastCrouch" type="RayCast3D" parent="Raycasts"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 1)
 target_position = Vector3(0, 2, 0)
 
 [node name="FootstepSound" type="AudioStreamPlayer" parent="."]

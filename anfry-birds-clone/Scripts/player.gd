@@ -1,7 +1,8 @@
 extends RigidBody2D
-class_name Palyer
+class_name Player
 
 @export var force_multiplayer:float
+@onready var line_2d: Line2D = $Line2D
 
 var max_drag_distance = 150.0
 var is_dragged = false
@@ -13,7 +14,7 @@ func _ready() -> void:
 	start_position = position
 	 #Conectar por script a una señal 
 	sleeping_state_changed.connect(_on_sleeping_state_changed)
-	
+	clearPoints()
 	
 	
 
@@ -22,7 +23,14 @@ func _physics_process(_delta: float) -> void:
 	if is_dragged:
 		drag()
 		check_release()
+		updateLine()
 	
+
+func updateLine():
+	clearPoints()
+	line_2d.add_point(to_local(start_position))
+	line_2d.add_point(to_local(position))
+
 
 func check_release():
 	if Input.is_action_just_released("drag"):
@@ -56,11 +64,17 @@ func launch():
 	freeze = false
 	#obtenemos el vector de la posicion del player a la posicion actual 
 	var force_vector = start_position - position
+	line2dvisible()
 	
 	#aplicar la fuerza instataneamente
 	apply_impulse(force_vector * force_multiplayer)
+	
 
+func clearPoints():
+	line_2d.clear_points()
 
+func line2dvisible():
+	line_2d.visible = false
 #-----------SEÑALES------------
 func _on_sleeping_state_changed():
 	#si el player se deja de mover que seria sleep

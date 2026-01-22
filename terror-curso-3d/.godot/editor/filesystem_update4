@@ -1,5 +1,0 @@
-res://Maps/test_map.tscn
-res://Interacts/enemy.tscn
-res://Scripts/Enemy_states/roam.gd
-res://Scripts/enemy.gd
-res://Maps/test_map.gd

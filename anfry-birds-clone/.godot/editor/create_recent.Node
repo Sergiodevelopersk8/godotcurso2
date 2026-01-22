@@ -1,6 +1,8 @@
+Camera2D
+AnimatedSprite2D
+Line2D
 Marker2D
 CollisionShape2D
-AnimatedSprite2D
 RigidBody2D
 Node2D
 Sprite2D
