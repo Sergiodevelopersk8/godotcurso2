@@ -1,9 +1,2 @@
-res://scenes/explosion/explosion.tscn
-res://scenes/Enemy/enemy.gd
-res://scenes/Enemy/enemy.tscn
-res://scenes/Player/player.tscn
-res://scenes/explosion/explosion.gd
-res://scenes/levels/level.tscn
-res://scenes/levels/follow_camera.gd
-res://Scripts/player_spawner.gd
-res://Scripts/player.gd
+res://scenes/ui/main/main.tscn
+res://resources/birds_themeirds.tres

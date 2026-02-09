@@ -1,0 +1,10 @@
+[gd_resource type="Theme" format=3 uid="uid://b6qb87raang5b"]
+
+[ext_resource type="FontFile" uid="uid://bfr5eemq7uj12" path="res://assets/fonts/BD_Cartoon_Shout.ttf" id="1_0qjru"]
+
+[resource]
+HeaderLarge/constants/outline_size = 30
+HeaderLarge/font_sizes/font_size = 90
+Label/constants/outline_size = 10
+Label/font_sizes/font_size = 36
+Label/fonts/font = ExtResource("1_0qjru")

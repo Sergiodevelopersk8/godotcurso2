@@ -1,78 +1,62 @@
-[gd_scene load_steps=8 format=3 uid="uid://cwrd1ljrkds6g"]
+[gd_scene format=3 uid="uid://cwrd1ljrkds6g"]
 
 [ext_resource type="Texture2D" uid="uid://du7sxsh668akq" path="res://assets/sprites/bg.png" id="1_377w7"]
 [ext_resource type="Texture2D" uid="uid://dkolv1560o3wq" path="res://assets/sprites/ground.png" id="2_bovvr"]
-[ext_resource type="PackedScene" uid="uid://ha41qoxj51cl" path="res://scenes/Crate/crate.tscn" id="3_b2cq8"]
 [ext_resource type="Script" uid="uid://bgvwa4hn4gvth" path="res://Scripts/player_spawner.gd" id="5_d4w6o"]
-[ext_resource type="PackedScene" uid="uid://c7d0my6mn7js3" path="res://scenes/Enemy/enemy.tscn" id="5_urvlt"]
 [ext_resource type="Script" uid="uid://dwv75ctyw84vy" path="res://scenes/levels/follow_camera.gd" id="7_mbbpy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b2cq8"]
 size = Vector2(2395, 152)
 
-[node name="Level" type="Node2D"]
+[node name="Level" type="Node2D" unique_id=401719443]
 
-[node name="Enviroment" type="Node2D" parent="."]
+[node name="Enviroment" type="Node2D" parent="." unique_id=1107774119]
 
-[node name="BackGround" type="Sprite2D" parent="Enviroment"]
+[node name="BackGround" type="Sprite2D" parent="Enviroment" unique_id=1606694683]
 position = Vector2(972, 535)
 texture = ExtResource("1_377w7")
 metadata/_edit_lock_ = true
 
-[node name="BackGround2" type="Sprite2D" parent="Enviroment"]
+[node name="BackGround2" type="Sprite2D" parent="Enviroment" unique_id=1408833674]
 position = Vector2(3366, 536)
 texture = ExtResource("1_377w7")
 metadata/_edit_lock_ = true
 
-[node name="Ground" type="StaticBody2D" parent="Enviroment"]
+[node name="Ground" type="StaticBody2D" parent="Enviroment" unique_id=638126491]
 z_index = 1
 position = Vector2(972, 1070)
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Enviroment/Ground"]
+[node name="Sprite2D" type="Sprite2D" parent="Enviroment/Ground" unique_id=469848326]
 texture = ExtResource("2_bovvr")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enviroment/Ground"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enviroment/Ground" unique_id=29849309]
 position = Vector2(-2.5, -4)
 shape = SubResource("RectangleShape2D_b2cq8")
 
-[node name="Ground2" type="StaticBody2D" parent="Enviroment"]
+[node name="Ground2" type="StaticBody2D" parent="Enviroment" unique_id=466305201]
 z_index = 1
 position = Vector2(3365, 1070)
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Enviroment/Ground2"]
+[node name="Sprite2D" type="Sprite2D" parent="Enviroment/Ground2" unique_id=355573439]
 texture = ExtResource("2_bovvr")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enviroment/Ground2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enviroment/Ground2" unique_id=1595945064]
 position = Vector2(-2.5, -4)
 shape = SubResource("RectangleShape2D_b2cq8")
 
-[node name="Crate" parent="." instance=ExtResource("3_b2cq8")]
-position = Vector2(1517, 943)
-
-[node name="Crate2" parent="." instance=ExtResource("3_b2cq8")]
-position = Vector2(1516, 846)
-
-[node name="Crate3" parent="." instance=ExtResource("3_b2cq8")]
-position = Vector2(1516, 748)
-
-[node name="Crate4" parent="." instance=ExtResource("3_b2cq8")]
-position = Vector2(1516, 651)
-
-[node name="Crate5" parent="." instance=ExtResource("3_b2cq8")]
-position = Vector2(1516, 551)
-
-[node name="Enemy" parent="." instance=ExtResource("5_urvlt")]
-position = Vector2(1665, 948)
-
-[node name="PlayerSpawner" type="Marker2D" parent="."]
+[node name="PlayerSpawner" type="Marker2D" parent="." unique_id=1983487799]
 position = Vector2(193, 583)
 script = ExtResource("5_d4w6o")
 
-[node name="FollowCamera" type="Camera2D" parent="."]
+[node name="FollowCamera" type="Camera2D" parent="." unique_id=958824490]
 position = Vector2(960, 540)
 position_smoothing_enabled = true
 script = ExtResource("7_mbbpy")
+
+[node name="Enemys" type="Node2D" parent="." unique_id=1661057791]
+
+[node name="Creates" type="Node2D" parent="." unique_id=1524911427]
 
 [connection signal="player_spawned" from="PlayerSpawner" to="FollowCamera" method="_on_player_spawner_player_spawned"]

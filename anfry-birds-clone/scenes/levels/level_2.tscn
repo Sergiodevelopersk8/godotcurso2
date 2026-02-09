@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cs7bj7yjexqqe"]
+
+[ext_resource type="PackedScene" uid="uid://cwrd1ljrkds6g" path="res://scenes/levels/level.tscn" id="1_j2425"]
+[ext_resource type="PackedScene" uid="uid://c7d0my6mn7js3" path="res://scenes/Enemy/enemy.tscn" id="2_ra442"]
+[ext_resource type="PackedScene" uid="uid://ha41qoxj51cl" path="res://scenes/Crate/crate.tscn" id="3_fiq81"]
+
+[node name="Level_2" unique_id=401719443 instance=ExtResource("1_j2425")]
+
+[node name="Enemy" parent="Enemys" parent_id_path=PackedInt32Array(1661057791) index="0" unique_id=936949787 instance=ExtResource("2_ra442")]
+position = Vector2(1253, 944)
+
+[node name="Enemy2" parent="Enemys" parent_id_path=PackedInt32Array(1661057791) index="1" unique_id=1032079274 instance=ExtResource("2_ra442")]
+position = Vector2(1580, 640)
+
+[node name="Crate" parent="Creates" parent_id_path=PackedInt32Array(1524911427) index="0" unique_id=2119021399 instance=ExtResource("3_fiq81")]
+position = Vector2(1480, 940)
+
+[node name="Crate2" parent="Creates" parent_id_path=PackedInt32Array(1524911427) index="1" unique_id=1231342067 instance=ExtResource("3_fiq81")]
+position = Vector2(1580, 940)
+
+[node name="Crate3" parent="Creates" parent_id_path=PackedInt32Array(1524911427) index="2" unique_id=1600884463 instance=ExtResource("3_fiq81")]
+position = Vector2(1680, 940)
+
+[node name="Crate4" parent="Creates" parent_id_path=PackedInt32Array(1524911427) index="3" unique_id=765588349 instance=ExtResource("3_fiq81")]
+position = Vector2(1580, 840)
+
+[node name="Crate5" parent="Creates" parent_id_path=PackedInt32Array(1524911427) index="4" unique_id=1356454228 instance=ExtResource("3_fiq81")]
+position = Vector2(1580, 740)

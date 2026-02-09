@@ -1,6 +1,8 @@
-res://assets/sprites
-res://scenes/explosion
-res://scenes/Enemy
-res://scenes/Player
-res://scenes/Crate
-res://scenes/levels
+res://resources/
+res://scenes/ui/main/
+res://scenes/levels/
+res://assets/sprites/
+res://scenes/explosion/
+res://scenes/Enemy/
+res://scenes/Player/
+res://scenes/Crate/
