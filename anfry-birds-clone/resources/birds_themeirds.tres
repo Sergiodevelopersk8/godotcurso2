@@ -1,8 +1,37 @@
 [gd_resource type="Theme" format=3 uid="uid://b6qb87raang5b"]
 
 [ext_resource type="FontFile" uid="uid://bfr5eemq7uj12" path="res://assets/fonts/BD_Cartoon_Shout.ttf" id="1_0qjru"]
+[ext_resource type="Texture2D" uid="uid://my86ab8mfsir" path="res://assets/sprites/button-hover.png" id="2_f8lpc"]
+[ext_resource type="Texture2D" uid="uid://dh5ucpuj5rny4" path="res://assets/sprites/button-normal-2.png" id="2_qpiiu"]
+[ext_resource type="Texture2D" uid="uid://sec7cmwk8bgx" path="res://assets/sprites/button-pressed.png" id="4_xvm5f"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xvm5f"]
+texture = ExtResource("2_f8lpc")
+texture_margin_left = 30.0
+texture_margin_top = 30.0
+texture_margin_right = 30.0
+texture_margin_bottom = 30.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f8lpc"]
+texture = ExtResource("2_qpiiu")
+texture_margin_left = 30.0
+texture_margin_top = 30.0
+texture_margin_right = 30.0
+texture_margin_bottom = 30.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ux7q4"]
+texture = ExtResource("4_xvm5f")
+texture_margin_left = 30.0
+texture_margin_top = 30.0
+texture_margin_right = 30.0
+texture_margin_bottom = 30.0
 
 [resource]
+Button/font_sizes/font_size = 40
+Button/fonts/font = ExtResource("1_0qjru")
+Button/styles/hover = SubResource("StyleBoxTexture_xvm5f")
+Button/styles/normal = SubResource("StyleBoxTexture_f8lpc")
+Button/styles/pressed = SubResource("StyleBoxTexture_ux7q4")
 HeaderLarge/constants/outline_size = 30
 HeaderLarge/font_sizes/font_size = 90
 Label/constants/outline_size = 10

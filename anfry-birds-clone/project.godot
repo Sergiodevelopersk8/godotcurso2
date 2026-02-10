@@ -15,9 +15,13 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="AnfryBirdsClone"
-run/main_scene="uid://cwrd1ljrkds6g"
+run/main_scene="uid://dyaqutcvycfms"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameManager="*uid://64xhon8uyoc0"
 
 [display]
 

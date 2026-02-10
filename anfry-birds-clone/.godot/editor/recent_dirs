@@ -1,5 +1,6 @@
-res://resources/
+res://scenes/autoloads/
 res://scenes/ui/main/
+res://resources/
 res://scenes/levels/
 res://assets/sprites/
 res://scenes/explosion/

@@ -1,2 +1,4 @@
-res://scenes/ui/main/main.tscn
 res://resources/birds_themeirds.tres
+res://scenes/ui/main/main.tscn
+res://scenes/ui/main/start_button.gd
+res://scenes/autoloads/game_manager.gd
