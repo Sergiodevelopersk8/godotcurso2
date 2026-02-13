@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bdxopjeobqpx3"]
+
+[ext_resource type="Script" uid="uid://c71nimmptqnnf" path="res://scripts/Enemy.gd" id="1_3f0g2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3f0g2"]
+
+[node name="Raul" type="CharacterBody2D" unique_id=1346864071]
+script = ExtResource("1_3f0g2")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=896485229]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1923691305]
+shape = SubResource("CapsuleShape2D_3f0g2")
