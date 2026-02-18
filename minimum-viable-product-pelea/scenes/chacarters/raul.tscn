@@ -2,12 +2,21 @@
 
 [ext_resource type="Script" uid="uid://c71nimmptqnnf" path="res://scripts/Enemy.gd" id="1_3f0g2"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3f0g2"]
+size = Vector2(20, 8)
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3f0g2"]
 
 [node name="Raul" type="CharacterBody2D" unique_id=1346864071]
 script = ExtResource("1_3f0g2")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=896485229]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1502612365]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1923691305]
+[node name="floor" type="CollisionShape2D" parent="." unique_id=1392786150]
+position = Vector2(0, 13)
+shape = SubResource("RectangleShape2D_3f0g2")
+
+[node name="Hurtbox" type="Area2D" parent="." unique_id=896485229]
+
+[node name="bodycollishion" type="CollisionShape2D" parent="Hurtbox" unique_id=1923691305]
 shape = SubResource("CapsuleShape2D_3f0g2")
