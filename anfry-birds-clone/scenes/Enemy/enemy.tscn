@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c7d0my6mn7js3"]
+[gd_scene format=3 uid="uid://c7d0my6mn7js3"]
 
 [ext_resource type="Script" uid="uid://c1phc717mr34r" path="res://scenes/Enemy/enemy.gd" id="1_84vye"]
 [ext_resource type="Texture2D" uid="uid://bxpferljlt78a" path="res://assets/sprites/monster.png" id="1_muyyy"]
@@ -29,7 +29,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_muyyy"]
 size = Vector2(54, 68)
 
-[node name="Enemy" type="RigidBody2D"]
+[node name="Enemy" type="RigidBody2D" unique_id=993589852]
 contact_monitor = true
 max_contacts_reported = 2
 script = ExtResource("1_84vye")
@@ -37,12 +37,12 @@ velocity_threshold = 50.0
 explosion_path = ExtResource("2_vamnb")
 metadata/_edit_group_ = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1276887143]
 sprite_frames = SubResource("SpriteFrames_o5uld")
 animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.58488506
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1998326924]
 position = Vector2(0, 6)
 shape = SubResource("RectangleShape2D_muyyy")

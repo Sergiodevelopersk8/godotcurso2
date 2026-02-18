@@ -1,4 +1,8 @@
-res://resources/birds_themeirds.tres
 res://scenes/ui/main/main.tscn
-res://scenes/ui/main/start_button.gd
+res://resources/birds_themeirds.tres
 res://scenes/autoloads/game_manager.gd
+res://scenes/levels/level.tscn
+res://Scripts/level.gd
+res://scenes/levels/level_2.tscn
+res://scenes/Enemy/enemy.tscn
+res://scenes/Enemy/enemy.gd

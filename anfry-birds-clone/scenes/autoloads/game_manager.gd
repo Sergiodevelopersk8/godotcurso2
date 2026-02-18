@@ -12,7 +12,17 @@ const LEVELS = {
 
 
 var current_level = 0
+var enemies_left
 
+
+func set_enemies_left(enemies):
+	enemies_left = enemies
+	
+
+func decrease_enemies_left():
+	enemies_left -= 1
+	if enemies_left == 0:
+		load_next_level.call_deferred()
 
 func load_next_level():
 	current_level += 1

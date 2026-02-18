@@ -9,15 +9,22 @@ func _ready() -> void:
 
 func _on_damage_enemy(body):
 	if body.is_in_group("Player"):
-		queue_free()
-		createExposion()
+		destroy_enemy()
 		return
+	
 	
 	#saber si un nodo es de un cierto tipo y eliminarlo
 	#dependiendo de su velocidad elimina al enemigo
 	if body is RigidBody2D and body.linear_velocity.length() > velocity_threshold:
-		queue_free()
-		createExposion()
+		destroy_enemy()
+
+
+func destroy_enemy():
+	GameManager.decrease_enemies_left()
+	createExposion()
+	queue_free()
+
+
 
 
 func createExposion():
