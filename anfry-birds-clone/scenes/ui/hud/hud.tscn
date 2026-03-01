@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cpuh0204arhdw"]
+
+[node name="HUD" type="Control" unique_id=1325906188]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1637340027]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="LaunchesLabel" type="Label" parent="MarginContainer" unique_id=1908723353]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Launches: 0"
