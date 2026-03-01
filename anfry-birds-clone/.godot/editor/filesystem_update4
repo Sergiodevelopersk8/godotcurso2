@@ -1,2 +1,9 @@
 res://scenes/levels/level.tscn
 res://resources/birds_themeirds.tres
+res://scenes/ui/hud/hud.tscn
+res://Scripts/player.gd
+res://scenes/autoloads/signal_manager.gd
+res://Scripts/hud.gd
+res://scenes/autoloads/game_manager.gd
+res://Scripts/player_spawner.gd
+res://Scripts/level_completed_timer.gd

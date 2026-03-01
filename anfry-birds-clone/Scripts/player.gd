@@ -63,11 +63,15 @@ func launch():
 	#aqui es para que el player no se quede estatico y tenga gravedad
 	freeze = false
 	#obtenemos el vector de la posicion del player a la posicion actual 
-	var force_vector = start_position - position
+	var force_vector = (start_position - position) * force_multiplayer
+	#aplicar la fuerza instataneamente
+	apply_impulse(force_vector)
 	line2dvisible()
 	
-	#aplicar la fuerza instataneamente
-	apply_impulse(force_vector * force_multiplayer)
+	#incrementa el lanzamiento de los birds desde el game nmanager
+	GameManager.increase_launches()
+	#señal del signal manager de lanzar los birds
+	SignalManager.player_launch.emit()
 	
 
 func clearPoints():

@@ -1,5 +1,6 @@
-CanvasLayer
+Timer
 Label
+CanvasLayer
 MarginContainer
 Button
 VBoxContainer
@@ -12,4 +13,3 @@ Marker2D
 CollisionShape2D
 RigidBody2D
 Sprite2D
-StaticBody2D
