@@ -9,6 +9,7 @@ const LEVELS = {
 	1:preload("uid://c8na6cydev3ei"),
 	2:preload("uid://cs7bj7yjexqqe")
 }
+const SCORE_SCREEN = preload("uid://div82qfwv8mlu")
 
 
 var launches = 0
@@ -36,4 +37,4 @@ func load_next_level():
 		get_tree().change_scene_to_packed(LEVELS[current_level])
 		launches = 0
 	else:
-		print("no existe el nivel" + str(current_level))
+		get_tree().change_scene_to_packed(SCORE_SCREEN)
