@@ -1,16 +1,12 @@
 [gd_scene format=3 uid="uid://div82qfwv8mlu"]
 
+[ext_resource type="Script" uid="uid://55ksqd8fjyvo" path="res://Scripts/score_screen.gd" id="1_2nqls"]
 [ext_resource type="Texture2D" uid="uid://du7sxsh668akq" path="res://assets/sprites/bg.png" id="1_vembc"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_yuj8h"]
 font_size = 100
 outline_size = 35
 outline_color = Color(0.022979883, 0.022979883, 0.022979883, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_vembc"]
-font_size = 50
-outline_size = 25
-outline_color = Color(0.07762883, 0.07762881, 0.07762881, 1)
 
 [node name="ScoreScreen" type="Control" unique_id=620144212]
 layout_mode = 3
@@ -19,6 +15,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_2nqls")
 
 [node name="Background" type="TextureRect" parent="." unique_id=298840021]
 layout_mode = 1
@@ -59,25 +56,3 @@ size_flags_horizontal = 4
 size_flags_vertical = 0
 text = "lAUNCHES"
 label_settings = SubResource("LabelSettings_yuj8h")
-
-[node name="LeveLabel1" type="Label" parent="panel/MarginContainer/VBoxContainer" unique_id=904160676]
-layout_mode = 2
-size_flags_horizontal = 4
-text = "level 1 :"
-label_settings = SubResource("LabelSettings_vembc")
-
-[node name="LeveLabel2" type="Label" parent="panel/MarginContainer/VBoxContainer" unique_id=36253249]
-layout_mode = 2
-size_flags_horizontal = 4
-text = "level 2 :"
-label_settings = SubResource("LabelSettings_vembc")
-
-[node name="LeveLabel3" type="Label" parent="panel/MarginContainer/VBoxContainer" unique_id=1909144150]
-layout_mode = 2
-size_flags_horizontal = 4
-text = "level 3 :"
-label_settings = SubResource("LabelSettings_vembc")
-
-[node name="Backbutton" type="Button" parent="panel/MarginContainer/VBoxContainer" unique_id=1741909984]
-layout_mode = 2
-text = "GO BACK"
