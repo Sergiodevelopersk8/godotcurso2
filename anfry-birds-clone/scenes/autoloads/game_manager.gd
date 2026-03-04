@@ -14,6 +14,7 @@ const LEVELS = {
 const SCORE_SCREEN = preload("uid://div82qfwv8mlu")
 
 
+
 var launches = 0
 var current_level = 0
 var enemies_left
@@ -23,7 +24,7 @@ func add_level_launches():
 	#se crea la clave del nivel y el valor asociado es lo que
 	#se lanzo
 	level_launches[current_level] = launches
-	print(level_launches)
+	
 
 
 
@@ -50,3 +51,10 @@ func load_next_level():
 	else:
 		# pasa a la pantalla de cargar los puntajes
 		get_tree().change_scene_to_packed(SCORE_SCREEN)
+
+func reset_game():
+	#resetea las variables 
+	current_level = 0
+	launches = 0
+	#cambia de escena al presionar el boton de back
+	get_tree().change_scene_to_packed(MAIN)
