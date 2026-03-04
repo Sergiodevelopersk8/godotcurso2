@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cjcfpwg7d1bf2"]
+
+[ext_resource type="Texture2D" uid="uid://b82nqv42wj4k4" path="res://assets/sprites/player/player.png" id="1_cyojo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cyojo"]
+size = Vector2(12, 23)
+
+[node name="Player" type="CharacterBody2D" unique_id=560204453]
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1649609418]
+texture = ExtResource("1_cyojo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=872414626]
+position = Vector2(1, 5.5)
+shape = SubResource("RectangleShape2D_cyojo")
