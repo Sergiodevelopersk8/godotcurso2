@@ -20,5 +20,5 @@ func flip_player():
 	#si esta mirando a la izquierda y aprieto  a la derecha
 	
 	if (is_facing_right and velocity.x < 0) or  (not is_facing_right and velocity.x > 0):
-		scale.x *= -1
-		is_facing_right = not is_facing_right
+		scale.x *= -1 #si esta en 1 pasa a -1 si este estaba en -1 pasa a 1 para girar los nodos
+		is_facing_right = not is_facing_right # si esta true pasa a false y si estaba en false pasa true
