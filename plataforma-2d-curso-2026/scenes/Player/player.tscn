@@ -8,6 +8,7 @@ size = Vector2(12, 22)
 
 [node name="Player" type="CharacterBody2D" unique_id=560204453]
 script = ExtResource("1_1kbk7")
+speed = 180.0
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1649609418]
