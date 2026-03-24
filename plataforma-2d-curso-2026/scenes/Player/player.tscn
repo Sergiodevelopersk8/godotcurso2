@@ -207,7 +207,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cyojo"]
 size = Vector2(12, 22)
 
-[node name="Player" type="CharacterBody2D" unique_id=560204453]
+[node name="Player" type="CharacterBody2D" unique_id=560204453 groups=["Player"]]
 script = ExtResource("1_1kbk7")
 speed = 180.0
 jump_speed = 330.0
@@ -216,7 +216,7 @@ metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1520999909]
 sprite_frames = SubResource("SpriteFrames_t6q27")
-animation = &"jump"
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=872414626]
 position = Vector2(1, 5)
