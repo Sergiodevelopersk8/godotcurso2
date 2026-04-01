@@ -152,3 +152,7 @@ shape = SubResource("RectangleShape2D_nfsas")
 position = Vector2(0, 4)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_i0alm")
+
+[node name="RayCast2D" type="RayCast2D" parent="." index="3" unique_id=115592410]
+position = Vector2(-10, 0)
+target_position = Vector2(0, 25)

@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cvyu7te6341v5" path="res://assets/sprites/tiles/foreground.png" id="2_muv8p"]
 [ext_resource type="Script" uid="uid://bd4cgashv2udb" path="res://scenes/Levels/Follow_camera.gd" id="4_eg4yq"]
 [ext_resource type="PackedScene" uid="uid://cq8705j0gcxw0" path="res://scenes/Enemies/mushroom.tscn" id="5_fsqur"]
+[ext_resource type="PackedScene" uid="uid://ckefpvr2oanr4" path="res://scenes/Enemies/Bat.tscn" id="6_a4mo8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fsqur"]
 texture = ExtResource("1_tc7dm")
@@ -94,5 +95,10 @@ position = Vector2(132, 224)
 position = Vector2(245, 143)
 script = ExtResource("4_eg4yq")
 
-[node name="Mushroom" parent="." unique_id=585929183 instance=ExtResource("5_fsqur")]
-position = Vector2(493, 214)
+[node name="Enemies" type="Node2D" parent="." unique_id=1125394164]
+
+[node name="Mushroom" parent="Enemies" unique_id=585929183 instance=ExtResource("5_fsqur")]
+position = Vector2(302, 109)
+
+[node name="Bat" parent="Enemies" unique_id=1448959305 instance=ExtResource("6_a4mo8")]
+position = Vector2(325, 187)
