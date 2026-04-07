@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://egm13peyla6u" path="res://Scripts/enemy.gd" id="1_5alqo"]
 
 [node name="Enemy" type="CharacterBody2D" unique_id=585929183]
+collision_layer = 4
+collision_mask = 3
 script = ExtResource("1_5alqo")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1449535824]
@@ -10,5 +12,9 @@ script = ExtResource("1_5alqo")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=674357468]
 
 [node name="Hurtbox" type="Area2D" parent="." unique_id=391303335]
+collision_layer = 4
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=1078732743]
+
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]

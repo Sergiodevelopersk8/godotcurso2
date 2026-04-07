@@ -5,6 +5,11 @@ class_name Mushroom
 
 
 
+#func _ready() -> void:
+	#sobre escritura de la clase base del enemigo enemy.gd
+	#ejecuta el ready primero de la clase base 
+	#super._ready()
+
 
 func _physics_process(delta: float) -> void:
 	

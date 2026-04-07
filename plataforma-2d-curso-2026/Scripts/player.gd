@@ -51,3 +51,7 @@ func update_animations():
 		anim.play("run")
 	else:
 		anim.play("idle")
+
+
+func _on_hurtbox_area_entered(area: Area2D) -> void:
+	queue_free()

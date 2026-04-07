@@ -207,7 +207,11 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cyojo"]
 size = Vector2(12, 22)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uiqp4"]
+size = Vector2(14.5, 25)
+
 [node name="Player" type="CharacterBody2D" unique_id=560204453 groups=["Player"]]
+collision_layer = 0
 script = ExtResource("1_1kbk7")
 speed = 180.0
 jump_speed = 330.0
@@ -221,3 +225,14 @@ animation = &"idle"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=872414626]
 position = Vector2(1, 5)
 shape = SubResource("RectangleShape2D_cyojo")
+
+[node name="Hurtbox" type="Area2D" parent="." unique_id=1425065690]
+collision_layer = 2
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=1427754149]
+position = Vector2(1.75, 3.5)
+shape = SubResource("RectangleShape2D_uiqp4")
+debug_color = Color(0.727517, 0.47463733, 0.06003575, 0.41960785)
+
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
