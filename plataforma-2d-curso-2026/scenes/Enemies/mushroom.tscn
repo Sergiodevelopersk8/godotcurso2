@@ -128,7 +128,7 @@ animations = [{
 size = Vector2(20, 14)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i0alm"]
-radius = 5.0
+radius = 4.48666
 height = 20.0
 
 [node name="Mushroom" unique_id=585929183 instance=ExtResource("1_8f0vu")]
@@ -148,9 +148,13 @@ frame_progress = 0.23746574
 position = Vector2(0, 9)
 shape = SubResource("RectangleShape2D_nfsas")
 
-[node name="CollisionShape2D" parent="Hurtbox" parent_id_path=PackedInt32Array(391303335) index="0" unique_id=1078732743]
-position = Vector2(0, 4)
+[node name="Hurtbox" parent="." index="2" unique_id=391303335]
+position = Vector2(0, -6)
+
+[node name="CollisionShape2D" parent="Hurtbox" index="0" unique_id=1078732743]
+position = Vector2(0, 10)
 rotation = 1.5707964
+scale = Vector2(-1.1144147, 1.2098966)
 shape = SubResource("CapsuleShape2D_i0alm")
 
 [node name="RayCast2D" type="RayCast2D" parent="." index="3" unique_id=115592410]

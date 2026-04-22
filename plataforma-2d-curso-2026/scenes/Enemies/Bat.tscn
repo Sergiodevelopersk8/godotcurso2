@@ -62,7 +62,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t6urv"]
-size = Vector2(44, 13)
+size = Vector2(32, 13)
 
 [node name="Bat" unique_id=585929183 instance=ExtResource("1_t6urv")]
 script = ExtResource("2_c87qa")
@@ -75,6 +75,9 @@ animation = &"bat"
 autoplay = "bat"
 frame_progress = 0.24720776
 
-[node name="CollisionShape2D" parent="Hurtbox" parent_id_path=PackedInt32Array(391303335) index="0" unique_id=1078732743]
-position = Vector2(0, -0.5)
+[node name="Hurtbox" parent="." index="2" unique_id=391303335]
+position = Vector2(0, -6)
+
+[node name="CollisionShape2D" parent="Hurtbox" index="0" unique_id=1078732743]
+position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_t6urv")

@@ -228,7 +228,7 @@ shape = SubResource("RectangleShape2D_cyojo")
 
 [node name="Hurtbox" type="Area2D" parent="." unique_id=1425065690]
 collision_layer = 2
-collision_mask = 4
+collision_mask = 20
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=1427754149]
 position = Vector2(1.75, 3.5)
