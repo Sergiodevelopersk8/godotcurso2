@@ -2,6 +2,7 @@ class_name Player
 extends CharacterBody2D
 
 @onready var anim: AnimatedSprite2D = $Sprite2D
+@onready var anima: AnimationPlayer = $AnimationPlayer
 
 
 
@@ -55,10 +56,21 @@ func update_animations():
 
 func _on_hurtbox_area_entered(area: Area2D) -> void:
 	if area.is_in_group("traps"):
-		queue_free()
+		death_player()
 		return
 	if position.y < area.global_position.y:
 		velocity.y = -jump_speed #da un salto el jugador como mario bros
 		print("salto como mario")
 	else:
-		queue_free()
+		death_player()
+
+
+
+func death_player():
+	anima.play("death")
+	set_physics_process(false)
+	anim.pause()
+
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	queue_free()

@@ -210,6 +210,68 @@ size = Vector2(12, 22)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uiqp4"]
 size = Vector2(14.5, 25)
 
+[sub_resource type="Animation" id="Animation_uiqp4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_hvfru"]
+resource_name = "death"
+length = 0.5
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 0.13725491, 0.101960786, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:scale")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.1, 1.1), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a06cl"]
+_data = {
+&"RESET": SubResource("Animation_uiqp4"),
+&"death": SubResource("Animation_hvfru")
+}
+
 [node name="Player" type="CharacterBody2D" unique_id=560204453 groups=["Player"]]
 collision_layer = 0
 script = ExtResource("1_1kbk7")
@@ -220,7 +282,7 @@ metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1520999909]
 sprite_frames = SubResource("SpriteFrames_t6q27")
-animation = &"idle"
+animation = &"fall"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=872414626]
 position = Vector2(1, 5)
@@ -235,4 +297,8 @@ position = Vector2(1.75, 3.5)
 shape = SubResource("RectangleShape2D_uiqp4")
 debug_color = Color(0.727517, 0.47463733, 0.06003575, 0.41960785)
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=104471852]
+libraries/ = SubResource("AnimationLibrary_a06cl")
+
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

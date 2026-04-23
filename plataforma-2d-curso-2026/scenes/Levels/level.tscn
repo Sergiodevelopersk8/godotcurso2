@@ -119,10 +119,10 @@ script = ExtResource("4_eg4yq")
 [node name="Enemies" type="Node2D" parent="." unique_id=1125394164]
 
 [node name="Mushroom" parent="Enemies" unique_id=585929183 instance=ExtResource("5_fsqur")]
-position = Vector2(302, 109)
+position = Vector2(250, 223)
 
 [node name="Bat" parent="Enemies" unique_id=1448959305 instance=ExtResource("6_a4mo8")]
-position = Vector2(325, 187)
+position = Vector2(562, 148)
 
 [node name="Player" parent="." unique_id=560204453 instance=ExtResource("1_byklb")]
 position = Vector2(132, 224)
