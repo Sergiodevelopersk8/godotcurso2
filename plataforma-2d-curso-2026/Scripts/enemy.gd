@@ -16,7 +16,7 @@ func _ready() -> void:
 func _on_hurtbox_area_entered(area: Area2D) -> void:
 	if player.position.y < hurtbox.global_position.y:
 		animation_player.play("dissapear")
-		set_physics_process(false)
+		set_physics_process(false) #pausa la fisica del enemigo cuando no este en pantalla
 		animated_sprite_2d.pause()
 
 
@@ -26,4 +26,4 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 
 
 func _on_visible_on_screen_notifier_2d_screen_entered() -> void:
-	set_physics_process(true)
+	set_physics_process(true) #reactiva el movimiento del enemigo cuando entre en pantallaa
