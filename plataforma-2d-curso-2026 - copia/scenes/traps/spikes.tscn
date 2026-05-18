@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://begcb6l35qpnh"]
+
+[ext_resource type="Texture2D" uid="uid://cedmcv35pifgs" path="res://assets/sprites/other/spikes.png" id="1_x0y1a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k7bup"]
+size = Vector2(30, 5)
+
+[node name="spikes" type="Area2D" unique_id=729975688 groups=["traps"]]
+collision_layer = 16
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2013457349]
+texture = ExtResource("1_x0y1a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=353435990]
+position = Vector2(0, 5.5)
+shape = SubResource("RectangleShape2D_k7bup")
+metadata/_edit_group_ = true
