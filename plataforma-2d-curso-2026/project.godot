@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Plataforma2d_curso_2026_copy"
-run/main_scene="uid://dhnsfbfj84lcq"
+run/main_scene="uid://d4mlfr7pp0px1"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -27,6 +27,10 @@ window/stretch/mode="canvas_items"
 
 Player=""
 traps=""
+
+[gui]
+
+theme/custom="uid://dn52po0aqslkw"
 
 [input]
 

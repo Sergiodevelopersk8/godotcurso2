@@ -98,3 +98,5 @@ autoplay = "finsh"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=236609286]
 position = Vector2(15.5, -14.5)
 shape = SubResource("RectangleShape2D_an5s7")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

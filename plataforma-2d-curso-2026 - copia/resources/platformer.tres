@@ -1,0 +1,43 @@
+[gd_resource type="Theme" format=3 uid="uid://dn52po0aqslkw"]
+
+[ext_resource type="FontFile" uid="uid://fiqt22lyod0b" path="res://assets/fonts/BD_Cartoon_Shout.ttf" id="1_4h3ar"]
+[ext_resource type="Texture2D" uid="uid://b4p1uqdfyo56u" path="res://assets/sprites/ui/button-highlight.png" id="1_fv0h8"]
+[ext_resource type="Texture2D" uid="uid://cm14jm6ooqutu" path="res://assets/sprites/ui/button-normal.png" id="2_xpo83"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xpo83"]
+texture = ExtResource("1_fv0h8")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4mikn"]
+texture = ExtResource("1_fv0h8")
+draw_center = false
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w8cmg"]
+texture = ExtResource("2_xpo83")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a0o6w"]
+texture = ExtResource("1_fv0h8")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+
+[resource]
+Button/font_sizes/font_size = 10
+Button/fonts/font = ExtResource("1_4h3ar")
+Button/styles/focus = SubResource("StyleBoxTexture_xpo83")
+Button/styles/hover = SubResource("StyleBoxTexture_4mikn")
+Button/styles/normal = SubResource("StyleBoxTexture_w8cmg")
+Button/styles/pressed = SubResource("StyleBoxTexture_a0o6w")
+HeaderLarge/constants/outline_size = 10
+HeaderLarge/font_sizes/font_size = 25
+Label/constants/outline_size = 4
+Label/font_sizes/font_size = 10
+Label/fonts/font = ExtResource("1_4h3ar")
