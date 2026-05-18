@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d4mlfr7pp0px1"]
 
 [ext_resource type="Texture2D" uid="uid://bytpjiqb10ux6" path="res://assets/sprites/ui/background.png" id="1_0ay0p"]
+[ext_resource type="Script" uid="uid://cjcrfdov4aeh2" path="res://Scripts/main.gd" id="1_2p1s2"]
 
 [node name="Main" type="Control" unique_id=516656917]
 layout_mode = 3
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_2p1s2")
 
 [node name="Background" type="TextureRect" parent="." unique_id=949779993]
 layout_mode = 1
@@ -78,3 +80,5 @@ layout_mode = 2
 layout_mode = 2
 text = "High Score: 0"
 horizontal_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]

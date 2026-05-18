@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dxjjim4217ebn"]
 
 [ext_resource type="Texture2D" uid="uid://bytpjiqb10ux6" path="res://assets/sprites/ui/background.png" id="1_4ttpn"]
+[ext_resource type="Script" uid="uid://dv5uj507tdmjb" path="res://Scripts/end_screen.gd" id="1_53v5j"]
 [ext_resource type="Theme" uid="uid://dn52po0aqslkw" path="res://resources/platformer.tres" id="2_n8r4t"]
 [ext_resource type="FontFile" uid="uid://fiqt22lyod0b" path="res://assets/fonts/BD_Cartoon_Shout.ttf" id="3_wgyui"]
 
@@ -14,6 +15,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_53v5j")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1557747676]
 layout_mode = 1
