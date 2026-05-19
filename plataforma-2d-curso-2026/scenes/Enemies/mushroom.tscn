@@ -135,6 +135,7 @@ height = 20.0
 script = ExtResource("2_v73nu")
 speed = 40.0
 gravity = 980.0
+points = 5
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" parent="." index="0" unique_id=1449535824]

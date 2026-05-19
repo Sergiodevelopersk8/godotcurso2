@@ -2,8 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://itvkjvljocu8" path="res://assets/sprites/tiles/background-tile.png" id="1_tc7dm"]
 [ext_resource type="Texture2D" uid="uid://cvyu7te6341v5" path="res://assets/sprites/tiles/foreground.png" id="2_muv8p"]
+[ext_resource type="Script" uid="uid://drbemf30qtafc" path="res://Scripts/fall_death_area.gd" id="3_fsqur"]
 [ext_resource type="Script" uid="uid://bd4cgashv2udb" path="res://scenes/Levels/Follow_camera.gd" id="4_eg4yq"]
 [ext_resource type="PackedScene" uid="uid://b6uvbg87pg6ml" path="res://scenes/Flag/flag.tscn" id="4_fsqur"]
+[ext_resource type="PackedScene" uid="uid://d2kbd702fq7a2" path="res://scenes/ui/hud.tscn" id="6_a4mo8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fsqur"]
 texture = ExtResource("1_tc7dm")
@@ -93,6 +95,7 @@ tile_set = SubResource("TileSet_byklb")
 position = Vector2(326, 283)
 collision_layer = 16
 collision_mask = 0
+script = ExtResource("3_fsqur")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="traps/FallDeathArea" unique_id=2109099076]
 
@@ -107,3 +110,10 @@ script = ExtResource("4_eg4yq")
 [node name="moving_platforms" type="Node2D" parent="." unique_id=1246705155]
 
 [node name="Flag" parent="." unique_id=992286958 instance=ExtResource("4_fsqur")]
+
+[node name="UILayer" type="CanvasLayer" parent="." unique_id=307875238]
+
+[node name="HUD" parent="UILayer" unique_id=1588013561 instance=ExtResource("6_a4mo8")]
+metadata/_edit_lock_ = true
+
+[connection signal="area_entered" from="traps/FallDeathArea" to="traps/FallDeathArea" method="_on_area_entered"]

@@ -42,9 +42,8 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6sach"]
 size = Vector2(30, 4)
 
-[node name="MovingPlatform" type="AnimatableBody2D" unique_id=1015039138 node_paths=PackedStringArray("target")]
+[node name="MovingPlatform" type="AnimatableBody2D" unique_id=1015039138]
 script = ExtResource("1_evb6x")
-target = NodePath("")
 duration = 2.0
 metadata/_edit_group_ = true
 
@@ -58,3 +57,5 @@ frame_progress = 0.5763738
 position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_6sach")
 one_way_collision = true
+
+[connection signal="tree_exited" from="." to="." method="_on_tree_exited"]

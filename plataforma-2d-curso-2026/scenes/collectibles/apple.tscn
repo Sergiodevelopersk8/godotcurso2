@@ -49,6 +49,7 @@ _data = {
 collision_layer = 8
 collision_mask = 2
 script = ExtResource("1_xk55w")
+points = 5
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=435399054]

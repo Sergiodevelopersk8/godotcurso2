@@ -57,7 +57,7 @@ theme = ExtResource("2_n8r4t")
 text = "congratulations!"
 label_settings = SubResource("LabelSettings_53v5j")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=698673617]
+[node name="ScoreLabel" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=698673617]
 layout_mode = 2
 text = "your score: 0"
 
@@ -66,3 +66,5 @@ custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 text = "go back"
+
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/ReturnButton" to="." method="_on_return_button_pressed"]

@@ -67,6 +67,7 @@ size = Vector2(32, 13)
 [node name="Bat" unique_id=585929183 instance=ExtResource("1_t6urv")]
 script = ExtResource("2_c87qa")
 speed = 40.0
+points = 10
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" parent="." index="0" unique_id=1449535824]

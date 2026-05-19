@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+Signalmanager="*uid://djscexrji5yjk"
 Autoload="*uid://cm3kw78h4n3bf"
 
 [display]

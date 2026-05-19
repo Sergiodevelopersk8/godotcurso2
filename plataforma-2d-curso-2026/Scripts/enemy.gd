@@ -6,8 +6,14 @@ extends CharacterBody2D
 @onready var hurtbox: Area2D = $Hurtbox
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
-
 var player 
+@export var points:int
+
+
+
+
+
+
 
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("Player")
@@ -18,6 +24,8 @@ func _on_hurtbox_area_entered(area: Area2D) -> void:
 		animation_player.play("dissapear")
 		set_physics_process(false) #pausa la fisica del enemigo cuando no este en pantalla
 		animated_sprite_2d.pause()
+		Autoload.update_score(points)
+		Signalmanager.score_update.emit()
 
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
