@@ -81,4 +81,13 @@ layout_mode = 2
 text = "High Score: 0"
 horizontal_alignment = 1
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=854531031]
+
+[connection signal="focus_entered" from="VBoxContainer/StartButton" to="." method="_on_button_focus_entered"]
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="focus_entered" from="VBoxContainer/SFXButton" to="." method="_on_button_focus_entered"]
+[connection signal="pressed" from="VBoxContainer/SFXButton" to="." method="_on_sfx_button_pressed"]
+[connection signal="focus_entered" from="VBoxContainer/MusicButton" to="." method="_on_button_focus_entered"]
+[connection signal="pressed" from="VBoxContainer/MusicButton" to="." method="_on_music_button_pressed"]
+[connection signal="focus_entered" from="VBoxContainer/QuitButton" to="." method="_on_button_focus_entered"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

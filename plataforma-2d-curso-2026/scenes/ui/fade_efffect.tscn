@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://bjr3wts5s1w8s"]
+
+[ext_resource type="Script" uid="uid://b44bgxtjah0a1" path="res://Scripts/fade_efffect.gd" id="1_oyd6a"]
+
+[sub_resource type="Animation" id="Animation_4vjmk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.0035191667, 0.0035191681, 0.0035191672, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_oyd6a"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.0035191667, 0.0035191681, 0.0035191672, 1), Color(0.003921569, 0.003921569, 0.003921569, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_78icx"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.003921569, 0.003921569, 0.003921569, 0), Color(0.003921569, 0.003921569, 0.003921569, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_78icx"]
+_data = {
+&"RESET": SubResource("Animation_4vjmk"),
+&"fade_in": SubResource("Animation_oyd6a"),
+&"fade_out": SubResource("Animation_78icx")
+}
+
+[node name="FadeEfffect" type="Control" unique_id=1181228594]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_oyd6a")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1413445751]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0035191667, 0.0035191681, 0.0035191672, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=191180416]
+libraries/ = SubResource("AnimationLibrary_78icx")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

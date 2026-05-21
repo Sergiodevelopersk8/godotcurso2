@@ -11,6 +11,12 @@ extends CharacterBody2D
 @export var gravity : float
 var cambio_animacion : String
 var is_facing_right = true #esta mirando a la derecha
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
+
+
+func _ready() -> void:
+	Signalmanager.level_completed.connect(_on_level_completed)
+
 
 func _physics_process(delta: float) -> void:
 	move_x()
@@ -35,7 +41,7 @@ func jump_player(delta):
 	#salto del jugador
 	if is_on_floor() and Input.is_action_just_pressed("jump"):
 		velocity.y = -jump_speed 
-		
+		AudioManager.play_sfx(audio_stream_player_2d,AudioManager.JUMP)
 	
 	if not is_on_floor(): # si no esta en el piso aplica la gravedad
 		velocity.y += gravity * delta #aplico gravedad a el player
@@ -69,9 +75,15 @@ func _on_hurtbox_area_entered(area: Area2D) -> void:
 func death_player():
 	anima.play("death")
 	set_physics_process(false)
+	AudioManager.play_sfx(audio_stream_player_2d,AudioManager.PLAYER_DIE)
 	anim.pause()
 
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	queue_free()
 	Autoload.restart_level()
+
+
+func _on_level_completed():
+	set_physics_process(false)
+	anim.play("idle")

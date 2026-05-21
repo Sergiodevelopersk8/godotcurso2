@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://dey377jf00j4h"]
 
+[ext_resource type="Script" uid="uid://cnvrdgbt3ivfl" path="res://Scripts/level.gd" id="1_fi66n"]
 [ext_resource type="Texture2D" uid="uid://itvkjvljocu8" path="res://assets/sprites/tiles/background-tile.png" id="1_tc7dm"]
 [ext_resource type="Texture2D" uid="uid://cvyu7te6341v5" path="res://assets/sprites/tiles/foreground.png" id="2_muv8p"]
 [ext_resource type="Script" uid="uid://drbemf30qtafc" path="res://Scripts/fall_death_area.gd" id="3_fsqur"]
 [ext_resource type="Script" uid="uid://bd4cgashv2udb" path="res://scenes/Levels/Follow_camera.gd" id="4_eg4yq"]
 [ext_resource type="PackedScene" uid="uid://b6uvbg87pg6ml" path="res://scenes/Flag/flag.tscn" id="4_fsqur"]
 [ext_resource type="PackedScene" uid="uid://d2kbd702fq7a2" path="res://scenes/ui/hud.tscn" id="6_a4mo8"]
+[ext_resource type="PackedScene" uid="uid://bjr3wts5s1w8s" path="res://scenes/ui/fade_efffect.tscn" id="8_87hxj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fsqur"]
 texture = ExtResource("1_tc7dm")
@@ -78,6 +80,7 @@ physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_eg4yq")
 
 [node name="Level" type="Node2D" unique_id=1272231033]
+script = ExtResource("1_fi66n")
 
 [node name="TilemapLayers" type="Node2D" parent="." unique_id=415922790]
 
@@ -115,5 +118,11 @@ script = ExtResource("4_eg4yq")
 
 [node name="HUD" parent="UILayer" unique_id=1588013561 instance=ExtResource("6_a4mo8")]
 metadata/_edit_lock_ = true
+
+[node name="FadeEfffect" parent="UILayer" unique_id=1181228594 instance=ExtResource("8_87hxj")]
+visible = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=749388043]
+volume_db = 1.083
 
 [connection signal="area_entered" from="traps/FallDeathArea" to="traps/FallDeathArea" method="_on_area_entered"]

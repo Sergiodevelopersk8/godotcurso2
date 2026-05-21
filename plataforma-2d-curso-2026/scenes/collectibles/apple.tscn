@@ -62,4 +62,10 @@ shape = SubResource("RectangleShape2D_xk55w")
 libraries/ = SubResource("AnimationLibrary_xk55w")
 autoplay = &"APPLE"
 
+[node name="Apple_audio" type="AudioStreamPlayer2D" parent="." unique_id=245759355]
+
+[node name="Timer" type="Timer" parent="." unique_id=1113587155]
+wait_time = 0.2
+
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

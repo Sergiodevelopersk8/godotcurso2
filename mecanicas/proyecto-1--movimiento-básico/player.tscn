@@ -5,8 +5,7 @@
 
 [node name="player" type="CharacterBody2D" unique_id=1854700541]
 script = ExtResource("1_onrkg")
-speed = 1000
 
 [node name="sprite" type="Sprite2D" parent="." unique_id=1769819707]
-position = Vector2(564, 298)
+position = Vector2(136, 279)
 texture = ExtResource("2_i3pqv")

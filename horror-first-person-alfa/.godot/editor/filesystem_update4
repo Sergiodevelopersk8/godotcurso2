@@ -1,0 +1,3 @@
+res://levels/level_base.tscn
+res://common/autoloads/GameManager.gd
+res://common/autoloads/AudioManager.gd

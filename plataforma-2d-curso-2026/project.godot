@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Signalmanager="*uid://djscexrji5yjk"
 Autoload="*uid://cm3kw78h4n3bf"
+AudioManager="*uid://dog8c6cpj85me"
 
 [display]
 

@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://dv5uj507tdmjb" path="res://Scripts/end_screen.gd" id="1_53v5j"]
 [ext_resource type="Theme" uid="uid://dn52po0aqslkw" path="res://resources/platformer.tres" id="2_n8r4t"]
 [ext_resource type="FontFile" uid="uid://fiqt22lyod0b" path="res://assets/fonts/BD_Cartoon_Shout.ttf" id="3_wgyui"]
+[ext_resource type="PackedScene" uid="uid://bjr3wts5s1w8s" path="res://scenes/ui/fade_efffect.tscn" id="5_e4cmn"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_53v5j"]
 font = ExtResource("3_wgyui")
@@ -66,5 +67,8 @@ custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 text = "go back"
+
+[node name="FadeEfffect" parent="." unique_id=1181228594 instance=ExtResource("5_e4cmn")]
+layout_mode = 1
 
 [connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/ReturnButton" to="." method="_on_return_button_pressed"]

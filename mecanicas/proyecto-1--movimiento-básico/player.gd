@@ -7,7 +7,8 @@
 extends CharacterBody2D
 class_name Player
 
-@export var speed : int 
+@export var speed : int = 500
+@export var velocidad_correr : int = 200
 
 func _ready() -> void:
 	print("posicion inicial: ", position)
@@ -19,7 +20,7 @@ func _physics_process(delta: float) -> void:
 
 
 func move_player(delta : float):
-	
+	var velocidad_actual = speed
 	var direccion_x = Input.get_axis("izquierda","derecha")
 	var direccion_y = Input.get_axis("arriba","abajo")
 	var direccion = Vector2(direccion_x,direccion_y)
@@ -28,13 +29,17 @@ func move_player(delta : float):
 		velocity = direccion.normalized() * speed
 	else:
 		velocity = Vector2.ZERO
+	if Input.is_action_pressed("run"):
+		speed += velocidad_correr
+	else:
+		speed = velocidad_correr
 	move_and_slide()
 
 
 
 
 func pantalla_limite():
-	var pantalla = get_viewport_rect().size
-	
+	var pantalla = get_viewport_rect().size 
+	print(pantalla)
 	position.x = clamp(position.x, 0, pantalla.x)
 	position.y = clamp(position.y, 0, pantalla.y)
