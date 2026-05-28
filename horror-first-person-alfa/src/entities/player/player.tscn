@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://c1uydeliydj17"]
+
+[ext_resource type="Texture2D" uid="uid://cs2pcwflpxxib" path="res://ui/hud/point_view/crosshair.png" id="1_4m8ck"]
+[ext_resource type="Script" uid="uid://dguupkf4w1250" path="res://src/entities/player/scripts/Player.gd" id="1_vt6n5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s8n7f"]
+albedo_color = Color(1, 0.050980393, 1, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_s8n7f"]
+material = SubResource("StandardMaterial3D_s8n7f")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_s8n7f"]
+
+[node name="Player" type="CharacterBody3D" unique_id=1893940135]
+script = ExtResource("1_vt6n5")
+metadata/_edit_group_ = true
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1906324123]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5919798, -0.40497988)
+
+[node name="RayCastInteractuar" type="RayCast3D" parent="Camera3D" unique_id=1392849462]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, -0.106451094)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1443923370]
+mesh = SubResource("CapsuleMesh_s8n7f")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=742676274]
+shape = SubResource("CapsuleShape3D_s8n7f")
+
+[node name="StateMachine" type="Node" parent="." unique_id=428993389]
+
+[node name="Idle" type="Node" parent="StateMachine" unique_id=724833205]
+
+[node name="Walk" type="Node" parent="StateMachine" unique_id=222732841]
+
+[node name="Run" type="Node" parent="StateMachine" unique_id=847450465]
+
+[node name="Crouch" type="Node" parent="StateMachine" unique_id=1742343563]
+
+[node name="Air" type="Node" parent="StateMachine" unique_id=729915516]
+
+[node name="RaycastCrouch" type="Node3D" parent="." unique_id=441413815]
+
+[node name="RayCastGroundDetector" type="RayCast3D" parent="RaycastCrouch" unique_id=224488748]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+visible = false
+debug_shape_custom_color = Color(0.8922621, 0.07663231, 0.77940965, 1)
+
+[node name="RaycastCrouch" type="RayCast3D" parent="RaycastCrouch" unique_id=37865525]
+transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0.2, 0.048)
+
+[node name="FootstepSound" type="AudioStreamPlayer" parent="." unique_id=2102329457]
+
+[node name="GUIPlayer" type="CanvasLayer" parent="." unique_id=1324595581]
+
+[node name="StateMachinseLabel" type="Label" parent="GUIPlayer" unique_id=324124541]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="description_label" type="Label" parent="GUIPlayer" unique_id=1095406439]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = 16.0
+offset_right = 20.0
+offset_bottom = 39.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Punto_view" type="TextureRect" parent="GUIPlayer" unique_id=644185007]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_4m8ck")

@@ -1,3 +1,3 @@
+res://src/entities/player/player.tscn
+res://src/entities/player/scripts/Player.gd
 res://levels/level_base.tscn
-res://common/autoloads/GameManager.gd
-res://common/autoloads/AudioManager.gd

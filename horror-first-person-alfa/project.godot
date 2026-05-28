@@ -11,8 +11,14 @@ config_version=5
 [application]
 
 config/name="horror_first_person_alfa"
+run/main_scene="uid://bhnndfskx60x0"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameManager="*uid://dxmvf3ao106la"
+AudioStreamManager="*uid://cw5887r2ynam7"
 
 [physics]
 
