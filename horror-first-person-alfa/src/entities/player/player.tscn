@@ -2,6 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://cs2pcwflpxxib" path="res://ui/hud/point_view/crosshair.png" id="1_4m8ck"]
 [ext_resource type="Script" uid="uid://dguupkf4w1250" path="res://src/entities/player/scripts/Player.gd" id="1_vt6n5"]
+[ext_resource type="Script" uid="uid://sg6uskc1u0g3" path="res://src/entities/player/scripts/states/StateMachine.gd" id="2_muk8e"]
+[ext_resource type="Script" uid="uid://4eo0fvhxrssp" path="res://src/entities/player/scripts/states/idle.gd" id="3_wrxq6"]
+[ext_resource type="Script" uid="uid://byv56lxphp6al" path="res://src/entities/player/scripts/states/walk.gd" id="4_ketdh"]
+[ext_resource type="Script" uid="uid://dxa7rdxqqh6nm" path="res://src/entities/player/scripts/states/run.gd" id="5_0mfjg"]
+[ext_resource type="Script" uid="uid://cdhetbgoscikk" path="res://src/entities/player/scripts/states/crouch.gd" id="6_oih67"]
+[ext_resource type="Script" uid="uid://blsj0cgqndoym" path="res://src/entities/player/scripts/states/air.gd" id="7_eb65w"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s8n7f"]
 albedo_color = Color(1, 0.050980393, 1, 1)
@@ -28,16 +34,23 @@ mesh = SubResource("CapsuleMesh_s8n7f")
 shape = SubResource("CapsuleShape3D_s8n7f")
 
 [node name="StateMachine" type="Node" parent="." unique_id=428993389]
+script = ExtResource("2_muk8e")
+initial_state = NodePath("Idle")
 
 [node name="Idle" type="Node" parent="StateMachine" unique_id=724833205]
+script = ExtResource("3_wrxq6")
 
 [node name="Walk" type="Node" parent="StateMachine" unique_id=222732841]
+script = ExtResource("4_ketdh")
 
 [node name="Run" type="Node" parent="StateMachine" unique_id=847450465]
+script = ExtResource("5_0mfjg")
 
 [node name="Crouch" type="Node" parent="StateMachine" unique_id=1742343563]
+script = ExtResource("6_oih67")
 
 [node name="Air" type="Node" parent="StateMachine" unique_id=729915516]
+script = ExtResource("7_eb65w")
 
 [node name="RaycastCrouch" type="Node3D" parent="." unique_id=441413815]
 

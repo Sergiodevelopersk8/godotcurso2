@@ -1,5 +1,27 @@
 [gd_scene format=3 uid="uid://6rfn5ea2mlrw"]
 
 [ext_resource type="PackedScene" uid="uid://bhnndfskx60x0" path="res://levels/level_base.tscn" id="1_vn7o3"]
+[ext_resource type="Material" uid="uid://qbybyiagt4ao" path="res://Assets/environmental/materials/Concrete_One.tres" id="2_jirdo"]
+[ext_resource type="PackedScene" uid="uid://c1uydeliydj17" path="res://src/entities/player/player.tscn" id="3_bt44k"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jirdo"]
+size = Vector3(15.68512, 0.37841797, 9.408569)
+
+[sub_resource type="BoxMesh" id="BoxMesh_vn7o3"]
+lightmap_size_hint = Vector2i(133, 90)
+material = ExtResource("2_jirdo")
+size = Vector3(15.549, 0.386, 9.789)
 
 [node name="Level_1" unique_id=169332833 instance=ExtResource("1_vn7o3")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="ground" parent_id_path=PackedInt32Array(781961572) index="0" unique_id=229126455]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ground/StaticBody3D" index="0" unique_id=400379426]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9084167, -0.32495117, 0.14468384)
+shape = SubResource("BoxShape3D_jirdo")
+
+[node name="floor" parent="ground" parent_id_path=PackedInt32Array(781961572) index="1" unique_id=1623589840]
+mesh = SubResource("BoxMesh_vn7o3")
+
+[node name="Player" parent="." index="2" unique_id=1893940135 instance=ExtResource("3_bt44k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0103452, 0)

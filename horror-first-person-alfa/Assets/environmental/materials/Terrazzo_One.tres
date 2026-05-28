@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c5cc4ucsaeuo5"]
+
+[ext_resource type="Texture2D" uid="uid://cdvqcg6nyce3h" path="res://Assets/textura/Terrazzo/Terrazzo019S_1K-JPG_Color.jpg" id="1_3d3dt"]
+
+[resource]
+albedo_texture = ExtResource("1_3d3dt")
