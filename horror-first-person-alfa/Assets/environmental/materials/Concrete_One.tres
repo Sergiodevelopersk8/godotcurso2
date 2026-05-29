@@ -6,4 +6,4 @@
 [resource]
 albedo_texture = ExtResource("1_jnrwf")
 roughness_texture = ExtResource("2_duu6p")
-uv1_scale = Vector3(15, 15, 15)
+uv1_scale = Vector3(14.305, 13.035, 13.52)

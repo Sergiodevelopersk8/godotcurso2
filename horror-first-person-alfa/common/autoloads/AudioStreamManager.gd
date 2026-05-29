@@ -8,7 +8,7 @@ var num_players = 10
 var bus = "SFX"
 
 var available = [] # audio nodos
-var queue = []
+var queue = [] #libera el espcio
 
 #----------FUNCIONES DE SISTEMA-----------
 
