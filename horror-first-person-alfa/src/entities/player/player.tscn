@@ -52,14 +52,13 @@ script = ExtResource("6_oih67")
 [node name="Air" type="Node" parent="StateMachine" unique_id=729915516]
 script = ExtResource("7_eb65w")
 
-[node name="RaycastCrouch" type="Node3D" parent="." unique_id=441413815]
+[node name="Raycasts" type="Node3D" parent="." unique_id=441413815]
 
-[node name="RayCastGroundDetector" type="RayCast3D" parent="RaycastCrouch" unique_id=224488748]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
-visible = false
+[node name="RayCastGroundDetector" type="RayCast3D" parent="Raycasts" unique_id=224488748]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.72834575, 0)
 debug_shape_custom_color = Color(0.8922621, 0.07663231, 0.77940965, 1)
 
-[node name="RaycastCrouch" type="RayCast3D" parent="RaycastCrouch" unique_id=37865525]
+[node name="RaycastCrouch" type="RayCast3D" parent="Raycasts" unique_id=37865525]
 transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0.2, 0.048)
 
 [node name="FootstepSound" type="AudioStreamPlayer" parent="." unique_id=2102329457]

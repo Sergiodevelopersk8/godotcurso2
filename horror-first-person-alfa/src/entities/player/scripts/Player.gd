@@ -15,8 +15,9 @@ class_name Player
 
 #-------onreadys raycast----------
 @onready var ray_cast_interactuar: RayCast3D = $Camera3D/RayCastInteractuar
-@onready var ray_cast_ground_detector: RayCast3D = $RaycastCrouch/RayCastGroundDetector
-@onready var raycast_crouch: RayCast3D = $RaycastCrouch/RaycastCrouch
+@onready var ray_cast_ground_detector: RayCast3D = $Raycasts/RayCastGroundDetector
+@onready var raycast_crouch: RayCast3D = $Raycasts/RaycastCrouch
+
 
 
 #----------VARIABLES CAMARA---------
@@ -141,6 +142,7 @@ func Sound_Steps():
 		footstep_sound.pitch_scale = randf_range(.8,1.2)
 		footstep_sound.play()
 		distance_foot_step = 0
+	
 
 
 func floor_sounds_path(nameMat):
