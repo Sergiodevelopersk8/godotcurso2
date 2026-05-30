@@ -165,13 +165,19 @@ func floor_sounds_path(nameMat):
 
 
 func tomar_objeto(objeto):
+	#quita el objeto del padre
+	#en este caso el padre es un node3d que almacena los obejtos
+	#en la escena 
 	objeto.get_parent().remove_child(objeto)
+	#añada como hijo del marker(hand) el objeto que se muestre 
 	hand.add_child(objeto)
-	objeto.position = Vector3.ZERO
-	#Vector3(0.371,-0.415,-1.408) 
-	#0.034,-0.158,0.239
-	#sacle 0.17
-	objeto.rotation = Vector3.ZERO
+	#establesco la posicion esto es desde la clase interact 
+	objeto.position = objeto.pos_obj
+	#igual para la escala
+	objeto.scale = Vector3.ONE * objeto.scale_obj
+	
+	
+	
 
 
 

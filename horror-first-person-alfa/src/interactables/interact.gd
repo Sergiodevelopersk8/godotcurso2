@@ -6,7 +6,8 @@ class_name Interact
 @export var id : String = "Interact" 
 
 #segun yo obtengo la posicion del objeto
-@onready var mesh_instance_3d: MeshInstance3D = $MeshInstance3D
+@export var pos_obj:Vector3 = Vector3(0, 0, -0.5)
+@export var scale_obj: float = 1.0
 
 
 signal isInteract
