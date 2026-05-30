@@ -39,4 +39,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010901868, 0.8789674, 0.00
 [node name="Objetos" type="Node3D" parent="." index="3" unique_id=1028022283]
 
 [node name="Bote_salsa_base_interact" parent="Objetos" index="0" unique_id=607693157 instance=ExtResource("4_kx6l7")]
-transform = Transform3D(0.33, 0, 0, 0, 0.33, 0, 0, 0, 0.33, 6.4881644, 1.7961465, 0)
+transform = Transform3D(0.33, 0, 0, 0, 0.33, 0, 0, 0, 0.33, 0.14092875, 1.4004108, -3.5830255)

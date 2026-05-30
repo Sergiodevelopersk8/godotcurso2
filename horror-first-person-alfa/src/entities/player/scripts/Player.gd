@@ -61,7 +61,7 @@ func _process(delta: float) -> void:
 		Sound_Steps()
 	if direction == Vector3.ZERO:
 		camera_3d.position = camera_3d.position.lerp(origCamPos, delta * 5)
-	
+	interactions()
 
 #--------- FUNCIONES PROPIAS -----------
 
@@ -93,10 +93,6 @@ func process_input(delta) -> Vector3:
 	return direction
 
 func interactions():
-	#if Global.is_dialogue_active:
-	#	description_label.text = ""
-	#	return
-	
 	if ray_cast_interactuar.is_colliding() :
 		if ray_cast_interactuar.get_collider().is_in_group("Interacts"):
 			var interacts = ray_cast_interactuar.get_collider()

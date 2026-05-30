@@ -3,4 +3,9 @@ class_name Bote_de_Salsa
 
 
 func _ready() -> void:
-	print("bote de salsa")
+	action_use()
+
+
+func action_use():
+	#abrir o cerra 
+	super.action_use()

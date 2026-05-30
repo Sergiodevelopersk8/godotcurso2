@@ -3,7 +3,7 @@ extends Area3D
 class_name Interact
 
 
-@export var id : String = "interact" 
+@export var id : String = "Interact" 
 
 signal isInteract
 
