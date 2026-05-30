@@ -17,6 +17,7 @@ class_name Player
 @onready var ray_cast_interactuar: RayCast3D = $Camera3D/RayCastInteractuar
 @onready var ray_cast_ground_detector: RayCast3D = $Raycasts/RayCastGroundDetector
 @onready var raycast_crouch: RayCast3D = $Raycasts/RaycastCrouch
+@onready var hand: Marker3D = $Camera3D/hand
 
 
 
@@ -53,7 +54,7 @@ func _input(event: InputEvent) -> void:
 	if move_and_rotate_player:
 		#entra a la funcion 
 		rotate_camera(event)
-	#interactions()
+	
 
 func _process(delta: float) -> void:
 	if move_and_rotate_player:
@@ -62,6 +63,7 @@ func _process(delta: float) -> void:
 	if direction == Vector3.ZERO:
 		camera_3d.position = camera_3d.position.lerp(origCamPos, delta * 5)
 	interactions()
+	see_mouse()
 
 #--------- FUNCIONES PROPIAS -----------
 
@@ -92,6 +94,9 @@ func process_input(delta) -> Vector3:
 	direction = Vector3(side_input, 0, forward_input).rotated(Vector3.UP,h_rot).normalized()
 	return direction
 
+
+
+
 func interactions():
 	if ray_cast_interactuar.is_colliding() :
 		if ray_cast_interactuar.get_collider().is_in_group("Interacts"):
@@ -101,7 +106,12 @@ func interactions():
 				description_label.text = interacts.id
 			
 			if Input.is_action_just_pressed("interact"):
-				get_viewport().set_input_as_handled()
+				
+				#interacts.global_position
+				tomar_objeto(interacts)
+				
+				get_viewport().set_input_as_handled() #esto evita que el ui y otros inetrfieran cuando se interactua con objetos
+				
 				if interacts.has_method("action_use"):
 					interacts.action_use()
 		else:
@@ -152,3 +162,22 @@ func floor_sounds_path(nameMat):
 		footstep_sound.stream = load("res://Assets/audio/SFX/footsteps/wood/0.ogg")
 	else:
 		footstep_sound.stream = load("res://Assets/audio/SFX/footsteps/boots/0.ogg")
+
+
+func tomar_objeto(objeto):
+	objeto.get_parent().remove_child(objeto)
+	hand.add_child(objeto)
+	objeto.position = Vector3.ZERO
+	#Vector3(0.371,-0.415,-1.408) 
+	#0.034,-0.158,0.239
+	#sacle 0.17
+	objeto.rotation = Vector3.ZERO
+
+
+
+
+
+func see_mouse():
+	if Input.is_action_just_pressed("see_mouse_click"):
+		print("veo el mouse")
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)

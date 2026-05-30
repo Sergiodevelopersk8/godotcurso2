@@ -18,6 +18,7 @@ material = SubResource("StandardMaterial3D_s8n7f")
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_s8n7f"]
 
 [node name="Player" type="CharacterBody3D" unique_id=1893940135]
+transform = Transform3D(1, 0, 0, 0, 1.3996521, 0, 0, 0, 1, 0, 0, 0)
 script = ExtResource("1_vt6n5")
 metadata/_edit_group_ = true
 
@@ -26,7 +27,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5919798, -0.40497988)
 
 [node name="RayCastInteractuar" type="RayCast3D" parent="Camera3D" unique_id=1392849462]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, -0.106451094)
+visible = false
 collide_with_areas = true
+
+[node name="hand" type="Marker3D" parent="Camera3D" unique_id=803259067]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23510846, 0, -0.6592451)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1443923370]
 mesh = SubResource("CapsuleMesh_s8n7f")
