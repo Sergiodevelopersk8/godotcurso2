@@ -1,7 +1,5 @@
-res://src/interactables/bote_salsa/bote_salsa_base_interact.tscn
-res://src/interactables/bote_salsa/bote_salsa_base.gd
-res://src/entities/player/player.tscn
-res://levels/level_1.tscn
-res://src/entities/player/scripts/Player.gd
 res://src/interactables/interact.tscn
-res://src/interactables/interact.gd
+res://src/interactables/bote_salsa/bote_salsa_base_interact.tscn
+res://src/interactables/memela_base/memela_base.tscn
+res://src/interactables/memela_base/memela_base.gd
+res://levels/level_1.tscn

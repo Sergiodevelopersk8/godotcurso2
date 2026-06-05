@@ -1,10 +1,10 @@
+StaticBody3D
 Marker3D
 RayCast3D
 CollisionShape3D
 MeshInstance3D
 Area3D
 Node3D
-StaticBody3D
 TextureRect
 Label
 CanvasLayer
@@ -12,4 +12,3 @@ AudioStreamPlayer
 Node
 Camera3D
 CharacterBody3D
-WorldEnvironment
