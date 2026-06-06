@@ -1,5 +1,5 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1780639821
+::res://::1780766278
 apuntes.txt::TextFile::-1::1780130769::0::1::::<><><>0<>0<><>::
 default_bus_layout.tres::AudioBusLayout::3789415499722831103::1780016897::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D::3741386300160002114::1779343676::1779343685::1::::<><><>0<>0<>4524bee1a9f67b5b30483947bd60b466<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
@@ -140,7 +140,7 @@ garage_floor_rough_1k.exr::::-1::1779955018::1779955018::0::::<><><>0<>0<>08cc46
 ::res://Assets/textura/gravel_concrete/textures/::1779955019
 gravel_concrete_diff_1k.jpg::CompressedTexture2D::7772478731654394863::1779955018::1779955019::1::::<><><>0<>0<>c8ababdbeedff1aa52b6a79d00885eac<>res://.godot/imported/gravel_concrete_diff_1k.jpg-61f3ef05d1fefaa49979aa083f9d7ebb.s3tc.ctex::
 gravel_concrete_disp_1k.png::CompressedTexture2D::7126459060052296802::1779955018::1779955019::1::::<><><>0<>0<>98dab851096eeb3571381cfe7a48b6af<>res://.godot/imported/gravel_concrete_disp_1k.png-5d5814956fd66061d54adeda8fc9bde6.s3tc.ctex::
-::res://Assets/textura/memela_base/::1780639853
+::res://Assets/textura/memela_base/::1780639973
 memela-bandera-base_bread-background.jpg::CompressedTexture2D::3548797103496265055::1780639846::1780639973::1::::<><><>0<>0<>17652dbf9343567a1a1941bc3d5112bd<>res://.godot/imported/memela-bandera-base_bread-background.jpg-84707981b16ec6d8fe27bd25b2f3d8c2.s3tc.ctex::
 ::res://Assets/textura/red_brick/::1779955018
 ::res://Assets/textura/red_brick/textures/::1779955019
@@ -161,8 +161,8 @@ AudioStreamManager.gd::GDScript::6380991560273082304::1780021211::0::1::::<>Node
 GameManager.gd::GDScript::8799663444946049050::1779346555::0::1::::<>Node<><>0<>0<><>::
 ::res://common/shaders/::1779345187
 ::res://common/themes/::1779346019
-::res://levels/::1780130716
-level_1.tscn::PackedScene::2211276956798904084::1780130716::0::1::::<><><>0<>0<><>::uid://bhnndfskx60x0::::res://levels/level_base.tscn<>uid://qbybyiagt4ao::::res://Assets/environmental/materials/Concrete_One.tres<>uid://c1uydeliydj17::::res://src/entities/player/player.tscn<>uid://ddhe4vjdr6e5o::::res://src/interactables/bote_salsa/bote_salsa_base_interact.tscn
+::res://levels/::1780641032
+level_1.tscn::PackedScene::2211276956798904084::1780641032::0::1::::<><><>0<>0<><>::uid://bhnndfskx60x0::::res://levels/level_base.tscn<>uid://qbybyiagt4ao::::res://Assets/environmental/materials/Concrete_One.tres<>uid://c1uydeliydj17::::res://src/entities/player/player.tscn<>uid://ddhe4vjdr6e5o::::res://src/interactables/bote_salsa/bote_salsa_base_interact.tscn<>uid://cpsf3m1y6dysi::::res://src/interactables/memela_base/memela_base.tscn
 level_base.tscn::PackedScene::2905374469159351859::1779954843::0::1::::<><><>0<>0<><>::
 ::res://src/::1780024126
 ::res://src/core/::1779346072
@@ -188,8 +188,9 @@ interact.tscn::PackedScene::7861026107670656943::1780639023::0::1::::<><><>0<>0<
 ::res://src/interactables/bote_salsa/::1780639081
 bote_salsa_base.gd::GDScript::590118912587198746::1780122034::0::1::::Bote_de_Salsa<>Interact<><>0<>0<><>::
 bote_salsa_base_interact.tscn::PackedScene::7384574999319967426::1780639081::0::1::::<><><>0<>0<><>::uid://dj867l6dbx7rf::::res://src/interactables/interact.tscn<>uid://in4f4faonm0q::::res://src/interactables/bote_salsa/bote_salsa_base.gd<>uid://bu3rldctwmx4n::::res://Assets/textura/Bote_de_salsa/bote-desalsa-roja_rosa-plastic.png
-::res://src/interactables/memela_base/::1780639793
-memela_base.tscn::PackedScene::5863187080300072660::1780639792::0::1::::<><><>0<>0<><>::uid://dj867l6dbx7rf::::res://src/interactables/interact.tscn
+::res://src/interactables/memela_base/::1780641016
+memela_base.gd::GDScript::2970658074346078963::1780640059::0::1::::MemelaBase<>Interact<><>0<>0<><>::
+memela_base.tscn::PackedScene::5863187080300072660::1780641016::0::1::::<><><>0<>0<><>::uid://dj867l6dbx7rf::::res://src/interactables/interact.tscn<>uid://bqtcf1kfwssah::::res://Assets/textura/memela_base/memela-bandera-base_bread-background.jpg<>uid://bilakl7y0ojgd::::res://src/interactables/memela_base/memela_base.gd
 ::res://ui/::1779346718
 ::res://ui/hud/::1779952596
 ::res://ui/hud/point_view/::1779952606

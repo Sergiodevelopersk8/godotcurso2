@@ -4,6 +4,7 @@
 [ext_resource type="Material" uid="uid://qbybyiagt4ao" path="res://Assets/environmental/materials/Concrete_One.tres" id="2_jirdo"]
 [ext_resource type="PackedScene" uid="uid://c1uydeliydj17" path="res://src/entities/player/player.tscn" id="3_bt44k"]
 [ext_resource type="PackedScene" uid="uid://ddhe4vjdr6e5o" path="res://src/interactables/bote_salsa/bote_salsa_base_interact.tscn" id="4_kx6l7"]
+[ext_resource type="PackedScene" uid="uid://cpsf3m1y6dysi" path="res://src/interactables/memela_base/memela_base.tscn" id="5_n46q3"]
 
 [sub_resource type="Environment" id="Environment_bt44k"]
 background_mode = 2
@@ -42,3 +43,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010901868, 0.8789674, 0.00
 transform = Transform3D(0.33, 0, 0, 0, 0.33, 0, 0, 0, 0.33, 0.14092875, 1.4004108, -3.5830255)
 pos_obj = Vector3(0, -0.158, 0.239)
 scale_obj = 0.17
+
+[node name="Memela_base" parent="Objetos" index="1" unique_id=1007127372 instance=ExtResource("5_n46q3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1745559, -2.0497594)

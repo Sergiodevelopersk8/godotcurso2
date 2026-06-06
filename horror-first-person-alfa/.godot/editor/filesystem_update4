@@ -1,5 +1,2 @@
-res://src/interactables/interact.tscn
-res://src/interactables/bote_salsa/bote_salsa_base_interact.tscn
 res://src/interactables/memela_base/memela_base.tscn
-res://src/interactables/memela_base/memela_base.gd
 res://levels/level_1.tscn
