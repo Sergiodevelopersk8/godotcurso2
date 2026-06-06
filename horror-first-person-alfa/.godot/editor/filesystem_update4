@@ -1,2 +1,3 @@
 res://src/interactables/memela_base/memela_base.tscn
 res://levels/level_1.tscn
+res://src/entities/player/scripts/Player.gd

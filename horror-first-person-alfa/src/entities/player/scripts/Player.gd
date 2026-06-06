@@ -44,6 +44,10 @@ var _delta = 0
 var distance_foot_step = 0.0
 var play_foot_step := 1
 
+var object_in_hand = null
+
+
+
 #--------- FUNCIONES DEL SISTEMA -----------
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -165,22 +169,21 @@ func floor_sounds_path(nameMat):
 
 
 func tomar_objeto(objeto):
-	#quita el objeto del padre
-	#en este caso el padre es un node3d que almacena los obejtos
-	#en la escena 
-	objeto.get_parent().remove_child(objeto)
-	#añada como hijo del marker(hand) el objeto que se muestre 
-	hand.add_child(objeto)
-	#establesco la posicion esto es desde la clase interact 
-	objeto.position = objeto.pos_obj
-	#igual para la escala
-	objeto.scale = Vector3.ONE * objeto.scale_obj
 	
-	
-	
-
-
-
+	if object_in_hand == null:
+		#quita el objeto del padre
+		#en este caso el padre es un node3d que almacena los obejtos
+		#en la escena 
+		objeto.get_parent().remove_child(objeto)
+		#añada como hijo del marker(hand) el objeto que se muestre 
+		hand.add_child(objeto)
+		#establesco la posicion esto es desde la clase interact 
+		objeto.position = objeto.pos_obj
+		#igual para la escala
+		objeto.scale = Vector3.ONE * objeto.scale_obj
+		object_in_hand = true
+	else:
+		print("ya tengo un objeto en la mano")
 
 
 func see_mouse():
