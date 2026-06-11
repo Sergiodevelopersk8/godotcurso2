@@ -46,6 +46,7 @@ var play_foot_step := 1
 
 var object_in_hand = null
 
+@onready var objetos: Node3D = $"../Objetos"
 
 
 #--------- FUNCIONES DEL SISTEMA -----------
@@ -111,13 +112,18 @@ func interactions():
 			
 			if Input.is_action_just_pressed("interact"):
 				
-				#interacts.global_position
-				tomar_objeto(interacts)
-				
-				get_viewport().set_input_as_handled() #esto evita que el ui y otros inetrfieran cuando se interactua con objetos
+				#esto evita que el ui y otros inetrfieran cuando se interactua con objetos
+				get_viewport().set_input_as_handled() 
 				
 				if interacts.has_method("action_use"):
 					interacts.action_use()
+				
+				if object_in_hand == null:
+					tomar_objeto(interacts)
+				else:
+					if object_in_hand != null :
+						soltar_objeto(interacts)
+		
 		else:
 			description_label.text = ""
 	else:
@@ -174,16 +180,27 @@ func tomar_objeto(objeto):
 		#quita el objeto del padre
 		#en este caso el padre es un node3d que almacena los obejtos
 		#en la escena 
-		objeto.get_parent().remove_child(objeto)
+		objetos.remove_child(objeto)
 		#añada como hijo del marker(hand) el objeto que se muestre 
 		hand.add_child(objeto)
 		#establesco la posicion esto es desde la clase interact 
 		objeto.position = objeto.pos_obj
 		#igual para la escala
 		objeto.scale = Vector3.ONE * objeto.scale_obj
-		object_in_hand = true
-	else:
-		print("ya tengo un objeto en la mano")
+		object_in_hand = objeto #guardo el obejto
+	
+
+
+func soltar_objeto(objeto):
+	
+	if object_in_hand != null:
+		hand.remove_child(objeto)
+		objetos.add_child(objeto) 
+	
+	object_in_hand = null
+	
+
+
 
 
 func see_mouse():
