@@ -47,7 +47,7 @@ var play_foot_step := 1
 var object_in_hand = null
 
 @onready var objetos: Node3D = $"../Objetos"
-
+var interacts
 
 #--------- FUNCIONES DEL SISTEMA -----------
 func _ready() -> void:
@@ -103,33 +103,26 @@ func process_input(delta) -> Vector3:
 
 
 func interactions():
-	if ray_cast_interactuar.is_colliding() :
-		if ray_cast_interactuar.get_collider().is_in_group("Interacts"):
-			var interacts = ray_cast_interactuar.get_collider()
-			
-			if interacts.get("id"):
-				description_label.text = interacts.id
-			
-			if Input.is_action_just_pressed("interact"):
-				
-				#esto evita que el ui y otros inetrfieran cuando se interactua con objetos
-				get_viewport().set_input_as_handled() 
-				
-				if interacts.has_method("action_use"):
-					interacts.action_use()
-				
-				if object_in_hand == null:
-					tomar_objeto(interacts)
-				else:
-					if object_in_hand != null :
-						soltar_objeto(interacts)
+	var objeto_visto = comprobar_interacciones()
+	if comprobar_interacciones():
 		
+		if objeto_visto != null and objeto_visto.get("id") :
+			description_label.text = objeto_visto.id
 		else:
 			description_label.text = ""
-	else:
-		description_label.text = ""
 		
-
+	if Input.is_action_just_pressed("interact"):
+		#esto evita que el ui y otros inetrfieran cuando se interactua con objetos
+		get_viewport().is_input_handled()
+		
+		if object_in_hand != null:
+			soltar_objeto(object_in_hand)
+		else:
+			if objeto_visto != null:
+				 
+				if objeto_visto.has_method("action_use"):
+					objeto_visto.action_use()
+				tomar_objeto(objeto_visto)
 
 func Sound_Steps():
 	
@@ -159,6 +152,14 @@ func Sound_Steps():
 		footstep_sound.play()
 		distance_foot_step = 0
 	
+
+func comprobar_interacciones() -> Node3D:
+	if ray_cast_interactuar.is_colliding():
+		var colisionador = ray_cast_interactuar.get_collider()
+		if colisionador.is_in_group("Interacts"):
+			return colisionador # Si todo está bien, devuelve el objeto
+	return null # Si no está colisionando o no es del grupo, devuelve un vacío limpio
+
 
 
 func floor_sounds_path(nameMat):
@@ -193,7 +194,7 @@ func tomar_objeto(objeto):
 
 func soltar_objeto(objeto):
 	
-	if object_in_hand != null:
+	if object_in_hand != null and Input.is_action_just_pressed("interact") :
 		hand.remove_child(objeto)
 		objetos.add_child(objeto) 
 	
@@ -207,3 +208,34 @@ func see_mouse():
 	if Input.is_action_just_pressed("see_mouse_click"):
 		print("veo el mouse")
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+
+
+
+
+func other_interacs():
+	if ray_cast_interactuar.is_colliding() :
+		if ray_cast_interactuar.get_collider().is_in_group("Interacts"):
+			var interacts = ray_cast_interactuar.get_collider()
+			
+			if interacts.get("id"):
+				description_label.text = interacts.id
+			
+			if Input.is_action_just_pressed("interact"):
+				
+				#esto evita que el ui y otros inetrfieran cuando se interactua con objetos
+				get_viewport().set_input_as_handled() 
+				
+				if interacts.has_method("action_use"):
+					interacts.action_use()
+				
+				if object_in_hand == null:
+					tomar_objeto(interacts)
+				else:
+					if object_in_hand != null :
+						soltar_objeto(interacts)
+		
+		else:
+			description_label.text = ""
+	else:
+		description_label.text = ""
+		

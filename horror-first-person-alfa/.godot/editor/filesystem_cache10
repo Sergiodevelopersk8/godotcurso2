@@ -1,5 +1,5 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1781153374
+::res://::1781238047
 apuntes.txt::TextFile::-1::1780130769::0::1::::<><><>0<>0<><>::
 default_bus_layout.tres::AudioBusLayout::3789415499722831103::1780016897::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D::3741386300160002114::1779343676::1779343685::1::::<><><>0<>0<>4524bee1a9f67b5b30483947bd60b466<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
@@ -161,9 +161,9 @@ AudioStreamManager.gd::GDScript::6380991560273082304::1780021211::0::1::::<>Node
 GameManager.gd::GDScript::8799663444946049050::1779346555::0::1::::<>Node<><>0<>0<><>::
 ::res://common/shaders/::1779345187
 ::res://common/themes/::1779346019
-::res://levels/::1780769303
-level_1.tscn::PackedScene::2211276956798904084::1780769303::0::1::::<><><>0<>0<><>::uid://bhnndfskx60x0::::res://levels/level_base.tscn<>uid://qbybyiagt4ao::::res://Assets/environmental/materials/Concrete_One.tres<>uid://c1uydeliydj17::::res://src/entities/player/player.tscn<>uid://ddhe4vjdr6e5o::::res://src/interactables/bote_salsa/bote_salsa_base_interact.tscn<>uid://cpsf3m1y6dysi::::res://src/interactables/memela_base/memela_base.tscn
-level_base.tscn::PackedScene::2905374469159351859::1779954843::0::1::::<><><>0<>0<><>::
+::res://levels/::1781156692
+level_1.tscn::PackedScene::2211276956798904084::1781156692::0::1::::<><><>0<>0<><>::uid://bhnndfskx60x0::::res://levels/level_base.tscn<>uid://qbybyiagt4ao::::res://Assets/environmental/materials/Concrete_One.tres<>uid://c1uydeliydj17::::res://src/entities/player/player.tscn<>uid://ddhe4vjdr6e5o::::res://src/interactables/bote_salsa/bote_salsa_base_interact.tscn<>uid://cpsf3m1y6dysi::::res://src/interactables/memela_base/memela_base.tscn
+level_base.tscn::PackedScene::2905374469159351859::1781155632::0::1::::<><><>0<>0<><>::
 ::res://src/::1780024126
 ::res://src/core/::1779346072
 ::res://src/core/state_machine/::1779346072
@@ -171,8 +171,8 @@ level_base.tscn::PackedScene::2905374469159351859::1779954843::0::1::::<><><>0<>
 ::res://src/entities/enemies/::1779346146
 ::res://src/entities/player/::1780127381
 player.tscn::PackedScene::6640501649746283280::1780127381::0::1::::<><><>0<>0<><>::uid://cs2pcwflpxxib::::res://ui/hud/point_view/crosshair.png<>uid://dguupkf4w1250::::res://src/entities/player/scripts/Player.gd<>uid://sg6uskc1u0g3::::res://src/entities/player/scripts/states/StateMachine.gd<>uid://4eo0fvhxrssp::::res://src/entities/player/scripts/states/idle.gd<>uid://byv56lxphp6al::::res://src/entities/player/scripts/states/walk.gd<>uid://dxa7rdxqqh6nm::::res://src/entities/player/scripts/states/run.gd<>uid://cdhetbgoscikk::::res://src/entities/player/scripts/states/crouch.gd<>uid://blsj0cgqndoym::::res://src/entities/player/scripts/states/air.gd
-::res://src/entities/player/scripts/::1780769289
-Player.gd::GDScript::7622924329058200081::1780769289::0::1::::Player<>CharacterBody3D<><>0<>0<><>::
+::res://src/entities/player/scripts/::1781156692
+Player.gd::GDScript::7622924329058200081::1781156692::0::1::::Player<>CharacterBody3D<><>0<>0<><>::
 ::res://src/entities/player/scripts/states/::1780017417
 air.gd::GDScript::3196247976127054684::1779959898::0::1::::Air_Player_State<>PlayerState<><>0<>0<><>::
 crouch.gd::GDScript::4998135403086391406::1780017417::0::1::::Crouch_Player_State<>PlayerState<><>0<>0<><>::
