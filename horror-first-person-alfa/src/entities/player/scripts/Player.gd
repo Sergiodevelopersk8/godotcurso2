@@ -100,29 +100,80 @@ func process_input(delta) -> Vector3:
 	return direction
 
 
-
-
 func interactions():
-	var objeto_visto = comprobar_interacciones()
-	if comprobar_interacciones():
-		
-		if objeto_visto != null and objeto_visto.get("id") :
-			description_label.text = objeto_visto.id
-		else:
-			description_label.text = ""
-		
-	if Input.is_action_just_pressed("interact"):
-		#esto evita que el ui y otros inetrfieran cuando se interactua con objetos
-		get_viewport().is_input_handled()
-		
+	var seen_object = comprobar_interacciones()
+	if seen_object != null and seen_object.get("id") :
+		description_label.text = seen_object.id
+	else:
+		description_label.text = ""
+	
+	if Input.is_action_just_pressed("drop"):
 		if object_in_hand != null:
 			soltar_objeto(object_in_hand)
+	
+	if Input.is_action_just_pressed("interact"):
+		if object_in_hand == null and seen_object != null:
+			#esto evita que el ui y otros inetrfieran cuando se interactua con objetos
+			get_viewport().is_input_handled()
+			
+			if seen_object.has_method("action_use"):
+				seen_object.action_use()
+			tomar_objeto(seen_object)
 		else:
-			if objeto_visto != null:
-				 
-				if objeto_visto.has_method("action_use"):
-					objeto_visto.action_use()
-				tomar_objeto(objeto_visto)
+			#aqui pongo la logica del minijuego de hacer memelas 
+			pass
+	
+	
+
+
+
+
+func comprobar_interacciones() -> Node3D:
+	if ray_cast_interactuar.is_colliding():
+		var colisionador = ray_cast_interactuar.get_collider()
+		if colisionador.is_in_group("Interacts"):
+			return colisionador # Si todo está bien, devuelve el objeto
+	return null # Si no está colisionando o no es del grupo, devuelve un vacío limpio
+
+
+
+
+func tomar_objeto(objeto):
+	
+	if object_in_hand == null:
+		#quita el objeto del padre
+		#en este caso el padre es un node3d que almacena los obejtos
+		#en la escena 
+		objetos.remove_child(objeto)
+		#añada como hijo del marker(hand) el objeto que se muestre 
+		hand.add_child(objeto)
+		#establesco la posicion esto es desde la clase interact 
+		objeto.position = objeto.pos_obj
+		#igual para la escala
+		objeto.scale = Vector3.ONE * objeto.scale_obj
+		object_in_hand = objeto #guardo el obejto
+	
+
+
+func soltar_objeto(objeto):
+	
+	if object_in_hand != null  :
+		hand.remove_child(objeto)
+		objetos.add_child(objeto) 
+		objeto.global_position = global_position + (global_transform.basis.z * -1.5)
+	
+	object_in_hand = null
+	
+
+
+
+
+func see_mouse():
+	if Input.is_action_just_pressed("see_mouse_click"):
+		print("veo el mouse")
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+
+
 
 func Sound_Steps():
 	
@@ -153,12 +204,6 @@ func Sound_Steps():
 		distance_foot_step = 0
 	
 
-func comprobar_interacciones() -> Node3D:
-	if ray_cast_interactuar.is_colliding():
-		var colisionador = ray_cast_interactuar.get_collider()
-		if colisionador.is_in_group("Interacts"):
-			return colisionador # Si todo está bien, devuelve el objeto
-	return null # Si no está colisionando o no es del grupo, devuelve un vacío limpio
 
 
 
@@ -173,69 +218,3 @@ func floor_sounds_path(nameMat):
 		footstep_sound.stream = load("res://Assets/audio/SFX/footsteps/wood/0.ogg")
 	else:
 		footstep_sound.stream = load("res://Assets/audio/SFX/footsteps/boots/0.ogg")
-
-
-func tomar_objeto(objeto):
-	
-	if object_in_hand == null:
-		#quita el objeto del padre
-		#en este caso el padre es un node3d que almacena los obejtos
-		#en la escena 
-		objetos.remove_child(objeto)
-		#añada como hijo del marker(hand) el objeto que se muestre 
-		hand.add_child(objeto)
-		#establesco la posicion esto es desde la clase interact 
-		objeto.position = objeto.pos_obj
-		#igual para la escala
-		objeto.scale = Vector3.ONE * objeto.scale_obj
-		object_in_hand = objeto #guardo el obejto
-	
-
-
-func soltar_objeto(objeto):
-	
-	if object_in_hand != null and Input.is_action_just_pressed("interact") :
-		hand.remove_child(objeto)
-		objetos.add_child(objeto) 
-	
-	object_in_hand = null
-	
-
-
-
-
-func see_mouse():
-	if Input.is_action_just_pressed("see_mouse_click"):
-		print("veo el mouse")
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-
-
-
-
-func other_interacs():
-	if ray_cast_interactuar.is_colliding() :
-		if ray_cast_interactuar.get_collider().is_in_group("Interacts"):
-			var interacts = ray_cast_interactuar.get_collider()
-			
-			if interacts.get("id"):
-				description_label.text = interacts.id
-			
-			if Input.is_action_just_pressed("interact"):
-				
-				#esto evita que el ui y otros inetrfieran cuando se interactua con objetos
-				get_viewport().set_input_as_handled() 
-				
-				if interacts.has_method("action_use"):
-					interacts.action_use()
-				
-				if object_in_hand == null:
-					tomar_objeto(interacts)
-				else:
-					if object_in_hand != null :
-						soltar_objeto(interacts)
-		
-		else:
-			description_label.text = ""
-	else:
-		description_label.text = ""
-		

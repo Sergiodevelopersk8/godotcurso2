@@ -1,3 +1,29 @@
 esta es la escala y posicion del bote de salsa
 0.034,-0.158,0.239
 sacle 0.17
+
+
+
+
+
+****************************************************************************************
+TO DO LIST
+📋 Tu Lista de Desarrollo (Game Dev Checklist)
+🟢 1. TERMINADO (Lo que ya dominas)
+[x] Movimiento básico del Player (Caminar).
+[x] Sistema de correr (Run) y agacharse (Crouch).
+[x] Rotación y límites de la cámara en primera persona.
+[x] Sistema de detección con RayCast3D (Interacciones).
+[x] Sistema de "Agarre" físico del objeto (Cambio de papá al Marker3D).
+[x] Posicionamiento y escala del objeto en la mano.
+[X ] Límite de la mano: Modificar tomar_objeto para que solo acepte un objeto a la 
+[X] Mecánica de Soltar: Crear una tecla (ej. la Q) para regresar el objeto al suelo o a la mesa y vaciar la mano.
+🟡2. EN PROCESO (El núcleo de la Cocina)
+[ ] Notas para leer:crera las notas y que se vean cuando el jugador interactue con ellas osea las ui
+[ ] NPCs y Clientes Básicos: Triggers simples para que un NPC aparezca en la barra, pida una memela específica y espere.
+[ ] Subir el Comal: Programar que el comal sea un receptor (que detecte si llevas masa y se quede con ella, usando el Marker3D que platicamos).
+[ ] El Temporizador: Hacer que la memela cambie de color (o textura) después de unos segundos en el comal para saber si está cruda, cocida o quemada.
+[ ] Minijuego de Preparación: Ahora sí, añadir lógica para que si le echas salsa al objeto cocido, cambie su estado a "Memela con Salsa".
+
+🔵 3. SIGUIENTE PASO (Los Clientes y la Historia)
+en espera de saber que es lo que sigue o cuando termine todos los de  los pasos 2
