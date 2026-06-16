@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://qr8wpu0yir0p"]
+
+[ext_resource type="PackedScene" uid="uid://c1jqgakjvg3yq" path="res://src/interactables/Notas/nota_base.tscn" id="1_5527r"]
+[ext_resource type="Texture2D" uid="uid://b1q3ccbpiki1x" path="res://Assets/textura/ui/note_ui/nota_del_pedido_tia.png" id="2_2lvyd"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_83rtl"]
+
+[node name="nota_pedido" unique_id=383793543 instance=ExtResource("1_5527r")]
+
+[node name="MeshInstance3D" parent="." index="0" unique_id=404723989]
+mesh = SubResource("PlaneMesh_83rtl")
+
+[node name="TextureRect" parent="CanvasLayer" parent_id_path=PackedInt32Array(880019478) index="0" unique_id=672760637]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -540.0
+offset_top = -634.5
+offset_right = 540.0
+offset_bottom = 634.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_2lvyd")

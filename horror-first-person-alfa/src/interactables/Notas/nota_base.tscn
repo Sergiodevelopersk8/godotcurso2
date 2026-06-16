@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://c1jqgakjvg3yq"]
+
+[node name="nota_base" type="Area3D" unique_id=383793543]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=404723989]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=573062941]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=880019478]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=672760637]
+offset_right = 40.0
+offset_bottom = 40.0

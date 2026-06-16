@@ -1,2 +1,1 @@
-res://levels/level_1.tscn
-res://src/entities/player/scripts/Player.gd
+res://src/interactables/Notas/nota_pedido.tscn
