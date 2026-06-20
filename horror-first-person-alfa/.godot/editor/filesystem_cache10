@@ -1,5 +1,5 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1781621086
+::res://::1781964137
 apuntes.txt::TextFile::-1::1781325631::0::1::::<><><>0<>0<><>::
 default_bus_layout.tres::AudioBusLayout::3789415499722831103::1780016897::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D::3741386300160002114::1779343676::1779343685::1::::<><><>0<>0<>4524bee1a9f67b5b30483947bd60b466<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
@@ -156,7 +156,7 @@ Terrazzo019S_1K-JPG_NormalDX.jpg::CompressedTexture2D::8434706858278603993::1779
 Terrazzo019S_1K-JPG_NormalGL.jpg::CompressedTexture2D::5163546761546314938::1779955019::1779955019::1::::<><><>0<>0<>47d3d77e73edf8a3574453e8d283190f<>res://.godot/imported/Terrazzo019S_1K-JPG_NormalGL.jpg-8e44c4060ecb99087d96302531ad9ed2.s3tc.ctex::
 Terrazzo019S_1K-JPG_Roughness.jpg::CompressedTexture2D::7316393546005507198::1779955019::1779955019::1::::<><><>0<>0<>5edbafe075d7d76b84d7948e5c2b3a9b<>res://.godot/imported/Terrazzo019S_1K-JPG_Roughness.jpg-a203c81e14c5639386ea7e0ed9887c38.s3tc.ctex::
 ::res://Assets/textura/ui/::1781621066
-::res://Assets/textura/ui/note_ui/::1781621066
+::res://Assets/textura/ui/note_ui/::1781621087
 hoja_de_nota.png::CompressedTexture2D::4507202967996782050::1781621066::1781621087::1::::<><><>0<>0<>8c63d95ff645a088172ae21d311bd394<>res://.godot/imported/hoja_de_nota.png-9e94bd6b7b3bdf5c76a85f2cba8ab586.s3tc.ctex::
 nota_del_pedido_tia.png::CompressedTexture2D::4246064417016300187::1781621066::1781621087::1::::<><><>0<>0<>f060e54fa6fb32389ccc809f556666c2<>res://.godot/imported/nota_del_pedido_tia.png-d391c2d3015e65c9844a07166fadc59e.s3tc.ctex::
 ::res://common/::1779346019
@@ -195,9 +195,9 @@ bote_salsa_base_interact.tscn::PackedScene::7384574999319967426::1780639081::0::
 ::res://src/interactables/memela_base/::1780767981
 memela_base.gd::GDScript::2970658074346078963::1780640059::0::1::::MemelaBase<>Interact<><>0<>0<><>::
 memela_base.tscn::PackedScene::5863187080300072660::1780767981::0::1::::<><><>0<>0<><>::uid://dj867l6dbx7rf::::res://src/interactables/interact.tscn<>uid://bqtcf1kfwssah::::res://Assets/textura/memela_base/memela-bandera-base_bread-background.jpg<>uid://bilakl7y0ojgd::::res://src/interactables/memela_base/memela_base.gd
-::res://src/interactables/Notas/::1781620554
+::res://src/interactables/Notas/::1781621260
 nota_base.tscn::PackedScene::6617312904294569936::1781620518::0::1::::<><><>0<>0<><>::
-nota_pedido.tscn::PackedScene::1160159688169368453::1781620554::0::1::::<><><>0<>0<><>::uid://c1jqgakjvg3yq::::res://src/interactables/Notas/nota_base.tscn
+nota_pedido.tscn::PackedScene::1160159688169368453::1781621260::0::1::::<><><>0<>0<><>::uid://c1jqgakjvg3yq::::res://src/interactables/Notas/nota_base.tscn<>uid://b1q3ccbpiki1x::::res://Assets/textura/ui/note_ui/nota_del_pedido_tia.png
 ::res://ui/::1779346718
 ::res://ui/hud/::1779952596
 ::res://ui/hud/point_view/::1779952606

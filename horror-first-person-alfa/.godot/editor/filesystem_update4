@@ -1,1 +1,5 @@
 res://src/interactables/Notas/nota_pedido.tscn
+res://levels/level_1.tscn
+res://src/interactables/Notas/nota_pedido.gd
+res://src/interactables/Notas/nota_base.tscn
+res://src/interactables/Notas/nota_base.gd

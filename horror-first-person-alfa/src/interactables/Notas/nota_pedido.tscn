@@ -1,27 +1,44 @@
 [gd_scene format=3 uid="uid://qr8wpu0yir0p"]
 
-[ext_resource type="PackedScene" uid="uid://c1jqgakjvg3yq" path="res://src/interactables/Notas/nota_base.tscn" id="1_5527r"]
-[ext_resource type="Texture2D" uid="uid://b1q3ccbpiki1x" path="res://Assets/textura/ui/note_ui/nota_del_pedido_tia.png" id="2_2lvyd"]
+[ext_resource type="PackedScene" uid="uid://dj867l6dbx7rf" path="res://src/interactables/interact.tscn" id="1_5527r"]
+[ext_resource type="Script" uid="uid://da7o6n04i5164" path="res://src/interactables/Notas/nota_pedido.gd" id="2_2lvyd"]
+[ext_resource type="Texture2D" uid="uid://b1q3ccbpiki1x" path="res://Assets/textura/ui/note_ui/nota_del_pedido_tia.png" id="3_83rtl"]
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_83rtl"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_83rtl"]
+albedo_texture = ExtResource("3_83rtl")
 
-[node name="nota_pedido" unique_id=383793543 instance=ExtResource("1_5527r")]
+[sub_resource type="BoxMesh" id="BoxMesh_8iu06"]
+material = SubResource("StandardMaterial3D_83rtl")
+size = Vector3(0.7429199, 0.17089844, 0.9589844)
 
-[node name="MeshInstance3D" parent="." index="0" unique_id=404723989]
-mesh = SubResource("PlaneMesh_83rtl")
+[sub_resource type="BoxShape3D" id="BoxShape3D_83rtl"]
+size = Vector3(0.7706299, 0.21191406, 1)
 
-[node name="TextureRect" parent="CanvasLayer" parent_id_path=PackedInt32Array(880019478) index="0" unique_id=672760637]
+[node name="Nota_pedido" unique_id=607693157 instance=ExtResource("1_5527r")]
+script = ExtResource("2_2lvyd")
+id = "nota"
+
+[node name="MeshInstance3D" parent="." index="0" unique_id=338085748]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12854004, -0.41455078, 0.020507813)
+mesh = SubResource("BoxMesh_8iu06")
+
+[node name="CollisionShape3D" parent="." index="1" unique_id=1620085705]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11468506, -0.39404297, 0)
+shape = SubResource("BoxShape3D_83rtl")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="2" unique_id=85573388]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" index="0" unique_id=282282025]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -540.0
-offset_top = -634.5
-offset_right = 540.0
-offset_bottom = 634.5
+offset_left = -224.0
+offset_top = -310.0
+offset_right = 856.345
+offset_bottom = 959.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture = ExtResource("2_2lvyd")
+scale = Vector2(0.49, 0.49)
+texture = ExtResource("3_83rtl")

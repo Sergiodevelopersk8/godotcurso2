@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c1uydeliydj17" path="res://src/entities/player/player.tscn" id="3_bt44k"]
 [ext_resource type="PackedScene" uid="uid://ddhe4vjdr6e5o" path="res://src/interactables/bote_salsa/bote_salsa_base_interact.tscn" id="4_kx6l7"]
 [ext_resource type="PackedScene" uid="uid://cpsf3m1y6dysi" path="res://src/interactables/memela_base/memela_base.tscn" id="5_n46q3"]
+[ext_resource type="PackedScene" uid="uid://qr8wpu0yir0p" path="res://src/interactables/Notas/nota_pedido.tscn" id="6_btoec"]
 
 [sub_resource type="Environment" id="Environment_bt44k"]
 background_mode = 2
@@ -46,3 +47,8 @@ scale_obj = 0.17
 
 [node name="Memela_base" parent="Objetos" index="1" unique_id=1007127372 instance=ExtResource("5_n46q3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1745559, -2.0497594)
+
+[node name="nota_pedido" parent="." index="4" unique_id=383793543 instance=ExtResource("6_btoec")]
+transform = Transform3D(0.04568317, -0.99895597, 0, 0.99895597, 0.04568317, 0, 0, 0, 1, 2.3793402, 1.5311458, 0)
+
+[node name="Nota_pedido" parent="." index="5" unique_id=1799684875 instance=ExtResource("6_btoec")]
