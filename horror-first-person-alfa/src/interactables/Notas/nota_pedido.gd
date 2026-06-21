@@ -1,39 +1,39 @@
 extends Interact
 class_name NotaPedido
 
-@onready var ui_note: CanvasLayer = $CanvasLayer
-@onready var img_note: TextureRect = $CanvasLayer/TextureRect
+@onready var ui_note: CanvasLayer = $UINota
+@onready var img_note: TextureRect = $UINota/IMGNota
 
-var player 
 
+var  player
+var can_be_loaded = false
 
 func _ready() -> void:
 	ui_note.hide()
 	player = get_tree().get_first_node_in_group("player")
 
-
-
 func action_use():
 	super.action_use()
 	
-	var abriendo = !ui_note.visible
-	ui_note.visible = abriendo
-	
-
-	# Pausamos o despausamos el mundo
-	get_tree().paused = abriendo
-	
-	if player:
-		# Bloqueamos rotación
-		player.move_and_rotate_player = !abriendo
-		# Forzamos que la dirección sea cero para que no camine
-		player.direction = Vector3.ZERO 
+	# 1. Si la UI está oculta, significa que la vamos a ABRIR
+	if ui_note.visible == false:
 		
-		# Mostramos/Ocultamos mouse
-		if abriendo:
-			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		else:
-			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		ui_note.show()
+		get_tree().paused = true # Pausamos el mundo
+		
+		if player:
+			player.move_and_rotate_player = false # Congelamos cámara
+			player.direction = Vector3.ZERO       # Detenemos al player
+		
+	# 2. Si la UI ya estaba visible, significa que la vamos a CERRAR
+	else:
+		ui_note.hide()
+		get_tree().paused = false # Despausamos el mundo
+		
+		if player:
+			player.move_and_rotate_player = true # Devolvemos cámara
+			
+
 
 
 

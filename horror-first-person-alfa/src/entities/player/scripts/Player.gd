@@ -116,9 +116,12 @@ func interactions():
 			#esto evita que el ui y otros inetrfieran cuando se interactua con objetos
 			get_viewport().is_input_handled()
 			
-			if seen_object.has_method("action_use"):
-				seen_object.action_use()
-			tomar_objeto(seen_object)
+			#if seen_object.has_method("action_use"):
+			if seen_object.get("can_be_loaded") == true:
+				tomar_objeto(seen_object)
+			else:
+				if seen_object.has_method("action_use"):
+					seen_object.action_use()
 		else:
 			#aqui pongo la logica del minijuego de hacer memelas 
 			pass
@@ -141,9 +144,11 @@ func comprobar_interacciones() -> Node3D:
 func tomar_objeto(objeto):
 	
 	if object_in_hand == null:
+		
 		#quita el objeto del padre
 		#en este caso el padre es un node3d que almacena los obejtos
 		#en la escena 
+		print("nombre -> ",objeto.get_parent().name)
 		objetos.remove_child(objeto)
 		#añada como hijo del marker(hand) el objeto que se muestre 
 		hand.add_child(objeto)
