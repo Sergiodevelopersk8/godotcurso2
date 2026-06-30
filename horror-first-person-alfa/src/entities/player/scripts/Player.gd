@@ -12,6 +12,7 @@ class_name Player
 @onready var state_machine: Node = $StateMachine
 @onready var state_machinse_label: Label = $GUIPlayer/StateMachinseLabel
 @onready var description_label: Label = $GUIPlayer/description_label
+@onready var objetos: Node3D = $"../Objetos"
 
 #-------onreadys raycast----------
 @onready var ray_cast_interactuar: RayCast3D = $Camera3D/RayCastInteractuar
@@ -36,18 +37,20 @@ var ACCEL_AIR = 5
 const gravity = 50
 var joystick_deadzone = 0.2 #saber si el jostic se mueve 
 var controller_sensitivity = .05 #sensibilidad del control
-
 var cam_Bob_Speed := 5 #que tan rapido se mueve la camara
 var cam_Bob_Up_Down := 1 #cuanto se mueve de arriba y abajo
 var _delta = 0
-
 var distance_foot_step = 0.0
 var play_foot_step := 1
-
 var object_in_hand = null
-
-@onready var objetos: Node3D = $"../Objetos"
 var interacts
+var reading_note := false
+
+
+
+
+
+
 
 #--------- FUNCIONES DEL SISTEMA -----------
 func _ready() -> void:
@@ -101,6 +104,14 @@ func process_input(delta) -> Vector3:
 
 
 func interactions():
+	if reading_note:
+		if Input.is_action_just_pressed("interact"):
+			if ray_cast_interactuar.is_colliding():
+				var collider = ray_cast_interactuar.get_collider()
+				if collider.has_method("action_use"):
+					collider.action_use()
+		return
+		pass
 	var seen_object = comprobar_interacciones()
 	if seen_object != null and seen_object.get("id") :
 		description_label.text = seen_object.id

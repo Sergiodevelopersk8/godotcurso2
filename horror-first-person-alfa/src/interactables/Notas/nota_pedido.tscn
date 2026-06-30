@@ -32,6 +32,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11468506, -0.39404297, 0)
 visible = false
 
 [node name="UINota" type="CanvasLayer" parent="." index="3" unique_id=85573388]
+process_mode = 3
+layer = 100
 
 [node name="IMGNota" type="TextureRect" parent="UINota" index="0" unique_id=282282025]
 anchors_preset = 8

@@ -18,6 +18,7 @@ material = SubResource("StandardMaterial3D_s8n7f")
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_s8n7f"]
 
 [node name="Player" type="CharacterBody3D" unique_id=1893940135]
+process_mode = 3
 transform = Transform3D(1, 0, 0, 0, 1.3996521, 0, 0, 0, 1, 0, 0, 0)
 script = ExtResource("1_vt6n5")
 metadata/_edit_group_ = true
