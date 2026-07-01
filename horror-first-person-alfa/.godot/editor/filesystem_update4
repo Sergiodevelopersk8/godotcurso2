@@ -1,4 +1,3 @@
-res://levels/level_1.tscn
-res://src/interactables/Notas/nota_pedido.gd
-res://src/interactables/Notas/nota_pedido.tscn
 res://src/entities/player/player.tscn
+res://src/interactables/Notas/nota_pedido.gd
+res://levels/level_1.tscn
