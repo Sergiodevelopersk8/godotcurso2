@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cfsxc0wljf85o"]
+
+[ext_resource type="PackedScene" uid="uid://cqfjhxe5rxh2h" path="res://src/entities/npcs/npc_base.tscn" id="1_be27t"]
+[ext_resource type="Script" uid="uid://bvkl50q3x2hmk" path="res://src/entities/npcs/cliente_npc_1.gd" id="2_70rwr"]
+
+[node name="cliente_npc1" unique_id=179669330 instance=ExtResource("1_be27t")]
+script = ExtResource("2_70rwr")

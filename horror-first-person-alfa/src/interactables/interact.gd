@@ -8,7 +8,7 @@ class_name Interact
 #segun yo obtengo la posicion del objeto
 @export var pos_obj:Vector3 = Vector3(0, 0, -0.5)
 @export var scale_obj: float = 1.0
-
+var can_be_loaded: bool = false
 
 signal isInteract
 

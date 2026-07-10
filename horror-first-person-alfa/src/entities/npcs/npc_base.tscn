@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cqfjhxe5rxh2h"]
+
+[ext_resource type="Script" uid="uid://d0trvbj5jw03q" path="res://src/entities/npcs/npc_base.gd" id="1_idiyj"]
+
+[node name="npc_base" type="CharacterBody3D" unique_id=179669330]
+script = ExtResource("1_idiyj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2000061726]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2124465438]
+
+[node name="OrderLabel" type="Label" parent="." unique_id=932447932]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="PatienceTimer" type="Timer" parent="." unique_id=65339641]

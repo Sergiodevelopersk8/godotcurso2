@@ -6,11 +6,13 @@ class_name NotaPedido
 
 
 var  player
-var can_be_loaded = false
 
 func _ready() -> void:
+	#referencia al player buscando su grupo
 	player = get_tree().get_first_node_in_group("Player")
+	#oculta la nota 
 	ui_note.hide()
+	can_be_loaded = false
 	
 
 

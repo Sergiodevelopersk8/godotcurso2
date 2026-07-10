@@ -1,3 +1,4 @@
-res://src/entities/player/player.tscn
+res://src/interactables/bote_salsa/bote_salsa_base_interact.tscn
+res://src/interactables/bote_salsa/bote_salsa_base.gd
+res://src/interactables/memela_base/memela_base.gd
 res://src/interactables/Notas/nota_pedido.gd
-res://levels/level_1.tscn

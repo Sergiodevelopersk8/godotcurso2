@@ -18,8 +18,8 @@ TO DO LIST
 [x] Posicionamiento y escala del objeto en la mano.
 [X ] Límite de la mano: Modificar tomar_objeto para que solo acepte un objeto a la 
 [X] Mecánica de Soltar: Crear una tecla (ej. la Q) para regresar el objeto al suelo o a la mesa y vaciar la mano.
+[X] Notas para leer:crera las notas y que se vean cuando el jugador interactue con ellas osea las ui
 🟡2. EN PROCESO (El núcleo de la Cocina)
-[ ] Notas para leer:crera las notas y que se vean cuando el jugador interactue con ellas osea las ui
 [ ] NPCs y Clientes Básicos: Triggers simples para que un NPC aparezca en la barra, pida una memela específica y espere.
 [ ] Subir el Comal: Programar que el comal sea un receptor (que detecte si llevas masa y se quede con ella, usando el Marker3D que platicamos).
 [ ] El Temporizador: Hacer que la memela cambie de color (o textura) después de unos segundos en el comal para saber si está cruda, cocida o quemada.

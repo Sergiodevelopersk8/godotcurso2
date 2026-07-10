@@ -1,3 +1,5 @@
 extends Interact
 class_name MemelaBase 
-var can_be_loaded = true
+
+func _ready():
+	can_be_loaded = true
