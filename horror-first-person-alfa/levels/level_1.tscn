@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ddhe4vjdr6e5o" path="res://src/interactables/bote_salsa/bote_salsa_base_interact.tscn" id="4_kx6l7"]
 [ext_resource type="PackedScene" uid="uid://cpsf3m1y6dysi" path="res://src/interactables/memela_base/memela_base.tscn" id="5_n46q3"]
 [ext_resource type="PackedScene" uid="uid://qr8wpu0yir0p" path="res://src/interactables/Notas/nota_pedido.tscn" id="6_btoec"]
+[ext_resource type="PackedScene" uid="uid://cfsxc0wljf85o" path="res://src/entities/npcs/cliente_npc_1.tscn" id="7_gwceb"]
 
 [sub_resource type="Environment" id="Environment_bt44k"]
 background_mode = 2
@@ -53,3 +54,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1745559, -2.0497594)
 process_mode = 0
 transform = Transform3D(-0.009111185, -0.18923569, -0.014381951, -0.02037103, 0.015290505, -0.18828495, 0.18868494, -0.00748697, -0.021022316, 1.8475034, 1.251301, 0)
 metadata/_edit_group_ = true
+
+[node name="cliente_npc1" parent="." index="5" unique_id=179669330 instance=ExtResource("7_gwceb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18306613, 0.9452337, 2.5867522)
+id = "npcCliente1"

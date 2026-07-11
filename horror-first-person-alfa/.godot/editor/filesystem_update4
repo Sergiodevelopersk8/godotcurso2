@@ -1,4 +1,5 @@
-res://src/interactables/bote_salsa/bote_salsa_base_interact.tscn
-res://src/interactables/bote_salsa/bote_salsa_base.gd
-res://src/interactables/memela_base/memela_base.gd
-res://src/interactables/Notas/nota_pedido.gd
+res://levels/level_1.tscn
+res://src/entities/npcs/cliente_npc_1.gd
+res://src/entities/npcs/npc_base.tscn
+res://src/entities/npcs/cliente_npc_1.tscn
+res://src/entities/npcs/npc_base.gd

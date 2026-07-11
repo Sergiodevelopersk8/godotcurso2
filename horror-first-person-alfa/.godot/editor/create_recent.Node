@@ -1,3 +1,5 @@
+Label3D
+Area3D
 Timer
 Label
 MeshInstance3D
@@ -5,11 +7,9 @@ CollisionShape3D
 CharacterBody3D
 TextureRect
 CanvasLayer
-Area3D
 StaticBody3D
 Marker3D
 RayCast3D
 Node3D
 AudioStreamPlayer
 Node
-Camera3D
