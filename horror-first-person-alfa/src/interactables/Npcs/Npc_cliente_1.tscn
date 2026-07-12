@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://vh7pva6qxujm"]
+
+[ext_resource type="PackedScene" uid="uid://dj867l6dbx7rf" path="res://src/interactables/interact.tscn" id="1_mwlw8"]
+[ext_resource type="Script" uid="uid://cskuf0bkv6rh" path="res://src/interactables/Npcs/npc_cliente_1.gd" id="2_4lysx"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_mwlw8"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4lysx"]
+
+[node name="Interact" unique_id=607693157 instance=ExtResource("1_mwlw8")]
+script = ExtResource("2_4lysx")
+id = "Cliente1"
+
+[node name="MeshInstance3D" parent="." index="0" unique_id=338085748]
+mesh = SubResource("CapsuleMesh_mwlw8")
+
+[node name="CollisionShape3D" parent="." index="1" unique_id=1620085705]
+shape = SubResource("CapsuleShape3D_4lysx")

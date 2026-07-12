@@ -1,0 +1,2 @@
+extends Interact
+class_name NPCCliente1

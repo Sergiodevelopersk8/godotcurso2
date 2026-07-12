@@ -1,2 +1,0 @@
-extends NPCBase
-class_name NpcCliente1
