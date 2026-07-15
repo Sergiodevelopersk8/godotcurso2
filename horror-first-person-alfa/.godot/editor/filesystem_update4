@@ -1,7 +1,2 @@
-res://levels/level_1.tscn
-res://src/systems/dialogue/dialogue_data.gd
-res://src/entities/npcs/npc_base.gd
-res://src/entities/npcs/cliente_npc_1.gd
-res://src/entities/npcs/npc_base.tscn
 res://src/interactables/Npcs/Npc_cliente_1.tscn
 res://src/interactables/Npcs/npc_cliente_1.gd
