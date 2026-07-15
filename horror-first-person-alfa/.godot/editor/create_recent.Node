@@ -1,7 +1,9 @@
+Label
+RichTextLabel
+Panel
 Label3D
 Area3D
 Timer
-Label
 MeshInstance3D
 CollisionShape3D
 CharacterBody3D
@@ -10,6 +12,3 @@ CanvasLayer
 StaticBody3D
 Marker3D
 RayCast3D
-Node3D
-AudioStreamPlayer
-Node
