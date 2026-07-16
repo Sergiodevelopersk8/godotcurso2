@@ -1,5 +1,5 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1784132107
+::res://::1784221826
 apuntes.txt::TextFile::-1::1782911738::0::1::::<><><>0<>0<><>::
 default_bus_layout.tres::AudioBusLayout::3789415499722831103::1780016897::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D::3741386300160002114::1779343676::1779343685::1::::<><><>0<>0<>4524bee1a9f67b5b30483947bd60b466<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
@@ -199,12 +199,16 @@ memela_base.tscn::PackedScene::5863187080300072660::1780767981::0::1::::<><><>0<
 ::res://src/interactables/Notas/::1783702417
 nota_pedido.gd::GDScript::7226228259472188787::1783702417::0::1::::NotaPedido<>Interact<><>0<>0<><>::
 nota_pedido.tscn::PackedScene::1160159688169368453::1782826010::0::1::::<><><>0<>0<><>::uid://dj867l6dbx7rf::::res://src/interactables/interact.tscn<>uid://da7o6n04i5164::::res://src/interactables/Notas/nota_pedido.gd<>uid://b1q3ccbpiki1x::::res://Assets/textura/ui/note_ui/nota_del_pedido_tia.png
-::res://src/interactables/Npcs/::1783878417
-npc_cliente_1.gd::GDScript::178179673951425005::1783878410::0::1::::NPCCliente1<>Interact<><>0<>0<><>::
-Npc_cliente_1.tscn::PackedScene::1490387195775358758::1783878417::0::1::::<><><>0<>0<><>::uid://dj867l6dbx7rf::::res://src/interactables/interact.tscn<>uid://cskuf0bkv6rh::::res://src/interactables/Npcs/npc_cliente_1.gd
+::res://src/interactables/Npcs/::1784138049
+npc_cliente_1.gd::GDScript::178179673951425005::1784132234::0::1::::NPCCliente1<>Interact<><>0<>0<><>::
+Npc_cliente_1.tscn::PackedScene::1490387195775358758::1784138049::0::1::::<><><>0<>0<><>::uid://dj867l6dbx7rf::::res://src/interactables/interact.tscn<>uid://cskuf0bkv6rh::::res://src/interactables/Npcs/npc_cliente_1.gd
 ::res://src/systems/::1783865955
-::res://src/systems/dialogue/::1783866408
+::res://src/systems/dialogue/::1784138201
 dialogue_data.gd::GDScript::2704231860204328566::1783866408::0::1::::DialogueData<>Resource<><>0<>0<><>::
+dialogue_manager.gd::GDScript::4799519441036906130::1784138183::0::1::::<>Node<><>0<>0<><>::
+::res://src/systems/dialogue/ui/::1784138364
+DialogueUI.tscn::PackedScene::5942418484288467889::1784138363::0::1::::<><><>0<>0<><>::uid://qukbcxe51msk::::res://src/systems/dialogue/ui/dialogue_ui.gd
+dialogue_ui.gd::GDScript::1164918149811353230::1784138364::0::1::::<>Control<><>0<>0<><>::
 ::res://ui/::1779346718
 ::res://ui/hud/::1779952596
 ::res://ui/hud/point_view/::1779952606
