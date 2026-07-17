@@ -1,2 +1,3 @@
 res://src/systems/dialogue/ui/DialogueUI.tscn
 res://src/systems/dialogue/ui/dialogue_ui.gd
+res://src/systems/dialogue/dialogue_manager.gd
