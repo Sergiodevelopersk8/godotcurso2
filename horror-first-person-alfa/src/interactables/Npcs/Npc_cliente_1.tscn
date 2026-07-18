@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dj867l6dbx7rf" path="res://src/interactables/interact.tscn" id="1_mwlw8"]
 [ext_resource type="Script" uid="uid://cskuf0bkv6rh" path="res://src/interactables/Npcs/npc_cliente_1.gd" id="2_4lysx"]
+[ext_resource type="Resource" uid="uid://bxuejju8csl7q" path="res://src/systems/dialogue/cliente_pedido_memela.tres" id="3_xomrd"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_mwlw8"]
 
@@ -9,6 +10,7 @@
 
 [node name="Interact" unique_id=607693157 instance=ExtResource("1_mwlw8")]
 script = ExtResource("2_4lysx")
+dialogue_resource = ExtResource("3_xomrd")
 id = "Cliente1"
 
 [node name="MeshInstance3D" parent="." index="0" unique_id=338085748]

@@ -1,2 +1,3 @@
+DialogueData
 StandardMaterial3D
 Resource

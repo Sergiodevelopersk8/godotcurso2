@@ -13,6 +13,18 @@ func _ready() -> void:
 	DialogueManager.dialogue_request.connect(_on_dialogue_request)
 
 
+func _input(event: InputEvent):
+	if not panel.visible:
+		return
+	if event.is_action_pressed("interact"):
+		current_page_index += 1
+		if current_page_index< currentdata.pages.size():
+			update_dialogue_ui()
+		else:
+			panel.hide()
+			DialogueManager.finish_Dialogue()
+
+
 func _on_dialogue_request(data:DialogueData):
 	currentdata = data
 	panel.show()
@@ -21,4 +33,5 @@ func _on_dialogue_request(data:DialogueData):
 
 
 func update_dialogue_ui():
-	currentdata.name_character
+	name_label.text = currentdata.name_character
+	text_label.text =  currentdata.pages[current_page_index]

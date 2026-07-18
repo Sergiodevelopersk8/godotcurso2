@@ -1,3 +1,5 @@
 res://src/systems/dialogue/ui/DialogueUI.tscn
 res://src/systems/dialogue/ui/dialogue_ui.gd
-res://src/systems/dialogue/dialogue_manager.gd
+res://src/interactables/Npcs/npc_cliente_1.gd
+res://src/interactables/Npcs/Npc_cliente_1.tscn
+res://levels/level_1.tscn
