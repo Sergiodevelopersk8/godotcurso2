@@ -4,11 +4,14 @@ class_name Bote_de_Salsa
 
  
 func _ready() -> void:
-	action_use()
+	interact()
 	can_be_loaded = true
 
 
-func action_use():
-	#abrir o cerra 
-	super.action_use()
-	 
+#func action_use():
+#	abrir o cerra 
+#	super.action_use()
+
+func interact():
+	super.interact()
+	pass

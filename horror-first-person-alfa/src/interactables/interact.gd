@@ -13,7 +13,12 @@ var can_be_loaded: bool = false
 signal isInteract
 
 
-func action_use():
+#func action_use():
+#	Al llamar a emit(), cualquier cosa conectada se enterará
+#	isInteract.emit()
+
+
+func interact():
 	# Al llamar a emit(), cualquier cosa conectada se enterará
 	isInteract.emit()
 	

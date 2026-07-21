@@ -16,7 +16,7 @@ func _ready() -> void:
 	
 
 
-func action_use():
+func interact():
 	ui_note.visible = not ui_note.visible
 	get_tree().paused = not get_tree().paused
 #debo de ARREGLAR ESTO DEL MOVIMIENTO 

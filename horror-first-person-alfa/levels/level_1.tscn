@@ -60,3 +60,4 @@ metadata/_edit_group_ = true
 
 [node name="NPC_CLIENTE" parent="." index="6" unique_id=511793934 instance=ExtResource("7_gwceb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9054338, 3.782369)
+id = "Gustavo"

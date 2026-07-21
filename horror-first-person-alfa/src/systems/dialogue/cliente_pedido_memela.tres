@@ -4,4 +4,6 @@
 
 [resource]
 script = ExtResource("1_nt37a")
+name_character = "Gustavo"
+pages = Array[String](["Hola 	", "me das una memela por favor"])
 metadata/_custom_type_script = "uid://ber7klao4uqd7"

@@ -104,6 +104,10 @@ func process_input(delta) -> Vector3:
 
 
 func interactions():
+	if not move_and_rotate_player:
+		if Input.is_action_just_pressed("interact"):
+			print("[Player] Intento de interacción bloqueado (El jugador está congelado).")
+		return
 	if reading_note:
 		if Input.is_action_just_pressed("interact"):
 			if ray_cast_interactuar.is_colliding():
@@ -111,7 +115,7 @@ func interactions():
 				if collider.has_method("action_use"):
 					collider.action_use()
 		return
-		pass
+	
 	var seen_object = comprobar_interacciones()
 	if seen_object != null and seen_object.get("id") :
 		description_label.text = seen_object.id
@@ -128,11 +132,11 @@ func interactions():
 			get_viewport().is_input_handled()
 			
 			#if seen_object.has_method("action_use"):
-			if seen_object.get("can_be_loaded") == true:
+			if seen_object.can_be_loaded == true:
 				tomar_objeto(seen_object)
 			else:
-				if seen_object.has_method("action_use"):
-					seen_object.action_use()
+				move_and_rotate_player = false
+				seen_object.interact()
 		else:
 			#aqui pongo la logica del minijuego de hacer memelas 
 			pass
@@ -142,10 +146,11 @@ func interactions():
 
 
 
-func comprobar_interacciones() -> Node3D:
+func comprobar_interacciones() -> Interact:
 	if ray_cast_interactuar.is_colliding():
 		var colisionador = ray_cast_interactuar.get_collider()
-		if colisionador.is_in_group("Interacts"):
+		#if colisionador.is_in_group("Interacts"):
+		if colisionador is Interact:
 			return colisionador # Si todo está bien, devuelve el objeto
 	return null # Si no está colisionando o no es del grupo, devuelve un vacío limpio
 
