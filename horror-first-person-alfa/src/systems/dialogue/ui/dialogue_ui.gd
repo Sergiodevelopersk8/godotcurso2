@@ -20,13 +20,16 @@ func _ready() -> void:
 func _unhandled_input(event: InputEvent):
 	if not panel.visible:
 		return
-	if event.is_action_pressed("interact"):
-		print("[UI] ¡Botón detectado en la UI!") # <-- RASTREO 1
-		get_viewport().set_input_as_handled()
+	if event.is_action_released("interact"):
 		if just_opened:
-			print("[UI] Diálogo recién abierto. Ignorando primer frame.") # <-- RASTREO 2
+			
+			print("[UI] Input de apertura ignorado de forma segura.")
 			just_opened = false
+			get_viewport().set_input_as_handled()
 			return
+		
+		print("[UI] ¡Botón detectado en la UI!")
+		get_viewport().set_input_as_handled()
 		print("[UI] Intentando avanzar de página. Índice actual antes del cambio: ", current_page_index) # <-- RASTREO 3
 		current_page_index += 1
 		if current_page_index< currentdata.pages.size():

@@ -55,6 +55,7 @@ var reading_note := false
 #--------- FUNCIONES DEL SISTEMA -----------
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	DialogueManager.dialogue_finished.connect(_on_dialogue_finished)
 
 
 func _input(event: InputEvent) -> void:
@@ -68,9 +69,9 @@ func _process(delta: float) -> void:
 	if move_and_rotate_player:
 		state_machinse_label.text = $StateMachine.get_state()
 		Sound_Steps()
+		interactions()
 	if direction == Vector3.ZERO:
 		camera_3d.position = camera_3d.position.lerp(origCamPos, delta * 5)
-	interactions()
 	see_mouse()
 
 #--------- FUNCIONES PROPIAS -----------
@@ -184,9 +185,14 @@ func soltar_objeto(objeto):
 		objeto.global_position = global_position + (global_transform.basis.z * -1.5)
 	
 	object_in_hand = null
-	
 
 
+func _on_dialogue_finished():
+	print("[Player] El gestor notifica el fin del diálogo. Descongelando al personaje.")
+	await get_tree().process_frame
+	Input.action_release("interact")
+	move_and_rotate_player = true
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 
 func see_mouse():

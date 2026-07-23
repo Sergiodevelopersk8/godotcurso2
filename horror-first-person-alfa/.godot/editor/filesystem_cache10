@@ -1,5 +1,5 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1784654845
+::res://::1784781706
 apuntes.txt::TextFile::-1::1782911738::0::1::::<><><>0<>0<><>::
 default_bus_layout.tres::AudioBusLayout::3789415499722831103::1780016897::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D::3741386300160002114::1779343676::1779343685::1::::<><><>0<>0<>4524bee1a9f67b5b30483947bd60b466<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
@@ -165,8 +165,8 @@ AudioStreamManager.gd::GDScript::6380991560273082304::1780021211::0::1::::<>Node
 GameManager.gd::GDScript::8799663444946049050::1779346555::0::1::::<>Node<><>0<>0<><>::
 ::res://common/shaders/::1779345187
 ::res://common/themes/::1779346019
-::res://levels/::1784569231
-level_1.tscn::PackedScene::2211276956798904084::1784569231::0::1::::<><><>0<>0<><>::uid://bhnndfskx60x0::::res://levels/level_base.tscn<>uid://qbybyiagt4ao::::res://Assets/environmental/materials/Concrete_One.tres<>uid://c1uydeliydj17::::res://src/entities/player/player.tscn<>uid://ddhe4vjdr6e5o::::res://src/interactables/bote_salsa/bote_salsa_base_interact.tscn<>uid://cpsf3m1y6dysi::::res://src/interactables/memela_base/memela_base.tscn<>uid://qr8wpu0yir0p::::res://src/interactables/Notas/nota_pedido.tscn<>uid://vh7pva6qxujm::::res://src/interactables/Npcs/Npc_cliente_1.tscn<>uid://cqws08pu1x52l::::res://src/systems/dialogue/ui/DialogueUI.tscn
+::res://levels/::1784728799
+level_1.tscn::PackedScene::2211276956798904084::1784728799::0::1::::<><><>0<>0<><>::uid://bhnndfskx60x0::::res://levels/level_base.tscn<>uid://qbybyiagt4ao::::res://Assets/environmental/materials/Concrete_One.tres<>uid://c1uydeliydj17::::res://src/entities/player/player.tscn<>uid://ddhe4vjdr6e5o::::res://src/interactables/bote_salsa/bote_salsa_base_interact.tscn<>uid://cpsf3m1y6dysi::::res://src/interactables/memela_base/memela_base.tscn<>uid://qr8wpu0yir0p::::res://src/interactables/Notas/nota_pedido.tscn<>uid://vh7pva6qxujm::::res://src/interactables/Npcs/Npc_cliente_1.tscn<>uid://cqws08pu1x52l::::res://src/systems/dialogue/ui/DialogueUI.tscn
 level_base.tscn::PackedScene::2905374469159351859::1781155632::0::1::::<><><>0<>0<><>::
 ::res://src/::1783865923
 ::res://src/core/::1779346072
@@ -176,8 +176,8 @@ level_base.tscn::PackedScene::2905374469159351859::1781155632::0::1::::<><><>0<>
 ::res://src/entities/npcs/::1783878217
 ::res://src/entities/player/::1782911697
 player.tscn::PackedScene::6640501649746283280::1782911697::0::1::::<><><>0<>0<><>::uid://cs2pcwflpxxib::::res://ui/hud/point_view/crosshair.png<>uid://dguupkf4w1250::::res://src/entities/player/scripts/Player.gd<>uid://sg6uskc1u0g3::::res://src/entities/player/scripts/states/StateMachine.gd<>uid://4eo0fvhxrssp::::res://src/entities/player/scripts/states/idle.gd<>uid://byv56lxphp6al::::res://src/entities/player/scripts/states/walk.gd<>uid://dxa7rdxqqh6nm::::res://src/entities/player/scripts/states/run.gd<>uid://cdhetbgoscikk::::res://src/entities/player/scripts/states/crouch.gd<>uid://blsj0cgqndoym::::res://src/entities/player/scripts/states/air.gd
-::res://src/entities/player/scripts/::1784569095
-Player.gd::GDScript::7622924329058200081::1784569095::0::1::::Player<>CharacterBody3D<><>0<>0<><>::
+::res://src/entities/player/scripts/::1784657466
+Player.gd::GDScript::7622924329058200081::1784657466::0::1::::Player<>CharacterBody3D<><>0<>0<><>::
 ::res://src/entities/player/scripts/states/::1780017417
 air.gd::GDScript::3196247976127054684::1779959898::0::1::::Air_Player_State<>PlayerState<><>0<>0<><>::
 crouch.gd::GDScript::4998135403086391406::1780017417::0::1::::Crouch_Player_State<>PlayerState<><>0<>0<><>::
@@ -203,13 +203,13 @@ nota_pedido.tscn::PackedScene::1160159688169368453::1782826010::0::1::::<><><>0<
 npc_cliente_1.gd::GDScript::178179673951425005::1784394065::0::1::::NPCCliente1<>Interact<><>0<>0<><>::
 Npc_cliente_1.tscn::PackedScene::1490387195775358758::1784394066::0::1::::<><><>0<>0<><>::uid://dj867l6dbx7rf::::res://src/interactables/interact.tscn<>uid://cskuf0bkv6rh::::res://src/interactables/Npcs/npc_cliente_1.gd<>uid://bxuejju8csl7q::::res://src/systems/dialogue/cliente_pedido_memela.tres
 ::res://src/systems/::1783865955
-::res://src/systems/dialogue/::1784393516
-cliente_pedido_memela.tres::Resource/DialogueData::4042311087674253900::1784393424::0::1::::<><><>0<>0<><>::uid://ber7klao4uqd7::::res://src/systems/dialogue/dialogue_data.gd
+::res://src/systems/dialogue/::1784655012
+cliente_pedido_memela.tres::Resource/DialogueData::4042311087674253900::1784655012::0::1::::<><><>0<>0<><>::uid://ber7klao4uqd7::::res://src/systems/dialogue/dialogue_data.gd
 dialogue_data.gd::GDScript::2704231860204328566::1783866408::0::1::::DialogueData<>Resource<><>0<>0<><>::
 dialogue_manager.gd::GDScript::4799519441036906130::1784308151::0::1::::<>Node<><>0<>0<><>::
-::res://src/systems/dialogue/ui/::1784392973
-DialogueUI.tscn::PackedScene::5942418484288467889::1784392973::0::1::::<><><>0<>0<><>::uid://qukbcxe51msk::::res://src/systems/dialogue/ui/dialogue_ui.gd
-dialogue_ui.gd::GDScript::1164918149811353230::1784391499::0::1::::DialogueUI<>Control<><>0<>0<><>::
+::res://src/systems/dialogue/ui/::1784728799
+DialogueUI.tscn::PackedScene::5942418484288467889::1784655357::0::1::::<><><>0<>0<><>::uid://qukbcxe51msk::::res://src/systems/dialogue/ui/dialogue_ui.gd
+dialogue_ui.gd::GDScript::1164918149811353230::1784728799::0::1::::DialogueUI<>Control<><>0<>0<><>::
 ::res://ui/::1779346718
 ::res://ui/hud/::1779952596
 ::res://ui/hud/point_view/::1779952606

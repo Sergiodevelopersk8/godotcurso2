@@ -1,5 +1,4 @@
-res://levels/level_1.tscn
-res://src/systems/dialogue/cliente_pedido_memela.tres
-res://src/systems/dialogue/ui/DialogueUI.tscn
-res://src/systems/dialogue/ui/dialogue_ui.gd
 res://src/entities/player/scripts/Player.gd
+res://levels/level_1.tscn
+res://src/systems/dialogue/ui/dialogue_ui.gd
+res://src/interactables/Notas/nota_pedido.gd
