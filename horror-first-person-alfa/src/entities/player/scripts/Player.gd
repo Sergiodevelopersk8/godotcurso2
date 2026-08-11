@@ -27,7 +27,7 @@ var move_and_rotate_player := true #sirve para habilitar si se mueve la camara o
 var mouse_sens = 0.25 #sensibilidad con la que rota la camara
 var friction := 20 #AL DETENERSE
 var direction := Vector3()
-
+var current_note = null
 
 #--------- VARIABLES DE VELOCIDADES, GRAVEDAD Y MOVIMIENTO_DE_CAMARA -----------
 var speed := 3 #VELOCIDAD DEL PLAYER
@@ -45,7 +45,7 @@ var play_foot_step := 1
 var object_in_hand = null
 var interacts
 var reading_note := false
-
+var is_in_dialogue = false
 
 
 
@@ -55,10 +55,13 @@ var reading_note := false
 #--------- FUNCIONES DEL SISTEMA -----------
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	DialogueManager.dialogue_request.connect(_on_dialogue_requested)
 	DialogueManager.dialogue_finished.connect(_on_dialogue_finished)
 
 
 func _input(event: InputEvent) -> void:
+	if event is InputEventMouseMotion:
+		print("[Player Debug] Intento rotar. move_and_rotate_player =", move_and_rotate_player)
 	#si se puede rotar la camara
 	if move_and_rotate_player:
 		#entra a la funcion 
@@ -66,10 +69,10 @@ func _input(event: InputEvent) -> void:
 	
 
 func _process(delta: float) -> void:
+	interactions()
 	if move_and_rotate_player:
 		state_machinse_label.text = $StateMachine.get_state()
 		Sound_Steps()
-		interactions()
 	if direction == Vector3.ZERO:
 		camera_3d.position = camera_3d.position.lerp(origCamPos, delta * 5)
 	see_mouse()
@@ -91,8 +94,8 @@ func process_input(delta) -> Vector3:
 	_delta += delta
 	direction = Vector3.ZERO
 	
-	if get_tree().paused:
-		direction = Vector3.ZERO
+	if get_tree().paused or not move_and_rotate_player:
+		
 		return Vector3.ZERO
 	
 	
@@ -105,16 +108,18 @@ func process_input(delta) -> Vector3:
 
 
 func interactions():
-	if not move_and_rotate_player:
-		if Input.is_action_just_pressed("interact"):
-			print("[Player] Intento de interacción bloqueado (El jugador está congelado).")
-		return
 	if reading_note:
+		print("[Player Debug] Estado actual: Leyendo nota. Esperando 'interact'...")
 		if Input.is_action_just_pressed("interact"):
-			if ray_cast_interactuar.is_colliding():
-				var collider = ray_cast_interactuar.get_collider()
-				if collider.has_method("action_use"):
-					collider.action_use()
+			
+			print("[Player Debug] 'interact' presionado mientras se leía la nota.")
+			
+			if current_note != null and current_note.has_method("interact"):
+				current_note.interact()
+				current_note = null
+		return
+	
+	if not move_and_rotate_player:
 		return
 	
 	var seen_object = comprobar_interacciones()
@@ -131,18 +136,16 @@ func interactions():
 		if object_in_hand == null and seen_object != null:
 			#esto evita que el ui y otros inetrfieran cuando se interactua con objetos
 			get_viewport().is_input_handled()
-			
-			#if seen_object.has_method("action_use"):
 			if seen_object.can_be_loaded == true:
 				tomar_objeto(seen_object)
 			else:
-				move_and_rotate_player = false
+				if seen_object is NotaPedido:
+					current_note = seen_object
 				seen_object.interact()
 		else:
 			#aqui pongo la logica del minijuego de hacer memelas 
 			pass
-	
-	
+
 
 
 
@@ -187,12 +190,23 @@ func soltar_objeto(objeto):
 	object_in_hand = null
 
 
+func _on_dialogue_requested(data):
+	is_in_dialogue = true
+	move_and_rotate_player = false 
+
+
+
+
 func _on_dialogue_finished():
 	print("[Player] El gestor notifica el fin del diálogo. Descongelando al personaje.")
 	await get_tree().process_frame
 	Input.action_release("interact")
 	move_and_rotate_player = true
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+
+
+
 
 
 func see_mouse():

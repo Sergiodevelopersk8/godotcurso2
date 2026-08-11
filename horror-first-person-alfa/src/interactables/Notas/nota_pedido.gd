@@ -16,10 +16,9 @@ func _ready() -> void:
 	
 
 
-func interact():
+func interact1():
 	ui_note.visible = not ui_note.visible
 	if ui_note.visible:
-		
 		player.reading_note = true
 		player.move_and_rotate_player = false
 	else:
@@ -27,9 +26,17 @@ func interact():
 		player.move_and_rotate_player = true
 
 
-func interact2():
+func interact():
+	
 	ui_note.visible = not ui_note.visible
-	get_tree().paused = not get_tree().paused
-#debo de ARREGLAR ESTO DEL MOVIMIENTO 
+	
+	player.reading_note = ui_note.visible
+	
+	
+	print("[Nota Debug] Visibilidad UI:", ui_note.visible)
+	print("[Nota Debug] Player.reading_note:", player.reading_note)
+	print("[Nota Debug] Player.move_and_rotate_player:", player.move_and_rotate_player)
+	#get_tree().paused = not get_tree().paused
+	#debo de ARREGLAR ESTO DEL MOVIMIENTO 
 	
 	player.move_and_rotate_player = not player.move_and_rotate_player
