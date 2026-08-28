@@ -23,8 +23,10 @@ window/stretch/aspect="expand"
 
 folder_colors={
 "res://assets/": "red",
+"res://src/": "teal",
 "res://src/core/": "purple",
 "res://src/entities/": "pink",
+"res://src/entities/player/states/": "yellow",
 "res://src/systems/": "orange",
 "res://src/ui/": "green"
 }
