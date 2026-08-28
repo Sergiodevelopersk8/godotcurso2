@@ -1,9 +1,10 @@
 res://src/systems/dialogue/
+res://ui/NoteUI/
+res://src/interactables/Notas/
 res://src/systems/dialogue/ui/
 res://src/interactables/Npcs/
 res://src/interactables/
 res://src/entities/npcs/
-res://src/interactables/Notas/
 res://src/interactables/memela_base/
 res://src/interactables/bote_salsa/
 res://Assets/environmental/materials/

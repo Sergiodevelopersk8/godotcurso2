@@ -2,10 +2,6 @@ extends PlayerState
 class_name Idle_Player_State
 
 
-#--------- FUNCIONES DEL SISTEMA -----------
-
-
-
 #--------- FUNCIONES PROPIAS -----------
 func update(delta):
 	player._delta += delta
@@ -32,7 +28,6 @@ func physics_update(delta: float) -> void:
 	if !player.is_on_floor():
 		state_machine.change_state("Air")
 		
-	
 	
 	player.velocity = player.velocity.lerp(Vector3.ZERO,player.friction * delta)
 	

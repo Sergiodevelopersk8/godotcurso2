@@ -1,0 +1,42 @@
+#referncio o importar el dialogo de preguntas
+import "res://Dialogues/pregutas.dialogue" as preguntas
+
+# AQUI ES EL DIALOGO DE PRUEBA OSEA EL PRIMERO
+
+#esto es de inicio 
+~ start 
+#aqui es quien habla le puse mi nombre despues de los puntos suspensivos : 
+# siguie lo que sera el dialogo 
+Sergio: Voy a tarer una  memela roja quieres algo ?
+
+# signo de  - para preguntar 
+- Si quiero una 
+# aqui te envia al otro nodo de aqui mismo ques ~ memela
+	=> memela
+
+
+# finaliza la conversacion
+- NO
+	End the conversation => END
+
+
+
+#nodo de memela para preguntar y enviar a la otra conversación 
+~ memela
+
+Sergio: Como quieres tu memela 
+
+# pregunta
+- de que tiene
+# envia al dialogue  manager de preguntas  
+	=>< preguntas/prueba_dos
+#el menor < regresa a esta conversacion para finalizar que seria 
+#Sergio: okay
+
+- sorprendeme
+
+Sergio: okay 
+
+
+#aqui finaliza el nodo 
+=> END

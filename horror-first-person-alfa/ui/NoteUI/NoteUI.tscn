@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dmyey5juk5seb"]
+
+[ext_resource type="Script" uid="uid://b1bh64fvbj3d3" path="res://note_ui.gd" id="1_icjph"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=518121971]
+script = ExtResource("1_icjph")
+
+[node name="IMGNote" type="TextureRect" parent="." unique_id=634072093]
+offset_right = 40.0
+offset_bottom = 40.0

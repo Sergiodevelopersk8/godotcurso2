@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bavm4amuqqa6u"
+path="res://.godot/imported/pregutas.dialogue-3a2c5c6c19e19e4fc2873ddbfc992ab7.tres"
+
+[deps]
+
+source_file="res://Dialogues/pregutas.dialogue"
+dest_files=["res://.godot/imported/pregutas.dialogue-3a2c5c6c19e19e4fc2873ddbfc992ab7.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cr32bqffxsdry"
+path="res://.godot/imported/npc_vecino.dialogue-fd13a0ca6cdc321f6b60b4dbb796417d.tres"
+
+[deps]
+
+source_file="res://src/systems/dialogue/npc_vecino.dialogue"
+dest_files=["res://.godot/imported/npc_vecino.dialogue-fd13a0ca6cdc321f6b60b4dbb796417d.tres"]
+
+[params]
+
+defaults=true

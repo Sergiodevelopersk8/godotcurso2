@@ -8,6 +8,8 @@
 [ext_resource type="Script" uid="uid://dxa7rdxqqh6nm" path="res://src/entities/player/scripts/states/run.gd" id="5_0mfjg"]
 [ext_resource type="Script" uid="uid://cdhetbgoscikk" path="res://src/entities/player/scripts/states/crouch.gd" id="6_oih67"]
 [ext_resource type="Script" uid="uid://blsj0cgqndoym" path="res://src/entities/player/scripts/states/air.gd" id="7_eb65w"]
+[ext_resource type="Script" uid="uid://3suq40lhoo7i" path="res://src/entities/player/in_dialogue.gd" id="8_4f0qm"]
+[ext_resource type="Script" uid="uid://cpfitpfcakdvs" path="res://src/entities/player/ReadingNote.gd" id="9_tk761"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s8n7f"]
 albedo_color = Color(1, 0.050980393, 1, 1)
@@ -58,6 +60,12 @@ script = ExtResource("6_oih67")
 
 [node name="Air" type="Node" parent="StateMachine" unique_id=729915516]
 script = ExtResource("7_eb65w")
+
+[node name="ReadingNote" type="Node" parent="StateMachine" unique_id=479894401]
+script = ExtResource("9_tk761")
+
+[node name="InDialogue" type="Node" parent="StateMachine" unique_id=910874669]
+script = ExtResource("8_4f0qm")
 
 [node name="Raycasts" type="Node3D" parent="." unique_id=441413815]
 

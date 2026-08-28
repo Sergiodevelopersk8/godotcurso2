@@ -1,0 +1,216 @@
+[gd_resource type="Resource" script_class="DialogueResource" format=3]
+
+[ext_resource type="Script" uid="uid://dbs4435dsf3ry" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_jpkct"]
+
+[resource]
+script = ExtResource("1_jpkct")
+using_states = PackedStringArray()
+titles = {
+"memela": "26",
+"preguntas/Cuanto": "bavm4amuqqa6u@15",
+"preguntas/prueba_dos": "bavm4amuqqa6u@2",
+"start": "9"
+}
+character_names = PackedStringArray("Sergio")
+first_title = "6"
+lines = {
+"0": {
+&"id": "0",
+&"next_id": "6",
+&"type": ""
+},
+"11": {
+&"id": "11",
+&"next_id": "12",
+&"type": ""
+},
+"12": {
+&"id": "12",
+&"next_id": "13",
+&"responses": PackedStringArray("12", "18"),
+&"text": "Si quiero una",
+&"type": "response"
+},
+"13": {
+&"id": "13",
+&"next_id": "14",
+&"type": ""
+},
+"14": {
+&"id": "14",
+&"is_snippet": false,
+&"next_id": "26",
+&"next_id_after": "",
+&"type": "goto"
+},
+"17": {
+&"id": "17",
+&"next_id": "18",
+&"type": ""
+},
+"18": {
+&"id": "18",
+&"next_id": "19",
+&"text": "NO",
+&"type": "response"
+},
+"19": {
+&"id": "19",
+&"next_id": "end",
+&"text": "End the conversation",
+&"type": "dialogue"
+},
+"23": {
+&"id": "23",
+&"next_id": "24",
+&"type": ""
+},
+"24": {
+&"id": "24",
+&"next_id": "26",
+&"type": "title"
+},
+"25": {
+&"id": "25",
+&"next_id": "26",
+&"type": ""
+},
+"26": {
+&"character": "Sergio",
+&"id": "26",
+&"next_id": "29",
+&"text": "Como quieres tu memela",
+&"type": "dialogue"
+},
+"28": {
+&"id": "28",
+&"next_id": "29",
+&"type": ""
+},
+"29": {
+&"id": "29",
+&"next_id": "30",
+&"responses": PackedStringArray("29", "35"),
+&"text": "de que tiene",
+&"type": "response"
+},
+"30": {
+&"id": "30",
+&"next_id": "31",
+&"type": ""
+},
+"31": {
+&"id": "31",
+&"is_snippet": true,
+&"next_id": "bavm4amuqqa6u@2",
+&"next_id_after": "37",
+&"type": "goto"
+},
+"34": {
+&"id": "34",
+&"next_id": "35",
+&"type": ""
+},
+"35": {
+&"id": "35",
+&"next_id": "37",
+&"text": "sorprendeme",
+&"type": "response"
+},
+"36": {
+&"id": "36",
+&"next_id": "37",
+&"type": ""
+},
+"37": {
+&"character": "Sergio",
+&"id": "37",
+&"next_id": "41",
+&"text": "okay",
+&"type": "dialogue"
+},
+"40": {
+&"id": "40",
+&"next_id": "41",
+&"type": ""
+},
+"41": {
+&"id": "41",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+},
+"42": {
+&"id": "42",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+},
+"5": {
+&"id": "5",
+&"next_id": "6",
+&"type": ""
+},
+"6": {
+&"id": "6",
+&"next_id": "9",
+&"type": "title"
+},
+"8": {
+&"id": "8",
+&"next_id": "9",
+&"type": ""
+},
+"9": {
+&"character": "Sergio",
+&"id": "9",
+&"next_id": "12",
+&"text": "Voy a tarer una  memela roja quieres algo ?",
+&"type": "dialogue"
+}
+}
+raw_text = "#referncio o importar el dialogo de preguntas
+import \"res://Dialogues/pregutas.dialogue\" as preguntas
+
+# AQUI ES EL DIALOGO DE PRUEBA OSEA EL PRIMERO
+
+#esto es de inicio 
+~ start 
+#aqui es quien habla le puse mi nombre despues de los puntos suspensivos : 
+# siguie lo que sera el dialogo 
+Sergio: Voy a tarer una  memela roja quieres algo ?
+
+# signo de  - para preguntar 
+- Si quiero una 
+# aqui te envia al otro nodo de aqui mismo ques ~ memela
+	=> memela
+
+
+# finaliza la conversacion
+- NO
+	End the conversation => END
+
+
+
+#nodo de memela para preguntar y enviar a la otra conversación 
+~ memela
+
+Sergio: Como quieres tu memela 
+
+# pregunta
+- de que tiene
+# envia al dialogue  manager de preguntas  
+	=>< preguntas/prueba_dos
+#el menor < regresa a esta conversacion para finalizar que seria 
+#Sergio: okay
+
+- sorprendeme
+
+Sergio: okay 
+
+
+#aqui finaliza el nodo 
+=> END"
+metadata/dialogue_manager_version = "3.10.5"

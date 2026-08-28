@@ -53,20 +53,30 @@ var is_in_dialogue = false
 
 
 #--------- FUNCIONES DEL SISTEMA -----------
+
+
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	DialogueManager.dialogue_request.connect(_on_dialogue_requested)
-	DialogueManager.dialogue_finished.connect(_on_dialogue_finished)
+#	DialogueManager.dialogue_request.connect(_on_dialogue_requested)
+#	DialogueManager.dialogue_finished.connect(_on_dialogue_finished)
+	#nos suscribimos a las señales de la nota
+	NoteManager.note_opened.connect(_on_note_opened)
+	NoteManager.note_closed.connect(_on_note_closed)
+
+
+
 
 
 func _input(event: InputEvent) -> void:
+	# 1. Si no se permite mover/rotar, cancelamos CUALQUIER procesamiento de entrada
+	if not move_and_rotate_player:
+		return
+	# 2. Solo si move_and_rotate_player es true, procesamos la cámara
 	if event is InputEventMouseMotion:
-		print("[Player Debug] Intento rotar. move_and_rotate_player =", move_and_rotate_player)
-	#si se puede rotar la camara
-	if move_and_rotate_player:
-		#entra a la funcion 
 		rotate_camera(event)
-	
+
+
+
 
 func _process(delta: float) -> void:
 	interactions()
@@ -76,6 +86,9 @@ func _process(delta: float) -> void:
 	if direction == Vector3.ZERO:
 		camera_3d.position = camera_3d.position.lerp(origCamPos, delta * 5)
 	see_mouse()
+
+
+
 
 #--------- FUNCIONES PROPIAS -----------
 
@@ -108,22 +121,14 @@ func process_input(delta) -> Vector3:
 
 
 func interactions():
-	if reading_note:
-		print("[Player Debug] Estado actual: Leyendo nota. Esperando 'interact'...")
-		if Input.is_action_just_pressed("interact"):
-			
-			print("[Player Debug] 'interact' presionado mientras se leía la nota.")
-			
-			if current_note != null and current_note.has_method("interact"):
-				current_note.interact()
-				current_note = null
-		return
-	
+	# Si la cámara/movimiento están desactivados, NO detectar interacciones
 	if not move_and_rotate_player:
+		description_label.text = ""
 		return
-	
+
 	var seen_object = comprobar_interacciones()
-	if seen_object != null and seen_object.get("id") :
+	
+	if seen_object != null and seen_object.get("id"):
 		description_label.text = seen_object.id
 	else:
 		description_label.text = ""
@@ -133,21 +138,14 @@ func interactions():
 			soltar_objeto(object_in_hand)
 	
 	if Input.is_action_just_pressed("interact"):
-		if object_in_hand == null and seen_object != null:
-			#esto evita que el ui y otros inetrfieran cuando se interactua con objetos
-			get_viewport().is_input_handled()
-			if seen_object.can_be_loaded == true:
-				tomar_objeto(seen_object)
-			else:
-				if seen_object is NotaPedido:
-					current_note = seen_object
-				seen_object.interact()
+		if object_in_hand == null:
+			if seen_object != null:
+				if seen_object.can_be_loaded:
+					tomar_objeto(seen_object)
+				else:
+					seen_object.interact()
 		else:
-			#aqui pongo la logica del minijuego de hacer memelas 
 			pass
-
-
-
 
 
 func comprobar_interacciones() -> Interact:
@@ -157,8 +155,6 @@ func comprobar_interacciones() -> Interact:
 		if colisionador is Interact:
 			return colisionador # Si todo está bien, devuelve el objeto
 	return null # Si no está colisionando o no es del grupo, devuelve un vacío limpio
-
-
 
 
 func tomar_objeto(objeto):
@@ -177,7 +173,6 @@ func tomar_objeto(objeto):
 		#igual para la escala
 		objeto.scale = Vector3.ONE * objeto.scale_obj
 		object_in_hand = objeto #guardo el obejto
-	
 
 
 func soltar_objeto(objeto):
@@ -190,22 +185,28 @@ func soltar_objeto(objeto):
 	object_in_hand = null
 
 
-func _on_dialogue_requested(data):
-	is_in_dialogue = true
-	move_and_rotate_player = false 
+
+
+func _on_nota_pedido_note_toggled(is_open: bool) -> void:
+	
+	if is_open:
+		move_and_rotate_player = false
+	else:
+		await get_tree().process_frame
+		move_and_rotate_player = true
+ 
 
 
 
+func  _on_note_opened(_texture: Texture2D):
+	move_and_rotate_player = false
+	# Liberamos virtualmente la acción 'interact' para que no siga activa en el frame
+	Input.action_release("interact")
 
-func _on_dialogue_finished():
-	print("[Player] El gestor notifica el fin del diálogo. Descongelando al personaje.")
+func _on_note_closed():
 	await get_tree().process_frame
 	Input.action_release("interact")
 	move_and_rotate_player = true
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-
-
-
 
 
 

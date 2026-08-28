@@ -1,3 +1,6 @@
+Node
+TextureRect
+CanvasLayer
 Label
 RichTextLabel
 Panel
@@ -7,8 +10,5 @@ Timer
 MeshInstance3D
 CollisionShape3D
 CharacterBody3D
-TextureRect
-CanvasLayer
 StaticBody3D
 Marker3D
-RayCast3D

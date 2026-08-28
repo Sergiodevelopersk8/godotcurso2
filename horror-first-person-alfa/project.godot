@@ -21,13 +21,15 @@ buses/default_bus_layout="uid://bt8veckldwqpb"
 
 [autoload]
 
+NoteManager="*uid://dbtbwj2e7rfgh"
 GameManager="*uid://dxmvf3ao106la"
 AudioStreamManager="*uid://cw5887r2ynam7"
-DialogueManager="*uid://cam6nb41bdh7o"
+DialogueManager="*uid://c3rodes2l3gxb"
+NoteUi="*uid://dmyey5juk5seb"
 
 [editor_plugins]
 
-enabled=PackedStringArray()
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
 [file_customization]
 
@@ -95,6 +97,15 @@ drop={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":81,"key_label":0,"unicode":113,"location":0,"echo":false,"script":null)
 ]
 }
+dialogue_click={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":84,"key_label":0,"unicode":116,"location":0,"echo":false,"script":null)
+]
+}
+
+[internationalization]
+
+locale/translations_pot_files=PackedStringArray("res://src/systems/dialogue/npc_vecino.dialogue")
 
 [physics]
 

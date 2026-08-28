@@ -6,9 +6,6 @@ class_name Walk_Player_State
 
 func update(delta):
 	
-	#if Global.is_dialogue_active:
-	#	state_machine.change_state("Idle")
-	#	return
 	if get_tree().paused:
 		player.velocity = Vector3.ZERO
 		return

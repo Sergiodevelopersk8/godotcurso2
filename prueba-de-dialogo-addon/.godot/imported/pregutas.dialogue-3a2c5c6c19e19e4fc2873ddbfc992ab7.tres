@@ -1,0 +1,244 @@
+[gd_resource type="Resource" script_class="DialogueResource" format=3]
+
+[ext_resource type="Script" uid="uid://dbs4435dsf3ry" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_3bqlx"]
+
+[resource]
+script = ExtResource("1_3bqlx")
+using_states = PackedStringArray()
+titles = {
+"Cuanto": "15",
+"prueba_dos": "2"
+}
+character_names = PackedStringArray("Sergio", "yo")
+first_title = "1"
+lines = {
+"0": {
+&"id": "0",
+&"next_id": "1",
+&"type": ""
+},
+"1": {
+&"id": "1",
+&"next_id": "2",
+&"type": "title"
+},
+"12": {
+&"id": "12",
+&"next_id": "13",
+&"type": ""
+},
+"13": {
+&"id": "13",
+&"next_id": "15",
+&"type": "title"
+},
+"14": {
+&"id": "14",
+&"next_id": "15",
+&"type": ""
+},
+"15": {
+&"character": "yo",
+&"id": "15",
+&"next_id": "17",
+&"text": "tengo ({{get_dinero()}}) pesos",
+&"text_replacements": Array[Dictionary]([{
+&"expression": Array[Dictionary]([{
+&"function": "get_dinero",
+&"i": 13,
+&"type": &"function",
+&"value": Array[Array]([Array[Dictionary]([{
+&"i": 24,
+&"type": &"parens_close"
+}])])
+}]),
+&"value_in_text": "{{get_dinero()}}"
+}]),
+&"type": "dialogue"
+},
+"16": {
+&"id": "16",
+&"next_id": "17",
+&"type": ""
+},
+"17": {
+&"condition": {
+&"expression": Array[Dictionary]([{
+&"function": "get_dinero",
+&"i": 35,
+&"type": &"function",
+&"value": Array[Array]([Array[Dictionary]([{
+&"i": 46,
+&"type": &"parens_close"
+}])])
+}, {
+&"i": 48,
+&"type": &"comparison",
+&"value": "<="
+}, {
+&"i": 51,
+&"type": &"number",
+&"value": 10
+}])
+},
+&"condition_as_text": "get_dinero() <= 10",
+&"id": "17",
+&"next_id": "24",
+&"responses": PackedStringArray("17", "18"),
+&"text": "Tengo ({{get_dinero()}} pesos)",
+&"text_replacements": Array[Dictionary]([{
+&"expression": Array[Dictionary]([{
+&"function": "get_dinero",
+&"i": 11,
+&"type": &"function",
+&"value": Array[Array]([Array[Dictionary]([{
+&"i": 22,
+&"type": &"parens_close"
+}])])
+}]),
+&"value_in_text": "{{get_dinero()}}"
+}]),
+&"type": "response"
+},
+"18": {
+&"id": "18",
+&"next_id": "19",
+&"text": "Me prestas 10 pesos ?",
+&"type": "response"
+},
+"19": {
+&"character": "Sergio",
+&"id": "19",
+&"next_id": "20",
+&"text": "ya que toma",
+&"type": "dialogue"
+},
+"2": {
+&"character": "Sergio",
+&"id": "2",
+&"next_id": "3",
+&"text": "salsa roja,verde sin salsa",
+&"type": "dialogue"
+},
+"20": {
+&"id": "20",
+&"mutation": {
+&"expression": Array[Dictionary]([{
+&"function": "set_dinero",
+&"i": 3,
+&"type": &"function",
+&"value": Array[Array]([Array[Dictionary]([{
+&"i": 14,
+&"type": &"number",
+&"value": 10
+}, {
+&"i": 16,
+&"type": &"parens_close"
+}])])
+}]),
+&"is_blocking": true
+},
+&"next_id": "22",
+&"type": "mutation"
+},
+"21": {
+&"id": "21",
+&"next_id": "22",
+&"type": ""
+},
+"22": {
+&"id": "22",
+&"is_snippet": false,
+&"next_id": "2",
+&"next_id_after": "",
+&"type": "goto"
+},
+"23": {
+&"id": "23",
+&"next_id": "24",
+&"type": ""
+},
+"24": {
+&"id": "24",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+},
+"25": {
+&"id": "25",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+},
+"3": {
+&"character": "Sergio",
+&"id": "3",
+&"next_id": "5",
+&"text": "Pero si tienes dinero ?",
+&"type": "dialogue"
+},
+"4": {
+&"id": "4",
+&"next_id": "5",
+&"type": ""
+},
+"5": {
+&"id": "5",
+&"next_id": "6",
+&"responses": PackedStringArray("5", "8"),
+&"text": "SI",
+&"type": "response"
+},
+"6": {
+&"character": "Sergio",
+&"id": "6",
+&"next_id": "15",
+&"text": "Cuanto tienes",
+&"type": "dialogue"
+},
+"7": {
+&"id": "7",
+&"next_id": "8",
+&"type": ""
+},
+"8": {
+&"id": "8",
+&"next_id": "9",
+&"text": "No",
+&"type": "response"
+},
+"9": {
+&"id": "9",
+&"next_id": "end",
+&"text": "End the conversation",
+&"type": "dialogue"
+}
+}
+raw_text = "
+~ prueba_dos
+Sergio: salsa roja,verde sin salsa  
+Sergio: Pero si tienes dinero ? 
+
+- SI
+	Sergio: Cuanto tienes  => Cuanto
+
+- No
+	 End the conversation => END
+
+
+# manager de preguntas
+~ Cuanto
+# las {{}} sirven para detectar el set como metodo
+yo: tengo ({{get_dinero()}}) pesos 
+# la condicional es entre [aqui va el get]
+- Tengo ({{get_dinero()}} pesos) [if get_dinero() <= 10]
+- Me prestas 10 pesos ? 
+	Sergio: ya que toma
+	do set_dinero(10) #aqui es para enviar el valor del dinero al main
+	# ya regresa al nodo de preguntas
+	=> prueba_dos  
+
+=> END"
+metadata/dialogue_manager_version = "3.10.5"

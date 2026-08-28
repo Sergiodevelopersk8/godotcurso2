@@ -1,0 +1,25 @@
+
+~ prueba_dos
+Sergio: salsa roja,verde sin salsa  
+Sergio: Pero si tienes dinero ? 
+
+- SI
+	Sergio: Cuanto tienes  => Cuanto
+
+- No
+	 End the conversation => END
+
+
+# manager de preguntas
+~ Cuanto
+# las {{}} sirven para detectar el set como metodo
+yo: tengo ({{get_dinero()}}) pesos 
+# la condicional es entre [aqui va el get]
+- Tengo ({{get_dinero()}} pesos) [if get_dinero() <= 10]
+- Me prestas 10 pesos ? 
+	Sergio: ya que toma
+	do set_dinero(10) #aqui es para enviar el valor del dinero al main
+	# ya regresa al nodo de preguntas
+	=> prueba_dos  
+
+=> END

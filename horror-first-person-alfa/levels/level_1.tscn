@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://cpsf3m1y6dysi" path="res://src/interactables/memela_base/memela_base.tscn" id="5_n46q3"]
 [ext_resource type="PackedScene" uid="uid://qr8wpu0yir0p" path="res://src/interactables/Notas/nota_pedido.tscn" id="6_btoec"]
 [ext_resource type="PackedScene" uid="uid://vh7pva6qxujm" path="res://src/interactables/Npcs/Npc_cliente_1.tscn" id="7_gwceb"]
-[ext_resource type="PackedScene" uid="uid://cqws08pu1x52l" path="res://src/systems/dialogue/ui/DialogueUI.tscn" id="7_l53as"]
 
 [sub_resource type="Environment" id="Environment_bt44k"]
 background_mode = 2
@@ -39,7 +38,7 @@ mesh = SubResource("BoxMesh_vn7o3")
 shape = SubResource("ConcavePolygonShape3D_bt44k")
 
 [node name="Player" parent="." index="2" unique_id=1893940135 instance=ExtResource("3_bt44k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010901868, 0.8789674, 0.009541273)
+transform = Transform3D(-0.9958912, 0, 0.09055765, 0, 1, 0, -0.09055765, 0, -0.9958912, -0.010901868, 0.8789674, 0.009541273)
 
 [node name="Objetos" type="Node3D" parent="." index="3" unique_id=1028022283]
 
@@ -51,13 +50,9 @@ scale_obj = 0.17
 [node name="Memela_base" parent="Objetos" index="1" unique_id=1007127372 instance=ExtResource("5_n46q3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1745559, -2.0497594)
 
-[node name="Nota_pedido" parent="." index="4" unique_id=1799684875 instance=ExtResource("6_btoec")]
-process_mode = 0
-transform = Transform3D(-0.009111185, -0.18923569, -0.014381951, -0.02037103, 0.015290505, -0.18828495, 0.18868494, -0.00748697, -0.021022316, 1.8475034, 1.251301, 0)
-metadata/_edit_group_ = true
-
-[node name="DialogueUI" parent="." index="5" unique_id=2107100169 instance=ExtResource("7_l53as")]
-
-[node name="NPC_CLIENTE" parent="." index="6" unique_id=511793934 instance=ExtResource("7_gwceb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9054338, 3.782369)
+[node name="NPC_CLIENTE" parent="." index="4" unique_id=511793934 instance=ExtResource("7_gwceb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9054338, 2.0992553)
 id = "Gustavo"
+
+[node name="Nota_pedido" parent="." index="5" unique_id=126755250 instance=ExtResource("6_btoec")]
+transform = Transform3D(-2.2262811e-05, -0.20265776, -0.004546982, -0.03367421, 0.0036446287, -0.24876304, 0.2583927, 0.00045751382, -0.032419637, 2.9696608, 1.3670331, -0.3693607)

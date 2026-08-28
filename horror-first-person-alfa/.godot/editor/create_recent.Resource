@@ -1,3 +1,3 @@
-DialogueData
+DialogueResource
 StandardMaterial3D
 Resource
