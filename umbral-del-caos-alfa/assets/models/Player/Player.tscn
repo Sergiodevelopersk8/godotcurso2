@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://bfm8qaeianonx"]
 
+[ext_resource type="Script" uid="uid://d3wc2lpxjvdt2" path="res://assets/models/Player/player.gd" id="1_6befo"]
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s8n7f"]
 albedo_color = Color(1, 0.050980393, 1, 1)
 
@@ -11,6 +13,7 @@ material = SubResource("StandardMaterial3D_s8n7f")
 [node name="Player" type="CharacterBody3D" unique_id=1893940135 groups=["Player"]]
 process_mode = 3
 transform = Transform3D(1, 0, 0, 0, 1.3996521, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_6befo")
 metadata/_edit_group_ = true
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1906324123]
@@ -40,7 +43,7 @@ shape = SubResource("CapsuleShape3D_s8n7f")
 
 [node name="Crouch" type="Node" parent="StateMachine" unique_id=1742343563]
 
-[node name="Air" type="Node" parent="StateMachine" unique_id=729915516]
+[node name="Air" type="Node" parent="StateMachine" unique_id=729915516 groups=["Player"]]
 
 [node name="ReadingNote" type="Node" parent="StateMachine" unique_id=479894401]
 

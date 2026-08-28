@@ -6,3 +6,4 @@ res://src/entities/player/states/WalkState.gd
 res://src/entities/player/states/InDialogueState.gd
 res://src/systems/interaction/Interact.gd
 res://assets/models/Player/Player.tscn
+res://assets/models/Player/player.gd
