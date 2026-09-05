@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bfm8qaeianonx"]
 
 [ext_resource type="Script" uid="uid://d3wc2lpxjvdt2" path="res://assets/models/Player/player.gd" id="1_6befo"]
+[ext_resource type="Script" uid="uid://b7i5p0tsh6tc1" path="res://src/entities/player/states/InDialogueState.gd" id="2_1ex3p"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s8n7f"]
 albedo_color = Color(1, 0.050980393, 1, 1)
@@ -48,6 +49,7 @@ shape = SubResource("CapsuleShape3D_s8n7f")
 [node name="ReadingNote" type="Node" parent="StateMachine" unique_id=479894401]
 
 [node name="InDialogue" type="Node" parent="StateMachine" unique_id=910874669]
+script = ExtResource("2_1ex3p")
 
 [node name="Raycasts" type="Node3D" parent="." unique_id=441413815]
 

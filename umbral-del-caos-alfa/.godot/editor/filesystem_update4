@@ -1,9 +1,4 @@
-res://src/entities/player/states/State.gd
-res://src/entities/player/states/PlayerState.gd
-res://src/entities/player/states/StateMachine.gd
-res://src/entities/player/states/IdleState.gd
-res://src/entities/player/states/WalkState.gd
-res://src/entities/player/states/InDialogueState.gd
-res://src/systems/interaction/Interact.gd
 res://assets/models/Player/Player.tscn
-res://assets/models/Player/player.gd
+res://src/entities/player/states/IdleState.gd
+res://src/entities/player/states/InDialogueState.gd
+res://src/entities/player/states/State.gd
