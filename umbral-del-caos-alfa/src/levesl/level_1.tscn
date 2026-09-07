@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://hopqhuwe6443"]
 
 [ext_resource type="PackedScene" uid="uid://bfm8qaeianonx" path="res://assets/models/Player/Player.tscn" id="1_n0jmb"]
-[ext_resource type="Material" uid="uid://ehreeh5b7m2d" path="res://assets/environmental/materials/Brick_One.tres" id="1_uyyla"]
+[ext_resource type="Material" uid="uid://qbybyiagt4ao" path="res://assets/environmental/materials/Concrete_One.tres" id="1_uyyla"]
+[ext_resource type="PackedScene" uid="uid://karhd88i6rv" path="res://src/entities/interactables/bote_salsa_roja.tscn" id="3_a0ior"]
 
 [sub_resource type="Environment" id="Environment_v2nwe"]
 ambient_light_source = 3
@@ -33,4 +34,8 @@ mesh = SubResource("PlaneMesh_uyyla")
 shape = SubResource("ConcavePolygonShape3D_a0ior")
 
 [node name="CharacterBody3D" parent="." unique_id=1901970933 instance=ExtResource("1_n0jmb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0505052, 1.5556288, 1.0252843)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0505052, 1, 1.0252843)
+
+[node name="objects" type="Node3D" parent="." unique_id=834404580]
+
+[node name="BoteSalsaRoja" parent="objects" unique_id=1494490827 instance=ExtResource("3_a0ior")]

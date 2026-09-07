@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://karhd88i6rv"]
+
+[ext_resource type="PackedScene" uid="uid://p7nhmt8mpm1x" path="res://src/entities/interactables/interact.tscn" id="1_yg1ng"]
+[ext_resource type="Script" uid="uid://4a57cdkd3tu2" path="res://src/entities/interactables/scrips_interactables/bote_salsa_roja.gd" id="2_11vda"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_11vda"]
+albedo_color = Color(0.89833856, 0.022582805, 0.16338527, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_dmf12"]
+material = SubResource("StandardMaterial3D_11vda")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_yg1ng"]
+
+[node name="BoteSalsaRoja" unique_id=1494490827 instance=ExtResource("1_yg1ng")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.66643536, 0)
+script = ExtResource("2_11vda")
+id = "salsa roja"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="0" unique_id=1368010973]
+mesh = SubResource("CapsuleMesh_dmf12")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1" unique_id=1606629778]
+shape = SubResource("CapsuleShape3D_yg1ng")
+metadata/_edit_group_ = true

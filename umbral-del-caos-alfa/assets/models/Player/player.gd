@@ -10,8 +10,6 @@ class_name Player
 
 #-------onreadys state_machines----------
 @onready var state_machine: StateMachine = $StateMachine
-@onready var state_machinse_label: Label = $GUIPlayer/StateMachinseLabel
-@onready var description_label: Label = $GUIPlayer/description_label
 
 
 #-------onreadys raycast----------
@@ -27,7 +25,7 @@ var move_and_rotate_player := true #sirve para habilitar si se mueve la camara o
 var mouse_sens = 0.25 #sensibilidad con la que rota la camara
 var friction := 20 #AL DETENERSE
 var direction := Vector3()
-var current_note = null
+
 
 #--------- VARIABLES DE VELOCIDADES, GRAVEDAD Y MOVIMIENTO_DE_CAMARA -----------
 var speed := 3 #VELOCIDAD DEL PLAYER
@@ -42,26 +40,28 @@ var cam_Bob_Up_Down := 1 #cuanto se mueve de arriba y abajo
 var _delta = 0
 var distance_foot_step = 0.0
 var play_foot_step := 1
-var object_in_hand = null
-var interacts
-var reading_note := false
-var is_in_dialogue = false
-
 const FOOTSTEP_AUDIO_MAP ={
-		"Grass": preload("res://Assets/audio/SFX/footsteps/grass/0.ogg"),
-		"Metal": preload("res://Assets/audio/SFX/footsteps/metal/0.ogg"),
-		"Concrete":preload("res://Assets/audio/SFX/footsteps/wood/0.ogg"),
-		"Terrazzo":preload("res://Assets/audio/SFX/footsteps/wood/0.ogg")
+		"Grass": preload("res://assets/audio/SFX/footsteps/grass/0.ogg"),
+		"Metal": preload("res://assets/audio/SFX/footsteps/metal/0.ogg"),
+		"Concrete":preload("res://assets/audio/SFX/footsteps/wood/0.ogg"),
+		"Terrazzo":preload("res://assets/audio/SFX/footsteps/wood/0.ogg")
 	}
+const DEFAULT_FOOTSTEP = preload("res://assets/audio/SFX/footsteps/boots/0.ogg")
 
-const DEFAULT_FOOTSTEP = preload("res://Assets/audio/SFX/footsteps/boots/0.ogg")
+
+#--------- SEÑALES -----------
+signal interactable_focused(description: String)
+
+
 
 
 #--------- FUNCIONES DEL SISTEMA -----------
 
 
 func _ready() -> void:
+	
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	
 
 
 
@@ -81,7 +81,7 @@ func _input(event: InputEvent) -> void:
 func _process(delta: float) -> void:
 	interactions()
 	if move_and_rotate_player:
-		state_machinse_label.text = $StateMachine.get_state()
+		#state_machinse_label.text = $StateMachine.get_state()
 		Sound_Steps()
 	if direction == Vector3.ZERO:
 		camera_3d.position = camera_3d.position.lerp(origCamPos, delta * 5)
@@ -120,15 +120,18 @@ func process_input(delta) -> Vector3:
 func interactions():
 	# Si la cámara/movimiento están desactivados, NO detectar interacciones
 	if not move_and_rotate_player:
-		description_label.text = ""
+		
+		interactable_focused.emit("")
 		return
 
 	var seen_object = comprobar_interacciones()
 	
 	if seen_object != null and seen_object.get("id"):
-		description_label.text = seen_object.id
+		
+		interactable_focused.emit(seen_object.id)
 	else:
-		description_label.text = ""
+		interactable_focused.emit("")
+		
 	
 
 
@@ -188,7 +191,7 @@ func floor_sounds_path(nameMat: String):
 	
 	#si no existe reproduce el sonido por default
 	var selected_stream: AudioStream = DEFAULT_FOOTSTEP
-	print("hola")
+	
 	#recorremos el diccionario de sonidos precargados
 	for key in FOOTSTEP_AUDIO_MAP.keys():
 		#si existe el nombre en el diccionario 

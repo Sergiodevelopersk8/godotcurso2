@@ -1,9 +1,10 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://qbybyiagt4ao"]
 
-[ext_resource type="Texture2D" uid="uid://cdvqcg6nyce3h" path="res://Assets/textura/Terrazzo/Terrazzo019S_1K-JPG_Color.jpg" id="1_jnrwf"]
-[ext_resource type="Texture2D" uid="uid://dcid6yjmosv8y" path="res://Assets/textura/Terrazzo/Terrazzo019S_1K-JPG_Roughness.jpg" id="2_duu6p"]
+[ext_resource type="Texture2D" uid="uid://cdvqcg6nyce3h" path="res://assets/textura/Terrazzo/Terrazzo019S_1K-JPG_Color.jpg" id="1_jnrwf"]
+[ext_resource type="Texture2D" uid="uid://dcid6yjmosv8y" path="res://assets/textura/Terrazzo/Terrazzo019S_1K-JPG_Roughness.jpg" id="2_duu6p"]
 
 [resource]
+albedo_color = Color(0.27022192, 0.27022192, 0.2702219, 1)
 albedo_texture = ExtResource("1_jnrwf")
 roughness_texture = ExtResource("2_duu6p")
 uv1_scale = Vector3(14.305, 13.035, 13.52)
