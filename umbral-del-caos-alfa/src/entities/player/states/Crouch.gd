@@ -17,10 +17,12 @@ const CAM_CROUCH = 0.3
 
 #------------FUNCIONE PROPIAS----------
 
+## Inicializa el estado agachado al entrar en el estado.
 func enter(_msg := {}) -> void:
 	has_crouch = false
 	pass
 
+## Ajusta suavemente la altura, la camara y las transiciones del jugador agachado.
 func update(delta: float):
 	if get_tree().paused:
 		player.velocity = Vector3.ZERO
@@ -46,6 +48,7 @@ func update(delta: float):
 		state_machine.change_state("Air")
 
 
+## Anima el balanceo vertical de la camara mientras el jugador esta agachado.
 func camera_bob(delta):
 	player._delta += delta
 	var cam_bob = floor(abs(player.direction.z) + abs(player.direction.x)) * player._delta * player.cam_Bob_Speed
@@ -56,6 +59,7 @@ func camera_bob(delta):
 		player._delta = 0
 
 
+## Aplica el movimiento reducido y la gravedad del estado agachado.
 func physics_update(delta: float):
 	
 	player.process_input(delta)

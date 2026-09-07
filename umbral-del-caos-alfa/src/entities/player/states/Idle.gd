@@ -3,6 +3,7 @@ class_name Idle_Player_State
 
 
 #--------- FUNCIONES PROPIAS -----------
+## Actualiza el balanceo suave de la camara cuando el jugador esta quieto.
 func update(delta):
 	player._delta += delta
 	#EFECTO DE LA CAMARA QUE SIMULA QUE SE
@@ -14,6 +15,7 @@ func update(delta):
 	if player._delta > 20:
 		player._delta = 0
 
+## Comprueba cambios de estado y mantiene al jugador detenido en el suelo.
 func physics_update(delta: float) -> void:
 	
 	#cambi de estado para moverte

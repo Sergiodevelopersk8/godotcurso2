@@ -2,6 +2,7 @@ extends PlayerState
 class_name Run_Player_State
 
 #--------- FUNCIONES PROPIAS -----------
+## Gestiona las entradas y transiciones mientras el jugador corre.
 func update(delta):
 	if player.process_input(delta) == Vector3.ZERO:
 		state_machine.change_state("Idle")
@@ -11,11 +12,13 @@ func update(delta):
 	
 	camera_bob(delta)
 
+## Aplica la velocidad aumentada del estado de carrera.
 func physics_update(delta: float) -> void:
 	player.velocity = player.velocity.lerp(player.direction * player.speed * 1.5, player.accel * delta)
 	player.move_and_slide()
 
 
+## Anima el balanceo de la camara durante la carrera.
 func camera_bob(delta):
 	player._delta += delta
 	var cam_bob = floor(abs(player.direction.z) + abs(player.direction.x)) * player._delta * player.cam_Bob_Speed

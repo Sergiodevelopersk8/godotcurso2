@@ -4,6 +4,7 @@ class_name Walk_Player_State
 
 #--------- FUNCIONES PROPIAS -----------
 
+## Gestiona las entradas y transiciones mientras el jugador camina.
 func update(delta):
 	
 	if get_tree().paused:
@@ -21,12 +22,14 @@ func update(delta):
 	if !player.is_on_floor():
 		state_machine.change_state("Air")
 
+## Aplica la velocidad normal y el desplazamiento del jugador.
 func physics_update(delta: float) -> void:
 	player.velocity = player.velocity.lerp(player.direction * player.speed, player.accel * delta)
 	player.move_and_slide()
 	
 
 
+## Anima el balanceo de la camara durante el desplazamiento.
 func camera_bob(delta):
 	player._delta += delta
 	

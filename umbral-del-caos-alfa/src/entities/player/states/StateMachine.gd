@@ -10,6 +10,7 @@ signal transitioned(state_name) #señal para pasar de estado
 
 
 #--------- FUNCIONES DEL SISTEMA -----------
+## Asigna la maquina a sus estados hijos e inicia el estado inicial.
 func _ready() -> void:
 	#esperamos a que se cargue el padre
 	await owner.ready
@@ -24,9 +25,11 @@ func _ready() -> void:
 	#accedemos a la funcion de enter del script de state.gd
 	state.enter()
 
+## Ejecuta la actualizacion no fisica del estado activo.
 func _process(delta: float) -> void:
 	state.update(delta)
 
+## Ejecuta la actualizacion fisica del estado activo.
 func _physics_process(delta: float) -> void:
 	state.physics_update(delta)
 
@@ -35,10 +38,11 @@ func _physics_process(delta: float) -> void:
 #--------- FUNCIONES PROPIAS -----------
 
 
-
+## Reenvia un evento de entrada al estado activo.
 func remove_input(event):
 	state._handled_input(event)
 
+## Cambia al estado indicado si existe y emite la senal de transicion.
 func change_state(current_state_name : String):
 	# si no existe el estado no hagas nada
 	if not has_node(current_state_name):
@@ -49,7 +53,7 @@ func change_state(current_state_name : String):
 	emit_signal("transitioned", state.name)
 	
 
-
+## Devuelve el nombre del estado activo.
 func get_state():
 	#obtenemos en que estado estamos
 	return state.name as String

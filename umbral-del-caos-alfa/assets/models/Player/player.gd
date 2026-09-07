@@ -47,9 +47,14 @@ var interacts
 var reading_note := false
 var is_in_dialogue = false
 
+const FOOTSTEP_AUDIO_MAP ={
+		"Grass": preload("res://Assets/audio/SFX/footsteps/grass/0.ogg"),
+		"Metal": preload("res://Assets/audio/SFX/footsteps/metal/0.ogg"),
+		"Concrete":preload("res://Assets/audio/SFX/footsteps/wood/0.ogg"),
+		"Terrazzo":preload("res://Assets/audio/SFX/footsteps/wood/0.ogg")
+	}
 
-
-
+const DEFAULT_FOOTSTEP = preload("res://Assets/audio/SFX/footsteps/boots/0.ogg")
 
 
 #--------- FUNCIONES DEL SISTEMA -----------
@@ -175,14 +180,21 @@ func Sound_Steps():
 
 
 
-func floor_sounds_path(nameMat):
-	if "Grass" in nameMat:
-		footstep_sound.stream = load("res://Assets/audio/SFX/footsteps/grass/0.ogg")
-	elif "Metal" in nameMat:
-		footstep_sound.stream = load("res://Assets/audio/SFX/footsteps/metal/0.ogg")
-	elif "Concrete" in nameMat:
-		footstep_sound.stream = load("res://Assets/audio/SFX/footsteps/wood/0.ogg")
-	elif "Terrazzo" in nameMat:
-		footstep_sound.stream = load("res://Assets/audio/SFX/footsteps/wood/0.ogg")
-	else:
-		footstep_sound.stream = load("res://Assets/audio/SFX/footsteps/boots/0.ogg")
+
+
+
+
+func floor_sounds_path(nameMat: String):
+	
+	#si no existe reproduce el sonido por default
+	var selected_stream: AudioStream = DEFAULT_FOOTSTEP
+	print("hola")
+	#recorremos el diccionario de sonidos precargados
+	for key in FOOTSTEP_AUDIO_MAP.keys():
+		#si existe el nombre en el diccionario 
+		if key in nameMat:
+			#lo pasamos al valor de stream
+			selected_stream = FOOTSTEP_AUDIO_MAP[key]
+			break
+	footstep_sound.stream = selected_stream 
+	

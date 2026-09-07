@@ -4,6 +4,7 @@ class_name PlayerState
 
 
 var player
+## Espera a que el propietario este listo y obtiene la referencia al jugador.
 func _ready() -> void:
 	#eperamos a que la escena del player se cargue bien 
 	await  owner.ready

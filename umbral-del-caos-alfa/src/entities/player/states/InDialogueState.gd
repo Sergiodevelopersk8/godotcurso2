@@ -2,6 +2,7 @@
 extends PlayerState
 class_name InDialogueState
 
+## Bloquea el movimiento y la rotacion del jugador durante el dialogo.
 func enter(_msg := {}) -> void:
 	if player:
 		# Bloqueamos el movimiento y la rotación en el Player
@@ -9,6 +10,7 @@ func enter(_msg := {}) -> void:
 		player.velocity = Vector3.ZERO
 		print("[InDialogueState] Jugador congelado correctamente.")
 
+## Restaura el control del jugador al terminar el dialogo.
 func exit() -> void:
 	if player:
 		# Restauramos la libertad de movimiento al salir del estado
