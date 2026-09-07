@@ -24,3 +24,7 @@ func update(_delta: float) -> void:
 # Procesa la física (_physics_process) cuando este estado está activo
 func physics_update(_delta: float) -> void:
 	pass
+
+
+func camera_bob(_delta):
+	pass

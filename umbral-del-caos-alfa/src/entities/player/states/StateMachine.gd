@@ -1,45 +1,55 @@
-# res://src/entities/player/states/StateMachine.gd
+# res://src/entities/player/scripts/StateMachine.gd
 extends Node
 class_name StateMachine
 
-@export var initial_state: State
-var current_state: State
-var states: Dictionary = {}
 
+signal transitioned(state_name) #señal para pasar de estado 
+
+@export var initial_state := NodePath() # ruta del nodo de estado
+@onready var state : State = get_node(initial_state) # obtiene el nodo
+
+
+#--------- FUNCIONES DEL SISTEMA -----------
 func _ready() -> void:
-	# Guardamos todos los nodos hijos que sean de tipo State
-	for child in get_children():
-		if child is State:
-			states[child.name] = child
-			child.state_machine = self
+	#esperamos a que se cargue el padre
+	await owner.ready
 	
-	if initial_state:
-		initial_state.enter()
-		current_state = initial_state
-
-func _unhandled_input(event: InputEvent) -> void:
-	if current_state:
-		current_state.handle_input(event)
+	#recorremos todos los hijos 
+	for node_child in get_children():
+		if node_child is State:
+			#no los asignamos a nosotros 
+			node_child.state_machine = self
+		
+	
+	#accedemos a la funcion de enter del script de state.gd
+	state.enter()
 
 func _process(delta: float) -> void:
-	if current_state:
-		current_state.update(delta)
+	state.update(delta)
 
 func _physics_process(delta: float) -> void:
-	if current_state:
-		current_state.physics_update(delta)
+	state.physics_update(delta)
 
-func change_state(target_state_name: String, msg: Dictionary = {}) -> void:
-	if not states.has(target_state_name):
-		print("[StateMachine ERROR] El estado '", target_state_name, "' no existe.")
+
+
+#--------- FUNCIONES PROPIAS -----------
+
+
+
+func remove_input(event):
+	state._handled_input(event)
+
+func change_state(current_state_name : String):
+	# si no existe el estado no hagas nada
+	if not has_node(current_state_name):
 		return
-		
-	if current_state:
-		current_state.exit()
-		
-	current_state = states[target_state_name]
-	current_state.enter(msg)
-	print("[StateMachine] Estado cambiado a: ", target_state_name)
+	# si  existe el estado
+	state.exit()
+	state = get_node(current_state_name)
+	emit_signal("transitioned", state.name)
+	
 
-func get_state() -> String:
-	return current_state.name if current_state else ""
+
+func get_state():
+	#obtenemos en que estado estamos
+	return state.name as String

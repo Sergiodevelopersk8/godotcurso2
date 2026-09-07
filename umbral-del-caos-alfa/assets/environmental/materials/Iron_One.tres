@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cbkj380yefld6"]
+
+[ext_resource type="Texture2D" uid="uid://1cg0ovbhtujj" path="res://Assets/textura/corrugated_iron/textures/corrugated_iron_02_disp_1k.png" id="1_v40gq"]
+
+[resource]
+albedo_texture = ExtResource("1_v40gq")

@@ -1,95 +1,89 @@
 [gd_scene format=3 uid="uid://bfm8qaeianonx"]
 
 [ext_resource type="Script" uid="uid://d3wc2lpxjvdt2" path="res://assets/models/Player/player.gd" id="1_6befo"]
-[ext_resource type="Script" uid="uid://b7i5p0tsh6tc1" path="res://src/entities/player/states/InDialogueState.gd" id="2_1ex3p"]
+[ext_resource type="Texture2D" uid="uid://cs2pcwflpxxib" path="res://src/ui/hud/point_view/crosshair.png" id="2_1ex3p"]
+[ext_resource type="Script" uid="uid://jqrereep2fd" path="res://src/entities/player/states/StateMachine.gd" id="2_v71d1"]
+[ext_resource type="Script" uid="uid://d4ng3vnncmdk" path="res://src/entities/player/states/Idle.gd" id="3_244o0"]
+[ext_resource type="Script" uid="uid://bxkm0aw80qvft" path="res://src/entities/player/states/Walk.gd" id="4_awhsm"]
+[ext_resource type="Script" uid="uid://b4ddkbk1o1sd8" path="res://src/entities/player/states/Run.gd" id="5_244o0"]
+[ext_resource type="Script" uid="uid://cty3fu3jxf7m" path="res://src/entities/player/states/Crouch.gd" id="6_awhsm"]
+[ext_resource type="Script" uid="uid://cpp247knlg0lw" path="res://src/entities/player/states/Air.gd" id="7_xb7us"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s8n7f"]
-albedo_color = Color(1, 0.050980393, 1, 1)
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2a86y"]
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_s8n7f"]
-material = SubResource("StandardMaterial3D_s8n7f")
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_6befo"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_s8n7f"]
-
-[node name="Player" type="CharacterBody3D" unique_id=1893940135 groups=["Player"]]
-process_mode = 3
-transform = Transform3D(1, 0, 0, 0, 1.3996521, 0, 0, 0, 1, 0, 0, 0)
+[node name="CharacterBody3D" type="CharacterBody3D" unique_id=1901970933 groups=["Player"]]
 script = ExtResource("1_6befo")
-metadata/_edit_group_ = true
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=1906324123]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5919798, -0.40497988)
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1466239464]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5774515, -0.40946138)
 
-[node name="RayCastInteractuar" type="RayCast3D" parent="Camera3D" unique_id=1392849462]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, -0.106451094)
-visible = false
-collide_with_areas = true
+[node name="RayCastInteractuar" type="RayCast3D" parent="Camera3D" unique_id=1223787391]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, -0.018495739, -0.106000006)
+debug_shape_custom_color = Color(0.4336873, 0.61731386, 0, 1)
 
-[node name="hand" type="Marker3D" parent="Camera3D" unique_id=803259067]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23510846, 0, -0.6592451)
+[node name="hand" type="Marker3D" parent="Camera3D" unique_id=1427675814]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, -0.5774515, -0.2495386)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1443923370]
-mesh = SubResource("CapsuleMesh_s8n7f")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1514380184]
+shape = SubResource("CapsuleShape3D_2a86y")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=742676274]
-shape = SubResource("CapsuleShape3D_s8n7f")
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D" unique_id=1483501904]
+mesh = SubResource("CapsuleMesh_6befo")
 
-[node name="StateMachine" type="Node" parent="." unique_id=428993389]
+[node name="StateMachine" type="Node" parent="." unique_id=1290910096]
+script = ExtResource("2_v71d1")
+initial_state = NodePath("Idle")
 
-[node name="Idle" type="Node" parent="StateMachine" unique_id=724833205]
+[node name="Idle" type="Node" parent="StateMachine" unique_id=129042066]
+script = ExtResource("3_244o0")
 
-[node name="Walk" type="Node" parent="StateMachine" unique_id=222732841]
+[node name="Walk" type="Node" parent="StateMachine" unique_id=1193868291]
+script = ExtResource("4_awhsm")
 
-[node name="Run" type="Node" parent="StateMachine" unique_id=847450465]
+[node name="Run" type="Node" parent="StateMachine" unique_id=261390569]
+script = ExtResource("5_244o0")
 
-[node name="Crouch" type="Node" parent="StateMachine" unique_id=1742343563]
+[node name="Crouch" type="Node" parent="StateMachine" unique_id=344089378]
+script = ExtResource("6_awhsm")
 
-[node name="Air" type="Node" parent="StateMachine" unique_id=729915516 groups=["Player"]]
+[node name="Air" type="Node" parent="StateMachine" unique_id=125043950]
+script = ExtResource("7_xb7us")
 
-[node name="ReadingNote" type="Node" parent="StateMachine" unique_id=479894401]
+[node name="ReadingNote" type="Node" parent="StateMachine" unique_id=686275620]
 
-[node name="InDialogue" type="Node" parent="StateMachine" unique_id=910874669]
-script = ExtResource("2_1ex3p")
+[node name="InDialogue" type="Node" parent="StateMachine" unique_id=506903113]
 
-[node name="Raycasts" type="Node3D" parent="." unique_id=441413815]
+[node name="Raycasts" type="Node3D" parent="." unique_id=510313004]
 
-[node name="RayCastGroundDetector" type="RayCast3D" parent="Raycasts" unique_id=224488748 groups=["Player"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.72834575, 0)
-debug_shape_custom_color = Color(0.8922621, 0.07663231, 0.77940965, 1)
+[node name="RayCastGroundDetector" type="RayCast3D" parent="Raycasts" unique_id=1192353110]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.728, 0)
+debug_shape_custom_color = Color(0.0051886877, 0.1906218, 0.8399299, 1)
 
-[node name="RaycastCrouch" type="RayCast3D" parent="Raycasts" unique_id=37865525]
-transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0.2, 0.048)
+[node name="RaycastCrouch" type="RayCast3D" parent="Raycasts" unique_id=1986169582]
+transform = Transform3D(-0.99852467, -0.05429949, 0, 0.05429949, -0.99852467, 0, 0, 0, 1, 0, 0.36643952, -0.008069873)
+debug_shape_custom_color = Color(0.8274293, 3.946722e-06, 8.663535e-07, 1)
 
-[node name="FootstepSound" type="AudioStreamPlayer" parent="." unique_id=2102329457]
+[node name="FootstepSound" type="AudioStreamPlayer" parent="." unique_id=1350137496]
 
-[node name="GUIPlayer" type="CanvasLayer" parent="." unique_id=1324595581]
+[node name="GUIPlayer" type="CanvasLayer" parent="." unique_id=1179286457]
 
-[node name="StateMachinseLabel" type="Label" parent="GUIPlayer" unique_id=324124541]
+[node name="StateMachinseLabel" type="Label" parent="GUIPlayer" unique_id=690264518]
+offset_top = 1.0
 offset_right = 40.0
-offset_bottom = 23.0
+offset_bottom = 24.0
 
-[node name="description_label" type="Label" parent="GUIPlayer" unique_id=1095406439]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -45.0
-offset_top = 25.0
-offset_right = 46.0
-offset_bottom = 48.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="description_label" type="Label" parent="GUIPlayer" unique_id=1250701881]
+offset_left = 454.0
+offset_top = 333.0
+offset_right = 494.0
+offset_bottom = 356.0
+scale = Vector2(4.6800003, 1)
 
-[node name="Punto_view" type="TextureRect" parent="GUIPlayer" unique_id=644185007]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="TextureRect" type="TextureRect" parent="GUIPlayer" unique_id=332766355]
+offset_left = 514.0
+offset_top = 278.0
+offset_right = 554.0
+offset_bottom = 318.0
+texture = ExtResource("2_1ex3p")
