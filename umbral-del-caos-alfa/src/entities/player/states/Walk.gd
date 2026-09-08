@@ -1,6 +1,12 @@
 extends PlayerState
 class_name Walk_Player_State
 
+# Frecuencia entre pasos en segundos para la caminata
+var step_interval: float = 0.45 
+var step_timer: float = 0.0
+
+func enter(_msg:Dictionary =  {}) -> void:
+	step_timer = 0.0
 
 #--------- FUNCIONES PROPIAS -----------
 
@@ -27,6 +33,15 @@ func physics_update(delta: float) -> void:
 	player.velocity = player.velocity.lerp(player.direction * player.speed, player.accel * delta)
 	player.move_and_slide()
 	
+	if player.direction != Vector3.ZERO and player.is_on_floor():
+		step_timer += delta
+		if step_timer >= step_interval:
+			step_timer = 0.0
+			# Usar has_method previene errores si la clase global no se ha recompilado en el editor
+			if player.footstep_sound and player.footstep_sound.has_method("play_footstep"):
+				player.footstep_sound.play_footstep()
+
+
 
 
 ## Anima el balanceo de la camara durante el desplazamiento.

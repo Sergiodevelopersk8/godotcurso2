@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://cty3fu3jxf7m" path="res://src/entities/player/states/Crouch.gd" id="6_awhsm"]
 [ext_resource type="Script" uid="uid://cpp247knlg0lw" path="res://src/entities/player/states/Air.gd" id="7_xb7us"]
 [ext_resource type="PackedScene" uid="uid://detlr40ca7k4q" path="res://src/ui/hud/HUD.tscn" id="8_244o0"]
+[ext_resource type="Script" uid="uid://dpx501ogir6pj" path="res://assets/models/Player/footstep_sound.gd" id="8_awhsm"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2a86y"]
 
@@ -66,7 +67,10 @@ debug_shape_custom_color = Color(0.0051886877, 0.1906218, 0.8399299, 1)
 transform = Transform3D(-0.99852467, -0.05429949, 0, 0.05429949, -0.99852467, 0, 0, 0, 1, 0, 0.36643952, -0.008069873)
 debug_shape_custom_color = Color(0.8274293, 3.946722e-06, 8.663535e-07, 1)
 
-[node name="FootstepSound" type="AudioStreamPlayer" parent="." unique_id=1350137496]
+[node name="FootstepSound" type="AudioStreamPlayer" parent="." unique_id=1350137496 node_paths=PackedStringArray("player", "ground_raycast")]
+script = ExtResource("8_awhsm")
+player = NodePath("..")
+ground_raycast = NodePath("../Raycasts/RayCastGroundDetector")
 
 [node name="Hud" parent="." unique_id=1935245061 node_paths=PackedStringArray("player") instance=ExtResource("8_244o0")]
 player = NodePath("..")

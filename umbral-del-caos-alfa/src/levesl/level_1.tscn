@@ -39,3 +39,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0505052, 1, 1.0252843)
 [node name="objects" type="Node3D" parent="." unique_id=834404580]
 
 [node name="BoteSalsaRoja" parent="objects" unique_id=1494490827 instance=ExtResource("3_a0ior")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9611094, 1.5195584, -0.95617366)

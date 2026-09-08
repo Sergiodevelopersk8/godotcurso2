@@ -17,9 +17,11 @@ script = ExtResource("2_11vda")
 id = "salsa roja"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." index="0" unique_id=1368010973]
+transform = Transform3D(0.33, 0, 0, 0, 0.33, 0, 0, 0, 0.33, 0, 0, 0)
 mesh = SubResource("CapsuleMesh_dmf12")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1" unique_id=1606629778]
+transform = Transform3D(0.405, 0, 0, 0, 0.405, 0, 0, 0, 0.405, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_yg1ng")
 metadata/_edit_group_ = true
