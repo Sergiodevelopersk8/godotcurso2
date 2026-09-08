@@ -7,3 +7,4 @@ res://assets/models/Player/footstep_sound.gd
 res://src/entities/player/states/Walk.gd
 res://src/entities/player/states/Run.gd
 res://src/levesl/level_1.tscn
+res://assets/models/Player/ray_cast_interactuar.gd

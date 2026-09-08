@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cs2pcwflpxxib" path="res://src/ui/hud/point_view/crosshair.png" id="1_3hlc3"]
 [ext_resource type="Script" uid="uid://dq25fq6kvam2j" path="res://src/ui/hud/HUD.gd" id="1_px1xl"]
 
-[node name="Hud" type="Control" unique_id=1935245061]
+[node name="Hud" type="Control" unique_id=1935245061 node_paths=PackedStringArray("description_label")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -11,6 +11,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_px1xl")
+description_label = NodePath("GUIPlayer/description_label")
 
 [node name="GUIPlayer" type="CanvasLayer" parent="." unique_id=2015801061]
 

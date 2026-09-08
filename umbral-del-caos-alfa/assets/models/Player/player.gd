@@ -7,13 +7,13 @@ class_name Player
 @onready var camera_3d: Camera3D = $Camera3D
 @onready var origCamPos : Vector3 = camera_3d.position
 @onready var footstep_sound: FootstepPlayer = $FootstepSound
+@onready var ray_cast_interactuar: Interactor3D = $Camera3D/RayCastInteractuar
 
 #-------onreadys state_machines----------
 @onready var state_machine: StateMachine = $StateMachine
 
 
 #-------onreadys raycast----------
-@onready var ray_cast_interactuar: RayCast3D = $Camera3D/RayCastInteractuar
 @onready var ray_cast_ground_detector: RayCast3D = $Raycasts/RayCastGroundDetector
 @onready var raycast_crouch: RayCast3D = $Raycasts/RaycastCrouch
 @onready var hand: Marker3D = $Camera3D/hand
@@ -75,7 +75,6 @@ func _input(event: InputEvent) -> void:
 
 
 func _process(delta: float) -> void:
-	interactions()
 	
 	if move_and_rotate_player:
 		rotate_camera_joystick(delta) # Activamos la rotación con joystick
@@ -127,31 +126,7 @@ func process_input(delta) -> Vector3:
 	return direction
 
 
-func interactions():
-	# Si la cámara/movimiento están desactivados, NO detectar interacciones
-	if not move_and_rotate_player:
-		
-		interactable_focused.emit("")
-		return
 
-	var seen_object = comprobar_interacciones()
-	
-	if seen_object != null and seen_object.get("id"):
-		
-		interactable_focused.emit(seen_object.id)
-	else:
-		interactable_focused.emit("")
-		
-	
-
-
-func comprobar_interacciones() -> Interact:
-	if ray_cast_interactuar.is_colliding():
-		var colisionador = ray_cast_interactuar.get_collider()
-		#if colisionador.is_in_group("Interacts"):
-		if colisionador is Interact:
-			return colisionador # Si todo está bien, devuelve el objeto
-	return null # Si no está colisionando o no es del grupo, devuelve un vacío limpio
 
 
 func see_mouse():

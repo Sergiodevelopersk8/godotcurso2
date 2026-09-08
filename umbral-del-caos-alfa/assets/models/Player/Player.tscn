@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d3wc2lpxjvdt2" path="res://assets/models/Player/player.gd" id="1_6befo"]
 [ext_resource type="Script" uid="uid://jqrereep2fd" path="res://src/entities/player/states/StateMachine.gd" id="2_v71d1"]
+[ext_resource type="Script" uid="uid://mn3lmvfqptuw" path="res://assets/models/Player/ray_cast_interactuar.gd" id="2_xb7us"]
 [ext_resource type="Script" uid="uid://d4ng3vnncmdk" path="res://src/entities/player/states/Idle.gd" id="3_244o0"]
 [ext_resource type="Script" uid="uid://bxkm0aw80qvft" path="res://src/entities/player/states/Walk.gd" id="4_awhsm"]
 [ext_resource type="Script" uid="uid://b4ddkbk1o1sd8" path="res://src/entities/player/states/Run.gd" id="5_244o0"]
@@ -20,10 +21,13 @@ script = ExtResource("1_6befo")
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1466239464]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5774515, -0.40946138)
 
-[node name="RayCastInteractuar" type="RayCast3D" parent="Camera3D" unique_id=1223787391]
+[node name="RayCastInteractuar" type="RayCast3D" parent="Camera3D" unique_id=1223787391 node_paths=PackedStringArray("hand", "player")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, -0.018495739, -0.106000006)
 collide_with_areas = true
 debug_shape_custom_color = Color(0.4336873, 0.61731386, 0, 1)
+script = ExtResource("2_xb7us")
+hand = NodePath("../hand")
+player = NodePath("../..")
 
 [node name="hand" type="Marker3D" parent="Camera3D" unique_id=1427675814]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, -0.5774515, -0.2495386)
