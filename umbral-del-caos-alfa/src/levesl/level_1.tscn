@@ -36,7 +36,12 @@ shape = SubResource("ConcavePolygonShape3D_a0ior")
 [node name="CharacterBody3D" parent="." unique_id=1901970933 instance=ExtResource("1_n0jmb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0505052, 1, 1.0252843)
 
+[node name="RayCastInteractuar" parent="CharacterBody3D/Camera3D" parent_id_path=PackedInt32Array(1901970933, 1466239464) index="0" unique_id=1223787391 node_paths=PackedStringArray("level_objects_container")]
+level_objects_container = NodePath("../../../objects")
+
 [node name="objects" type="Node3D" parent="." unique_id=834404580]
 
 [node name="BoteSalsaRoja" parent="objects" unique_id=1494490827 instance=ExtResource("3_a0ior")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9611094, 1.5195584, -0.95617366)
+
+[editable path="CharacterBody3D"]
