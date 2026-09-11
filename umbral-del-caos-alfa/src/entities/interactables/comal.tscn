@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://ccna5hq21rukv"]
+
+[ext_resource type="PackedScene" uid="uid://p7nhmt8mpm1x" path="res://src/entities/interactables/interact.tscn" id="1_k7fp1"]
+[ext_resource type="Script" uid="uid://bm7m8avpif5d3" path="res://src/entities/interactables/scrips_interactables/comal.gd" id="2_6ysrt"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6ysrt"]
+albedo_color = Color(0.07762883, 0.07762881, 0.07762881, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6ysrt"]
+material = SubResource("StandardMaterial3D_6ysrt")
+size = Vector3(2.1983643, 0.037963867, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6ysrt"]
+size = Vector3(2.2164307, 0.06591797, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_6ysrt"]
+top_radius = 0.07910156
+bottom_radius = 0.07910156
+height = 0.62524414
+
+[node name="Comal" unique_id=1494490827 instance=ExtResource("1_k7fp1")]
+script = ExtResource("2_6ysrt")
+id = "Comal"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="0" unique_id=82132948]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5991821, 0.5468197, 0)
+mesh = SubResource("BoxMesh_6ysrt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1" unique_id=1532208858]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6128954, 0.57143676, 0)
+shape = SubResource("BoxShape3D_6ysrt")
+
+[node name="paws" type="Node3D" parent="." index="2" unique_id=2009180001]
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="paws" index="0" unique_id=1893082662]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.41690123, 0.20519936, 0.41955894)
+mesh = SubResource("CylinderMesh_6ysrt")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="paws" index="1" unique_id=928364818]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.41690123, 0.20519936, -0.44160998)
+mesh = SubResource("CylinderMesh_6ysrt")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="paws" index="2" unique_id=1362525390]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.594334, 0.20519936, -0.44160998)
+mesh = SubResource("CylinderMesh_6ysrt")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="paws" index="3" unique_id=297877087]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.594334, 0.20519936, 0.41811192)
+mesh = SubResource("CylinderMesh_6ysrt")
+
+[node name="Marker3D" type="Marker3D" parent="." index="3" unique_id=477490747]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.70823723, 0.57303417, 0)

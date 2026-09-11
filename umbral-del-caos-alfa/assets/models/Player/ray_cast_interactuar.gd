@@ -8,6 +8,8 @@ signal interactable_focused(description: String)
 @export var hand: Marker3D # Inyectamos la mano por Inspector para evitar $"../hand"
 @export var level_objects_container: Node3D # Asignamos el contenedor de objetos del nivel activo
 
+
+
 var object_in_hand: Interact = null
 
 func _process(_delta: float) -> void:
@@ -46,17 +48,24 @@ func take_object(object: Interact) -> void:
 	object_in_hand = object
 	# Método nativo de Godot 4 para cambiar de padre manteniendo/ajustando transformaciones
 	object.reparent(hand)
+	print("id del objeto -> ",object.id)
 	object.position = object.pos_obj
 	object.scale = Vector3.ONE * object.scale_obj
+
+
+
 
 func drop_object() -> void:
 	if not object_in_hand:
 		return
 		
-	# Si tenemos contenedor de nivel se manda ahí, de lo contrario a la raíz del mundo
-	var target_parent = level_objects_container if level_objects_container else get_tree().current_scene
-	
+	# Asigna a target_parent la variable level_objects_container, 
+	#SI dicha variable no está vacía (null). 
+	#DE LO CONTRARIO, asigna la escena actual completa get_tree().current_scene.
+	var target_parent = level_objects_container 
+	if !level_objects_container:
+		target_parent = get_tree().current_scene
 	object_in_hand.reparent(target_parent)
-	# Posicionamos el objeto frente a la cámara/jugador
-	object_in_hand.global_position = global_position + (global_transform.basis.z * -1.5)
+	# Posicionamos el objeto 
+	global_position + (global_transform.basis.z * -1.5)
 	object_in_hand = null

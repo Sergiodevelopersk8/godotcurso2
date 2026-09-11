@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://du4xpsttw3ga2"]
+
+[ext_resource type="PackedScene" uid="uid://p7nhmt8mpm1x" path="res://src/entities/interactables/interact.tscn" id="1_ubbvo"]
+[ext_resource type="Script" uid="uid://cxb7gofuirch2" path="res://src/entities/interactables/scrips_interactables/memela_base.gd" id="2_p0e4n"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p0e4n"]
+albedo_color = Color(0.44313726, 0.44313726, 0.30588236, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_omc20"]
+material = SubResource("StandardMaterial3D_p0e4n")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1abss"]
+size = Vector3(1.5072632, 0.17456055, 1)
+
+[node name="memela_base" unique_id=1494490827 instance=ExtResource("1_ubbvo")]
+script = ExtResource("2_p0e4n")
+id = "Memela"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="0" unique_id=333059183]
+transform = Transform3D(1.5714262, 0, 0, 0, 0.18492967, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("SphereMesh_omc20")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1" unique_id=309143538]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.017425537, -0.008911133, 0)
+shape = SubResource("BoxShape3D_1abss")

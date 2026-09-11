@@ -1,7 +1,8 @@
+Marker3D
+CollisionShape3D
+MeshInstance3D
 Node3D
 Label
-MeshInstance3D
-CollisionShape3D
 Area3D
 StaticBody3D
 TextureRect
@@ -10,5 +11,4 @@ AudioStreamPlayer
 AudioStreamPlayer3D
 RayCast3D
 Node
-Marker3D
 Camera3D

@@ -3,6 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://bfm8qaeianonx" path="res://assets/models/Player/Player.tscn" id="1_n0jmb"]
 [ext_resource type="Material" uid="uid://qbybyiagt4ao" path="res://assets/environmental/materials/Concrete_One.tres" id="1_uyyla"]
 [ext_resource type="PackedScene" uid="uid://karhd88i6rv" path="res://src/entities/interactables/bote_salsa_roja.tscn" id="3_a0ior"]
+[ext_resource type="PackedScene" uid="uid://du4xpsttw3ga2" path="res://src/entities/interactables/memela_base.tscn" id="4_lckxe"]
+[ext_resource type="PackedScene" uid="uid://ccna5hq21rukv" path="res://src/entities/interactables/comal.tscn" id="4_n157a"]
 
 [sub_resource type="Environment" id="Environment_v2nwe"]
 ambient_light_source = 3
@@ -44,4 +46,13 @@ level_objects_container = NodePath("../../../objects")
 [node name="BoteSalsaRoja" parent="objects" unique_id=1494490827 instance=ExtResource("3_a0ior")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9611094, 1.5195584, -0.95617366)
 
+[node name="memela_base" parent="objects" unique_id=1188055321 instance=ExtResource("4_lckxe")]
+transform = Transform3D(1, 0, 0, 0, 1.8799999, 0, 0, 0, 1, 1.4866652, 1.1489351, -3.9718277)
+
+[node name="Comal" parent="." unique_id=2024034999 instance=ExtResource("4_n157a")]
+transform = Transform3D(1.87, 0, 0, 0, 1.87, 0, 0, 0, 1.87, 0, 0, -6.5249248)
+id = "comal"
+
 [editable path="CharacterBody3D"]
+[editable path="objects/memela_base"]
+[editable path="Comal"]

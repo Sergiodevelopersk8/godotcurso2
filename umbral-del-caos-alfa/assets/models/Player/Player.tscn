@@ -21,13 +21,13 @@ script = ExtResource("1_6befo")
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1466239464]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5774515, -0.40946138)
 
-[node name="RayCastInteractuar" type="RayCast3D" parent="Camera3D" unique_id=1223787391 node_paths=PackedStringArray("hand", "player")]
+[node name="RayCastInteractuar" type="RayCast3D" parent="Camera3D" unique_id=1223787391 node_paths=PackedStringArray("player", "hand")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, -0.018495739, -0.106000006)
 collide_with_areas = true
 debug_shape_custom_color = Color(0.4336873, 0.61731386, 0, 1)
 script = ExtResource("2_xb7us")
-hand = NodePath("../hand")
 player = NodePath("../..")
+hand = NodePath("../hand")
 
 [node name="hand" type="Marker3D" parent="Camera3D" unique_id=1427675814]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, -0.5774515, -0.2495386)

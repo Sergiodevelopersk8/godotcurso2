@@ -1,9 +1,12 @@
 extends Interact
-class_name Bote_de_Salsa
+class_name Comal
 
+
+ 
 func _ready() -> void:
 	interact()
 	can_be_loaded = true
+
 
 
 func interact():
