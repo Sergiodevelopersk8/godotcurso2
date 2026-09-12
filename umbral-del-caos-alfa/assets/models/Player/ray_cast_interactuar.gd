@@ -30,11 +30,24 @@ func check_interaction() -> Interact:
 	interactable_focused.emit("")
 	return null
 
+
 func handle_input(target_object: Interact) -> void:
 	if Input.is_action_just_pressed("drop") and object_in_hand:
 		drop_object()
+		
 	elif Input.is_action_just_pressed("interact"):
-		if not object_in_hand and target_object:
+		# CASO 1: Llevas un objeto en la mano e intentas entregarlo
+		if object_in_hand and target_object:
+			# Verificamos si el objeto enfocado sabe recibir elementos
+			if target_object.has_method("receive_object"):
+				var accepted: bool = target_object.receive_object(object_in_hand)
+				if accepted:
+					object_in_hand = null # Liberamos la mano solo si el comal lo aceptó
+			else:
+				print("[Interactor3D] Este objeto no puede recibir ingredientes.")
+				
+		# CASO 2: Mano vacía, intentas tomar o interactuar con algo
+		elif not object_in_hand and target_object:
 			if target_object.can_be_loaded:
 				take_object(target_object)
 			else:

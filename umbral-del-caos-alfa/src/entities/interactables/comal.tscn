@@ -18,8 +18,9 @@ top_radius = 0.07910156
 bottom_radius = 0.07910156
 height = 0.62524414
 
-[node name="Comal" unique_id=1494490827 instance=ExtResource("1_k7fp1")]
+[node name="Comal" unique_id=1494490827 node_paths=PackedStringArray("doneness") instance=ExtResource("1_k7fp1")]
 script = ExtResource("2_6ysrt")
+doneness = NodePath("CollisionShape3D/Marker3D")
 id = "Comal"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." index="0" unique_id=82132948]
@@ -29,6 +30,9 @@ mesh = SubResource("BoxMesh_6ysrt")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1" unique_id=1532208858]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6128954, 0.57143676, 0)
 shape = SubResource("BoxShape3D_6ysrt")
+
+[node name="Marker3D" type="Marker3D" parent="CollisionShape3D" index="0" unique_id=477490747]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0953418, 0.0015974045, 0)
 
 [node name="paws" type="Node3D" parent="." index="2" unique_id=2009180001]
 
@@ -47,6 +51,3 @@ mesh = SubResource("CylinderMesh_6ysrt")
 [node name="MeshInstance3D5" type="MeshInstance3D" parent="paws" index="3" unique_id=297877087]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.594334, 0.20519936, 0.41811192)
 mesh = SubResource("CylinderMesh_6ysrt")
-
-[node name="Marker3D" type="Marker3D" parent="." index="3" unique_id=477490747]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.70823723, 0.57303417, 0)
