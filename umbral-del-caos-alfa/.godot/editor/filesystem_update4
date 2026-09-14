@@ -1,4 +1,4 @@
-res://src/entities/interactables/comal.tscn
-res://src/entities/interactables/scrips_interactables/comal.gd
+res://src/entities/interactables/bote_salsa_roja.tscn
+res://src/levesl/level_1.tscn
 res://assets/models/Player/Player.tscn
 res://assets/models/Player/ray_cast_interactuar.gd

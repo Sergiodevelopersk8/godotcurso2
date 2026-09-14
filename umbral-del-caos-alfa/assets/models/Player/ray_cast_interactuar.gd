@@ -63,7 +63,7 @@ func take_object(object: Interact) -> void:
 	object.reparent(hand)
 	print("id del objeto -> ",object.id)
 	object.position = object.pos_obj
-	object.scale = Vector3.ONE * object.scale_obj
+	#object.scale = Vector3.ONE * object.scale_obj
 
 
 

@@ -15,7 +15,7 @@ func receive_object(object:Interact):
 	
 	if object.id == "Memela":
 		object_in_comal = object
-		# Emparentamos la memela al comal y la ubicamos en el Marker3D
+		# emparentamos la memela al comal y la ubicamos en el Marker3D
 		object.reparent(self)
 		object.global_position = doneness.global_position
 		object.rotation = Vector3.ZERO

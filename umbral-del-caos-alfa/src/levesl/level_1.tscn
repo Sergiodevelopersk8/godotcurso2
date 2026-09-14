@@ -44,7 +44,7 @@ level_objects_container = NodePath("../../../objects")
 [node name="objects" type="Node3D" parent="." unique_id=834404580]
 
 [node name="BoteSalsaRoja" parent="objects" unique_id=1494490827 instance=ExtResource("3_a0ior")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9611094, 1.5195584, -0.95617366)
+transform = Transform3D(0.275, 0, 0, 0, 0.275, 0, 0, 0, 0.275, -0.9611094, 1.175251, -0.95617366)
 
 [node name="memela_base" parent="objects" unique_id=1188055321 instance=ExtResource("4_lckxe")]
 transform = Transform3D(1, 0, 0, 0, 1.8799999, 0, 0, 0, 1, 1.4866652, 1.1489351, -3.9718277)
