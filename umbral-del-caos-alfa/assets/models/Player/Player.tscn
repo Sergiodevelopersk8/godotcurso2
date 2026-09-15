@@ -15,8 +15,10 @@
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_6befo"]
 
-[node name="CharacterBody3D" type="CharacterBody3D" unique_id=1901970933 groups=["Player"]]
+[node name="CharacterBody3D" type="CharacterBody3D" unique_id=1901970933 node_paths=PackedStringArray("fp_camera", "debug_camera") groups=["Player"]]
 script = ExtResource("1_6befo")
+fp_camera = NodePath("Camera3D")
+debug_camera = NodePath("Camera3D2")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1466239464]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5774515, -0.40946138)
@@ -78,3 +80,6 @@ ground_raycast = NodePath("../Raycasts/RayCastGroundDetector")
 
 [node name="Hud" parent="." unique_id=1935245061 node_paths=PackedStringArray("player") instance=ExtResource("8_244o0")]
 player = NodePath("..")
+
+[node name="Camera3D2" type="Camera3D" parent="." unique_id=1726319258]
+transform = Transform3D(-0.08035872, -0.46146768, 0.8835101, 0.0024109147, 0.88628405, 0.46313584, -0.9967631, 0.039347067, -0.07010809, 1.5018778, 1.2439831, -0.6509722)

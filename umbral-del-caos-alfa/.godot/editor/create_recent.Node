@@ -1,3 +1,4 @@
+Camera3D
 Marker3D
 CollisionShape3D
 MeshInstance3D
@@ -11,4 +12,3 @@ AudioStreamPlayer
 AudioStreamPlayer3D
 RayCast3D
 Node
-Camera3D

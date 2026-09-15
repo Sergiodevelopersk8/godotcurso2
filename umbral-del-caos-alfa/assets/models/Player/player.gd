@@ -3,17 +3,22 @@ extends CharacterBody3D
 class_name Player
 
 
-#-------onreadys----------
+#-------onreadys camara----------
 @onready var camera_3d: Camera3D = $Camera3D
 @onready var origCamPos : Vector3 = camera_3d.position
 @onready var footstep_sound: FootstepPlayer = $FootstepSound
 @onready var ray_cast_interactuar: Interactor3D = $Camera3D/RayCastInteractuar
+@export var fp_camera: Camera3D
+@export var debug_camera: Camera3D
+
+
+
 
 #-------onreadys state_machines----------
 @onready var state_machine: StateMachine = $StateMachine
 
 
-#-------onreadys raycast----------
+#-------onreadys raycast camera ----------
 @onready var ray_cast_ground_detector: RayCast3D = $Raycasts/RayCastGroundDetector
 @onready var raycast_crouch: RayCast3D = $Raycasts/RaycastCrouch
 @onready var hand: Marker3D = $Camera3D/hand
@@ -61,8 +66,6 @@ func _ready() -> void:
 
 
 
-
-
 func _input(event: InputEvent) -> void:
 	# 1. Si no se permite mover/rotar, cancelamos CUALQUIER procesamiento de entrada
 	if not move_and_rotate_player:
@@ -70,7 +73,10 @@ func _input(event: InputEvent) -> void:
 	# 2. Solo si move_and_rotate_player es true, procesamos la cámara
 	if event is InputEventMouseMotion:
 		rotate_camera(event)
-
+	if Input.is_action_just_pressed("tree_person") :
+		debug_camera.current = true
+	if Input.is_action_just_pressed("first_person") :
+		debug_camera.current = false
 
 
 
@@ -124,6 +130,9 @@ func process_input(delta) -> Vector3:
 	
 	direction = Vector3(side_input, 0, forward_input).rotated(Vector3.UP,h_rot).normalized()
 	return direction
+
+
+
 
 
 

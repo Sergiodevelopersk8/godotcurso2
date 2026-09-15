@@ -41,6 +41,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0505052, 1, 1.0252843)
 [node name="RayCastInteractuar" parent="CharacterBody3D/Camera3D" parent_id_path=PackedInt32Array(1901970933, 1466239464) index="0" unique_id=1223787391 node_paths=PackedStringArray("level_objects_container")]
 level_objects_container = NodePath("../../../objects")
 
+[node name="hand" parent="CharacterBody3D/Camera3D" parent_id_path=PackedInt32Array(1901970933, 1466239464) index="1" unique_id=1427675814]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19999999, -0.38938212, -0.20177174)
+
 [node name="objects" type="Node3D" parent="." unique_id=834404580]
 
 [node name="BoteSalsaRoja" parent="objects" unique_id=1494490827 instance=ExtResource("3_a0ior")]
@@ -49,9 +52,15 @@ transform = Transform3D(0.275, 0, 0, 0, 0.275, 0, 0, 0, 0.275, -0.9611094, 1.175
 [node name="memela_base" parent="objects" unique_id=1188055321 instance=ExtResource("4_lckxe")]
 transform = Transform3D(1, 0, 0, 0, 1.8799999, 0, 0, 0, 1, 1.4866652, 1.1489351, -3.9718277)
 
+[node name="MeshInstance3D" parent="objects/memela_base" index="0" unique_id=333059183]
+transform = Transform3D(1.266, 0, 0, 0, 0.135, 0, 0, 0, 0.816, 0, 0, 0)
+
 [node name="Comal" parent="." unique_id=2024034999 instance=ExtResource("4_n157a")]
 transform = Transform3D(1.87, 0, 0, 0, 1.87, 0, 0, 0, 1.87, 0, 0, -6.5249248)
 id = "comal"
+
+[node name="Cube_001" parent="Comal" index="0" unique_id=692415147]
+transform = Transform3D(0.9600002, 0, 0, 0, 0.12633263, 0, 0, 0, 0.4800001, 0, 0.4652409, 0)
 
 [editable path="CharacterBody3D"]
 [editable path="objects/memela_base"]
