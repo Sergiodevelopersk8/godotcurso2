@@ -12,3 +12,4 @@ res://src/entities/interactables/quesillo.tscn
 res://src/entities/interactables/scrips_interactables/bote_salsa_roja.gd
 res://src/entities/interactables/scrips_interactables/bote_salsa_verde.gd
 res://src/entities/interactables/scrips_interactables/quesillo.gd
+res://src/entities/Objects_scenes/mesa.tscn
