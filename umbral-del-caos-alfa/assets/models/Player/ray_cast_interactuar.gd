@@ -36,16 +36,26 @@ func handle_input(target_object: Interact) -> void:
 		drop_object()
 		
 	elif Input.is_action_just_pressed("interact"):
-		# CASO 1: Llevas un objeto en la mano e intentas entregarlo
+		# CASO 1: Llevas un objeto en la mano e intentas entregarlo / combinarlo
 		if object_in_hand and target_object:
-			# Verificamos si el objeto enfocado sabe recibir elementos
+			
+			# ¿El objetivo acepta ingredientes directos? (Ej. Memela)
+			if target_object.has_method("receive_ingredient"):
+				var was_added: bool = target_object.receive_ingredient(object_in_hand)
+				if was_added:
+					print("[Interactor3D] Ingrediente aplicado con éxito.")
+					# NOTA: Si el recipiente de salsa es consumible, aquí harías queue_free()
+					return # Salimos para no ejecutar otras interacciones simultáneas
+			
+			# ¿El objetivo recibe objetos enteros? (Ej. Comal / Mesa)
 			if target_object.has_method("receive_object"):
 				var accepted: bool = target_object.receive_object(object_in_hand)
 				if accepted:
-					object_in_hand = null # Liberamos la mano solo si el comal lo aceptó
-			else:
-				print("[Interactor3D] Este objeto no puede recibir ingredientes.")
-				
+					object_in_hand = null # Liberamos la mano porque el Comal ya lo sostuvo
+					return
+					
+			print("[Interactor3D] No se puede realizar ninguna acción entre estos objetos.")
+			
 		# CASO 2: Mano vacía, intentas tomar o interactuar con algo
 		elif not object_in_hand and target_object:
 			if target_object.can_be_loaded:

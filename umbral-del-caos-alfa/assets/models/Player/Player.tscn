@@ -21,7 +21,7 @@ fp_camera = NodePath("Camera3D")
 debug_camera = NodePath("Camera3D2")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1466239464]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5774515, -0.40946138)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.730323, -0.06937289)
 
 [node name="RayCastInteractuar" type="RayCast3D" parent="Camera3D" unique_id=1223787391 node_paths=PackedStringArray("player", "hand")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, -0.018495739, -0.106000006)
@@ -32,7 +32,7 @@ player = NodePath("../..")
 hand = NodePath("../hand")
 
 [node name="hand" type="Marker3D" parent="Camera3D" unique_id=1427675814]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, -0.38938218, -0.6906878)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, -0.38938218, -0.50761545)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1514380184]
 shape = SubResource("CapsuleShape3D_2a86y")

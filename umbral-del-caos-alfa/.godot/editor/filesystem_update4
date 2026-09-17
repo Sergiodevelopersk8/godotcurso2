@@ -1,3 +1,14 @@
-res://assets/models/Player/Player.tscn
-res://assets/models/Player/player.gd
+res://src/levesl/level_1.tscn
 res://src/entities/interactables/comal.tscn
+res://src/entities/interactables/memela_base.tscn
+res://src/entities/interactables/memela.tscn
+res://src/entities/interactables/scrips_interactables/memela_base.gd
+res://src/entities/interactables/memela.scn
+res://src/entities/interactables/bote_salsa_roja.tscn
+res://assets/models/Player/ray_cast_interactuar.gd
+res://src/entities/interactables/bote_salsa_verde.tscn
+res://assets/models/Player/Player.tscn
+res://src/entities/interactables/quesillo.tscn
+res://src/entities/interactables/scrips_interactables/bote_salsa_roja.gd
+res://src/entities/interactables/scrips_interactables/bote_salsa_verde.gd
+res://src/entities/interactables/scrips_interactables/quesillo.gd

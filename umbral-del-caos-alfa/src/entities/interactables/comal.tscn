@@ -82,6 +82,7 @@ size = Vector3(4.044464, 0.95336914, 2.016571)
 script = ExtResource("2_6ysrt")
 doneness = NodePath("CollisionShape3D/Marker3D")
 id = "Comal"
+metadata/_edit_group_ = true
 
 [node name="Cube_001" type="MeshInstance3D" parent="." index="0" unique_id=692415147]
 transform = Transform3D(2.0401154, 0, 0, 0, 0.4180802, 0, 0, 0, 1, 0, 0, 0)

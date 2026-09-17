@@ -1,5 +1,5 @@
 extends Interact
-class_name Bote_de_Salsa_Roja
+class_name Quesillo
 
 func _ready() -> void:
 	interact()

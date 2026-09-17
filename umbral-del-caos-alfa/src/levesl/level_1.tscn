@@ -3,8 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://bfm8qaeianonx" path="res://assets/models/Player/Player.tscn" id="1_n0jmb"]
 [ext_resource type="Material" uid="uid://qbybyiagt4ao" path="res://assets/environmental/materials/Concrete_One.tres" id="1_uyyla"]
 [ext_resource type="PackedScene" uid="uid://karhd88i6rv" path="res://src/entities/interactables/bote_salsa_roja.tscn" id="3_a0ior"]
-[ext_resource type="PackedScene" uid="uid://du4xpsttw3ga2" path="res://src/entities/interactables/memela_base.tscn" id="4_lckxe"]
+[ext_resource type="PackedScene" uid="uid://du4xpsttw3ga2" path="res://src/entities/interactables/memela.tscn" id="4_lckxe"]
 [ext_resource type="PackedScene" uid="uid://ccna5hq21rukv" path="res://src/entities/interactables/comal.tscn" id="4_n157a"]
+[ext_resource type="PackedScene" uid="uid://cwhir5ddg2gp2" path="res://src/entities/interactables/bote_salsa_verde.tscn" id="5_hefpv"]
+[ext_resource type="PackedScene" uid="uid://1ciiyrssodbc" path="res://src/entities/interactables/quesillo.tscn" id="6_rrsh6"]
 
 [sub_resource type="Environment" id="Environment_v2nwe"]
 ambient_light_source = 3
@@ -47,21 +49,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19999999, -0.38938212, -0.2
 [node name="objects" type="Node3D" parent="." unique_id=834404580]
 
 [node name="BoteSalsaRoja" parent="objects" unique_id=1494490827 instance=ExtResource("3_a0ior")]
-transform = Transform3D(0.275, 0, 0, 0, 0.275, 0, 0, 0, 0.275, -0.9611094, 1.175251, -0.95617366)
+transform = Transform3D(0.145, 0, 0, 0, 0.145, 0, 0, 0, 0.145, -0.9611094, 1.175251, -0.95617366)
+id = "Salsa Roja"
 
-[node name="memela_base" parent="objects" unique_id=1188055321 instance=ExtResource("4_lckxe")]
-transform = Transform3D(1, 0, 0, 0, 1.8799999, 0, 0, 0, 1, 1.4866652, 1.1489351, -3.9718277)
+[node name="memela" parent="objects" unique_id=928348330 instance=ExtResource("4_lckxe")]
+transform = Transform3D(0.42, 0, 0, 0, 0.42, 0, 0, 0, 0.42, 0, 1.2318418, -3.9087105)
 
-[node name="MeshInstance3D" parent="objects/memela_base" index="0" unique_id=333059183]
-transform = Transform3D(1.266, 0, 0, 0, 0.135, 0, 0, 0, 0.816, 0, 0, 0)
+[node name="Interact" parent="objects" unique_id=1848401282 instance=ExtResource("5_hefpv")]
+transform = Transform3D(0.145, 0, 0, 0, 0.145, 0, 0, 0, 0.145, 0.72999144, 1.0473788, -0.9503297)
 
-[node name="Comal" parent="." unique_id=2024034999 instance=ExtResource("4_n157a")]
-transform = Transform3D(1.87, 0, 0, 0, 1.87, 0, 0, 0, 1.87, 0, 0, -6.5249248)
-id = "comal"
+[node name="Quesillo" parent="objects" unique_id=79260992 instance=ExtResource("6_rrsh6")]
+transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 0, 0.907408, -1.0853778)
 
-[node name="Cube_001" parent="Comal" index="0" unique_id=692415147]
-transform = Transform3D(0.9600002, 0, 0, 0, 0.12633263, 0, 0, 0, 0.4800001, 0, 0.4652409, 0)
+[node name="Comal" parent="." unique_id=1955610188 instance=ExtResource("4_n157a")]
+transform = Transform3D(0.55, 0, 0, 0, 0.55, 0, 0, 0, 0.55, 0, 0.74693835, -7.726218)
 
 [editable path="CharacterBody3D"]
-[editable path="objects/memela_base"]
-[editable path="Comal"]

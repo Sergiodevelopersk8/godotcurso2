@@ -83,7 +83,7 @@ shadow_mesh = SubResource("ArrayMesh_gmayt")
 [node name="BoteSalsaRoja" unique_id=1494490827 instance=ExtResource("1_yg1ng")]
 transform = Transform3D(0.275, 0, 0, 0, 0.275, 0, 0, 0, 0.275, 0, 0.66643536, 0)
 script = ExtResource("2_11vda")
-id = "salsa roja"
+id = "SalsaRoja"
 metadata/_edit_group_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." index="0" unique_id=1606629778 groups=["Interacts"]]
