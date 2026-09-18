@@ -1,4 +1,3 @@
-# res://src/interactables/interact.gd
 extends Area3D
 class_name Interact
 
@@ -21,4 +20,3 @@ signal isInteract
 func interact():
 	# Al llamar a emit(), cualquier cosa conectada se enterará
 	isInteract.emit()
-	

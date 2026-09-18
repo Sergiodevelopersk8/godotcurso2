@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cviubs6vqkv33"]
+
+[ext_resource type="PackedScene" uid="uid://p7nhmt8mpm1x" path="res://src/entities/interactables/interact.tscn" id="1_q6dt8"]
+[ext_resource type="Script" uid="uid://diapluvk6tldp" path="res://src/entities/npcs/scripts_npc/customer_npc_1.gd" id="2_6ew7l"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6ew7l"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_x2rey"]
+
+[node name="cliente1" unique_id=1494490827 instance=ExtResource("1_q6dt8")]
+script = ExtResource("2_6ew7l")
+dialogue_resource = null
+dialogue_start_title = "start"
+id = "Gustavo"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="0" unique_id=1875928504]
+shape = SubResource("CapsuleShape3D_6ew7l")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="1" unique_id=832657166]
+mesh = SubResource("CapsuleMesh_x2rey")

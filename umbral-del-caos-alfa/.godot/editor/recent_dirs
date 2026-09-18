@@ -1,5 +1,8 @@
-res://src/entities/Objects_scenes/
-res://src/entities/interactables/scrips_interactables/
+res://src/entities/npcs/scripts_npc/
+res://src/entities/npcs/
 res://src/entities/interactables/
+res://src/entities/Objects_scenes/
+res://src/entities/
+res://src/entities/interactables/scrips_interactables/
 res://assets/models/Player/
 res://src/levesl/

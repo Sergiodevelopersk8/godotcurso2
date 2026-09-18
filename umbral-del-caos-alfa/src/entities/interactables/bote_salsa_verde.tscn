@@ -92,3 +92,6 @@ mesh = SubResource("ArrayMesh_2uqgv")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1" unique_id=917662686]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.056625366, -0.009338379, -0.007909536)
 shape = SubResource("BoxShape3D_sxoqh")
+
+[node name="RayCast3D" parent="." index="2" unique_id=1889189091]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.455653, 0)

@@ -503,3 +503,6 @@ mesh = SubResource("ArrayMesh_q5fkb")
 transform = Transform3D(1, 0, 0, 0, -0.15070939, 0, 0, 0, 0.56910074, 0, 0, 0)
 visible = false
 mesh = SubResource("ArrayMesh_ubrud")
+
+[node name="RayCast3D" parent="." index="6" unique_id=1889189091]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.19053912, 0)

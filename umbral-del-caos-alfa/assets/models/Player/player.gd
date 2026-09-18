@@ -50,9 +50,12 @@ var _delta = 0
 var distance_foot_step = 0.0
 var play_foot_step := 1
 
+var is_talking: bool = false
+
+
+
 #--------- SEÑALES -----------
 signal interactable_focused(description: String)
-
 
 
 
@@ -67,17 +70,17 @@ func _ready() -> void:
 
 
 func _input(event: InputEvent) -> void:
-	# 1. Si no se permite mover/rotar, cancelamos CUALQUIER procesamiento de entrada
-	if not move_and_rotate_player:
+# Si está hablando o el control está bloqueado, ignoramos las entradas de cámara y teclado
+	if is_talking or not move_and_rotate_player:
 		return
-	# 2. Solo si move_and_rotate_player es true, procesamos la cámara
+		
 	if event is InputEventMouseMotion:
 		rotate_camera(event)
-	if Input.is_action_just_pressed("tree_person") :
+		
+	if Input.is_action_just_pressed("tree_person"):
 		debug_camera.current = true
-	if Input.is_action_just_pressed("first_person") :
+	if Input.is_action_just_pressed("first_person"):
 		debug_camera.current = false
-
 
 
 func _process(delta: float) -> void:
@@ -94,15 +97,11 @@ func _process(delta: float) -> void:
 
 #--------- FUNCIONES PROPIAS -----------
 
-func rotate_camera(event):
-	# si se mueve el mouse rota el jugador y la camara 
-	if event is InputEventMouseMotion :
-		#rota el jugador 
-		rotate_y(deg_to_rad(-event.relative.x * mouse_sens))
-		#se rota de arriba y abajo llamamos a al camara 
-		camera_3d.rotate_x(deg_to_rad(-event.relative.y * mouse_sens))
-		#limite de arriba y abajo al rotar la camara
-		camera_3d.rotation.x = clamp(camera_3d.rotation.x, deg_to_rad(-89), deg_to_rad(89))
+
+func rotate_camera(event: InputEventMouseMotion) -> void:
+	rotate_y(deg_to_rad(-event.relative.x * mouse_sens))
+	camera_3d.rotate_x(deg_to_rad(-event.relative.y * mouse_sens))
+	camera_3d.rotation.x = clamp(camera_3d.rotation.x, deg_to_rad(-89), deg_to_rad(89))
 
 
 func rotate_camera_joystick(delta: float) -> void:
@@ -132,13 +131,27 @@ func process_input(delta) -> Vector3:
 	return direction
 
 
-
-
-
-
-
-
 func see_mouse():
 	if Input.is_action_just_pressed("see_mouse_click"):
 		print("veo el mouse")
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+
+
+func _physics_process(delta: float) -> void:
+	# Si el jugador está en diálogo, bloqueamos la caminata
+	if is_talking or not move_and_rotate_player:
+		velocity.x = move_toward(velocity.x, 0, friction * delta)
+		velocity.z = move_toward(velocity.z, 0, friction * delta)
+		move_and_slide()
+		return
+
+
+func set_talking_state(talking: bool) -> void:
+	is_talking = talking
+	move_and_rotate_player = not talking
+	
+	if is_talking:
+		velocity = Vector3.ZERO
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	else:
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)

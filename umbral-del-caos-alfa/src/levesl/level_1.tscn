@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://cwhir5ddg2gp2" path="res://src/entities/interactables/bote_salsa_verde.tscn" id="5_hefpv"]
 [ext_resource type="PackedScene" uid="uid://1ciiyrssodbc" path="res://src/entities/interactables/quesillo.tscn" id="6_rrsh6"]
 [ext_resource type="PackedScene" uid="uid://vktjm7qmqdb4" path="res://src/entities/Objects_scenes/mesa.tscn" id="8_rrsh6"]
+[ext_resource type="PackedScene" uid="uid://cviubs6vqkv33" path="res://src/entities/npcs/cliente_1.tscn" id="9_c7gus"]
+[ext_resource type="Resource" uid="uid://dw68me6l7yxs5" path="res://src/systems/dialogue/cliente_1.dialogue" id="10_l3hh4"]
 
 [sub_resource type="Environment" id="Environment_v2nwe"]
 ambient_light_source = 3
@@ -17,8 +19,8 @@ ambient_light_energy = 4.33
 [sub_resource type="PlaneMesh" id="PlaneMesh_uyyla"]
 material = ExtResource("1_uyyla")
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_a0ior"]
-data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+[sub_resource type="BoxShape3D" id="BoxShape3D_rrsh6"]
+size = Vector3(1.9908447, 0.5234375, 2.0234985)
 
 [node name="level_1" type="Node3D" unique_id=2091755154]
 
@@ -33,10 +35,11 @@ environment = SubResource("Environment_v2nwe")
 transform = Transform3D(8.9999695, 0, 0, 0, 1, 0, 0, 0, 9.20862, 0, 0, 0)
 mesh = SubResource("PlaneMesh_uyyla")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="floor/MeshInstance3D" unique_id=855459320]
+[node name="StaticBody3D" type="StaticBody3D" parent="floor/MeshInstance3D" unique_id=932409287]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="floor/MeshInstance3D/StaticBody3D" unique_id=1531825168]
-shape = SubResource("ConcavePolygonShape3D_a0ior")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor/MeshInstance3D/StaticBody3D" unique_id=103804637]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -0.0040893694, -0.23828125, -0.00088502554)
+shape = SubResource("BoxShape3D_rrsh6")
 
 [node name="CharacterBody3D" parent="." unique_id=1901970933 instance=ExtResource("1_n0jmb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0505052, 1, 1.0252843)
@@ -56,19 +59,23 @@ id = "Salsa Roja"
 [node name="memela" parent="objects" unique_id=928348330 instance=ExtResource("4_lckxe")]
 transform = Transform3D(0.42, 0, 0, 0, 0.42, 0, 0, 0, 0.42, -2.3439846, 0.9459083, -8.071383)
 
-[node name="Interact" parent="objects" unique_id=1848401282 instance=ExtResource("5_hefpv")]
+[node name="Bote_salsa_verde" parent="objects" unique_id=1848401282 instance=ExtResource("5_hefpv")]
 transform = Transform3D(0.145, 0, 0, 0, 0.145, 0, 0, 0, 0.145, -4.0956187, 1.0549281, -8.035055)
 
 [node name="Quesillo" parent="objects" unique_id=79260992 instance=ExtResource("6_rrsh6")]
-transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, -3.7464697, 1.0133511, -8.000933)
+transform = Transform3D(0.145, 0, 0, 0, 0.145, 0, 0, 0, 0.145, -3.7464697, 1.0440286, -7.820148)
 
 [node name="Comal" parent="." unique_id=1955610188 instance=ExtResource("4_n157a")]
 transform = Transform3D(0.55, 0, 0, 0, 0.55, 0, 0, 0, 0.55, 0, 0.74693835, -8.583302)
 
 [node name="Mesa" parent="." unique_id=1005961017 instance=ExtResource("8_rrsh6")]
-transform = Transform3D(-0.4435936, 0, 0.03535124, 0, 0.44499996, 0, -0.03535124, 0, -0.4435936, -2.1314125, -0.279783, -9.41555)
+transform = Transform3D(-0.4435936, 0, 0.03535124, 0, 0.44499996, 0, -0.03535124, 0, -0.4435936, -2.3813977, 0.8526269, -8.189339)
 
 [node name="Mesa2" parent="." unique_id=1023589142 instance=ExtResource("8_rrsh6")]
-transform = Transform3D(-0.4435936, 0, 0.03535124, 0, 0.44499996, 0, -0.03535124, 0, -0.4435936, -3.4741564, -0.279783, -9.505121)
+transform = Transform3D(-0.4435936, 0, 0.03535124, 0, 0.44499996, 0, -0.03535124, 0, -0.4435936, -3.7241411, 0.8526269, -8.27891)
+
+[node name="Gustavo" parent="." unique_id=926957031 instance=ExtResource("9_c7gus")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9578285, 0.7854471, -2.426764)
+dialogue_resource = ExtResource("10_l3hh4")
 
 [editable path="CharacterBody3D"]

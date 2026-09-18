@@ -8,8 +8,6 @@ signal interactable_focused(description: String)
 @export var hand: Marker3D # Inyectamos la mano por Inspector para evitar $"../hand"
 @export var level_objects_container: Node3D # Asignamos el contenedor de objetos del nivel activo
 
-
-
 var object_in_hand: Interact = null
 
 func _process(_delta: float) -> void:
@@ -31,7 +29,7 @@ func check_interaction() -> Interact:
 	return null
 
 
-func handle_input(target_object: Interact) -> void:
+func handle_input(target_object: Interact) -> void: #target_object detecta que recogemos con su id
 	if Input.is_action_just_pressed("drop") and object_in_hand:
 		drop_object()
 		
@@ -39,13 +37,16 @@ func handle_input(target_object: Interact) -> void:
 		# CASO 1: Llevas un objeto en la mano e intentas entregarlo / combinarlo
 		if object_in_hand and target_object:
 			
-			# ¿El objetivo acepta ingredientes directos? (Ej. Memela)
+			# si el objeto recibe ingredientes
 			if target_object.has_method("receive_ingredient"):
+				#variable que agrega el objeto y detecta si el script del objeto tienen el metodo de 
+				#recibir ingrediente
 				var was_added: bool = target_object.receive_ingredient(object_in_hand)
 				if was_added:
 					print("[Interactor3D] Ingrediente aplicado con éxito.")
-					# NOTA: Si el recipiente de salsa es consumible, aquí harías queue_free()
-					return # Salimos para no ejecutar otras interacciones simultáneas
+					# si el recipiente de salsa es consumible, aquí harías queue_free()
+					
+					return # salimos para no ejecutar otras interacciones simultáneas
 			
 			# ¿El objetivo recibe objetos enteros? (Ej. Comal / Mesa)
 			if target_object.has_method("receive_object"):
@@ -74,9 +75,6 @@ func take_object(object: Interact) -> void:
 	print("id del objeto -> ",object.id)
 	object.position = object.pos_obj
 	#object.scale = Vector3.ONE * object.scale_obj
-
-
-
 
 func drop_object() -> void:
 	if not object_in_hand:

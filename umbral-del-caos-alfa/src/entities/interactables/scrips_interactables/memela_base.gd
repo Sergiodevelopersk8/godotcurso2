@@ -22,10 +22,13 @@ func add_ingredients(ingredient_id: String):
 		update_visuals()
 
 func receive_ingredient(object: Interact) -> bool:
+	#si el objeto es igual a null regresa false
 	if object == null:
 		return false
+	
 	# Verificamos si el ingrediente que sostiene el jugador es válido
 	var valid_ingredients = ["Salsa Roja","Salsa Verde","Quesillo"]
+	
 	if valid_ingredients.has(object.id):
 		if ingredients.has(object.id) :
 			print("[Memela] Ya tiene ", object.id)
@@ -55,7 +58,6 @@ func update_visuals():
 	# Evaluamos las combinaciones
 	if has_red and has_green and has_cheese:
 		memela_bandera_quesillo.visible = true
-		
 	elif has_red and has_green:
 		memela_bandera.visible = true
 	elif has_green and has_cheese:

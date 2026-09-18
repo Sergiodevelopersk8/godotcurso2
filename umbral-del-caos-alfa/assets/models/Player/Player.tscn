@@ -13,7 +13,11 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2a86y"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xb7us"]
+albedo_color = Color(0.9999998, 0.32170892, 0.99285287, 1)
+
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_6befo"]
+material = SubResource("StandardMaterial3D_xb7us")
 
 [node name="CharacterBody3D" type="CharacterBody3D" unique_id=1901970933 node_paths=PackedStringArray("fp_camera", "debug_camera") groups=["Player"]]
 script = ExtResource("1_6befo")

@@ -81,7 +81,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_gmayt")
 
 [node name="BoteSalsaRoja" unique_id=1494490827 instance=ExtResource("1_yg1ng")]
-transform = Transform3D(0.275, 0, 0, 0, 0.275, 0, 0, 0, 0.275, 0, 0.66643536, 0)
+transform = Transform3D(0.275, 0, 0, 0, 0.275, 0, 0, 0, 0.275, 0, 0, 0)
 script = ExtResource("2_11vda")
 id = "SalsaRoja"
 metadata/_edit_group_ = true
@@ -93,3 +93,6 @@ shape = SubResource("BoxShape3D_i160a")
 [node name="Cylinder" type="MeshInstance3D" parent="." index="1" unique_id=1912804200]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.367841)
 mesh = SubResource("ArrayMesh_6a2u5")
+
+[node name="RayCast3D" parent="." index="2" unique_id=1889189091]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.8737453, 0)

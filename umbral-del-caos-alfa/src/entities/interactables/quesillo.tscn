@@ -46,10 +46,12 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ip7pf")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kd3ye"]
-size = Vector3(1.411499, 1.5991211, 1.8710938)
+size = Vector3(1.3996277, 2.0747223, 2.0058594)
 
 [node name="Quesillo" unique_id=1494490827 instance=ExtResource("1_s40t2")]
 script = ExtResource("2_1btop")
+velocidad_terminal = 4.0
+offset_suelo = 0.25
 id = "Quesillo"
 metadata/_edit_group_ = true
 
@@ -57,5 +59,8 @@ metadata/_edit_group_ = true
 mesh = SubResource("ArrayMesh_fjied")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1" unique_id=1030040262]
-transform = Transform3D(0.9772126, 0, 0, 0, 1, 0, 0, 0, 1, -0.031753004, 0.12036133, 0.036132813)
+transform = Transform3D(0.9772126, 0, 0, 0, 1, 0, 0, 0, 1, -0.037553415, 0.0006637573, -0.03125)
 shape = SubResource("BoxShape3D_kd3ye")
+
+[node name="RayCast3D" type="RayCast3D" parent="." index="2" unique_id=1004061465]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.057611, 0)
