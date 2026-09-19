@@ -2,11 +2,11 @@
 extends State
 class_name PlayerState
 
-
+@export var can_rotate_camera: bool = true
+@export var can_move: bool = true
 var player
-## Espera a que el propietario este listo y obtiene la referencia al jugador.
+
 func _ready() -> void:
-	#eperamos a que la escena del player se cargue bien 
-	await  owner.ready
+	await owner.ready
 	player = owner as Player
 	assert(player != null, "ERROR: PlayerState debe ser hijo directo o indirecto de un nodo Player.")

@@ -11,7 +11,8 @@ signal interactable_focused(description: String)
 var object_in_hand: Interact = null
 
 func _process(_delta: float) -> void:
-	if player and not player.move_and_rotate_player:
+	# Si el RayCast está desactivado (por ejemplo, durante un diálogo), limpiamos el UI focus
+	if not is_enabled():
 		interactable_focused.emit("")
 		return
 		
@@ -29,40 +30,37 @@ func check_interaction() -> Interact:
 	return null
 
 
-func handle_input(target_object: Interact) -> void: #target_object detecta que recogemos con su id
+func handle_input(target_object: Interact) -> void:
+	# 1. SOLTAR OBJETO (Tecla asignada a drop)
 	if Input.is_action_just_pressed("drop") and object_in_hand:
 		drop_object()
-		
-	elif Input.is_action_just_pressed("interact"):
-		# CASO 1: Llevas un objeto en la mano e intentas entregarlo / combinarlo
+		return
+
+	# 2. DIÁLOGO / INTERACCIÓN CON NPC (Clic Izquierdo)
+	if Input.is_action_just_pressed("interact_dialogue") and target_object:
+		# Si el NPC/Objeto tiene el método interact() o start_dialogue(), lo invocamos
+		if target_object.has_method("interact"):
+			target_object.interact()
+		return
+
+	# 3. INTERACCIÓN DE OBJETOS / AGARRAR (Tecla E)
+	if Input.is_action_just_pressed("interact_object"):
+		# CASO A: Llevas un objeto en la mano
 		if object_in_hand and target_object:
-			
-			# si el objeto recibe ingredientes
 			if target_object.has_method("receive_ingredient"):
-				#variable que agrega el objeto y detecta si el script del objeto tienen el metodo de 
-				#recibir ingrediente
-				var was_added: bool = target_object.receive_ingredient(object_in_hand)
-				if was_added:
-					print("[Interactor3D] Ingrediente aplicado con éxito.")
-					# si el recipiente de salsa es consumible, aquí harías queue_free()
-					
-					return # salimos para no ejecutar otras interacciones simultáneas
-			
-			# ¿El objetivo recibe objetos enteros? (Ej. Comal / Mesa)
-			if target_object.has_method("receive_object"):
-				var accepted: bool = target_object.receive_object(object_in_hand)
-				if accepted:
-					object_in_hand = null # Liberamos la mano porque el Comal ya lo sostuvo
+				if target_object.receive_ingredient(object_in_hand):
+					print("[Interactor3D] Ingrediente aplicado.")
 					return
-					
-			print("[Interactor3D] No se puede realizar ninguna acción entre estos objetos.")
 			
-		# CASO 2: Mano vacía, intentas tomar o interactuar con algo
+			if target_object.has_method("receive_object"):
+				if target_object.receive_object(object_in_hand):
+					object_in_hand = null
+					return
+
+		# CASO B: Mano vacía y miras un objeto que se puede cargar
 		elif not object_in_hand and target_object:
 			if target_object.can_be_loaded:
 				take_object(target_object)
-			else:
-				target_object.interact()
 
 func take_object(object: Interact) -> void:
 	if not hand:
@@ -88,5 +86,5 @@ func drop_object() -> void:
 		target_parent = get_tree().current_scene
 	object_in_hand.reparent(target_parent)
 	# Posicionamos el objeto 
-	global_position + (global_transform.basis.z * -1.5)
+	object_in_hand.global_position = global_position + (-global_transform.basis.z * 1.5)
 	object_in_hand = null

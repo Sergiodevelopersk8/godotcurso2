@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://cpp247knlg0lw" path="res://src/entities/player/states/Air.gd" id="7_xb7us"]
 [ext_resource type="PackedScene" uid="uid://detlr40ca7k4q" path="res://src/ui/hud/HUD.tscn" id="8_244o0"]
 [ext_resource type="Script" uid="uid://dpx501ogir6pj" path="res://assets/models/Player/footstep_sound.gd" id="8_awhsm"]
+[ext_resource type="Script" uid="uid://dbaacpeqxqb7x" path="res://assets/models/Player/in_dialogue.gd" id="9_8gcxf"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2a86y"]
 
@@ -66,6 +67,7 @@ script = ExtResource("7_xb7us")
 [node name="ReadingNote" type="Node" parent="StateMachine" unique_id=686275620]
 
 [node name="InDialogue" type="Node" parent="StateMachine" unique_id=506903113]
+script = ExtResource("9_8gcxf")
 
 [node name="Raycasts" type="Node3D" parent="." unique_id=510313004]
 

@@ -2,58 +2,55 @@
 extends Node
 class_name StateMachine
 
+signal transitioned(state_name)
 
-signal transitioned(state_name) #señal para pasar de estado 
+@export var initial_state := NodePath()
+@onready var state: State = get_node(initial_state)
+var current_state: State
 
-@export var initial_state := NodePath() # ruta del nodo de estado
-@onready var state : State = get_node(initial_state) # obtiene el nodo
-
-
-#--------- FUNCIONES DEL SISTEMA -----------
-## Asigna la maquina a sus estados hijos e inicia el estado inicial.
 func _ready() -> void:
-	#esperamos a que se cargue el padre
 	await owner.ready
-	
-	#recorremos todos los hijos 
+
 	for node_child in get_children():
 		if node_child is State:
-			#no los asignamos a nosotros 
 			node_child.state_machine = self
-		
-	
-	#accedemos a la funcion de enter del script de state.gd
-	state.enter()
 
-## Ejecuta la actualizacion no fisica del estado activo.
+	current_state = state
+	current_state.enter()
+
 func _process(delta: float) -> void:
-	state.update(delta)
+	if current_state:
+		current_state.update(delta)
 
-## Ejecuta la actualizacion fisica del estado activo.
 func _physics_process(delta: float) -> void:
-	state.physics_update(delta)
+	if current_state:
+		current_state.physics_update(delta)
 
+func remove_input(event) -> void:
+	if current_state:
+		current_state._handled_input(event)
 
-
-#--------- FUNCIONES PROPIAS -----------
-
-
-## Reenvia un evento de entrada al estado activo.
-func remove_input(event):
-	state._handled_input(event)
-
-## Cambia al estado indicado si existe y emite la senal de transicion.
-func change_state(current_state_name : String):
-	# si no existe el estado no hagas nada
-	if not has_node(current_state_name):
+func change_state(state_name: String) -> void:
+	if not has_node(state_name):
+		push_warning("[StateMachine] No existe el estado: %s" % state_name)
 		return
-	# si  existe el estado
-	state.exit()
-	state = get_node(current_state_name)
-	emit_signal("transitioned", state.name)
-	
 
-## Devuelve el nombre del estado activo.
-func get_state():
-	#obtenemos en que estado estamos
-	return state.name as String
+	var new_state := get_node(state_name) as State
+	if new_state == null or new_state == current_state:
+		return
+
+	if current_state:
+		current_state.exit()
+
+	current_state = new_state
+	state = new_state          # mantenemos 'state' sincronizado por compatibilidad
+	current_state.enter()
+
+	transitioned.emit(current_state.name)
+
+# Alias para que el NPC pueda seguir llamando transition_to()
+func transition_to(state_name: String) -> void:
+	change_state(state_name)
+
+func get_state() -> String:
+	return current_state.name as String if current_state else ""

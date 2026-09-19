@@ -50,7 +50,6 @@ var _delta = 0
 var distance_foot_step = 0.0
 var play_foot_step := 1
 
-var is_talking: bool = false
 
 
 
@@ -69,31 +68,36 @@ func _ready() -> void:
 
 
 
+# Fragmento de Player.gd corregido en _input
+
 func _input(event: InputEvent) -> void:
-# Si está hablando o el control está bloqueado, ignoramos las entradas de cámara y teclado
-	if is_talking or not move_and_rotate_player:
-		return
-		
-	if event is InputEventMouseMotion:
+	var can_rotate := true
+	if state_machine and state_machine.current_state:
+		can_rotate = state_machine.current_state.can_rotate_camera
+
+	if event is InputEventMouseMotion and can_rotate:
 		rotate_camera(event)
-		
+
 	if Input.is_action_just_pressed("tree_person"):
 		debug_camera.current = true
 	if Input.is_action_just_pressed("first_person"):
 		debug_camera.current = false
 
 
-func _process(delta: float) -> void:
-	
-	if move_and_rotate_player:
-		rotate_camera_joystick(delta) # Activamos la rotación con joystick
-		
-	if direction == Vector3.ZERO:
-		camera_3d.position = camera_3d.position.lerp(origCamPos, delta * 5)
-		
-	see_mouse()
+func process_input(delta) -> Vector3:
+	_delta += delta
+	direction = Vector3.ZERO
 
+	# Si el estado actual no permite moverse (diálogo, cutscene...), no leemos input
+	if state_machine and state_machine.current_state and not state_machine.current_state.can_move:
+		return direction
 
+	var h_rot = global_transform.basis.get_euler().y
+	var forward_input = Input.get_action_strength("down") - Input.get_action_strength("up")
+	var side_input = Input.get_action_strength("right") - Input.get_action_strength("left")
+
+	direction = Vector3(side_input, 0, forward_input).rotated(Vector3.UP, h_rot).normalized()
+	return direction
 
 #--------- FUNCIONES PROPIAS -----------
 
@@ -104,54 +108,23 @@ func rotate_camera(event: InputEventMouseMotion) -> void:
 	camera_3d.rotation.x = clamp(camera_3d.rotation.x, deg_to_rad(-89), deg_to_rad(89))
 
 
+# Fragmento para rotate_camera_joystick en Player.gd
 func rotate_camera_joystick(delta: float) -> void:
-	delta = 2
-	if not move_and_rotate_player:
-		return
+	# Si existe el estado y prohíbe rotar, nos salimos
+	if state_machine and state_machine.current_state:
+		if not state_machine.current_state.can_rotate_camera:
+			return
 		
 	var joystick_vector := Input.get_vector("cam_left", "cam_right", "cam_up", "cam_down", joystick_deadzone)
 	
 	if joystick_vector != Vector2.ZERO:
-		rotate_y(-joystick_vector.x * controller_sensitivity * delta)
-		camera_3d.rotate_x(-joystick_vector.y * controller_sensitivity * delta)
+		rotate_y(-joystick_vector.x * controller_sensitivity * delta * 60.0)
+		camera_3d.rotate_x(-joystick_vector.y * controller_sensitivity * delta * 60.0)
 		camera_3d.rotation.x = clamp(camera_3d.rotation.x, deg_to_rad(-89), deg_to_rad(89))
 
-
-func process_input(delta) -> Vector3:
-	_delta += delta
-	direction = Vector3.ZERO
-	
-	
-	
-	var h_rot = global_transform.basis.get_euler().y 
-	var forward_input = Input.get_action_strength("down") - Input.get_action_strength("up")
-	var side_input = Input.get_action_strength("right") - Input.get_action_strength("left")
-	
-	direction = Vector3(side_input, 0, forward_input).rotated(Vector3.UP,h_rot).normalized()
-	return direction
 
 
 func see_mouse():
 	if Input.is_action_just_pressed("see_mouse_click"):
 		print("veo el mouse")
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-
-
-func _physics_process(delta: float) -> void:
-	# Si el jugador está en diálogo, bloqueamos la caminata
-	if is_talking or not move_and_rotate_player:
-		velocity.x = move_toward(velocity.x, 0, friction * delta)
-		velocity.z = move_toward(velocity.z, 0, friction * delta)
-		move_and_slide()
-		return
-
-
-func set_talking_state(talking: bool) -> void:
-	is_talking = talking
-	move_and_rotate_player = not talking
-	
-	if is_talking:
-		velocity = Vector3.ZERO
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	else:
-		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)

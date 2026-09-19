@@ -77,5 +77,6 @@ transform = Transform3D(-0.4435936, 0, 0.03535124, 0, 0.44499996, 0, -0.03535124
 [node name="Gustavo" parent="." unique_id=926957031 instance=ExtResource("9_c7gus")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9578285, 0.7854471, -2.426764)
 dialogue_resource = ExtResource("10_l3hh4")
+id = "Gustavo"
 
 [editable path="CharacterBody3D"]
