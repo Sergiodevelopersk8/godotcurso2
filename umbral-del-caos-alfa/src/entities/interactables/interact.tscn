@@ -2,5 +2,5 @@
 
 [ext_resource type="Script" uid="uid://bvx3cgq87fa4j" path="res://src/systems/interaction/Interact.gd" id="1_j6apq"]
 
-[node name="Interact" type="Area3D" unique_id=1494490827 groups=["Interacts"]]
+[node name="Interact" type="Area3D" unique_id=1190471633 groups=["Interacts"]]
 script = ExtResource("1_j6apq")

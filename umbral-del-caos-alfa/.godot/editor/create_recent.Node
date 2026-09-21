@@ -1,7 +1,8 @@
-MeshInstance3D
-CollisionShape3D
 Area3D
 RigidBody3D
+CSGBox3D
+MeshInstance3D
+CollisionShape3D
 RayCast3D
 StaticBody3D
 VehicleWheel3D
@@ -11,4 +12,3 @@ Node3D
 Label
 TextureRect
 CanvasLayer
-AudioStreamPlayer

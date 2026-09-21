@@ -37,7 +37,7 @@ player = NodePath("../..")
 hand = NodePath("../hand")
 
 [node name="hand" type="Marker3D" parent="Camera3D" unique_id=1427675814]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, -0.38938218, -0.50761545)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, -0.21334195, -0.6853348)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1514380184]
 shape = SubResource("CapsuleShape3D_2a86y")

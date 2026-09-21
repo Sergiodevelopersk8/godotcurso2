@@ -16,12 +16,6 @@ ambient_light_source = 3
 ambient_light_color = Color(0.88086826, 0.91513336, 0.9734048, 1)
 ambient_light_energy = 4.33
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_uyyla"]
-material = ExtResource("1_uyyla")
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_rrsh6"]
-size = Vector3(1.9908447, 0.5234375, 2.0234985)
-
 [node name="level_1" type="Node3D" unique_id=2091755154]
 
 [node name="Background" type="Node3D" parent="." unique_id=1295549066]
@@ -31,15 +25,17 @@ environment = SubResource("Environment_v2nwe")
 
 [node name="floor" type="Node3D" parent="." unique_id=1701320689]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="floor" unique_id=1445818339]
-transform = Transform3D(8.9999695, 0, 0, 0, 1, 0, 0, 0, 9.20862, 0, 0, 0)
-mesh = SubResource("PlaneMesh_uyyla")
+[node name="CSGBox3D" type="CSGBox3D" parent="floor" unique_id=79609496]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.39901543, -0.39941406, -2.3341675)
+use_collision = true
+size = Vector3(34.545532, 0.20117188, 19.929321)
+material = ExtResource("1_uyyla")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="floor/MeshInstance3D" unique_id=932409287]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="floor/MeshInstance3D/StaticBody3D" unique_id=103804637]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -0.0040893694, -0.23828125, -0.00088502554)
-shape = SubResource("BoxShape3D_rrsh6")
+[node name="MESA" type="CSGBox3D" parent="floor" unique_id=1495400803]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3609629, 0.7845545, -9.113944)
+use_collision = true
+size = Vector3(3.4265747, 0.20117188, 2.8491516)
+material = ExtResource("1_uyyla")
 
 [node name="CharacterBody3D" parent="." unique_id=1901970933 instance=ExtResource("1_n0jmb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0505052, 1, 1.0252843)
@@ -77,6 +73,6 @@ transform = Transform3D(-0.4435936, 0, 0.03535124, 0, 0.44499996, 0, -0.03535124
 [node name="Gustavo" parent="." unique_id=926957031 instance=ExtResource("9_c7gus")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9578285, 0.7854471, -2.426764)
 dialogue_resource = ExtResource("10_l3hh4")
-id = "Gustavo"
+id = "gustavo"
 
 [editable path="CharacterBody3D"]

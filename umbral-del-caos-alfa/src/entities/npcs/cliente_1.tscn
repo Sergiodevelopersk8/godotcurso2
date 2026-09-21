@@ -9,7 +9,6 @@
 
 [node name="cliente1" unique_id=1494490827 instance=ExtResource("1_q6dt8")]
 script = ExtResource("2_6ew7l")
-dialogue_resource = null
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." index="0" unique_id=1875928504]
 shape = SubResource("CapsuleShape3D_6ew7l")

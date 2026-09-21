@@ -13,12 +13,6 @@ func _ready() -> void:
 	can_be_loaded = true
 
 
-func _physics_process(delta: float) -> void:
-	ray.is_colliding()
-	if ray.collision_mask == 2:
-		gravity = 0
-		print("si choque con el objeto" )
-	velocidad.y -= gravity * delta
 
 
 func interact():

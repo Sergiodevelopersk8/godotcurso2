@@ -35,7 +35,6 @@ func physics_update(delta: float) -> void:
 
 func camera_bob(delta):
 	player._delta += delta
-	
 	var cam_bob = player._delta * DIALOGUE_BOB_SPEED
 	var objCam = player.origCamPos + Vector3.UP * sin(cam_bob) * DIALOGUE_BOB_HEIGHT
 	

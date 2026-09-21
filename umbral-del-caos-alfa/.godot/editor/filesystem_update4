@@ -1,6 +1,4 @@
 res://assets/models/Player/Player.tscn
-res://src/entities/player/states/StateMachine.gd
-res://src/entities/player/states/PlayerState.gd
-res://assets/models/Player/in_dialogue.gd
-res://assets/models/Player/player.gd
-res://src/entities/npcs/scripts_npc/customer_npc_1.gd
+res://assets/models/Player/ray_cast_interactuar.gd
+res://src/entities/interactables/interact.tscn
+res://src/systems/interaction/Interact.gd

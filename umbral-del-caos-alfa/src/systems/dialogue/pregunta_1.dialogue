@@ -1,0 +1,26 @@
+
+
+
+~ start
+
+mariana: si como te la preparo
+- Roja ? 
+	=> roja
+- Verde ? 
+=> verde
+- Bandera ? 
+	bandera
+=> END
+
+
+~ roja
+marian: ahorita te preparo la roja
+=> END
+
+~ verde
+marian: ahorita te preparo la verde
+=> END
+
+~ bandera
+marian: ahorita te preparo uan vandera
+=> END

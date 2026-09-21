@@ -8,6 +8,7 @@ var is_dialogue_active: bool = false
 var can_start_dialogue: bool = true
 var current_player: Player = null
 
+
 const DIALOGUE_COOLDOWN := 0.35
 
 func _ready() -> void:

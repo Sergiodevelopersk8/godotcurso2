@@ -1,3 +1,7 @@
+import "res://src/systems/dialogue/pregunta_1.dialogue" as preguntas
+
 ~ start
-Gustavo: ¡Hola! Quisiera una memela con Salsa Roja, por favor.
+Gustavo: ¡Hola! Quisiera una memela, por favor.
+- de que salsa
+	=> preguntas/start
 => END
