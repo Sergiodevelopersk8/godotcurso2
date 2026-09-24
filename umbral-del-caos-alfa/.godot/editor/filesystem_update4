@@ -1,4 +1,1 @@
-res://assets/models/Player/Player.tscn
-res://assets/models/Player/ray_cast_interactuar.gd
-res://src/entities/interactables/interact.tscn
-res://src/systems/interaction/Interact.gd
+res://src/ui/hud/npc_ui_dialogue/balloon.tscn

@@ -15,6 +15,28 @@ signal isInteract
 var _original_collision_layer: int
 var _original_collision_mask: int
 
+var falling := false
+var velocity := Vector3.ZERO
+var graviti := 12.0
+var ground_y := 0.0
+
+func begin_fall() -> void:
+	falling = true
+	velocity = Vector3.ZERO
+
+func _physics_process(delta: float) -> void:
+	if not falling:
+		return
+
+	velocity.y -= gravity * delta
+	global_position += velocity * delta
+
+	if global_position.y <= ground_y:
+		global_position.y = ground_y
+		velocity = Vector3.ZERO
+		falling = false
+
+
 func _ready() -> void:
 	_original_collision_layer = collision_layer
 	_original_collision_mask = collision_mask

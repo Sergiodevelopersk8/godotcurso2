@@ -33,7 +33,7 @@ func interact() -> void:
 	if current_player and current_player.state_machine:
 		current_player.state_machine.change_state("InDialogue")
 
-	DialogueManager.show_example_dialogue_balloon(dialogue_resource, "start")
+	DialogueManager.show_dialogue_balloon(dialogue_resource, "start")
 
 func _on_dialogue_ended(_resource: DialogueResource) -> void:
 	# La señal es global: si este NPC no lanzó el diálogo, lo ignoramos

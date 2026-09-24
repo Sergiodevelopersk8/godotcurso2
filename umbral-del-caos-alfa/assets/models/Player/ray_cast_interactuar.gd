@@ -78,6 +78,10 @@ func drop_object() -> void:
 	if not object_in_hand:
 		return
 		
+	
+	
+	
+	
 	# Asigna a target_parent la variable level_objects_container, 
 	#SI dicha variable no está vacía (null). 
 	#DE LO CONTRARIO, asigna la escena actual completa get_tree().current_scene.
@@ -85,6 +89,7 @@ func drop_object() -> void:
 	if !level_objects_container:
 		target_parent = get_tree().current_scene
 	object_in_hand.reparent(target_parent)
-	# Posicionamos el objeto 
 	object_in_hand.global_position = global_position + (-global_transform.basis.z * 1.5)
+	object_in_hand.global_position.y += 0.4
+	object_in_hand.begin_fall()
 	object_in_hand = null
