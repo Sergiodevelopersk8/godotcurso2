@@ -78,10 +78,6 @@ func drop_object() -> void:
 	if not object_in_hand:
 		return
 		
-	
-	
-	
-	
 	# Asigna a target_parent la variable level_objects_container, 
 	#SI dicha variable no está vacía (null). 
 	#DE LO CONTRARIO, asigna la escena actual completa get_tree().current_scene.

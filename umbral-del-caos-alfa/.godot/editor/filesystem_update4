@@ -1,1 +1,3 @@
-res://src/ui/hud/npc_ui_dialogue/balloon.tscn
+res://src/levesl/level_1.tscn
+res://assets/models/Player/ray_cast_interactuar.gd
+res://assets/models/Player/Player.tscn

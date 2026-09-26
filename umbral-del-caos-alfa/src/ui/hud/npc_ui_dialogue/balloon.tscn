@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://srycl11vjon" path="res://src/ui/hud/npc_ui_dialogue/balloon.gd" id="1_36de5"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
+[ext_resource type="FontFile" uid="uid://ggw35jocf46d" path="res://src/ui/fonts/IM_Fell_English/IMFellEnglish-Italic.ttf" id="2_pj00k"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_72ixx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
@@ -112,6 +113,8 @@ unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.501961)
 layout_mode = 2
 mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("2_pj00k")
+theme_override_font_sizes/italics_font_size = 40
 bbcode_enabled = true
 text = "Character"
 fit_content = true

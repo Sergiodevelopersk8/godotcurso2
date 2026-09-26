@@ -26,7 +26,7 @@ fp_camera = NodePath("Camera3D")
 debug_camera = NodePath("Camera3D2")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1466239464]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.730323, -0.06937289)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.730323, -0.38411623)
 
 [node name="RayCastInteractuar" type="RayCast3D" parent="Camera3D" unique_id=1223787391 node_paths=PackedStringArray("player", "hand")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, -0.018495739, -0.106000006)
