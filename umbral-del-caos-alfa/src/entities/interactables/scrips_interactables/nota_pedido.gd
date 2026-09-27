@@ -15,9 +15,9 @@ func action_use():
 	#abrir o cerra 
 	
 	
-#	if not MissionManager.mision_completada and not MissionManager.tiene_memela:
-#		MissionManager.tiene_memela = true
-#		MissionManager.set_mission("- Entregar memela al vendedor")
+	if not MissionManager.mision_completada and not MissionManager.tiene_memela:
+		MissionManager.tiene_memela = true
+		MissionManager.set_mission("- Entregar memela al vendedor")
 	
 	
 	# Cambiamos el estado de visibilidad

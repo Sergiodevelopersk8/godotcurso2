@@ -288,7 +288,8 @@ Terrazzo019S_1K-JPG_Roughness.jpg::CompressedTexture2D::7316393546005507198::179
 hoja_de_nota.png::CompressedTexture2D::4507202967996782050::1790273211::1790273211::1::::<><><>0<>0<>3f99e63cbcf08850da1da7a5696fb206<>res://.godot/imported/hoja_de_nota.png-d52189956ae83b0a171dd997455f694f.s3tc.ctex::
 nota_del_pedido_tia.png::CompressedTexture2D::4246064417016300187::1790273211::1790273211::1::::<><><>0<>0<>bfb179ce197c3246f1a55869dada2f60<>res://.godot/imported/nota_del_pedido_tia.png-03a72531820597ea80037f8e767f67dd.s3tc.ctex::
 ::res://src/::1788710989
-::res://src/core/::1787937170
+::res://src/core/::1790489142
+::res://src/core/autoloads/::1790489142
 ::res://src/entities/::1790273211
 prueba_pysica.gd::GDScript::1632112334079854004::1790273211::0::1::::RigidInteract<>RigidBody3D<><>0<>0<><>::
 prueba_pysica.tscn::PackedScene::5253022630621761890::1790273211::0::1::::<><><>0<>0<><>::
@@ -300,14 +301,15 @@ interact.tscn::PackedScene::1119695225311191891::1790273211::0::1::::<><><>0<>0<
 memela.scn::PackedScene::5316689235437176153::1790273211::0::1::::<><><>0<>0<><>::uid://p7nhmt8mpm1x::::res://src/entities/interactables/interact.tscn<>uid://cxb7gofuirch2::::res://src/entities/interactables/scrips_interactables/memela_base.gd<>uid://dle2og3no2bmn::::res://assets/models/level_1_mercado/memela-base_bread-background.jpg<>uid://2txg14jolga1::::res://assets/models/level_1_mercado/memela-roja-base_bread-background.jpg<>uid://olj4jo4d2ld0::::res://assets/models/level_1_mercado/memela-roja-base_salsa-roja-aplicada.png<>uid://bdyofo4uywv28::::res://assets/models/level_1_mercado/memela-bandera-base_bread-background.jpg<>uid://c6nagevrhk64j::::res://assets/models/level_1_mercado/memela-bandera-base_green-sauce-1.png<>uid://da7igcmx2wbos::::res://assets/models/level_1_mercado/memela-bandera-base_salsa-roja-aplicada.png<>uid://bsmiaesp5pmdd::::res://assets/models/level_1_mercado/memela-bandera-quesillo_green-sauce-1.png<>uid://7w26rvt828jq::::res://assets/models/level_1_mercado/memela-bandera-quesillo_bread-background.jpg<>uid://bix7o0i03tchh::::res://assets/models/level_1_mercado/memela-bandera-quesillo_quesillo-aplicado.png<>uid://d311cw5505tq6::::res://assets/models/level_1_mercado/memela-bandera-quesillo_salsa-roja-aplicada.png<>uid://clehc3qp23047::::res://assets/models/level_1_mercado/memela-verde-quesillo_bread-background.jpg<>uid://bxwlidww08ks0::::res://assets/models/level_1_mercado/memela-verde-quesillo_green-sauce-1.png<>uid://bpwaiwwtineri::::res://assets/models/level_1_mercado/memela-verde-quesillo_quesillo-aplicado.png
 memela.tscn::PackedScene::8624330132115252883::1790273211::0::1::::<><><>0<>0<><>::uid://p7nhmt8mpm1x::::res://src/entities/interactables/interact.tscn<>uid://cxb7gofuirch2::::res://src/entities/interactables/scrips_interactables/memela_base.gd<>uid://dle2og3no2bmn::::res://assets/models/level_1_mercado/memela-base_bread-background.jpg<>uid://2txg14jolga1::::res://assets/models/level_1_mercado/memela-roja-base_bread-background.jpg<>uid://olj4jo4d2ld0::::res://assets/models/level_1_mercado/memela-roja-base_salsa-roja-aplicada.png<>uid://bdyofo4uywv28::::res://assets/models/level_1_mercado/memela-bandera-base_bread-background.jpg<>uid://c6nagevrhk64j::::res://assets/models/level_1_mercado/memela-bandera-base_green-sauce-1.png<>uid://da7igcmx2wbos::::res://assets/models/level_1_mercado/memela-bandera-base_salsa-roja-aplicada.png<>uid://bsmiaesp5pmdd::::res://assets/models/level_1_mercado/memela-bandera-quesillo_green-sauce-1.png<>uid://7w26rvt828jq::::res://assets/models/level_1_mercado/memela-bandera-quesillo_bread-background.jpg<>uid://bix7o0i03tchh::::res://assets/models/level_1_mercado/memela-bandera-quesillo_quesillo-aplicado.png<>uid://d311cw5505tq6::::res://assets/models/level_1_mercado/memela-bandera-quesillo_salsa-roja-aplicada.png<>uid://clehc3qp23047::::res://assets/models/level_1_mercado/memela-verde-quesillo_bread-background.jpg<>uid://bxwlidww08ks0::::res://assets/models/level_1_mercado/memela-verde-quesillo_green-sauce-1.png<>uid://bpwaiwwtineri::::res://assets/models/level_1_mercado/memela-verde-quesillo_quesillo-aplicado.png
 quesillo.tscn::PackedScene::1829540000054856384::1790273211::0::1::::<><><>0<>0<><>::uid://p7nhmt8mpm1x::::res://src/entities/interactables/interact.tscn<>uid://dfl1lxmmetvcx::::res://src/entities/interactables/scrips_interactables/quesillo.gd<>uid://bskn2ivujwglb::::res://assets/models/level_1_mercado/quesillo_quesillo-texture-1.png
-::res://src/entities/interactables/notas/::1790488163
-nota_pedido.tscn::PackedScene::8485220813764584573::1790488174::0::1::::<><><>0<>0<><>::uid://p7nhmt8mpm1x::::res://src/entities/interactables/interact.tscn
-::res://src/entities/interactables/scrips_interactables/::1790273211
+::res://src/entities/interactables/notas/::1790488618
+nota_pedido.tscn::PackedScene::8485220813764584573::1790488618::0::1::::<><><>0<>0<><>::uid://p7nhmt8mpm1x::::res://src/entities/interactables/interact.tscn<>uid://csnu7d8hccqj2::::res://src/entities/interactables/scrips_interactables/nota_pedido.gd<>uid://b10ysbcypm23q::::res://src/ui/NoteUI/nota_del_pedido_tia.png
+::res://src/entities/interactables/scrips_interactables/::1790488616
 bote_salsa_roja.gd::GDScript::2037355230831489695::1790273211::0::1::::Bote_de_Salsa_Roja<>Interact<><>0<>0<><>::
 bote_salsa_verde.gd::GDScript::8257997646085275273::1790273211::0::1::::Bote_de_Salsa_Verde<>Interact<><>0<>0<><>::
 comal.gd::GDScript::3295534463724807746::1790273211::0::1::::Comal<>Interact<><>0<>0<><>::
 memela_base.gd::GDScript::6391203551317956953::1790273211::0::1::::Memela<>Interact<><>0<>0<><>::
 quesillo.gd::GDScript::7534513937235052423::1790273211::0::1::::Quesillo<>Interact<><>0<>0<><>::
+nota_pedido.gd::GDScript::6064349157803262301::1790488616::0::1::::NotaPedidoTia<>Interact<><>0<>0<><>::
 ::res://src/entities/npcs/::1790273211
 cliente_1.tscn::PackedScene::6264539225751777624::1790273211::0::1::::<><><>0<>0<><>::uid://p7nhmt8mpm1x::::res://src/entities/interactables/interact.tscn<>uid://diapluvk6tldp::::res://src/entities/npcs/scripts_npc/customer_npc_1.gd
 ::res://src/entities/npcs/scripts_npc/::1790273211
@@ -359,7 +361,7 @@ IMFellEnglish-Italic.ttf::FontFile::2560240131483624550::1790271455::1790274942:
 IMFellEnglish-Regular.ttf::FontFile::1436274464877061863::1790271455::1790274942::1::::<><><>0<>0<>403cb61b911b672fef71bb4431c590ac<>res://.godot/imported/IMFellEnglish-Regular.ttf-d550b4fa924957341f852a8915ae754b.fontdata::
 OFL.txt::TextFile::-1::1790271455::0::1::::<><><>0<>0<><>::
 ::res://src/ui/main_menu/::1779346708
-::res://src/ui/NoteUI/::1790488081
+::res://src/ui/NoteUI/::1790488197
 hoja_de_nota.png::CompressedTexture2D::6111030211479411524::1765310251::1790484419::1::::<><><>0<>0<>61b6d72b080f75230fac604cde4d8d35<>res://.godot/imported/hoja_de_nota.png-2e975031e0b6204f2ac8c76014bb8d08.ctex::
 nota_del_pedido_tia.png::CompressedTexture2D::4264429470974078724::1765823488::1790488197::1::::<><><>0<>0<>f3433cc32e1ccd349e2bd0e7b9973a5e<>res://.godot/imported/nota_del_pedido_tia.png-9fa53001bf5740f3b838b8f98d4d1fb1.s3tc.ctex::
 paper.fbx::PackedScene::7934902859829945922::1676602504::1790487717::1::::<><><>0<>0<>51721bf56834abdb6d942a191260ab56<>res://.godot/imported/paper.fbx-d5c8cb8f0012fd42652eb4a3c5eba09b.scn::
