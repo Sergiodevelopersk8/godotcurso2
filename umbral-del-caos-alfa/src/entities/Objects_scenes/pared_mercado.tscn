@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dqffql0gajm66"]
+
+[ext_resource type="Material" uid="uid://cu37ojd8ijbvj" path="res://Assets/Materials/Brick_One.tres" id="1_237sa"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_g4qv1"]
+material = ExtResource("1_237sa")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_237sa"]
+
+[node name="Pared_mercado" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 0.5505843, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.6093879, 0, 0, 0, 1.8217376, 0, 0, 0, 0.184, -2.6132538, 1.8155928, 0)
+mesh = SubResource("BoxMesh_g4qv1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D3/StaticBody3D"]
+shape = SubResource("BoxShape3D_237sa")

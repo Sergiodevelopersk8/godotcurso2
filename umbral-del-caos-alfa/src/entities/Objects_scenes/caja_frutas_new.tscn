@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://d3b1ef7us8b17"]
+
+[ext_resource type="PackedScene" uid="uid://dqodm6vd7yr43" path="res://Assets/Models/caja-frutas.glb" id="1_nqflb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nqflb"]
+size = Vector3(1.9556885, 2.7294617, 1.9384155)
+
+[node name="caja-frutas" instance=ExtResource("1_nqflb")]
+
+[node name="Cube" parent="." index="0"]
+transform = Transform3D(-1.0965511, -5.9087114e-08, 0, 9.586354e-08, -0.6758778, 0, 0, 0, 2.9050913, 0, 1.0380838, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube/StaticBody3D" index="0"]
+transform = Transform3D(1, 4.6185278e-14, 0, 0, 0.99999917, 0, 0, 0, 0.9999712, 0.049377706, 0.2006067, 0.014496875)
+shape = SubResource("BoxShape3D_nqflb")

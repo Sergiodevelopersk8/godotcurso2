@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bi5osv258ko7x"]
+
+[ext_resource type="PackedScene" uid="uid://b4nsf3b0uuiou" path="res://Assets/Models/puerta-de-mercado.glb" id="1_7x12p"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kfy71"]
+size = Vector3(1.58417, 1.39233, 0.0461426)
+
+[node name="puerta-de-mercado" instance=ExtResource("1_7x12p")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000213623, 0.681274, 0.00378418)
+shape = SubResource("BoxShape3D_kfy71")

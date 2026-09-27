@@ -50,7 +50,7 @@ transform = Transform3D(0.145, 0, 0, 0, 0.145, 0, 0, 0, 0.145, -3.305094, 1.0119
 id = "Salsa Roja"
 
 [node name="memela" parent="objects" unique_id=928348330 instance=ExtResource("4_lckxe")]
-transform = Transform3D(0.42, 0, 0, 0, 0.42, 0, 0, 0, 0.42, -2.3439846, 0.92162216, -8.071383)
+transform = Transform3D(0.265, 0, 0, 0, 0.265, 0, 0, 0, 0.265, -2.3439846, 0.92162216, -8.071383)
 
 [node name="Bote_salsa_verde" parent="objects" unique_id=1848401282 instance=ExtResource("5_hefpv")]
 transform = Transform3D(0.145, 0, 0, 0, 0.145, 0, 0, 0, 0.145, -4.0956187, 0.98948133, -8.035055)

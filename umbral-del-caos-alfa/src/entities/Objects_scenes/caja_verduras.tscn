@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://crchxfgiiabjx"]
+
+[ext_resource type="PackedScene" uid="uid://mc0681m3dgkv" path="res://Assets/Models/caja-verduras.glb" id="1_3n4cx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ywip8"]
+size = Vector3(2, 3.80933, 2.03714)
+
+[node name="caja-verduras" instance=ExtResource("1_3n4cx")]
+
+[node name="Cube" parent="." index="0"]
+transform = Transform3D(-1.09654, -0.00229681, 0, 0.00372636, -0.675874, 0, 0, 0, 2.90509, 0, 1.95172, -0.144105)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube/StaticBody3D" index="0"]
+transform = Transform3D(1, 2.32831e-10, 0, -2.48197e-07, 1, 0, 0, 0, 1, 0.0138611, 0.852667, 0.00206008)
+shape = SubResource("BoxShape3D_ywip8")
