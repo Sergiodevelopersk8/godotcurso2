@@ -1,22 +1,25 @@
-#res://src/core/Managers/MissionManager.gd
+# res://autoloads/mission_manager.gd
 extends Node
 
-signal mission_updated(text:String)
+signal mission_updated(text: String)
+signal mission_completed(mission_id: String)
 
+# Diccionario simple de flags de progreso
+var flags: Dictionary = {}
 
-var misison_actual := ""
-var tiene_memela := false
-var mision_completada:= false
+# Texto de la misión actual, para mostrar en HUD
+var current_mission_text: String = ""
 
-func set_mission(text:String):
-	misison_actual = text
-	mission_updated.emit(misison_actual)
+func set_mission(text: String) -> void:
+	current_mission_text = text
+	mission_updated.emit(text)
 
+func set_flag(flag_name: String, value: bool = true) -> void:
+	flags[flag_name] = value
 
-func complete_mission():
-	misison_actual = ""
-	mision_completada = true
-	mission_updated.emit("Mision Completada")
-	#se borra el texto en 3 segundos
-	await get_tree().create_timer(3.0).timeout
-	mission_updated.emit("")
+func has_flag(flag_name: String) -> bool:
+	return flags.get(flag_name, false)
+
+func complete_mission(mission_id: String) -> void:
+	set_flag(mission_id + "_completada")
+	mission_completed.emit(mission_id)

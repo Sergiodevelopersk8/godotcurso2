@@ -19,6 +19,7 @@ func _process(_delta: float) -> void:
 	var current_interactable = check_interaction()
 	handle_input(current_interactable)
 
+
 func check_interaction() -> Interact:
 	if is_colliding():
 		var collider = get_collider()

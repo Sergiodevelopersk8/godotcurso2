@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ccna5hq21rukv" path="res://src/entities/interactables/comal.tscn" id="4_n157a"]
 [ext_resource type="PackedScene" uid="uid://cwhir5ddg2gp2" path="res://src/entities/interactables/bote_salsa_verde.tscn" id="5_hefpv"]
 [ext_resource type="PackedScene" uid="uid://1ciiyrssodbc" path="res://src/entities/interactables/quesillo.tscn" id="6_rrsh6"]
+[ext_resource type="PackedScene" uid="uid://ds5kl2ijplbej" path="res://src/entities/interactables/notas/nota_pedido.tscn" id="7_0h81o"]
 [ext_resource type="PackedScene" uid="uid://vktjm7qmqdb4" path="res://src/entities/Objects_scenes/mesa.tscn" id="8_rrsh6"]
 [ext_resource type="PackedScene" uid="uid://cviubs6vqkv33" path="res://src/entities/npcs/cliente_1.tscn" id="9_c7gus"]
 [ext_resource type="Resource" uid="uid://dw68me6l7yxs5" path="res://src/systems/dialogue/cliente_1.dialogue" id="10_l3hh4"]
@@ -57,6 +58,9 @@ transform = Transform3D(0.145, 0, 0, 0, 0.145, 0, 0, 0, 0.145, -4.0956187, 0.989
 
 [node name="Quesillo" parent="objects" unique_id=79260992 instance=ExtResource("6_rrsh6")]
 transform = Transform3D(0.145, 0, 0, 0, 0.145, 0, 0, 0, 0.145, -3.7464697, 0.97381413, -7.820148)
+
+[node name="Nota_pedido_tia" parent="objects" unique_id=1190471633 instance=ExtResource("7_0h81o")]
+transform = Transform3D(0.023832297, -0.3942771, -0.0016072112, -0.39338356, -0.023886427, 0.026529144, -0.026577786, 0, -0.39410484, 3.752197, 1.6667931, -0.13148618)
 
 [node name="Comal" parent="." unique_id=1955610188 instance=ExtResource("4_n157a")]
 transform = Transform3D(0.55, 0, 0, 0, 0.55, 0, 0, 0, 0.55, 0, 0.49138898, -8.142588)

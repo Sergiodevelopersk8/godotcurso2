@@ -66,7 +66,14 @@ func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
 
-
+func _process(delta: float) -> void:
+	# Llama la función directamente sin depender de move_and_rotate_player
+	rotate_camera_joystick(delta)
+		
+	if direction == Vector3.ZERO:
+		camera_3d.position = camera_3d.position.lerp(origCamPos, delta * 5)
+		
+	see_mouse()
 
 # Fragmento de Player.gd corregido en _input
 
@@ -110,19 +117,21 @@ func rotate_camera(event: InputEventMouseMotion) -> void:
 
 # Fragmento para rotate_camera_joystick en Player.gd
 func rotate_camera_joystick(delta: float) -> void:
-	# Si existe el estado y prohíbe rotar, nos salimos
+	var joystick_vector := Input.get_vector("cam_left", "cam_right", "cam_up", "cam_down", joystick_deadzone)
+	
+	# Ponemos el print AQUÍ ARRIBA antes de cualquier 'if' o 'return'
+	if joystick_vector != Vector2.ZERO:
+		print("Vector Joystick detectado: ", joystick_vector)
+
+	# Verificación del estado
 	if state_machine and state_machine.current_state:
 		if not state_machine.current_state.can_rotate_camera:
 			return
-		
-	var joystick_vector := Input.get_vector("cam_left", "cam_right", "cam_up", "cam_down", joystick_deadzone)
-	
+
 	if joystick_vector != Vector2.ZERO:
 		rotate_y(-joystick_vector.x * controller_sensitivity * delta * 60.0)
 		camera_3d.rotate_x(-joystick_vector.y * controller_sensitivity * delta * 60.0)
 		camera_3d.rotation.x = clamp(camera_3d.rotation.x, deg_to_rad(-89), deg_to_rad(89))
-
-
 
 func see_mouse():
 	if Input.is_action_just_pressed("see_mouse_click"):
