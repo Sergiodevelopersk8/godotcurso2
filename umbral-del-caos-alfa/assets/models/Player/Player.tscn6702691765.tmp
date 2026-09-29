@@ -21,7 +21,6 @@ albedo_color = Color(0.9999998, 0.32170892, 0.99285287, 1)
 material = SubResource("StandardMaterial3D_xb7us")
 
 [node name="CharacterBody3D" type="CharacterBody3D" unique_id=1901970933 node_paths=PackedStringArray("fp_camera", "debug_camera") groups=["Player"]]
-process_mode = 3
 script = ExtResource("1_6befo")
 fp_camera = NodePath("Camera3D")
 debug_camera = NodePath("Camera3D2")
@@ -38,7 +37,7 @@ player = NodePath("../..")
 hand = NodePath("../hand")
 
 [node name="hand" type="Marker3D" parent="Camera3D" unique_id=1427675814]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.20479257, -0.21334195, -0.38865113)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, -0.21334195, -0.6853348)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1514380184]
 shape = SubResource("CapsuleShape3D_2a86y")
@@ -55,6 +54,8 @@ script = ExtResource("3_244o0")
 
 [node name="Walk" type="Node" parent="StateMachine" unique_id=1193868291]
 script = ExtResource("4_awhsm")
+can_rotate_camera = null
+can_move = null
 
 [node name="Run" type="Node" parent="StateMachine" unique_id=261390569]
 script = ExtResource("5_244o0")

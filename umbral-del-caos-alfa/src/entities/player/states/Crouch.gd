@@ -46,7 +46,7 @@ func update(delta: float):
 	# 2. CAMBIO A AIRE (Si cae de una plataforma)
 	if !player.is_on_floor():
 		state_machine.change_state("Air")
-
+#	ManagerCamreaBob.camera_bob(player,delta)
 
 ## Anima el balanceo vertical de la camara mientras el jugador esta agachado.
 func camera_bob(delta):

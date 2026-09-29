@@ -34,7 +34,7 @@ func update(delta: float) -> void:
 		state_machine.change_state("Air")
 		return
 
-	camera_bob(delta)
+	ManagerCamreaBob.camera_bob(player,delta)
 
 ## Aplica la velocidad aumentada del estado de carrera.
 func physics_update(delta: float) -> void:
@@ -49,11 +49,3 @@ func physics_update(delta: float) -> void:
 				player.footstep_sound.play_footstep()
 
 ## Anima el balanceo de la camara durante la carrera.
-func camera_bob(delta):
-	player._delta += delta
-	var cam_bob = floor(abs(player.direction.z) + abs(player.direction.x)) * player._delta * player.cam_Bob_Speed
-	var objCam = player.origCamPos + Vector3.UP * sin(cam_bob) * player.cam_Bob_Up_Down * 1.5
-	player.camera_3d.position = player.camera_3d.position.lerp(objCam, delta)
-	
-	if player._delta > 20:
-		player._delta = 0

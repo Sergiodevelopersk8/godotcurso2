@@ -48,6 +48,7 @@ shadow_mesh = SubResource("ArrayMesh_u2re5")
 size = Vector3(3, 1, 1)
 
 [node name="Nota_pedido_tia" unique_id=1190471633 instance=ExtResource("1_3q26m")]
+process_mode = 3
 script = ExtResource("2_24hgt")
 id = "nota"
 metadata/_edit_group_ = true
@@ -61,7 +62,20 @@ transform = Transform3D(0.8, 0, 0, 0, 0.39999998, 0, 0, 0, 1.1, 0, 0, 0)
 shape = SubResource("BoxShape3D_e7fo4")
 
 [node name="UINote" type="CanvasLayer" parent="." index="2" unique_id=175710104]
+layer = 2
 
 [node name="IMGNota" type="TextureRect" parent="UINote" index="0" unique_id=861880487]
-offset_right = 40.0
-offset_bottom = 40.0
+z_index = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 358.0
+offset_top = 49.0
+offset_right = 289.0
+offset_bottom = 670.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.47999987, 0.4000003)
+size_flags_vertical = 4
+texture = ExtResource("2_uh4ki")
+metadata/_edit_use_anchors_ = true

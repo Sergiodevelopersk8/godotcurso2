@@ -46,6 +46,7 @@ func handle_input(target_object: Interact) -> void:
 
 	# 3. INTERACCIÓN DE OBJETOS / AGARRAR (Tecla E)
 	if Input.is_action_just_pressed("interact_object"):
+		
 		# CASO A: Llevas un objeto en la mano
 		if object_in_hand and target_object:
 			if target_object.has_method("receive_ingredient"):

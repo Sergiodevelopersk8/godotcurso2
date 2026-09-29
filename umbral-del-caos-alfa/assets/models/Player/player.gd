@@ -91,11 +91,12 @@ func _input(event: InputEvent) -> void:
 		debug_camera.current = false
 
 
-func process_input(delta) -> Vector3:
-	_delta += delta
+func process_input(delta: float) -> Vector3:
+	# Le pasamos 'self' (el jugador) y 'delta' (el delta frame real) al Manager
+	ManagerCamreaBob.camera_bob(self, delta)
+	
 	direction = Vector3.ZERO
-
-	# Si el estado actual no permite moverse (diálogo, cutscene...), no leemos input
+	# Si el estado actual no permite moverse, no leemos input
 	if state_machine and state_machine.current_state and not state_machine.current_state.can_move:
 		return direction
 

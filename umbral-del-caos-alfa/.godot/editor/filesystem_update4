@@ -1,6 +1,4 @@
-res://src/levesl/level_1.tscn
-res://src/entities/interactables/notas/nota_pedido.tscn
-res://src/core/Managers/MissionManager.gd
 res://assets/models/Player/Player.tscn
-res://assets/models/Player/player.gd
-res://assets/models/Player/ray_cast_interactuar.gd
+res://src/entities/interactables/scrips_interactables/nota_pedido.gd
+res://src/ui/hud/npc_ui_dialogue/balloon.tscn
+res://src/entities/interactables/notas/nota_pedido.tscn

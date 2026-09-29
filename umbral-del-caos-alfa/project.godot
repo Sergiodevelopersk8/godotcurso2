@@ -24,6 +24,7 @@ buses/default_bus_layout="uid://ysjs0ef23q1x"
 DialogueManager="*uid://c3rodes2l3gxb"
 MissionManager="*uid://0ydk5po3cxgx"
 AudioStreamManager="*uid://ckqs2n1vtlcrs"
+ManagerCamreaBob="*uid://dyv1x458kfws"
 
 [dialogue_manager]
 

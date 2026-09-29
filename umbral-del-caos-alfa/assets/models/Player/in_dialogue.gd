@@ -24,21 +24,11 @@ func exit() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func update(_delta: float) -> void:
-	camera_bob(_delta)
+	ManagerCamreaBob.camera_bob_dialogue(player,_delta)
+	
 
 func physics_update(delta: float) -> void:
 	player.velocity.x = move_toward(player.velocity.x, 0, player.friction * delta)
 	player.velocity.z = move_toward(player.velocity.z, 0, player.friction * delta)
 	player.velocity.y -= player.gravity * delta
 	player.move_and_slide()
-
-
-func camera_bob(delta):
-	player._delta += delta
-	var cam_bob = player._delta * DIALOGUE_BOB_SPEED
-	var objCam = player.origCamPos + Vector3.UP * sin(cam_bob) * DIALOGUE_BOB_HEIGHT
-	
-	player.camera_3d.position = player.camera_3d.position.lerp(objCam, delta * 2.0)
-	
-	if player._delta > 20:
-		player._delta = 0
