@@ -1,13 +1,11 @@
 [gd_scene format=4 uid="uid://ds5kl2ijplbej"]
 
-[ext_resource type="PackedScene" uid="uid://p7nhmt8mpm1x" path="res://src/entities/interactables/interact.tscn" id="1_3q26m"]
-[ext_resource type="Script" uid="uid://csnu7d8hccqj2" path="res://src/entities/interactables/scrips_interactables/nota_pedido.gd" id="2_24hgt"]
+[ext_resource type="PackedScene" uid="uid://bxsgdqbakaq5k" path="res://src/core/Managers/nota_base.tscn" id="1_3q26m"]
 [ext_resource type="Texture2D" uid="uid://b10ysbcypm23q" path="res://src/ui/NoteUI/nota_del_pedido_tia.png" id="2_uh4ki"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n2xih"]
 resource_name = "4"
 vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("2_uh4ki")
 emission_enabled = true
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_u2re5"]
@@ -44,64 +42,14 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_u2re5")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_e7fo4"]
-size = Vector3(3, 1, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_24hgt"]
+albedo_texture = ExtResource("2_uh4ki")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aiuxp"]
-bg_color = Color(0.12591082, 0.12591085, 0.12591076, 1)
+[node name="nota_pedido" unique_id=1996715622 instance=ExtResource("1_3q26m")]
+textura_nota = ExtResource("2_uh4ki")
+texto = "asasasasazas"
 
-[node name="Nota_pedido_tia" unique_id=1190471633 instance=ExtResource("1_3q26m")]
-process_mode = 3
-script = ExtResource("2_24hgt")
-id = "nota"
-metadata/_edit_group_ = true
-
-[node name="4" type="MeshInstance3D" parent="." index="0" unique_id=1152987036]
-transform = Transform3D(5.861599e-06, -116.40928, -5.8903283e-06, 0, -5.0884114e-06, 134.755, -77.63924, -8.7886565e-06, -4.4470742e-13, 0, 0, 0)
+[node name="4" type="MeshInstance3D" parent="." index="0" unique_id=1124066974]
+transform = Transform3D(4.627659e-06, -116.40928, 1.2048036e-05, 0, 6.9385337e-06, 134.755, -77.63924, -1.0407801e-05, 0, 0, 0, 0)
 mesh = SubResource("ArrayMesh_h1leh")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1" unique_id=520785190]
-transform = Transform3D(0.8, 0, 0, 0, 0.39999998, 0, 0, 0, 1.1, 0, 0, 0)
-shape = SubResource("BoxShape3D_e7fo4")
-
-[node name="UINote" type="CanvasLayer" parent="." index="2" unique_id=175710104]
-layer = 2
-
-[node name="RichTextLabel" type="RichTextLabel" parent="UINote" index="0" unique_id=1950797918]
-z_index = 100
-offset_left = 366.99997
-offset_top = 60.000008
-offset_right = 618.0
-offset_bottom = 296.0
-scale = Vector2(2.120001, 2.1199994)
-theme_override_colors/default_color = Color(0.98939866, 0.98939866, 0.98939854, 1)
-theme_override_styles/focus = SubResource("StyleBoxFlat_aiuxp")
-text = "calle 18 poniente posada lunar 
-2 memelas banderas combinando uno de longaniza y uno de bistec
-
-posdata: el cliente menciona que entro a la posada ya que la ama de llaves no está"
-
-[node name="ColorRect" type="ColorRect" parent="UINote" index="1" unique_id=1471474765]
-z_index = 2
-offset_left = 361.0
-offset_top = 47.0
-offset_right = 401.0
-offset_bottom = 87.0
-scale = Vector2(13.216184, 12.723465)
-color = Color(0.12941177, 0.12941177, 0.12941177, 0.7411765)
-
-[node name="IMGNota" type="TextureRect" parent="UINote" index="2" unique_id=861880487]
-z_index = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 358.0
-offset_top = 49.0
-offset_right = 289.0
-offset_bottom = 670.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.47999987, 0.4000003)
-size_flags_vertical = 4
-texture = ExtResource("2_uh4ki")
-metadata/_edit_use_anchors_ = true
+surface_material_override/0 = SubResource("StandardMaterial3D_24hgt")

@@ -1,6 +1,5 @@
-#  Nota.gd
 extends Interact
-class_name Nota_pedido
+class_name Nota
 
 @export var textura_nota: Texture2D
 @export var texto : String

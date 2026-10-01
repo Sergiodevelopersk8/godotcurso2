@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bxsgdqbakaq5k"]
+
+[ext_resource type="Script" uid="uid://dyisbbio52cqg" path="res://src/core/Managers/nota_base.gd" id="1_82cxs"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_b7s2u"]
+size = Vector3(2.890747, 1, 1.3571777)
+
+[node name="nota_base" type="Area3D" unique_id=1996715622 groups=["Interacts"]]
+script = ExtResource("1_82cxs")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=313584598]
+transform = Transform3D(0.8, 0, 0, 0, 0.39999998, 0, 0, 0, 1.1, 0.02504883, 0, -0.010339355)
+shape = SubResource("BoxShape3D_b7s2u")
