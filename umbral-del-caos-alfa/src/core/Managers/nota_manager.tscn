@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://ld7dwho5uv8x"]
+
+[ext_resource type="Texture2D" uid="uid://b10ysbcypm23q" path="res://src/ui/NoteUI/nota_del_pedido_tia.png" id="1_u7j8x"]
+
+[node name="nota_manager" type="Node" unique_id=1755652765]
+
+[node name="UINote" type="CanvasLayer" parent="." unique_id=571834516]
+layer = 2
+
+[node name="IMGNota" type="TextureRect" parent="UINote" unique_id=1619909782]
+z_index = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 358.0
+offset_top = 49.0
+offset_right = 289.0
+offset_bottom = 670.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.47999987, 0.4000003)
+size_flags_vertical = 4
+texture = ExtResource("1_u7j8x")
+metadata/_edit_use_anchors_ = true
