@@ -47,6 +47,9 @@ shadow_mesh = SubResource("ArrayMesh_u2re5")
 [sub_resource type="BoxShape3D" id="BoxShape3D_e7fo4"]
 size = Vector3(3, 1, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aiuxp"]
+bg_color = Color(0.12591082, 0.12591085, 0.12591076, 1)
+
 [node name="Nota_pedido_tia" unique_id=1190471633 instance=ExtResource("1_3q26m")]
 process_mode = 3
 script = ExtResource("2_24hgt")
@@ -64,7 +67,30 @@ shape = SubResource("BoxShape3D_e7fo4")
 [node name="UINote" type="CanvasLayer" parent="." index="2" unique_id=175710104]
 layer = 2
 
-[node name="IMGNota" type="TextureRect" parent="UINote" index="0" unique_id=861880487]
+[node name="RichTextLabel" type="RichTextLabel" parent="UINote" index="0" unique_id=1950797918]
+z_index = 100
+offset_left = 366.99997
+offset_top = 60.000008
+offset_right = 618.0
+offset_bottom = 296.0
+scale = Vector2(2.120001, 2.1199994)
+theme_override_colors/default_color = Color(0.98939866, 0.98939866, 0.98939854, 1)
+theme_override_styles/focus = SubResource("StyleBoxFlat_aiuxp")
+text = "calle 18 poniente posada lunar 
+2 memelas banderas combinando uno de longaniza y uno de bistec
+
+posdata: el cliente menciona que entro a la posada ya que la ama de llaves no está"
+
+[node name="ColorRect" type="ColorRect" parent="UINote" index="1" unique_id=1471474765]
+z_index = 2
+offset_left = 361.0
+offset_top = 47.0
+offset_right = 401.0
+offset_bottom = 87.0
+scale = Vector2(13.216184, 12.723465)
+color = Color(0.12941177, 0.12941177, 0.12941177, 0.7411765)
+
+[node name="IMGNota" type="TextureRect" parent="UINote" index="2" unique_id=861880487]
 z_index = 1
 anchors_preset = 15
 anchor_right = 1.0

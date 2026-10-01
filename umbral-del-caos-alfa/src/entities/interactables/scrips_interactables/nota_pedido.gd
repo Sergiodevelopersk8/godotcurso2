@@ -4,6 +4,7 @@ class_name Nota
 
 @onready var ui_note: CanvasLayer = $UINote
 @onready var img_nota: TextureRect = $UINote/IMGNota
+@onready var text_note: RichTextLabel = $UINote/RichTextLabel
 
 var player: Player
 var is_busy: bool = false #es un cooldown para
