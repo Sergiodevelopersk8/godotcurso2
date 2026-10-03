@@ -1,10 +1,13 @@
+# Ejecuta esta instruccion: @tool.
 @tool
+# Ejecuta esta instruccion: @icon("./assets/icon.svg").
 @icon("./assets/icon.svg")
 
 ## A collection of dialogue lines for use with [code]DialogueManager[/code].
 class_name DialogueResource extends Resource
 
 
+# Define DialogueLine con el valor fijo preload("./dialogue_line.gd").
 const DialogueLine = preload("./dialogue_line.gd")
 
 ## A list of state shortcuts
@@ -30,13 +33,17 @@ const DialogueLine = preload("./dialogue_line.gd")
 ## be a title string or a stringified line number). Runs any mutations along the way and then returns
 ## the first dialogue line encountered.
 func get_next_dialogue_line(title: String = "", extra_game_states: Array = [], mutation_behaviour: DMConstants.MutationBehaviour = DMConstants.MutationBehaviour.Wait) -> DialogueLine:
+	# Termina el metodo y devuelve await Engine.get_singleton("DialogueManager").get_next_dialogue_line(self, title, extra_game_states, mutation_behaviour) a quien lo llamo.
 	return await Engine.get_singleton("DialogueManager").get_next_dialogue_line(self, title, extra_game_states, mutation_behaviour)
 
 
 ## Get the list of any titles found in the file.
 func get_titles() -> PackedStringArray:
+	# Termina el metodo y devuelve titles.keys() a quien lo llamo.
 	return titles.keys()
 
 
+# Define el metodo _to_string para agrupar esta accion del script.
 func _to_string() -> String:
+	# Termina el metodo y devuelve "<DialogueResource titles=\"%s\">" % [",".join(titles.keys())] a quien lo llamo.
 	return "<DialogueResource titles=\"%s\">" % [",".join(titles.keys())]

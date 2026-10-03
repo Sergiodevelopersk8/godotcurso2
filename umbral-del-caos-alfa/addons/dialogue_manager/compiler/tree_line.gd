@@ -26,21 +26,36 @@ var notes: String = ""
 var is_nested_dialogue: bool = false
 
 
+# Define el metodo _init para agrupar esta accion del script.
 func _init(initial_id: String) -> void:
+	# Guarda en id el resultado de initial_id.
 	id = initial_id
 
 
+# Define el metodo _to_string para agrupar esta accion del script.
 func _to_string() -> String:
+	# Crea tabs e inicializa su valor con [].
 	var tabs = []
+	# Llama al metodo tabs.resize para realizar esta accion en este punto.
 	tabs.resize(indent)
+	# Llama al metodo tabs.fill para realizar esta accion en este punto.
 	tabs.fill("\t")
+	# Guarda en tabs el resultado de "".join(tabs).
 	tabs = "".join(tabs)
 
+	# Termina el metodo y devuelve tabs.join([tabs + "{\n", a quien lo llamo.
 	return tabs.join([tabs + "{\n",
+		# Ejecuta esta instruccion: "\tid: %s\n" % [id],.
 		"\tid: %s\n" % [id],
+		# Ejecuta esta instruccion: "\ttype: %s\n" % [type],.
 		"\ttype: %s\n" % [type],
+		# Ejecuta esta instruccion: "\tis_random: %s\n" % ["true" if is_random else "false"],.
 		"\tis_random: %s\n" % ["true" if is_random else "false"],
+		# Ejecuta esta instruccion: "\ttext: %s\n" % [text],.
 		"\ttext: %s\n" % [text],
+		# Ejecuta esta instruccion: "\tnotes: %s\n" % [notes],.
 		"\tnotes: %s\n" % [notes],
+		# Ejecuta esta instruccion: "\tchildren: []\n" if children.size() == 0 else "\tchildren: [\n" + ",\n".join(children.map(func(child): return str(child))) + "]\n",.
 		"\tchildren: []\n" if children.size() == 0 else "\tchildren: [\n" + ",\n".join(children.map(func(child): return str(child))) + "]\n",
+	# Ejecuta esta instruccion: "}"]).
 	"}"])
