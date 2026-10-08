@@ -18,7 +18,10 @@ class_name Interact
 # Crea can_be_loaded e inicializa su valor con false.
 var can_be_loaded: bool = false
 
-# Declara la seisInteract1al isInteract; otros nodos pueden conectarse para reaccionar cuando se emita.
+#Crea el nodo maker3d para hacer el autoenfoque en el npc
+var focus_tracking_marker = Marker3D.new()
+
+# Declara la  isInteract; otros nodos pueden conectarse para reaccionar cuando se emita.
 signal isInteract
 
 # Guardamos el estado original para restaurarlo al soltar
@@ -35,7 +38,7 @@ var graviti := 12.0
 # Crea ground_y e inicializa su valor con 0.0.
 var ground_y := 0.0
 
-# Activa la ca?da del objeto y reinicia su velocidad.
+# Activa la caída del objeto y reinicia su velocidad.
 func begin_fall() -> void:
 	# Guarda en falling el resultado de true.
 	falling = true
@@ -70,6 +73,7 @@ func _ready() -> void:
 	_original_collision_layer = collision_layer
 	# Guarda en _original_collision_mask el resultado de collision_mask.
 	_original_collision_mask = collision_mask
+
 
 
 # Se ejecuta cuando el jugador interact?a con este objeto o NPC.

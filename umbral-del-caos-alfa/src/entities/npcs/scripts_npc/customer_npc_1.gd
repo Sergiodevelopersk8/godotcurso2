@@ -5,6 +5,7 @@ class_name CustomerNPC1
 
 # Expone dialogue_resource en el Inspector para configurarlo desde la escena.
 @export var dialogue_resource: DialogueResource
+@onready var look_me: Marker3D = $look_me
 
 # Crea is_dialogue_active e inicializa su valor con false.
 var is_dialogue_active: bool = false
@@ -23,6 +24,9 @@ func _ready() -> void:
 	can_be_loaded = false
 	# Llama al metodo DialogueManager.dialogue_ended.connect para realizar esta accion en este punto.
 	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
+	
+
+
 
 # Se ejecuta cuando el jugador interact?a con este objeto o NPC.
 func interact() -> void:
@@ -52,7 +56,7 @@ func interact() -> void:
 	# Comprueba current_player and current_player.state_machine; ejecuta el bloque indentado solo cuando la condicion sea verdadera.
 	if current_player and current_player.state_machine:
 		# Llama al metodo current_player.state_machine.change_state para realizar esta accion en este punto.
-		current_player.state_machine.change_state("InDialogue")
+		current_player.state_machine.change_state("InDialogue", {"focus_target": look_me.global_position})
 
 	# Llama al metodo DialogueManager.show_dialogue_balloon para realizar esta accion en este punto.
 	DialogueManager.show_dialogue_balloon(dialogue_resource, "start")

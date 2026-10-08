@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://ds5kl2ijplbej" path="res://src/entities/interactables/notas/nota_pedido.tscn" id="7_0h81o"]
 [ext_resource type="PackedScene" uid="uid://vktjm7qmqdb4" path="res://src/entities/Objects_scenes/mesa.tscn" id="8_rrsh6"]
 [ext_resource type="PackedScene" uid="uid://cviubs6vqkv33" path="res://src/entities/npcs/cliente_1.tscn" id="9_c7gus"]
-[ext_resource type="Resource" uid="uid://dw68me6l7yxs5" path="res://src/systems/dialogue/cliente_1.dialogue" id="10_l3hh4"]
 
 [sub_resource type="Environment" id="Environment_v2nwe"]
 ambient_light_source = 3
@@ -70,11 +69,11 @@ transform = Transform3D(-0.4435936, 0, 0.03535124, 0, 0.44499996, 0, -0.03535124
 
 [node name="Gustavo" parent="." unique_id=926957031 instance=ExtResource("9_c7gus")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9578285, 0.70117176, -2.426764)
-dialogue_resource = ExtResource("10_l3hh4")
 id = "gustavo"
 
 [node name="nota_pedido" parent="." unique_id=1996715622 instance=ExtResource("7_0h81o")]
-transform = Transform3D(0.0283996, -1.0060607, 0.005167943, -0.41229236, -0.06942127, -0.06344793, 0.040738177, -0.0012305904, -0.64573, 2.8568444, 1.928611, 0)
+transform = Transform3D(0.028399603, -1.0060607, 0.005167943, -0.4132576, -0.06821952, 0.046354584, -0.029372916, -0.012919948, -0.64718175, 2.8568444, 1.2674179, 0)
 id = "nota pedido"
 
 [editable path="CharacterBody3D"]
+[editable path="Gustavo"]

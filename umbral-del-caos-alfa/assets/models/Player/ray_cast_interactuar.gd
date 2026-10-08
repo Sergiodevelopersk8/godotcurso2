@@ -101,8 +101,8 @@ func handle_input(target_object: Interact) -> void:
 				# Llama al metodo take_object para realizar esta accion en este punto.
 				take_object(target_object)
 
-# Ejecuta la l?gica espec?fica de take_object dentro del comportamiento del objeto.
-# Ejecuta la l?gica espec?fica de este m?todo dentro del comportamiento del objeto.
+# Ejecuta la logica especifica de take_object dentro del comportamiento del objeto.
+# Ejecuta la logica especifica de este metodo dentro del comportamiento del objeto.
 func take_object(object: Interact) -> void:
 	# Comprueba not hand; ejecuta el bloque indentado solo cuando la condicion sea verdadera.
 	if not hand:
@@ -121,8 +121,8 @@ func take_object(object: Interact) -> void:
 	object.position = object.pos_obj
 	#object.scale = Vector3.ONE * object.scale_obj
 
-# Ejecuta la l?gica espec?fica de drop_object dentro del comportamiento del objeto.
-# Ejecuta la l?gica espec?fica de este m?todo dentro del comportamiento del objeto.
+# Ejecuta la lógica espec?fica de drop_object dentro del comportamiento del objeto.
+# Ejecuta la lógica espec?fica de este método dentro del comportamiento del objeto.
 func drop_object() -> void:
 	# Comprueba not object_in_hand; ejecuta el bloque indentado solo cuando la condicion sea verdadera.
 	if not object_in_hand:

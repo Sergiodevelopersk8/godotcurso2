@@ -1,0 +1,7 @@
+res://src/entities/npcs/cliente_1.tscn
+res://src/entities/player/states/PlayerState.gd
+res://assets/models/Player/in_dialogue.gd
+res://assets/models/Player/Player.tscn
+res://src/levesl/level_1.tscn
+res://src/entities/player/states/StateMachine.gd
+res://src/entities/npcs/scripts_npc/customer_npc_1.gd

@@ -5,7 +5,9 @@ class_name Player
 
 
 #-------onreadys camara----------
+
 @onready var camera_3d: Camera3D = $Camera3D
+
 # Obtiene la referencia origCamPos cuando el nodo ya esta listo.
 @onready var origCamPos : Vector3 = camera_3d.position
 # Obtiene la referencia footstep_sound cuando el nodo ya esta listo.
