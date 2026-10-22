@@ -1,5 +1,5 @@
 # Archivo: src/core/Managers/manager_camrea_bob.gd
-# Descripci?n: Aplica un peque?o movimiento de c?mara para simular la sensaci?n de caminar o dialogar.
+# Descripci?n: Aplica un pequeño movimiento de cámara para simular la sensaci?n de caminar o dialogar.
 # Este script forma parte de la l?gica principal del juego y ayuda a entender su comportamiento dentro de Godot.
 
 # Hereda de Node y reutiliza sus propiedades y comportamiento base.
