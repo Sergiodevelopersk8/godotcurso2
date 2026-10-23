@@ -1,0 +1,19 @@
+dialogos
+cliente inicio 
+Buenas tardes
+Me puedes dar una memela roja con quesillo por favor
+gracias
+
+cliente final 
+¡Oh, muchas gracias! 
+item cliente "Memela roja con quesillo"
+
+tia 
+Sobrina ahorita regreso voy a dejar un pedido
+te encargo por favor el local
+gracias. te quiero 
+
+
+vendeor H
+Hola Yatziri como va el negocio?
+Que te tengas suerte

@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://cviubs6vqkv33" path="res://src/entities/npcs/cliente_1.tscn" id="9_c7gus"]
 [ext_resource type="Texture2D" uid="uid://v27dtwrnd6q6" path="res://assets/textura/red_brick/textures/red_brick_diff_1k.jpg" id="11_0h81o"]
 [ext_resource type="Texture2D" uid="uid://1cg0ovbhtujj" path="res://assets/textura/corrugated_iron/textures/corrugated_iron_02_disp_1k.png" id="12_ndlcb"]
+[ext_resource type="PackedScene" uid="uid://brwsogoc7yrlh" path="res://src/entities/npcs/npc_prueba_character.tscn" id="13_ov8ww"]
+[ext_resource type="Resource" uid="uid://dw68me6l7yxs5" path="res://src/systems/dialogue/cliente_1.dialogue" id="14_3vqyl"]
 
 [sub_resource type="Environment" id="Environment_v2nwe"]
 ambient_light_source = 3
@@ -69,16 +71,7 @@ size = Vector3(34.545532, 0.20117188, 19.929321)
 material = ExtResource("1_uyyla")
 
 [node name="CharacterBody3D" parent="." unique_id=1901970933 instance=ExtResource("1_n0jmb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0505052, 1, 1.0252843)
-
-[node name="RayCastInteractuar" parent="CharacterBody3D/Camera3D" parent_id_path=PackedInt32Array(1901970933, 1466239464) index="0" unique_id=1223787391 node_paths=PackedStringArray("level_objects_container")]
-level_objects_container = NodePath("../../../objects")
-
-[node name="hand" parent="CharacterBody3D/Camera3D" parent_id_path=PackedInt32Array(1901970933, 1466239464) index="1" unique_id=1427675814]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19999999, -0.38938212, -0.20177174)
-
-[node name="MeshInstance3D" parent="CharacterBody3D/CollisionShape3D" parent_id_path=PackedInt32Array(1901970933, 1514380184) index="0" unique_id=1483501904]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.29882813, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.051843405, 1, -2.44971)
 
 [node name="objects" type="Node3D" parent="." unique_id=834404580]
 
@@ -152,14 +145,28 @@ mesh = SubResource("BoxMesh_swv2c")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Paredes/pared4/StaticBody3D" unique_id=211105040]
 shape = SubResource("ConvexPolygonShape3D_ndlcb")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=325696094]
+[node name="techos" type="Node3D" parent="." unique_id=1708138341]
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="techos" unique_id=583487096]
+transform = Transform3D(0.28110242, 121.393936, -0.21630186, -0.038280804, -6.0667553, -4.322006, -9.8292465, 3.4953208, 0.010646494, -16.635473, 9.92, -2.226211)
+mesh = SubResource("PlaneMesh_e7fo4")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="techos" unique_id=1136973162]
+transform = Transform3D(0.20699865, -121.41783, 0.21550706, -0.0382808, -6.0667553, -4.322006, 9.831086, 2.532893, -0.021366881, 17.538666, 9.92, -2.226211)
+mesh = SubResource("PlaneMesh_e7fo4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="techos" unique_id=325696094]
 transform = Transform3D(-18.272848, 0.0011096052, -0.07904281, -0.12801412, -0.61688656, 3.2147937, -0.17483002, 0.33572358, 5.9073925, 2.0552273, 9.363814, -6.7913938)
 mesh = SubResource("PlaneMesh_e7fo4")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=929263167]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="techos" unique_id=929263167]
 transform = Transform3D(-18.272848, 0.0011096052, -0.07904281, 0.10396454, -0.56581867, -3.9843397, -0.19011715, -0.41606313, 5.41823, 1.7699137, 8.980355, 4.2976274)
 mesh = SubResource("PlaneMesh_e7fo4")
 
-[editable path="CharacterBody3D"]
+[node name="CharacterBody3D2" parent="." unique_id=1025598010 instance=ExtResource("13_ov8ww")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7011719, -4.5424604)
+dialogue_resource = ExtResource("14_3vqyl")
+
 [editable path="Comal"]
 [editable path="Gustavo"]
+[editable path="CharacterBody3D2"]

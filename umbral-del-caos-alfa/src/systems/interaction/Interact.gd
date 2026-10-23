@@ -24,6 +24,9 @@ var focus_tracking_marker = Marker3D.new()
 # Declara la  isInteract; otros nodos pueden conectarse para reaccionar cuando se emita.
 signal isInteract
 
+# Señal que avisa cuando alguien interactuó con esta área
+#signal interacted
+
 # Guardamos el estado original para restaurarlo al soltar
 var _original_collision_layer: int
 # Declara _original_collision_mask para guardar un dato utilizado por este script.
