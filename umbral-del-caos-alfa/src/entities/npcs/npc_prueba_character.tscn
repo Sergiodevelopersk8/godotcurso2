@@ -13,8 +13,8 @@ material = SubResource("StandardMaterial3D_e7fo4")
 
 [node name="CharacterBody3D" type="CharacterBody3D" unique_id=1025598010]
 collision_layer = 4
-collision_mask = 4
 script = ExtResource("1_caalf")
+metadata/_edit_group_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=466891463]
 shape = SubResource("CapsuleShape3D_caalf")
@@ -25,7 +25,11 @@ mesh = SubResource("CapsuleMesh_6q0ba")
 [node name="look_me" type="Marker3D" parent="." unique_id=1988903682]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11207318, 0.6519904, -0.03288667)
 
+[node name="nav_agent" type="NavigationAgent3D" parent="." unique_id=449755131]
+
 [node name="Interact" parent="." unique_id=1190471633 instance=ExtResource("1_syvuo")]
+collision_layer = 16
+collision_mask = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Interact" unique_id=223746785]
 shape = SubResource("CapsuleShape3D_caalf")

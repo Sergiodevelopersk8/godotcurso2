@@ -67,20 +67,26 @@ environment = SubResource("Environment_v2nwe")
 [node name="CSGBox3D" type="CSGBox3D" parent="floor" unique_id=79609496]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.39901543, -0.39941406, -2.3341675)
 use_collision = true
+collision_mask = 0
 size = Vector3(34.545532, 0.20117188, 19.929321)
 material = ExtResource("1_uyyla")
 
-[node name="CharacterBody3D" parent="." unique_id=1901970933 instance=ExtResource("1_n0jmb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.051843405, 1, -2.44971)
+[node name="player" parent="." unique_id=1901970933 instance=ExtResource("1_n0jmb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0329468, 0.7011719, 1.4386735)
+collision_mask = 7
 
 [node name="objects" type="Node3D" parent="." unique_id=834404580]
 
 [node name="BoteSalsaRoja" parent="objects" unique_id=1494490827 instance=ExtResource("3_a0ior")]
 transform = Transform3D(0.145, 0, 0, 0, 0.145, 0, 0, 0, 0.145, -3.305094, 1.0119342, -11.317701)
+collision_layer = 2
+collision_mask = 14
 id = "Salsa Roja"
 
 [node name="memela" parent="objects" unique_id=928348330 instance=ExtResource("4_lckxe")]
 transform = Transform3D(0.265, 0, 0, 0, 0.265, 0, 0, 0, 0.265, -2.3439846, 0.92162216, -11.383035)
+collision_layer = 2
+collision_mask = 14
 
 [node name="Bote_salsa_verde" parent="objects" unique_id=1848401282 instance=ExtResource("5_hefpv")]
 transform = Transform3D(0.145, 0, 0, 0, 0.145, 0, 0, 0, 0.145, -4.0956187, 0.98948133, -11.346706)
@@ -90,6 +96,8 @@ transform = Transform3D(0.145, 0, 0, 0, 0.145, 0, 0, 0, 0.145, -3.7464697, 0.973
 
 [node name="Comal" parent="." unique_id=1955610188 instance=ExtResource("4_n157a")]
 transform = Transform3D(0.55, 0, 0, 0, 0.55, 0, 0, 0, 0.55, 0, 0.49138898, -11.640729)
+collision_layer = 2
+collision_mask = 14
 
 [node name="Gustavo" parent="." unique_id=926957031 instance=ExtResource("9_c7gus")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9578285, 0.70117176, -2.426764)
@@ -163,10 +171,11 @@ mesh = SubResource("PlaneMesh_e7fo4")
 transform = Transform3D(-18.272848, 0.0011096052, -0.07904281, 0.10396454, -0.56581867, -3.9843397, -0.19011715, -0.41606313, 5.41823, 1.7699137, 8.980355, 4.2976274)
 mesh = SubResource("PlaneMesh_e7fo4")
 
-[node name="CharacterBody3D2" parent="." unique_id=1025598010 instance=ExtResource("13_ov8ww")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7011719, -4.5424604)
+[node name="npc_tia_alfa" parent="." unique_id=1025598010 instance=ExtResource("13_ov8ww")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.009855, 0.7011719, -7.0120482)
+movement_speed = null
 dialogue_resource = ExtResource("14_3vqyl")
+idName = "npc_tia_alfa"
 
 [editable path="Comal"]
 [editable path="Gustavo"]
-[editable path="CharacterBody3D2"]

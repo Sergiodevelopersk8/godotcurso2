@@ -184,6 +184,8 @@ locale/translations_pot_files=PackedStringArray("res://src/systems/dialogue/clie
 3d_physics/layer_1="floor"
 3d_physics/layer_2="objects"
 3d_physics/layer_3="npcs"
+3d_physics/layer_4="player"
+3d_physics/layer_5="npcInteract"
 
 [physics]
 

@@ -22,6 +22,8 @@ material = SubResource("StandardMaterial3D_xb7us")
 
 [node name="CharacterBody3D" type="CharacterBody3D" unique_id=1901970933 node_paths=PackedStringArray("fp_camera", "debug_camera") groups=["Player"]]
 process_mode = 3
+collision_layer = 8
+collision_mask = 23
 script = ExtResource("1_6befo")
 fp_camera = NodePath("Camera3D")
 debug_camera = NodePath("Camera3D2")
@@ -31,6 +33,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.730323, -0.38411623)
 
 [node name="RayCastInteractuar" type="RayCast3D" parent="Camera3D" unique_id=1223787391 node_paths=PackedStringArray("player", "hand")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, -0.018495739, -0.106000006)
+collision_mask = 18
 collide_with_areas = true
 debug_shape_custom_color = Color(0.4336873, 0.61731386, 0, 1)
 script = ExtResource("2_xb7us")
