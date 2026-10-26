@@ -46,6 +46,8 @@ shadow_mesh = SubResource("ArrayMesh_u2re5")
 albedo_texture = ExtResource("2_uh4ki")
 
 [node name="nota_pedido" unique_id=1996715622 instance=ExtResource("1_3q26m")]
+collision_layer = 2
+collision_mask = 8
 textura_nota = ExtResource("2_uh4ki")
 texto = "asasasasazas"
 

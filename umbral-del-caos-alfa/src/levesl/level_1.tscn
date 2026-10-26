@@ -173,7 +173,6 @@ mesh = SubResource("PlaneMesh_e7fo4")
 
 [node name="npc_tia_alfa" parent="." unique_id=1025598010 instance=ExtResource("13_ov8ww")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.009855, 0.7011719, -7.0120482)
-movement_speed = null
 dialogue_resource = ExtResource("14_3vqyl")
 idName = "npc_tia_alfa"
 

@@ -2,6 +2,10 @@
 
 [ext_resource type="Script" uid="uid://dwnspb3mro0b2" path="res://src/entities/npcs/npc_prueba_character.gd" id="1_caalf"]
 [ext_resource type="PackedScene" uid="uid://p7nhmt8mpm1x" path="res://src/entities/interactables/interact.tscn" id="1_syvuo"]
+[ext_resource type="Script" uid="uid://cgpaxmte4yi67" path="res://src/entities/npcs/NPCStateMachine.gd" id="3_6q0ba"]
+[ext_resource type="Script" uid="uid://0colsehfj3p7" path="res://src/entities/npcs/NPCWalk.gd" id="4_8n5jm"]
+[ext_resource type="Script" uid="uid://dh5hds2hiuaqu" path="res://src/entities/npcs/idleNPC.gd" id="4_sysoo"]
+[ext_resource type="Script" uid="uid://d07qapgbxv21b" path="res://src/entities/npcs/npc_in_dialogue.gd" id="5_myyq2"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_caalf"]
 
@@ -11,10 +15,23 @@ albedo_color = Color(1, 1, 0.16078432, 1)
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_6q0ba"]
 material = SubResource("StandardMaterial3D_e7fo4")
 
-[node name="CharacterBody3D" type="CharacterBody3D" unique_id=1025598010]
+[node name="NPCBase" type="CharacterBody3D" unique_id=1025598010]
 collision_layer = 4
 script = ExtResource("1_caalf")
 metadata/_edit_group_ = true
+
+[node name="NPCStateMachine" type="Node" parent="." unique_id=1130951998]
+script = ExtResource("3_6q0ba")
+initial_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="NPCStateMachine" unique_id=312088832]
+script = ExtResource("4_sysoo")
+
+[node name="Walk" type="Node" parent="NPCStateMachine" unique_id=1335372128]
+script = ExtResource("4_8n5jm")
+
+[node name="InDialogue" type="Node" parent="NPCStateMachine" unique_id=901840289]
+script = ExtResource("5_myyq2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=466891463]
 shape = SubResource("CapsuleShape3D_caalf")
