@@ -7,7 +7,7 @@ class_name CharacterNPC
 @export var dialogue_resource: DialogueResource
 @export var idName: String
 
-@onready var look_me: Marker3D = $look_me
+
 @onready var interaccion: Interact = $Interact
 @onready var nav_agent: NavigationAgent3D = $nav_agent
 @onready var state_machine: Node = $NPCStateMachine

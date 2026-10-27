@@ -71,42 +71,6 @@ collision_mask = 0
 size = Vector3(34.545532, 0.20117188, 19.929321)
 material = ExtResource("1_uyyla")
 
-[node name="player" parent="." unique_id=1901970933 instance=ExtResource("1_n0jmb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0329468, 0.7011719, 1.4386735)
-collision_mask = 7
-
-[node name="objects" type="Node3D" parent="." unique_id=834404580]
-
-[node name="BoteSalsaRoja" parent="objects" unique_id=1494490827 instance=ExtResource("3_a0ior")]
-transform = Transform3D(0.145, 0, 0, 0, 0.145, 0, 0, 0, 0.145, -3.305094, 1.0119342, -11.317701)
-collision_layer = 2
-collision_mask = 14
-id = "Salsa Roja"
-
-[node name="memela" parent="objects" unique_id=928348330 instance=ExtResource("4_lckxe")]
-transform = Transform3D(0.265, 0, 0, 0, 0.265, 0, 0, 0, 0.265, -2.3439846, 0.92162216, -11.383035)
-collision_layer = 2
-collision_mask = 14
-
-[node name="Bote_salsa_verde" parent="objects" unique_id=1848401282 instance=ExtResource("5_hefpv")]
-transform = Transform3D(0.145, 0, 0, 0, 0.145, 0, 0, 0, 0.145, -4.0956187, 0.98948133, -11.346706)
-
-[node name="Quesillo" parent="objects" unique_id=79260992 instance=ExtResource("6_rrsh6")]
-transform = Transform3D(0.145, 0, 0, 0, 0.145, 0, 0, 0, 0.145, -3.7464697, 0.97381413, -11.1318)
-
-[node name="Comal" parent="." unique_id=1955610188 instance=ExtResource("4_n157a")]
-transform = Transform3D(0.55, 0, 0, 0, 0.55, 0, 0, 0, 0.55, 0, 0.49138898, -11.640729)
-collision_layer = 2
-collision_mask = 14
-
-[node name="Gustavo" parent="." unique_id=926957031 instance=ExtResource("9_c7gus")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9578285, 0.70117176, -2.426764)
-id = "gustavo"
-
-[node name="nota_pedido" parent="." unique_id=1996715622 instance=ExtResource("7_0h81o")]
-transform = Transform3D(0.028399603, -1.0060607, 0.005167943, -0.4132576, -0.06821952, 0.046354584, -0.029372916, -0.012919948, -0.64718175, 15.476309, 0.055777073, -10.37921)
-id = "nota pedido"
-
 [node name="mesas" type="Node3D" parent="." unique_id=1084424763]
 
 [node name="Mesa" parent="mesas" unique_id=1005961017 instance=ExtResource("8_rrsh6")]
@@ -171,10 +135,64 @@ mesh = SubResource("PlaneMesh_e7fo4")
 transform = Transform3D(-18.272848, 0.0011096052, -0.07904281, 0.10396454, -0.56581867, -3.9843397, -0.19011715, -0.41606313, 5.41823, 1.7699137, 8.980355, 4.2976274)
 mesh = SubResource("PlaneMesh_e7fo4")
 
+[node name="objects" type="Node3D" parent="." unique_id=834404580]
+
+[node name="BoteSalsaRoja" parent="objects" unique_id=1494490827 instance=ExtResource("3_a0ior")]
+transform = Transform3D(0.145, 0, 0, 0, 0.145, 0, 0, 0, 0.145, -3.305094, 1.0119342, -11.317701)
+collision_layer = 2
+collision_mask = 14
+id = "Salsa Roja"
+
+[node name="memela" parent="objects" unique_id=928348330 instance=ExtResource("4_lckxe")]
+transform = Transform3D(0.265, 0, 0, 0, 0.265, 0, 0, 0, 0.265, -2.3439846, 0.92162216, -11.383035)
+collision_layer = 2
+collision_mask = 14
+
+[node name="Bote_salsa_verde" parent="objects" unique_id=1848401282 instance=ExtResource("5_hefpv")]
+transform = Transform3D(0.145, 0, 0, 0, 0.145, 0, 0, 0, 0.145, -4.0956187, 0.98948133, -11.346706)
+
+[node name="Quesillo" parent="objects" unique_id=79260992 instance=ExtResource("6_rrsh6")]
+transform = Transform3D(0.145, 0, 0, 0, 0.145, 0, 0, 0, 0.145, -3.7464697, 0.97381413, -11.1318)
+
+[node name="Comal" parent="." unique_id=1955610188 instance=ExtResource("4_n157a")]
+transform = Transform3D(0.55, 0, 0, 0, 0.55, 0, 0, 0, 0.55, 0, 0.49138898, -11.640729)
+collision_layer = 2
+collision_mask = 14
+
+[node name="Gustavo" parent="." unique_id=926957031 instance=ExtResource("9_c7gus")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9578285, 0.70117176, -2.426764)
+id = "gustavo"
+
+[node name="nota_pedido" parent="." unique_id=1996715622 instance=ExtResource("7_0h81o")]
+transform = Transform3D(0.028399603, -1.0060607, 0.005167943, -0.4132576, -0.06821952, 0.046354584, -0.029372916, -0.012919948, -0.64718175, 15.476309, 0.055777073, -10.37921)
+id = "nota pedido"
+
+[node name="player" parent="." unique_id=1901970933 instance=ExtResource("1_n0jmb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0329468, 0.7011719, 1.4386735)
+collision_mask = 7
+
 [node name="npc_tia_alfa" parent="." unique_id=1025598010 instance=ExtResource("13_ov8ww")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.009855, 0.7011719, -7.0120482)
 dialogue_resource = ExtResource("14_3vqyl")
 idName = "npc_tia_alfa"
 
+[node name="NPCStateMachine" parent="npc_tia_alfa" index="0" unique_id=1130951998]
+initial_state = NodePath("Walk")
+
+[node name="markers" type="Node3D" parent="." unique_id=911297927]
+
+[node name="1" type="Marker3D" parent="markers" unique_id=1836414422 groups=["waypoints_tia"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.8772, 0, 0)
+
+[node name="2" type="Marker3D" parent="markers" unique_id=1632401371 groups=["waypoints_tia"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.4700775, 0, -7.2115192)
+
+[node name="3" type="Marker3D" parent="markers" unique_id=1397541029 groups=["waypoints_tia"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.826899, 0, -6.4635353)
+
+[node name="4" type="Marker3D" parent="markers" unique_id=80796847 groups=["waypoints_tia"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.578615, 0, 5.0929813)
+
 [editable path="Comal"]
 [editable path="Gustavo"]
+[editable path="npc_tia_alfa"]

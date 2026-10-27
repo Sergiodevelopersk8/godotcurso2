@@ -3,6 +3,7 @@ extends Node
 class_name NPCInDialogue
 
 signal transition(state_node, new_state_name: String)
+@onready var look_me: Marker3D = $"../../look_me"
 
 @export var dialogue_resource: DialogueResource
 
@@ -23,9 +24,8 @@ func enter() -> void:
 	# 3. Obtener referencia del jugador y enfocar la mirada (look_me)
 	if not current_player:
 		current_player = get_tree().get_first_node_in_group("Player") as Player
-	if current_player and current_player.state_machine and npc.has_node("look_me"):
-		var look_marker = npc.get_node("look_me") as Marker3D
-		current_player.state_machine.change_state("InDialogue", {"focus_target": look_marker.global_position})
+	if current_player and current_player.state_machine :
+		current_player.state_machine.change_state("InDialogue", {"focus_target": look_me.global_position})
 	# 4. Conectar la señal de fin de diálogo y lanzarlo usando la fuente única de verdad
 	if not DialogueManager.dialogue_ended.is_connected(_on_dialogue_ended):
 		DialogueManager.dialogue_ended.connect(_on_dialogue_ended)

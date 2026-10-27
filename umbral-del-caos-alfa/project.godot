@@ -55,6 +55,7 @@ folder_colors={
 
 Player=""
 Interacts=""
+waypoints_tia=""
 
 [input]
 
