@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://cpbrfn3i5jvui"]
+[gd_scene format=3 uid="uid://cpbrfn3i5jvui"]
 
 [ext_resource type="Texture2D" uid="uid://i1v6d8iq58ox" path="res://Idle Tycoon Assets/Sprites/Fondo.png" id="1_jm17p"]
 [ext_resource type="Texture2D" uid="uid://dv0tmb053vwcd" path="res://Idle Tycoon Assets/Sprites/Counter.png" id="2_fc1p2"]
@@ -74,96 +74,96 @@ font_size = 48
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dadte"]
 bg_color = Color(0.172549, 0.6, 0.6, 1)
 
-[node name="Game" type="Node2D"]
+[node name="Game" type="Node2D" unique_id=1524751155]
 
-[node name="BG" type="Sprite2D" parent="."]
+[node name="BG" type="Sprite2D" parent="." unique_id=1155157261]
 texture = ExtResource("1_jm17p")
 centered = false
 
-[node name="MainCounter" type="Sprite2D" parent="."]
+[node name="MainCounter" type="Sprite2D" parent="." unique_id=1698231058]
 position = Vector2(531, 855)
 scale = Vector2(0.9, 0.9)
 texture = ExtResource("2_fc1p2")
 
-[node name="CoffeeCounter" type="Sprite2D" parent="."]
+[node name="CoffeeCounter" type="Sprite2D" parent="." unique_id=91804285]
 position = Vector2(417, 1382)
 scale = Vector2(0.8, 0.9)
 texture = ExtResource("3_fc1p2")
 
-[node name="Sprite2D" type="Sprite2D" parent="CoffeeCounter"]
+[node name="Sprite2D" type="Sprite2D" parent="CoffeeCounter" unique_id=1121170329]
 position = Vector2(-78.75, -52.2222)
 scale = Vector2(0.35, 0.35)
 texture = ExtResource("4_ssgoc")
 
-[node name="BurgerCounter" type="Sprite2D" parent="."]
+[node name="BurgerCounter" type="Sprite2D" parent="." unique_id=501166807]
 position = Vector2(657, 1382)
 scale = Vector2(0.8, 0.9)
 texture = ExtResource("3_fc1p2")
 
-[node name="Sprite2D" type="Sprite2D" parent="BurgerCounter"]
+[node name="Sprite2D" type="Sprite2D" parent="BurgerCounter" unique_id=508583286]
 position = Vector2(-73.75, -74.4445)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("5_cueac")
 
-[node name="CustomerManager" type="Node" parent="." node_paths=PackedStringArray("spawn_positions")]
+[node name="CustomerManager" type="Node" parent="." unique_id=20492106 node_paths=PackedStringArray("spawn_positions")]
 script = ExtResource("5_7dfdq")
 spawn_positions = [NodePath("TopSpawnerPos"), NodePath("BottomSpawnPos")]
 customer_sprites = Array[ExtResource("6_5rpqn")]([ExtResource("7_yvoo5"), ExtResource("8_y7cus"), ExtResource("9_wg16f"), ExtResource("10_u6w8h"), ExtResource("11_ssgoc")])
 customer_scene = ExtResource("12_yvoo5")
 
-[node name="TopSpawnerPos" type="Marker2D" parent="CustomerManager"]
+[node name="TopSpawnerPos" type="Marker2D" parent="CustomerManager" unique_id=1491806035]
 position = Vector2(-77, 193)
 
-[node name="BottomSpawnPos" type="Marker2D" parent="CustomerManager"]
+[node name="BottomSpawnPos" type="Marker2D" parent="CustomerManager" unique_id=457164829]
 position = Vector2(-77, 640)
 
-[node name="SpawnTimer" type="Timer" parent="CustomerManager"]
+[node name="SpawnTimer" type="Timer" parent="CustomerManager" unique_id=580386769]
 wait_time = 3.5
 autostart = true
 
-[node name="CounterManager" type="Node" parent="." node_paths=PackedStringArray("counter_positions")]
+[node name="CounterManager" type="Node" parent="." unique_id=2033811639 node_paths=PackedStringArray("counter_positions")]
 unique_name_in_owner = true
 script = ExtResource("13_y7cus")
 counter_positions = [NodePath("Pos_0"), NodePath("Pos_1"), NodePath("Pos_2"), NodePath("Pos_3")]
 
-[node name="Pos_0" type="Marker2D" parent="CounterManager"]
+[node name="Pos_0" type="Marker2D" parent="CounterManager" unique_id=1747733677]
 position = Vector2(370, 740)
 
-[node name="Pos_1" type="Marker2D" parent="CounterManager"]
+[node name="Pos_1" type="Marker2D" parent="CounterManager" unique_id=1418748697]
 position = Vector2(480, 740)
 
-[node name="Pos_2" type="Marker2D" parent="CounterManager"]
+[node name="Pos_2" type="Marker2D" parent="CounterManager" unique_id=1659824507]
 position = Vector2(590, 740)
 
-[node name="Pos_3" type="Marker2D" parent="CounterManager"]
+[node name="Pos_3" type="Marker2D" parent="CounterManager" unique_id=537203868]
 position = Vector2(700, 740)
 
-[node name="CashierManager" type="Node" parent="." node_paths=PackedStringArray("spawn_pos")]
+[node name="CashierManager" type="Node" parent="." unique_id=983595364 node_paths=PackedStringArray("spawn_pos")]
 script = ExtResource("13_wg16f")
 cashier_scene = ExtResource("4_bfxw3")
 spawn_pos = NodePath("SpawnPos")
 
-[node name="SpawnPos" type="Marker2D" parent="CashierManager"]
+[node name="SpawnPos" type="Marker2D" parent="CashierManager" unique_id=428839853]
 position = Vector2(521, 1081)
 
-[node name="GameUI" type="CanvasLayer" parent="."]
+[node name="GameUI" type="CanvasLayer" parent="." unique_id=292821787]
 script = ExtResource("17_cueac")
 
-[node name="CoffeButton" type="TextureButton" parent="GameUI"]
+[node name="CoffeButton" type="TextureButton" parent="GameUI" unique_id=265221694]
 offset_left = 407.0
 offset_top = 1317.0
 offset_right = 471.0
 offset_bottom = 1381.0
 texture_normal = ExtResource("18_rsxsa")
 
-[node name="BurgerButton" type="TextureButton" parent="GameUI"]
+[node name="BurgerButton" type="TextureButton" parent="GameUI" unique_id=2001685007]
 offset_left = 659.0
 offset_top = 1317.0
 offset_right = 723.0
 offset_bottom = 1381.0
 texture_normal = ExtResource("18_rsxsa")
 
-[node name="CoffeUpgradePanel" parent="GameUI" instance=ExtResource("18_r8o54")]
+[node name="CoffeUpgradePanel" parent="GameUI" unique_id=744192776 instance=ExtResource("18_r8o54")]
 visible = false
 offset_left = 265.0
 offset_top = 530.0
@@ -172,20 +172,20 @@ offset_bottom = -740.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="BurgerUpgradePanel" parent="GameUI" instance=ExtResource("18_r8o54")]
+[node name="BurgerUpgradePanel" parent="GameUI" unique_id=1673849734 instance=ExtResource("18_r8o54")]
 visible = false
 offset_left = 265.0
 offset_top = 530.0
 offset_right = -265.0
 offset_bottom = -740.0
 
-[node name="TopBar" type="Panel" parent="GameUI"]
+[node name="TopBar" type="Panel" parent="GameUI" unique_id=713386606]
 custom_minimum_size = Vector2(0, 96)
 anchors_preset = 10
 anchor_right = 1.0
 grow_horizontal = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="GameUI/TopBar"]
+[node name="HBoxContainer" type="HBoxContainer" parent="GameUI/TopBar" unique_id=1387363244]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -200,20 +200,20 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 10
 
-[node name="TextureRect" type="TextureRect" parent="GameUI/TopBar/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="GameUI/TopBar/HBoxContainer" unique_id=183722221]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 texture = ExtResource("20_vom40")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="CurrentCoins" type="Label" parent="GameUI/TopBar/HBoxContainer"]
+[node name="CurrentCoins" type="Label" parent="GameUI/TopBar/HBoxContainer" unique_id=1301493899]
 unique_name_in_owner = true
 layout_mode = 2
 text = "0"
 label_settings = SubResource("LabelSettings_80bkf")
 
-[node name="ButtomBar" type="Panel" parent="GameUI"]
+[node name="ButtomBar" type="Panel" parent="GameUI" unique_id=2000303091]
 custom_minimum_size = Vector2(0, 96)
 anchors_preset = 7
 anchor_left = 0.5
@@ -225,7 +225,7 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_i3l22")
 
-[node name="ShopButton" type="Button" parent="GameUI/ButtomBar"]
+[node name="ShopButton" type="Button" parent="GameUI/ButtomBar" unique_id=1974416609]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -237,7 +237,7 @@ offset_bottom = -41.0
 grow_vertical = 0
 icon = ExtResource("22_80bkf")
 
-[node name="OptionsButton" type="Button" parent="GameUI/ButtomBar"]
+[node name="OptionsButton" type="Button" parent="GameUI/ButtomBar" unique_id=1360679298]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -249,7 +249,7 @@ offset_bottom = -41.0
 grow_vertical = 0
 icon = ExtResource("23_my6rh")
 
-[node name="Shop" type="Panel" parent="GameUI"]
+[node name="Shop" type="Panel" parent="GameUI" unique_id=1957297989]
 visible = false
 custom_minimum_size = Vector2(700, 1000)
 anchors_preset = 8
@@ -265,7 +265,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_vom40")
 
-[node name="Label" type="Label" parent="GameUI/Shop"]
+[node name="Label" type="Label" parent="GameUI/Shop" unique_id=1789305438]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -278,7 +278,7 @@ grow_horizontal = 2
 text = "Shop"
 label_settings = SubResource("LabelSettings_ultrl")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="GameUI/Shop"]
+[node name="VBoxContainer" type="VBoxContainer" parent="GameUI/Shop" unique_id=992391981]
 custom_minimum_size = Vector2(650, 850)
 layout_mode = 1
 anchors_preset = 7
@@ -293,13 +293,13 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_constants/separation = 15
 
-[node name="NewCashierCard_1" type="Panel" parent="GameUI/Shop/VBoxContainer"]
+[node name="NewCashierCard_1" type="Panel" parent="GameUI/Shop/VBoxContainer" unique_id=2086883218]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(450, 150)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_80bkf")
 
-[node name="TextureRect" type="TextureRect" parent="GameUI/Shop/VBoxContainer/NewCashierCard_1"]
+[node name="TextureRect" type="TextureRect" parent="GameUI/Shop/VBoxContainer/NewCashierCard_1" unique_id=1271578140]
 custom_minimum_size = Vector2(95, 95)
 layout_mode = 1
 anchors_preset = 4
@@ -313,7 +313,7 @@ grow_vertical = 2
 texture = ExtResource("22_ultrl")
 expand_mode = 1
 
-[node name="Label" type="Label" parent="GameUI/Shop/VBoxContainer/NewCashierCard_1"]
+[node name="Label" type="Label" parent="GameUI/Shop/VBoxContainer/NewCashierCard_1" unique_id=74982363]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -330,7 +330,7 @@ text = "Hire a new Cashier
 Cashier + 1"
 label_settings = SubResource("LabelSettings_i3l22")
 
-[node name="NewCashierButton_1" type="Button" parent="GameUI/Shop/VBoxContainer/NewCashierCard_1"]
+[node name="NewCashierButton_1" type="Button" parent="GameUI/Shop/VBoxContainer/NewCashierCard_1" unique_id=108455695]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 6
@@ -350,13 +350,13 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_ultrl")
 text = "50
 "
 
-[node name="FasterCoffeCard" type="Panel" parent="GameUI/Shop/VBoxContainer"]
+[node name="FasterCoffeCard" type="Panel" parent="GameUI/Shop/VBoxContainer" unique_id=1179502546]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(450, 150)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_80bkf")
 
-[node name="TextureRect" type="TextureRect" parent="GameUI/Shop/VBoxContainer/FasterCoffeCard"]
+[node name="TextureRect" type="TextureRect" parent="GameUI/Shop/VBoxContainer/FasterCoffeCard" unique_id=82049154]
 custom_minimum_size = Vector2(95, 95)
 layout_mode = 1
 anchors_preset = 4
@@ -370,7 +370,7 @@ grow_vertical = 2
 texture = ExtResource("4_ssgoc")
 expand_mode = 1
 
-[node name="Label" type="Label" parent="GameUI/Shop/VBoxContainer/FasterCoffeCard"]
+[node name="Label" type="Label" parent="GameUI/Shop/VBoxContainer/FasterCoffeCard" unique_id=466755206]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -387,7 +387,7 @@ text = "Better Machine
 Make Coffe Faster"
 label_settings = SubResource("LabelSettings_i3l22")
 
-[node name="FasterCoffeButton" type="Button" parent="GameUI/Shop/VBoxContainer/FasterCoffeCard"]
+[node name="FasterCoffeButton" type="Button" parent="GameUI/Shop/VBoxContainer/FasterCoffeCard" unique_id=14140790]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 6
@@ -407,13 +407,13 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_ultrl")
 text = "50
 "
 
-[node name="NewCashierCard_2" type="Panel" parent="GameUI/Shop/VBoxContainer"]
+[node name="NewCashierCard_2" type="Panel" parent="GameUI/Shop/VBoxContainer" unique_id=928074916]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(450, 150)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_80bkf")
 
-[node name="TextureRect" type="TextureRect" parent="GameUI/Shop/VBoxContainer/NewCashierCard_2"]
+[node name="TextureRect" type="TextureRect" parent="GameUI/Shop/VBoxContainer/NewCashierCard_2" unique_id=756409224]
 custom_minimum_size = Vector2(95, 95)
 layout_mode = 1
 anchors_preset = 4
@@ -427,7 +427,7 @@ grow_vertical = 2
 texture = ExtResource("22_ultrl")
 expand_mode = 1
 
-[node name="Label" type="Label" parent="GameUI/Shop/VBoxContainer/NewCashierCard_2"]
+[node name="Label" type="Label" parent="GameUI/Shop/VBoxContainer/NewCashierCard_2" unique_id=1294055768]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -444,7 +444,7 @@ text = "Hire a new Cashier
 Cashier + 1"
 label_settings = SubResource("LabelSettings_i3l22")
 
-[node name="NewCashierButton_2" type="Button" parent="GameUI/Shop/VBoxContainer/NewCashierCard_2"]
+[node name="NewCashierButton_2" type="Button" parent="GameUI/Shop/VBoxContainer/NewCashierCard_2" unique_id=1958523582]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 6
@@ -464,13 +464,13 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_ultrl")
 text = "50
 "
 
-[node name="FasterBurgerCard" type="Panel" parent="GameUI/Shop/VBoxContainer"]
+[node name="FasterBurgerCard" type="Panel" parent="GameUI/Shop/VBoxContainer" unique_id=650969362]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(450, 150)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_80bkf")
 
-[node name="TextureRect" type="TextureRect" parent="GameUI/Shop/VBoxContainer/FasterBurgerCard"]
+[node name="TextureRect" type="TextureRect" parent="GameUI/Shop/VBoxContainer/FasterBurgerCard" unique_id=1310706572]
 custom_minimum_size = Vector2(95, 95)
 layout_mode = 1
 anchors_preset = 4
@@ -484,7 +484,7 @@ grow_vertical = 2
 texture = ExtResource("5_cueac")
 expand_mode = 1
 
-[node name="Label" type="Label" parent="GameUI/Shop/VBoxContainer/FasterBurgerCard"]
+[node name="Label" type="Label" parent="GameUI/Shop/VBoxContainer/FasterBurgerCard" unique_id=577853844]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -501,7 +501,7 @@ text = "Better Machine
 Make Burger Faster"
 label_settings = SubResource("LabelSettings_i3l22")
 
-[node name="FasterBurgerButton" type="Button" parent="GameUI/Shop/VBoxContainer/FasterBurgerCard"]
+[node name="FasterBurgerButton" type="Button" parent="GameUI/Shop/VBoxContainer/FasterBurgerCard" unique_id=2010227159]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 6
@@ -521,13 +521,13 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_ultrl")
 text = "50
 "
 
-[node name="NewCashierCard_3" type="Panel" parent="GameUI/Shop/VBoxContainer"]
+[node name="NewCashierCard_3" type="Panel" parent="GameUI/Shop/VBoxContainer" unique_id=1076812086]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(450, 150)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_80bkf")
 
-[node name="TextureRect" type="TextureRect" parent="GameUI/Shop/VBoxContainer/NewCashierCard_3"]
+[node name="TextureRect" type="TextureRect" parent="GameUI/Shop/VBoxContainer/NewCashierCard_3" unique_id=1214426208]
 custom_minimum_size = Vector2(95, 95)
 layout_mode = 1
 anchors_preset = 4
@@ -541,7 +541,7 @@ grow_vertical = 2
 texture = ExtResource("22_ultrl")
 expand_mode = 1
 
-[node name="Label" type="Label" parent="GameUI/Shop/VBoxContainer/NewCashierCard_3"]
+[node name="Label" type="Label" parent="GameUI/Shop/VBoxContainer/NewCashierCard_3" unique_id=764039125]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -558,7 +558,7 @@ text = "Hire a new Cashier
 Cashier + 1"
 label_settings = SubResource("LabelSettings_i3l22")
 
-[node name="NewCashierButton_3" type="Button" parent="GameUI/Shop/VBoxContainer/NewCashierCard_3"]
+[node name="NewCashierButton_3" type="Button" parent="GameUI/Shop/VBoxContainer/NewCashierCard_3" unique_id=1003152610]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 6
@@ -578,7 +578,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_ultrl")
 text = "50
 "
 
-[node name="Options" type="Panel" parent="GameUI"]
+[node name="Options" type="Panel" parent="GameUI" unique_id=1262472469]
 visible = false
 custom_minimum_size = Vector2(650, 450)
 anchors_preset = 8
@@ -594,7 +594,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_my6rh")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="GameUI/Options"]
+[node name="VBoxContainer" type="VBoxContainer" parent="GameUI/Options" unique_id=1786337784]
 custom_minimum_size = Vector2(550, 180)
 layout_mode = 1
 anchors_preset = 8
@@ -611,15 +611,15 @@ grow_vertical = 2
 theme_override_constants/separation = 30
 alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="GameUI/Options/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="GameUI/Options/VBoxContainer" unique_id=1514649446]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="GameUI/Options/VBoxContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="GameUI/Options/VBoxContainer/HBoxContainer" unique_id=400266978]
 layout_mode = 2
 text = "Music"
 label_settings = SubResource("LabelSettings_my6rh")
 
-[node name="MusicSlider" type="HSlider" parent="GameUI/Options/VBoxContainer/HBoxContainer"]
+[node name="MusicSlider" type="HSlider" parent="GameUI/Options/VBoxContainer/HBoxContainer" unique_id=130536860]
 custom_minimum_size = Vector2(240, 0)
 layout_mode = 2
 size_flags_horizontal = 10
@@ -629,15 +629,15 @@ max_value = 1.0
 step = 0.01
 value = 0.5
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="GameUI/Options/VBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="GameUI/Options/VBoxContainer" unique_id=1454364104]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="GameUI/Options/VBoxContainer/HBoxContainer2"]
+[node name="Label" type="Label" parent="GameUI/Options/VBoxContainer/HBoxContainer2" unique_id=96490135]
 layout_mode = 2
 text = "SFX"
 label_settings = SubResource("LabelSettings_my6rh")
 
-[node name="SFXSlider" type="HSlider" parent="GameUI/Options/VBoxContainer/HBoxContainer2"]
+[node name="SFXSlider" type="HSlider" parent="GameUI/Options/VBoxContainer/HBoxContainer2" unique_id=1118739728]
 custom_minimum_size = Vector2(240, 0)
 layout_mode = 2
 size_flags_horizontal = 10
@@ -647,7 +647,7 @@ max_value = 1.0
 step = 0.01
 value = 0.5
 
-[node name="Label" type="Label" parent="GameUI/Options"]
+[node name="Label" type="Label" parent="GameUI/Options" unique_id=861237451]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5

@@ -5,8 +5,8 @@ class_name CharacterNPC
 @export_group("Movimiento")
 @export var movement_speed: float = 2.5
 @export var dialogue_resource: DialogueResource
-@export var idName: String
 
+@export var idName: String
 
 @onready var interaccion: Interact = $Interact
 @onready var nav_agent: NavigationAgent3D = $nav_agent

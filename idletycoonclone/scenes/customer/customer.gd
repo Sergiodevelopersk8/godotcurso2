@@ -94,6 +94,7 @@ func oreder_completed():
 	waiting_order = false
 	#variable para mover customer cuando fue atendido
 	var counter_top_position = counter_position.y - 180
+	#variable para crear al tween
 	var tween = create_tween()
 	#mueve al customer 
 	tween.tween_property(self, "position",Vector2(counter_position.x, counter_top_position), 1.0)
