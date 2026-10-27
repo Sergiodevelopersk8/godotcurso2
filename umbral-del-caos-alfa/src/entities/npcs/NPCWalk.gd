@@ -5,7 +5,7 @@ class_name NPCWalk
 signal transition(state_node, new_state_name: String)
 
 # Ya no necesitamos @export var waypoints aquí
-var waypoint_nodes: Array[Node3D] = []
+@export var waypoint_nodes: Array[Node3D] = []
 var current_index: int = 0
 
 var npc: CharacterBody3D
