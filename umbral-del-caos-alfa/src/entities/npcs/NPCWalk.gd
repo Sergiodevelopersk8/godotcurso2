@@ -36,6 +36,7 @@ func physics_update(delta: float) -> void:
 		npc.velocity = direccion * SPEED
 		if distance_to_player <= 2.0:
 			npc.velocity = Vector3.ZERO
+			transition.emit(self, "InDialogue")
 		npc.move_and_slide()
 		
 		
