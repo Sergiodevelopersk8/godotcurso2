@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dqut6cyxvqpvg"
+path="res://.godot/imported/Tia_mercado.dialogue-22224067b923beb98ece3012c8740855.tres"
+
+[deps]
+
+source_file="res://src/systems/dialogue/Tia_mercado.dialogue"
+dest_files=["res://.godot/imported/Tia_mercado.dialogue-22224067b923beb98ece3012c8740855.tres"]
+
+[params]
+
+defaults=true

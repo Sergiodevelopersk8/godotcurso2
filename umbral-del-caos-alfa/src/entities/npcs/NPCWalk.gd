@@ -7,7 +7,7 @@ signal transition(state_node, new_state_name: String)
 # Ya no necesitamos @export var waypoints aquí
 @export var waypoint_nodes: Array[Node3D] = []
 var current_index: int = 0
-
+@export var player : Player
 var npc: CharacterBody3D
 const SPEED := 2.5
 const MIN_DISTANCE := 0.5
@@ -21,14 +21,34 @@ func setup(owner_npc: CharacterBody3D) -> void:
 		if node is Node3D:
 			waypoint_nodes.append(node)
 			
-	print("[NPCWalk] Waypoints encontrados: ", waypoint_nodes.size())
+
 
 func enter() -> void:
-	print("[NPCWalk] Entrando al estado de patrulla por Waypoints.")
 	if waypoint_nodes.is_empty():
 		push_warning("[NPCWalk] No hay waypoints asignados.")
 
 func physics_update(delta: float) -> void:
+	var distance_to_player = npc.global_position.distance_to(player.global_position)
+	if not waypoint_nodes.is_empty():
+		print("si existe puntos para caminar")
+	else:
+		var direccion = (player.global_position - npc.global_position).normalized()
+		npc.velocity = direccion * SPEED
+		if distance_to_player <= 2.0:
+			npc.velocity = Vector3.ZERO
+		npc.move_and_slide()
+		
+		
+		
+
+
+func exit() -> void:
+	if npc:
+		npc.velocity.x = 0.0
+		npc.velocity.z = 0.0
+
+
+func walk_points(delta: float):
 	if not npc or waypoint_nodes.is_empty():
 		return
 
@@ -57,8 +77,3 @@ func physics_update(delta: float) -> void:
 	npc.velocity.x = direction.x * SPEED
 	npc.velocity.z = direction.z * SPEED
 	npc.move_and_slide()
-
-func exit() -> void:
-	if npc:
-		npc.velocity.x = 0.0
-		npc.velocity.z = 0.0

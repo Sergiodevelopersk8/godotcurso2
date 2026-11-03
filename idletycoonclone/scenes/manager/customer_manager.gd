@@ -56,6 +56,7 @@ func spawn_customer():
 		var tween := create_tween()
 		#anima al customer
 		tween.tween_property(customer, "position", 
+		#calcular una posición de destino desplazada hacia la derecha y configurar un movimiento con una duración de 4.5 segundos
 		customer.position + Vector2.RIGHT * 1300, 4.5)
 		#termina la animacion y destruye la instancia del customer
 		tween.finished.connect(func(): customer.queue_free() )
