@@ -7,47 +7,43 @@ signal transition(state_node, new_state_name: String)
 # Ya no necesitamos @export var waypoints aquí
 @export var waypoint_nodes: Array[Node3D] = []
 var current_index: int = 0
-@export var player : Player
+var player : Player
 var npc: CharacterBody3D
 const SPEED := 2.5
 const MIN_DISTANCE := 0.5
 
 func setup(owner_npc: CharacterBody3D) -> void:
 	npc = owner_npc
-	
+	player = npc.get_tree().get_first_node_in_group("Player")
 	# Buscamos automáticamente todos los nodos en el nivel que pertenezcan al grupo "waypoints_tia"
 	var nodes = npc.get_tree().get_nodes_in_group("waypoints_tia")
 	for node in nodes:
 		if node is Node3D:
 			waypoint_nodes.append(node)
-			
-
 
 func enter() -> void:
 	if waypoint_nodes.is_empty():
 		push_warning("[NPCWalk] No hay waypoints asignados.")
 
 func physics_update(delta: float) -> void:
-	var distance_to_player = npc.global_position.distance_to(player.global_position)
 	if not waypoint_nodes.is_empty():
-		print("si existe puntos para caminar")
+		walk_points(delta)
 	else:
-		var direccion = (player.global_position - npc.global_position).normalized()
-		npc.velocity = direccion * SPEED
-		if distance_to_player <= 2.0:
-			npc.velocity = Vector3.ZERO
-			transition.emit(self, "InDialogue")
-		npc.move_and_slide()
-		
-		
-		
+		follow_player()
 
+func follow_player():
+	var distance_to_player = npc.global_position.distance_to(player.global_position)
+	var direccion = (player.global_position - npc.global_position).normalized()
+	npc.velocity = direccion * SPEED
+	if distance_to_player <= 2.0:
+		npc.velocity = Vector3.ZERO
+		transition.emit(self, "InDialogue")
+	npc.move_and_slide()
 
 func exit() -> void:
 	if npc:
 		npc.velocity.x = 0.0
 		npc.velocity.z = 0.0
-
 
 func walk_points(delta: float):
 	if not npc or waypoint_nodes.is_empty():

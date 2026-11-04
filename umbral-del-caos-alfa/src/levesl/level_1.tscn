@@ -192,7 +192,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.990145, 0.7011719, -7.0120
 dialogue_resource = ExtResource("13_3vqyl")
 idName = "npc_tia_alfa"
 
-[node name="Walk" parent="npc_tia_alfa/NPCStateMachine" parent_id_path=PackedInt32Array(1025598010, 1130951998) index="1" unique_id=1335372128 node_paths=PackedStringArray("waypoint_nodes")]
+[node name="NPCStateMachine" parent="npc_tia_alfa" index="0" unique_id=1130951998]
+initial_state = NodePath("Walk")
+
+[node name="Walk" parent="npc_tia_alfa/NPCStateMachine" index="1" unique_id=1335372128 node_paths=PackedStringArray("waypoint_nodes")]
 waypoint_nodes = [NodePath("../../../markers/1"), NodePath("../../../markers/2"), NodePath("../../../markers/3"), NodePath("../../../markers/4")]
 
 [node name="Gustavo" parent="." unique_id=39771918 instance=ExtResource("13_ov8ww")]
@@ -202,9 +205,6 @@ idName = "Gustavo"
 
 [node name="NPCStateMachine" parent="Gustavo" index="0" unique_id=1130951998]
 initial_state = NodePath("Walk")
-
-[node name="Walk" parent="Gustavo/NPCStateMachine" index="1" unique_id=1335372128 node_paths=PackedStringArray("player")]
-player = NodePath("../../../player")
 
 [editable path="Comal"]
 [editable path="npc_tia_alfa"]

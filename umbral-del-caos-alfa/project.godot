@@ -25,6 +25,7 @@ DialogueManager="*uid://c3rodes2l3gxb"
 AudioStreamManager="*uid://ckqs2n1vtlcrs"
 ManagerCamreaBob="*uid://dyv1x458kfws"
 NotaManager="*uid://ld7dwho5uv8x"
+GameManager="*uid://cexp4tep3f6v2"
 
 [dialogue_manager]
 

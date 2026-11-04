@@ -14,12 +14,22 @@ TO DO LIST
 [X] Se aplico el addon de dialogue manager.
 [X] Notas para leer: Esto es súper fácil de hacer (es casi igual a tu sistema de interacción actual, solo que abre un panel de texto en la pantalla). Te dará un respiro de la lógica pesada.
 [X] Auto enfoque como fallout o skyrim al conversar con un npc
+[X] Que los npc camine aleatoriamente para que se vea vivo las escenas.
+[X] Hacer caminar los npcs para que algunos disparen un dialogo al acercarse al player solo unos npcs lo pdran hacer.
 
-🟡2. EN PROCESO (El núcleo de la Cocina)
+🟡 2. EN PROCESO (El núcleo de la Cocina)
 
-[] Que los npc camine aleatoriamente para que se vea vivo las escenas.
-[] Hacer caminar los npcs para que algunos disparen un dialogo al acercarse al player solo unos npcs lo pdran hacer.
+[ ] Activador del Minijuego: Programar la señal o condición en el GameManager (o script global) que detecte cuando el jugador 
+    haya entregado las memelas a los 3 NPCs.
+[ ] Transición de la Tía: Hacer que, al cumplirse la condición anterior, la Tía cambie su estado inicial de Idle a Walk 
+    (o un nuevo estado FollowPlayer) para comenzar a seguir al jugador.
+[ ] Lógica de Entrega en el Comal: Sincronizar el estado de la masa con el comal y el inventario del jugador.
+
 
 🔵 3. SIGUIENTE PASO (Los Clientes y la Historia)
+
+[ ] Sistema de Pedidos (UI): Mostrar visualmente qué tipo de memela quiere cada cliente (por ejemplo, mediante globos de texto o burbujas con iconos).
+[ ] Control de Puntuación/Tiempo: Un indicador de éxito o paciencia de los clientes en la fonda Umbral del Caos.
+[ ] Cierre del Nivel 1: Secuencia narrativa final tras completar las entregas de la Tía.
 
 
