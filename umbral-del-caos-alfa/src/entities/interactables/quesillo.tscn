@@ -49,9 +49,9 @@ shadow_mesh = SubResource("ArrayMesh_ip7pf")
 size = Vector3(1.3996277, 2.0747223, 2.0058594)
 
 [node name="Quesillo" unique_id=1494490827 instance=ExtResource("1_s40t2")]
+collision_layer = 2
+collision_mask = 9
 script = ExtResource("2_1btop")
-velocidad_terminal = 4.0
-offset_suelo = 0.25
 id = "Quesillo"
 metadata/_edit_group_ = true
 

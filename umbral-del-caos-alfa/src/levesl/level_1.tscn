@@ -140,7 +140,6 @@ mesh = SubResource("PlaneMesh_e7fo4")
 
 [node name="BoteSalsaRoja" parent="objects" unique_id=1494490827 instance=ExtResource("3_a0ior")]
 transform = Transform3D(0.145, 0, 0, 0, 0.145, 0, 0, 0, 0.145, -3.305094, 1.0119342, -11.317701)
-collision_layer = 2
 collision_mask = 14
 id = "Salsa Roja"
 

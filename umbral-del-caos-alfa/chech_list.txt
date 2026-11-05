@@ -19,6 +19,7 @@ TO DO LIST
 
 🟡 2. EN PROCESO (El núcleo de la Cocina)
 
+[ ] falta la memela roja con quesillo  
 [ ] Activador del Minijuego: Programar la señal o condición en el GameManager (o script global) que detecte cuando el jugador 
     haya entregado las memelas a los 3 NPCs.
 [ ] Transición de la Tía: Hacer que, al cumplirse la condición anterior, la Tía cambie su estado inicial de Idle a Walk 
