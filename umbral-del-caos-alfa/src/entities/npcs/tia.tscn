@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://njeohksj4ewj"]
+
+[ext_resource type="PackedScene" uid="uid://brwsogoc7yrlh" path="res://src/entities/npcs/npc_prueba_character.tscn" id="1_8uflp"]
+[ext_resource type="Script" uid="uid://7xne7w2506xk" path="res://src/entities/npcs/scripts_npc/tia.gd" id="2_8nwnt"]
+
+[node name="Tia" unique_id=1025598010 instance=ExtResource("1_8uflp")]
+script = ExtResource("2_8nwnt")

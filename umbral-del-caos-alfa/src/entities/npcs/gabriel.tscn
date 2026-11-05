@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b0slflcmwx7de"]
+
+[ext_resource type="PackedScene" uid="uid://brwsogoc7yrlh" path="res://src/entities/npcs/npc_prueba_character.tscn" id="1_8mjf5"]
+[ext_resource type="Script" uid="uid://cphkwuxup61o" path="res://src/entities/npcs/gabriel.gd" id="2_qpgpw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_myyq2"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_qpgpw"]
+material = SubResource("StandardMaterial3D_myyq2")
+
+[node name="Gabriel" unique_id=1025598010 instance=ExtResource("1_8mjf5")]
+script = ExtResource("2_qpgpw")
+
+[node name="MeshInstance3D" parent="." index="2" unique_id=1585980790]
+mesh = SubResource("CapsuleMesh_qpgpw")

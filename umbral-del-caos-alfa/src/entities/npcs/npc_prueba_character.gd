@@ -9,7 +9,7 @@ class_name CharacterNPC
 @export var idName: String
 
 @onready var interaccion: Interact = $Interact
-@onready var nav_agent: NavigationAgent3D = $nav_agent
+
 @onready var state_machine: Node = $NPCStateMachine
 
 var is_dialogue_active: bool = false
@@ -36,8 +36,7 @@ func _physics_process(delta: float) -> void:
 		if state_machine.has_method("physics_update"):
 			state_machine.physics_update(delta)
 
-func set_destination(target_position: Vector3) -> void:
-	nav_agent.target_position = target_position
+
 
 func _on_interactuado() -> void:
 	if not can_start_dialogue:
