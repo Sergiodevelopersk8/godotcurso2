@@ -17,6 +17,19 @@ class_name Memela
 @onready var memela_bandera_quesillo: MeshInstance3D = $memela_bandera_quesillo
 # Obtiene la referencia memela_verde_quesillo cuando el nodo ya esta listo.
 @onready var memela_verde_quesillo: MeshInstance3D = $memela_verde_quesillo
+# Obtiene la referencia memela_roja_quesillo cuando el nodo ya esta listo.
+@onready var memela_roja_quesillo: MeshInstance3D = $"memela-roja-quesillo"
+# Diccionario que mapea la clave de ingredientes ordenados con su MeshInstance3D
+@onready var recipes: Dictionary = {
+	"Salsa Roja": memela_roja,
+	"Quesillo,Salsa Roja": memela_roja_quesillo,
+	"Quesillo,Salsa Verde": memela_verde_quesillo,
+	#"Salsa Verde": memela_verde, # Si tienes mesh para verde sola
+	"Quesillo,Salsa Bandera": memela_bandera_quesillo,
+	"Salsa Bandera": memela_bandera # O la combinación de Roja + Verde
+}
+
+
 
 # array para los ingredientes 
 var ingredients:Array[String] = []
@@ -70,7 +83,7 @@ func receive_ingredient(object: Interact) -> bool:
 
 
 
-# Ejecuta la l?gica espec?fica de este m?todo dentro del comportamiento del objeto.
+# Ejecuta la lógica específica de este método dentro del comportamiento del objeto.
 func hide_all_meshes() -> void:
 	# Guarda en memela_roja.visible el resultado de false.
 	memela_roja.visible = false
@@ -80,33 +93,31 @@ func hide_all_meshes() -> void:
 	memela_bandera_quesillo.visible = false
 	# Guarda en memela_verde_quesillo.visible el resultado de false.
 	memela_verde_quesillo.visible = false
+	memela_roja_quesillo.visible = false
 
 
-# Ejecuta la l?gica espec?fica de este m?todo dentro del comportamiento del objeto.
-func update_visuals():
-	# Llama al metodo hide_all_meshes para realizar esta accion en este punto.
+# Ejecuta la l?gica espec?fica de este método dentro del comportamiento del objeto.
+func update_visuals() -> void:
+	# 1. Apagamos todos los meshes como siempre
 	hide_all_meshes()
 	
-	# Crea has_red e inicializa su valor con ingredients.has("Salsa Roja").
-	var has_red = ingredients.has("Salsa Roja")
-	# Crea has_green e inicializa su valor con ingredients.has("Salsa Verde").
-	var has_green = ingredients.has("Salsa Verde")
-	# Crea has_cheese e inicializa su valor con ingredients.has("Quesillo").
-	var has_cheese = ingredients.has("Quesillo")
+	# Si no hay ingredientes, nos salimos (o mostramos la tortilla base/sphere)
+	if ingredients.is_empty():
+		sphere.visible = true
+		return
 	
-	# Evaluamos las combinaciones
-	if has_red and has_green and has_cheese:
-		# Guarda en memela_bandera_quesillo.visible el resultado de true.
-		memela_bandera_quesillo.visible = true
-	# Comprueba has_red and has_green si las condiciones anteriores resultaron falsas.
-	elif has_red and has_green:
-		# Guarda en memela_bandera.visible el resultado de true.
-		memela_bandera.visible = true
-	# Comprueba has_green and has_cheese si las condiciones anteriores resultaron falsas.
-	elif has_green and has_cheese:
-		# Guarda en memela_verde_quesillo.visible el resultado de true.
-		memela_verde_quesillo.visible = true
-	# Comprueba has_red si las condiciones anteriores resultaron falsas.
-	elif has_red:
-		# Guarda en memela_roja.visible el resultado de true.
-		memela_roja.visible = true
+	# 2. Creamos una copia de la lista para no alterar el orden original de inserción
+	var temp_ingredients: Array[String] = ingredients.duplicate()
+	temp_ingredients.sort() # Orden alfabético: ["Quesillo", "Salsa Roja"]
+	
+	# Convertimos el array a un string separado por comas
+	var recipe_key: String = ",".join(temp_ingredients)
+	
+	# 3. Buscamos en la Tabla de Búsqueda
+	if recipes.has(recipe_key):
+		var target_mesh: MeshInstance3D = recipes[recipe_key]
+		if target_mesh:
+			target_mesh.visible = true
+			print("[Memela] Receta visual encontrada: ", recipe_key)
+	else:
+		push_warning("[Memela] No existe una combinación visual para: " + recipe_key)
