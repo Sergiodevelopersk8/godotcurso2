@@ -32,13 +32,18 @@ func enfocar_camara_hacia(target_position: Vector3) -> void:
 	var start_player_rot = player.rotation
 	var start_cam_rot = player.camera_3d.rotation
 
-	# 2. Calculamos hacia dónde debe mirar el Player (solo eje Y)
-	# Duplicamos la transformación del player para calcular la rotación deseada sin moverlo aún
+# 2. Calculamos hacia dónde debe mirar el Player (solo eje Y)
 	var player_target_transform = player.global_transform.looking_at(
 		Vector3(target_position.x, player.global_position.y, target_position.z), 
 		Vector3.UP
 	)
 	var target_player_rot_y = player_target_transform.basis.get_euler().y
+
+	# --- CORRECCIÓN PARA EVITAR EL GIRO DE 360 GRADOS ---
+	# Ajustamos el ángulo de destino para que tome el camino más corto respecto a la rotación actual
+	var current_rot_y = player.rotation.y
+	target_player_rot_y = current_rot_y + wrapf(target_player_rot_y - current_rot_y, -PI, PI)
+	#--------------------------------------------------------
 
 	# 3. Calculamos la inclinación vertical deseada para la Camera3D (eje X)
 	var cam_target_transform = player.camera_3d.global_transform.looking_at(target_position, Vector3.UP)

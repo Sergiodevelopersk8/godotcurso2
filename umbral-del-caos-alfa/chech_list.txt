@@ -16,10 +16,9 @@ TO DO LIST
 [X] Auto enfoque como fallout o skyrim al conversar con un npc
 [X] Que los npc camine aleatoriamente para que se vea vivo las escenas.
 [X] Hacer caminar los npcs para que algunos disparen un dialogo al acercarse al player solo unos npcs lo pdran hacer.
+[X] falta la memela roja con quesillo  
 
 🟡 2. EN PROCESO (El núcleo de la Cocina)
-
-[ ] falta la memela roja con quesillo  
 [ ] Activador del Minijuego: Programar la señal o condición en el GameManager (o script global) que detecte cuando el jugador 
     haya entregado las memelas a los 3 NPCs.
 [ ] Transición de la Tía: Hacer que, al cumplirse la condición anterior, la Tía cambie su estado inicial de Idle a Walk 
@@ -27,10 +26,11 @@ TO DO LIST
 [ ] Lógica de Entrega en el Comal: Sincronizar el estado de la masa con el comal y el inventario del jugador.
 
 
-🔵 3. SIGUIENTE PASO (Los Clientes y la Historia)
 
+🔵 3. SIGUIENTE PASO (Los Clientes y la Historia)
 [ ] Sistema de Pedidos (UI): Mostrar visualmente qué tipo de memela quiere cada cliente (por ejemplo, mediante globos de texto o burbujas con iconos).
 [ ] Control de Puntuación/Tiempo: Un indicador de éxito o paciencia de los clientes en la fonda Umbral del Caos.
 [ ] Cierre del Nivel 1: Secuencia narrativa final tras completar las entregas de la Tía.
+
 
 
