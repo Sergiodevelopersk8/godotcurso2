@@ -200,9 +200,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.227376, 0, -9.534441)
 dialogue_resource = ExtResource("14_3vqyl")
 idName = "gabriel"
 
-[node name="NPCStateMachine" parent="npcs/Gabriel" index="0" unique_id=1130951998]
-initial_state = NodePath("Walk")
-
 [editable path="Comal"]
 [editable path="npcs/Gustavo"]
 [editable path="npcs/Gabriel"]
