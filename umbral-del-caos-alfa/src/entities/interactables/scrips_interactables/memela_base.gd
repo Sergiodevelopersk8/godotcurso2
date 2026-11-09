@@ -102,15 +102,18 @@ func update_visuals() -> void:
 	# 2. COMBINACIONES DE 3 INGREDIENTES (Las más específicas primero)
 	if has_red and has_green and has_cheese:
 		memela_bandera_quesillo.visible = true
+		id = "memela bandera con quesillo"
 	
 	# 3. COMBINACIONES DE 2 INGREDIENTES
 	elif has_red and has_cheese:
 		memela_roja_quesillo.visible = true
+		id = "memela roja con quesillo"
 	elif has_green and has_cheese:
 		memela_verde_quesillo.visible = true
+		id = "memela verde con quesillo"
 	elif has_red and has_green:
 		memela_bandera.visible = true
-		
+		id = "memela bandera "
 	# 4. INGREDIENTES INDIVIDUALES (Los más generales al final)
 	elif has_red:
 		memela_roja.visible = true
