@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://brwsogoc7yrlh" path="res://src/entities/npcs/npc_prueba_character.tscn" id="1_8mjf5"]
 [ext_resource type="Script" uid="uid://cphkwuxup61o" path="res://src/entities/npcs/gabriel.gd" id="2_qpgpw"]
+[ext_resource type="Script" uid="uid://0jmpxb0ao4g0" path="res://src/entities/interactables/gabriel_interact.gd" id="3_kkk15"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_myyq2"]
 
@@ -10,6 +11,15 @@ material = SubResource("StandardMaterial3D_myyq2")
 
 [node name="Gabriel" unique_id=1025598010 instance=ExtResource("1_8mjf5")]
 script = ExtResource("2_qpgpw")
+memela_pedido = ""
+dialogue_start_node = "start"
+idName = "Gabriel"
 
 [node name="MeshInstance3D" parent="." index="2" unique_id=1585980790]
 mesh = SubResource("CapsuleMesh_qpgpw")
+
+[node name="Interact" parent="." index="4" unique_id=1190471633]
+script = ExtResource("3_kkk15")
+
+[node name="HandNode" type="Marker3D" parent="." index="5" unique_id=196344065]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5083885, 0.40756083, 0)

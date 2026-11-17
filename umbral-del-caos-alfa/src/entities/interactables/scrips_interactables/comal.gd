@@ -15,7 +15,7 @@ var object_in_comal: Interact = null
 
 
 
-# Ejecuta la l?gica espec?fica de este m?todo dentro del comportamiento del objeto.
+# Ejecuta la lógica específica de este método dentro del comportamiento del objeto.
 func receive_object(object:Interact):
 	# Comprueba object_in_comal != null and object_in_comal.get_parent() == self; ejecuta el bloque indentado solo cuando la condicion sea verdadera.
 	if object_in_comal != null and object_in_comal.get_parent() == self:

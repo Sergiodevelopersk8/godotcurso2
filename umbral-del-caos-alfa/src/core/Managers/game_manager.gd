@@ -16,6 +16,7 @@ var player_health: int = 100
 
 var is_following_player : bool = false 
 
+var received : bool  = false 
 
 func entregar_memela() -> void:
 	memelas_entregadas += 1

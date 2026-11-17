@@ -23,6 +23,11 @@ class_name Memela
 # array para los ingredientes 
 var ingredients:Array[String] = []
 
+# Variable para saber la receta actual sin alterar la identidad base del objeto
+var current_recipe_name: String = "Tortilla base"
+
+
+
 # Inicializa referencias, conexiones y estado inicial del nodo al arrancar.
 func _ready() -> void:
 	
@@ -84,44 +89,50 @@ func hide_all_meshes() -> void:
 	memela_verde_quesillo.visible = false
 	memela_roja_quesillo.visible = false
 
+# Dentro de memela_base.gd (o tu lógica de interacción con la mesa)
+# Sobrescribimos interact respetando la firma original del padre (sin argumentos)
+# Sobrescribimos interact respetando la firma original del padre (sin argumentos)
+func interact() -> void:
+	# Buscamos al jugador directamente mediante su grupo global
+	var player = get_tree().get_first_node_in_group("Player")
+	
+	if player and player.has_method("equip_item"):
+		player.equip_item(self)
+		print("[Memela] Recogida por el jugador e integrada en la mano.")
+
 
 func update_visuals() -> void:
-	# 1. Apagamos todos los meshes para limpiar la pantalla
 	hide_all_meshes()
 	
-	# Si no hay ingredientes, mostramos la tortilla base
 	if ingredients.is_empty():
 		sphere.visible = true
+		current_recipe_name = "Tortilla base"
 		return
 	
-	# Verificamos qué ingredientes tiene el array actual
 	var has_red = ingredients.has("Salsa Roja")
 	var has_green = ingredients.has("Salsa Verde")
 	var has_cheese = ingredients.has("Quesillo")
 	
-	# 2. COMBINACIONES DE 3 INGREDIENTES (Las más específicas primero)
 	if has_red and has_green and has_cheese:
 		memela_bandera_quesillo.visible = true
-		id = "memela bandera con quesillo"
-	
-	# 3. COMBINACIONES DE 2 INGREDIENTES
+		current_recipe_name = "Memela bandera con quesillo"
 	elif has_red and has_cheese:
 		memela_roja_quesillo.visible = true
-		id = "memela roja con quesillo"
+		current_recipe_name = "Memela roja con quesillo"
 	elif has_green and has_cheese:
 		memela_verde_quesillo.visible = true
-		id = "memela verde con quesillo"
+		current_recipe_name = "Memela verde con quesillo"
 	elif has_red and has_green:
 		memela_bandera.visible = true
-		id = "memela bandera "
-	# 4. INGREDIENTES INDIVIDUALES (Los más generales al final)
+		id = "Memela bandera"
 	elif has_red:
 		memela_roja.visible = true
+		id = "Memela roja"
 	elif has_green:
-		# memela_verde.visible = true # Descomenta si creas este mesh después
-		pass
+		current_recipe_name = "Memela verde"
 	elif has_cheese:
-		# Si solo tuviera quesillo o la base
 		sphere.visible = true
+		current_recipe_name = "Memela con quesillo"
 	else:
 		sphere.visible = true
+		current_recipe_name = "Tortilla base"

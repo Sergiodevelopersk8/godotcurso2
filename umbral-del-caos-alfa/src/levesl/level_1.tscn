@@ -152,6 +152,28 @@ transform = Transform3D(0.145, 0, 0, 0, 0.145, 0, 0, 0, 0.145, -3.7464697, 0.973
 [node name="memela" parent="objects" unique_id=480400435 instance=ExtResource("8_v0810")]
 transform = Transform3D(0.335, 0, 0, 0, 0.335, 0, 0, 0, 0.335, -2.674096, 0.90450203, -11.183354)
 
+[node name="npcs" type="Node3D" parent="." unique_id=1791262858]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7011719, 0)
+
+[node name="Gustavo" parent="npcs" unique_id=39771918 instance=ExtResource("13_ov8ww")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.265464, 0, 0)
+dialogue_resource = ExtResource("14_3vqyl")
+idName = "Gustavo"
+
+[node name="Tia" parent="npcs" unique_id=1025598010 instance=ExtResource("14_v0810")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.227376, 0, -9.534441)
+speed = 2.5
+
+[node name="Gabriel" parent="npcs" unique_id=1996590776 instance=ExtResource("15_v0810")]
+memela_pedido = "Memela roja"
+dialogue_resource = ExtResource("14_3vqyl")
+
+[node name="NPCStateMachine" parent="npcs/Gabriel" index="0" unique_id=1130951998]
+initial_state = NodePath("Walk")
+
+[node name="Interact" parent="npcs/Gabriel" index="4" unique_id=1190471633 node_paths=PackedStringArray("hand_marker")]
+hand_marker = NodePath("../HandNode")
+
 [node name="markers" type="Node3D" parent="." unique_id=911297927]
 
 [node name="1" type="Marker3D" parent="markers" unique_id=1836414422]
@@ -185,21 +207,6 @@ id = "nota pedido"
 transform = Transform3D(-0.9456465, 0, -0.3251963, 0, 1, 0, 0.3251963, 0, -0.9456465, -0.40559888, 0.7011719, -9.462709)
 collision_mask = 7
 
-[node name="npcs" type="Node3D" parent="." unique_id=1791262858]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7011719, 0)
-
-[node name="Gustavo" parent="npcs" unique_id=39771918 instance=ExtResource("13_ov8ww")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.265464, 0, 0)
-dialogue_resource = ExtResource("14_3vqyl")
-idName = "Gustavo"
-
-[node name="Tia" parent="npcs" unique_id=1025598010 instance=ExtResource("14_v0810")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.227376, 0, -9.534441)
-
-[node name="Gabriel" parent="npcs" unique_id=1996590776 instance=ExtResource("15_v0810")]
-dialogue_resource = ExtResource("14_3vqyl")
-idName = "gabriel"
-
-[editable path="Comal"]
 [editable path="npcs/Gustavo"]
 [editable path="npcs/Gabriel"]
+[editable path="Comal"]

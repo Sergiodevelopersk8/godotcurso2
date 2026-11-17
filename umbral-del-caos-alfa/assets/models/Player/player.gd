@@ -74,6 +74,7 @@ var distance_foot_step = 0.0
 # Crea play_foot_step e inicializa su valor con 1.
 var play_foot_step := 1
 
+var held_object: Node = null
 
 
 
@@ -203,3 +204,40 @@ func see_mouse():
 		print("veo el mouse")
 		# Llama al metodo Input.set_mouse_mode para realizar esta accion en este punto.
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+
+func get_held_memela_id() -> String:
+	if held_object and held_object is Memela:
+		return held_object.id
+	return ""
+
+
+# Referencia al objeto que el jugador sostiene actualmente en la mano
+
+func tiene_memela_lista() -> bool:
+	# Verificamos si lo que sostiene es una instancia de la clase Memela
+	if held_object and held_object is Memela:
+		# Verificamos que el id ya no sea el genérico de la base o esté vacío
+		if held_object.id != "Memela" and held_object.id != "":
+			return true
+	return false
+
+# Método para remover la memela de la mano al entregarla
+func remover_memela_de_mano() -> void:
+	if held_object:
+		held_object.queue_free() # Destruye el objeto físico de la mano
+		held_object = null       # Limpia la referencia
+
+func equip_item(item: Interact) -> void:
+	held_object = item
+	# Aquí emparentas el objeto a la mano o marcador del jugador
+	item.reparent(hand)
+	item.position = Vector3.ZERO
+
+
+# Dentro de tu lógica de interacción o cuando el jugador presiona la tecla para tomar la memela:
+func pick_up(player_node: Node3D) -> void:
+	player_node.held_object = self
+	if get_parent():
+		get_parent().remove_child(self)
+		player_node.hand.add_child(self)
+	transform = Transform3D.IDENTITY
