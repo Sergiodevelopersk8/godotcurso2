@@ -16,8 +16,12 @@ func receive_object(object: Interact) -> bool:
 		
 	# 2. Comparamos el ID del objeto con el pedido de Gabriel (igual que el Comal compara "Memela")
 	if object.id == gabriel_npc.memela_pedido:
+		print("gabriel_npc.memela_pedido -> ",gabriel_npc.memela_pedido)
 		print("object.id -> ",object.id)
+		
 		memela_recibida = object
+		
+		
 		
 		# 3. Emparentamos y posicionamos igual que en el Comal
 		object.reparent(self)

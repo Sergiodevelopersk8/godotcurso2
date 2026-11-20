@@ -49,3 +49,7 @@ func receive_object(object: Interact) -> bool:
 		var nombre_recibido = object.id if object else "nada"
 		print("[Gabriel] Eso no es lo que pedí. Yo quería: ", memela_pedido, " y me diste: ", nombre_recibido)
 		return false
+
+
+func completar_pedido():
+	print("ya se completo la mememla entregada")

@@ -226,18 +226,3 @@ func remover_memela_de_mano() -> void:
 	if held_object:
 		held_object.queue_free() # Destruye el objeto físico de la mano
 		held_object = null       # Limpia la referencia
-
-func equip_item(item: Interact) -> void:
-	held_object = item
-	# Aquí emparentas el objeto a la mano o marcador del jugador
-	item.reparent(hand)
-	item.position = Vector3.ZERO
-
-
-# Dentro de tu lógica de interacción o cuando el jugador presiona la tecla para tomar la memela:
-func pick_up(player_node: Node3D) -> void:
-	player_node.held_object = self
-	if get_parent():
-		get_parent().remove_child(self)
-		player_node.hand.add_child(self)
-	transform = Transform3D.IDENTITY
